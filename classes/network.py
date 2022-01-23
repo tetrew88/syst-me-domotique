@@ -280,7 +280,6 @@ class Network:
 
     def destroy(self):
         self.network.destroy()
-        self.network = False
 
 
     def heal(self):
@@ -295,6 +294,7 @@ class Network:
 
         self.mainController.add_node()
 
+        print("Mettez le module en état d'inclusion")
         time.sleep(10)
 
         for module in self.modulesList:
@@ -307,6 +307,11 @@ class Network:
             newModule.set_location(str(location))
 
             self.save_modification()
+
+    def del_module(self):
+        self.mainController.remove_node()
+        print("Mettez le module en état d'exclusion")
+        time.sleep(10)
 
 
     def network_started(self, network):
@@ -323,18 +328,19 @@ class Network:
 
     def node_event(self, node, value, **kwargs):
         event=False
-        if 'sensor' in node.device_type.lower() or 'COMMAND_CLASS_SENSOR_MULTILEVEL' in node.command_classes_as_string:
-            for element in node.get_sensors():
-                if node.get_sensors()[element].label == "Sensor":
-                    if node.get_sensors()[element].data == True  :
-                        event = MotionDetection(node,
-                                          datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+        if self.isReady:
+            if 'sensor' in node.device_type.lower() or 'COMMAND_CLASS_SENSOR_MULTILEVEL' in node.command_classes_as_string:
+                for element in node.get_sensors():
+                    if node.get_sensors()[element].label == "Sensor":
+                        if node.get_sensors()[element].data == True  :
+                            event = MotionDetection(node,
+                                              datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 
-                        print(event)
+                            print(event)
 
-                        self.eventList.append(event)
-                    else:
-                        pass
+                            self.eventList.append(event)
+                        else:
+                            pass
 
     def node_added(self, node):
         print("le noeud {} a été ajouter", node.node_id)

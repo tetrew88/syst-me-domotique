@@ -36,6 +36,7 @@ class Home:
                 automation modules
 
             method:
+                start automation network
                 add an room
                 add an module
                 add habitant
@@ -126,6 +127,13 @@ class Home:
     def automationModules(self):
         return self.homeAutomationNetwork.modulesList
 
+    def start_automation_network(self):
+        self.homeAutomationNetwork.load()
+        self.homeAutomationNetwork.start()
+
+    def stop_automation_network(self):
+        self.homeAutomationNetwork.stop()
+
 
     def add_room(self, room):
         self.homeDatabase.add_room(room)
@@ -142,3 +150,42 @@ class Home:
 
     def del_room(self, roomId):
         self.homeDatabase.del_room(roomId)
+
+
+    def del_inhabitant(self, inhabitantId):
+        self.homeDatabase.del_inhabitant(inhabitantId)
+
+    def del_guest(self, guestId):
+        self.homeDatabase.del_guest(guestId)
+
+    def del_automation_module(self):
+        self.homeAutomationNetwork.del_module()
+
+
+    def set_room_name(self, roomId, newName):
+        self.homeDatabase.set_room_name(roomId, newName)
+
+    def set_room_type(self, roomId, newType):
+        self.homeDatabase.set_room_type(roomId, newType)
+
+    def set_inhabitant_first_name(self, inhabitantId, newFirstName):
+        self.homeDatabase.set_inhabitant_first_name(inhabitantId, newFirstName)
+
+    def set_inhabitant_last_name(self, inhabitantId, newLastName):
+        self.homeDatabase.set_inhabitant_last_name(inhabitantId, newLastName)
+
+    def set_guest_first_name(self, guestId, newFirstName):
+        self.homeDatabase.set_guest_first_name(guestId, newFirstName)
+
+    def set_guest_last_name(self, guestId, newLastName):
+        self.homeDatabase.set_guest_last_name(guestId, newLastName)
+
+
+    def heal_network(self):
+        self.homeAutomationNetwork.heal()
+
+    def destroy_network(self):
+        self.homeAutomationNetwork.destroy()
+
+    def save_network_modification(self):
+        self.homeAutomationNetwork.save_modification()

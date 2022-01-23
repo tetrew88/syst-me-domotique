@@ -47,6 +47,8 @@ class HomeDatabase:
                 del inhabitant
                 del guest
 
+                set room name
+
     """
 
     def __init__(self):
@@ -208,3 +210,110 @@ class HomeDatabase:
         self.db_cursor.execute(request)
 
         self.commit_change()
+
+
+    def del_profil(self, profilId):
+        request = "DELETE FROM Profils WHERE id = {}".format(profilId)
+        self.db_cursor.execute(request)
+
+        self.commit_change()
+
+
+    def del_inhabitant(self, inhabitantId):
+        request = "SELECT * FROM Inhabitants WHERE id = {}".format(inhabitantId)
+
+        self.db_cursor.execute(request)
+
+        inhabitant = self.db_cursor.fetchall()[0]
+        profilId = inhabitant[1]
+
+        request = "DELETE FROM Inhabitants WHERE id = {}".format(inhabitantId)
+        self.db_cursor.execute(request)
+
+        self.commit_change()
+
+        self.del_profil(profilId)
+
+    def del_guest(self, guestId):
+        request = "SELECT * FROM Guests WHERE id = {}".format(guestId)
+
+        self.db_cursor.execute(request)
+
+        guest = self.db_cursor.fetchall()[0]
+        profilId = guest[1]
+
+        request = "DELETE FROM Guests WHERE id = {}".format(guestId)
+        self.db_cursor.execute(request)
+
+        self.commit_change()
+
+        self.del_profil(profilId)
+
+
+    def set_room_name(self, roomId, newName):
+        request = """UPDATE Rooms SET name = '{}' where id = {}""".format(newName, roomId)
+
+        self.db_cursor.execute(request)
+
+        self.commit_change()
+
+    def set_room_type(self, roomId, newType):
+        request = """UPDATE Rooms SET type = '{}' where id = {}""".format(newType, roomId)
+
+        self.db_cursor.execute(request)
+
+        self.commit_change()
+
+    def set_profil_last_name(self, profilId, newLastName):
+        request = """UPDATE Profils SET last_name = '{}' where id = {}""".format(newLastName, profilId)
+
+        self.db_cursor.execute(request)
+
+        self.commit_change()
+
+    def set_profil_first_name(self, profilId, newFirstName):
+        request = """UPDATE Profils SET first_name = '{}' where id = {}""".format(newFirstName, profilId)
+
+        self.db_cursor.execute(request)
+
+        self.commit_change()
+
+    def set_inhabitant_last_name(self, inhabitantId, newLastName):
+        request = "SELECT * FROM Inhabitants WHERE id = {}".format(inhabitantId)
+
+        self.db_cursor.execute(request)
+
+        inhabitant = self.db_cursor.fetchall()[0]
+        profilId = inhabitant[1]
+
+        self.set_profil_last_name(profilId, newLastName)
+
+    def set_inhabitant_first_name(self, inhabitantId, newFirstName):
+        request = "SELECT * FROM Inhabitants WHERE id = {}".format(inhabitantId)
+
+        self.db_cursor.execute(request)
+
+        inhabitant = self.db_cursor.fetchall()[0]
+        profilId = inhabitant[1]
+
+        self.set_profil_first_name(profilId, newFirstName)
+
+    def set_guest_last_name(self, guestId, newLastName):
+        request = "SELECT * FROM Guests WHERE id = {}".format(guestId)
+
+        self.db_cursor.execute(request)
+
+        guest = self.db_cursor.fetchall()[0]
+        profilId = guest[1]
+
+        self.set_profil_last_name(profilId, newLastName)
+
+    def set_guest_first_name(self, guestId, newFirstName):
+        request = "SELECT * FROM Guests WHERE id = {}".format(guestId)
+
+        self.db_cursor.execute(request)
+
+        guest = self.db_cursor.fetchall()[0]
+        profilId = guest[1]
+
+        self.set_profil_first_name(profilId, newFirstName)

@@ -42,12 +42,11 @@ class HomeAutomationSystem:
 
     def start(self):
         self.home.homeDatabase.connect()
-        self.home.homeAutomationNetwork.load()
-        self.home.homeAutomationNetwork.start()
+        self.home.start_automation_network()
         self.running = True
 
     def stop(self):
-        self.home.homeAutomationNetwork.stop()
+        self.home.stop_automation_network()
         self.home.homeDatabase.disconnect()
         self.running = False
 
@@ -61,7 +60,7 @@ class HomeAutomationSystem:
     def get_home_inhabitants(self):
         return self.home.inhabitants
 
-    def get_home_guest(self):
+    def get_home_guests(self):
         return self.home.guests
 
     def get_home_automation_modules(self):
@@ -89,3 +88,41 @@ class HomeAutomationSystem:
 
     def del_home_room(self, roomId):
         self.home.del_room(roomId)
+
+    def del_home_inhabitant(self, inhabitantId):
+        self.home.del_inhabitant(inhabitantId)
+
+    def del_home_guest(self, guestId):
+        self.home.del_guest(guestId)
+
+    def del_home_automation_module(self):
+        self.home.del_automation_module()
+
+
+    def set_home_room_name(self, roomId, newName):
+        self.home.set_room_name(roomId, newName)
+
+    def set_home_room_type(self, roomId, newType):
+        self.home.set_room_type(roomId, newType)
+
+    def set_home_inhabitant_last_name(self, inhabitantId, newLastName):
+        self.home.set_inhabitant_last_name(inhabitantId, newLastName)
+
+    def set_home_inhabitant_first_name(self, inhabitantId, newFirstName):
+        self.home.set_inhabitant_first_name(inhabitantId, newFirstName)
+
+    def set_home_guest_last_name(self, guestId, newLastName):
+        self.home.set_guest_last_name(guestId, newLastName)
+
+    def set_home_guest_first_name(self, guestId, newFirstName):
+        self.home.set_guest_first_name(guestId, newFirstName)
+
+
+    def heal_automation_network(self):
+        self.home.heal_network()
+
+    def destroy_automation_network(self):
+        self.home.destroy_network()
+
+    def save_home_automation_network_modification(self):
+        self.home.save_network_modification()
