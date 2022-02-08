@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'roomManagement',
     'userManagement',
     'homeManagement',
+    'base',
 ]
 
 MIDDLEWARE = [

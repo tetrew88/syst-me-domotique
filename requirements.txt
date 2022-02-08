@@ -1,7 +1,6 @@
 asgiref==3.5.0
 Django==3.2.11
 mysql-connector-python==8.0.27
-pkg-resources==0.0.0
 protobuf==3.19.3
 PyDispatcher==2.0.5
 pyserial==3.5

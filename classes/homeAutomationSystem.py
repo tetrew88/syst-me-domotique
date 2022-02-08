@@ -1,3 +1,5 @@
+import socketio
+
 from .home import *
 
 
@@ -8,6 +10,7 @@ class HomeAutomationSystem:
             Attributes:
                 running
                 home
+                socket.io server (for communication with web interface)
 
             property:
 
@@ -33,6 +36,10 @@ class HomeAutomationSystem:
                 del inhabitant
                 del guest
                 del module
+
+            socketio event:
+                connection
+                disconnection
     """
 
     def __init__(self, controllerPath, zwaveConfigPath, logPath):

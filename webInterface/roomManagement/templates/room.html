@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <div class="col container-fluid">
+    <div class="row" style="margin-top: 3%;">
+
+      <div class="col-1"></div>
+      <div class="col-1">
+        button allumage
+      </div>
+
+      <div class="col-7"></div>
+
+      <div class="col-2">
+
+        <div class="row">
+          <div class="col-4"></div>
+          <div class="col indicator rounded text-center" style="color: {{indicatorColor}}">
+            {{ temp }}°
+          </div>
+          <div class="col-4"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-4"></div>
+          <div class="col indicator rounded text-center" style="color: {{indicatorColor}}" >
+            {{ lum }}lux
+          </div>
+          <div class="col-4"></div>
+        </div>
+
+      </div>
+      <div class="col-1"></div>
+
+    </div>
+
+
+    <div class="row" style="margin-top: 3%;">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <h2>{{ roomName }}</h2>
+      </div>
+      <div class="col-4"></div>
+    </div>
+
+
+    <div class="row" style="margin-top: 2%;">
+      <div class="col-3"></div>
+      <div class="col-6">
+
+        <div class="row">
+          <div class="col-4"></div>
+          <div class="col-4">
+            <h3>Modules:</h3>
+          </div>
+          <div class="col-4"></div>
+        </div>
+
+        <div class="row" style="margin-top: 2%;">
+          <div class="col-3"></div>
+          <div class="col-6 moduleList rounded">
+            <div class="row">
+              {% for module in modulesList %}
+                <div class="col-lg-4 card moduleCard rounded">
+                  {% if module == 'bulb' %}
+                    <img class="img-fluid rounded" src="{% static 'pictures/bulb.jpeg' %}" alt="product_picture">
+
+                  {% elif module == 'multiSensor' %}
+                    <img class="img-fluid rounded" src="{% static 'pictures/multisensor.jpeg' %}" alt="product_picture">
+                  {% endif %}
+
+                  <div class="card-title text-center">
+                    {{ module }}
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="col-3"></div>
+        </div>
+
+      </div>
+      <div class="col-3"></div>
+    </div>
+
+    <div class="row" style="margin-top: 2%;">
+      <div class="col-3"></div>
+      <div class="col-6">
+
+        <div class="row">
+          <div class="col-4"></div>
+          <div class="col-4">
+            <h3>événements:</h3>
+          </div>
+          <div class="col-4"></div>
+        </div>
+
+        <div class="row" style="margin-top: 2%; margin-bottom: 3%;">
+          <div class="col-2"></div>
+          <div class="col-8 eventList rounded">
+            <div class="row eventRapport">
+              [19/04/22 05:00:00]: detection de mouvement
+            </div>
+            <div class="row eventRapport">
+              [18/04/22 05:00:00]: allumage de l'éclairage principale
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
+
+      </div>
+      <div class="col-3"></div>
+    </div>
+
+  </div>
+
+
+{% endblock %}
