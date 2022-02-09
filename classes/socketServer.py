@@ -24,7 +24,7 @@ class SocketServer:
 		pass
 
 
-	def start():
+	def start(self):
 		eventlet.wsgi.server(eventlet.listen(('', 5000)), app)
 
 
