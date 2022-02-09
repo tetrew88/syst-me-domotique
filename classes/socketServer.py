@@ -16,12 +16,6 @@ class SocketServer(socketio.ClientNamespace):
 			methods:
 	"""
 
-	print(socketIoServer.__dict__)
-	print(app.__dict__)
-
-	def __init__(self):
-		self.test="...............!!!!!!!!!!........"
-
 
 	def start(self):
 		eventlet.wsgi.server(eventlet.listen(('', 5000)), app)
