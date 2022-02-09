@@ -18,8 +18,8 @@
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	  <!-- Fonts -->
-	  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-	  <link href="http://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet" type="text/css">
+	  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/html">
+	  <link href="http://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet" type="text/html">
 
 	  <!-- Personnal CSS -->
 	  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
@@ -45,7 +45,7 @@
 						<div class="col-9 text-center shortcutsBar rounded">
 							<ul class="navbar-nav">
 							  <li><a class="nav-item nav-link" href="/roomListing">listing pièces</a></li>
-							  <li><a class="nav-item nav-link" href="/profilListing">listing profils</a></li>
+							  <li><a class="nav-item nav-link" href="#">listing profils</a></li>
 							  <li><a class="nav-item nav-link" href="#">...</a></li>
 							  <li><a class="nav-item nav-link" href="#">...</a></li>
 							</ul>
@@ -65,21 +65,22 @@
 				{% block content %}
 				{% endblock %}
 			</div>
-
-
-			<footer>
-				<div class="row">
-					<div class="col-12">
-						<a href="#">lien git</a>
-					</div>
-				</div>
-			</footer>
 			
 		</div>
 
+		<footer>
+			<div class="row">
+				<div class="col-12">
+					<a href="#">lien git</a>
+				</div>
+			</div>
+		</footer>
+
 
     <!-- Optional JavaScript -->
-    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 

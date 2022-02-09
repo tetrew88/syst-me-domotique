@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'userManagement',
     'homeManagement',
     'base',
+    'profilManagement'
 ]
 
 MIDDLEWARE = [
