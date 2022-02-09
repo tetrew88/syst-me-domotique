@@ -16,7 +16,8 @@ class SocketServer:
 	socketIoServer = socketio.Server()
 	app = socketio.WSGIApp(socketIoServer)
 
-	print(app.get('port'))
+	print(socketIoServer)
+	print(app)
 
 	def __init__(self):
 		pass
