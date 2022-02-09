@@ -1,9 +1,4 @@
 console.log('hello world')
 
 
-const io = require("socket.io")(httpServer, {
-  cors: {
-    origin: "http://localhost:5000",
-    methods: ["GET", "POST"]
-  }
-});
+var socket = io.connect('http://127.0.0.1:5000');
