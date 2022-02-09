@@ -1,8 +1,6 @@
 import eventlet
 import socketio
 
-socketIoServer = socketio.Server(cors_allowed_origins="*")
-app = socketio.WSGIApp(socketIoServer)
 
 class SocketServer:
 	"""
@@ -20,14 +18,15 @@ class SocketServer:
 	print(app.__dict__)
 
 	def __init__(self):
-		pass
+		self.socketIoServer = socketio.Server(cors_allowed_origins="*")
+		self.app = socketio.WSGIApp(socketIoServer)
 
 
 	def start(self):
 		eventlet.wsgi.server(eventlet.listen(('', 5000)), app)
 
 
-	@socketIoServer.event
+	@self.socketIoServer.event
 	def connect(sid, environ, auth):
 		print('connect ', sid)
 
