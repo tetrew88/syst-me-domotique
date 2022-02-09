@@ -6,7 +6,7 @@ from .homeAutomationSystem import *
 socketIoServer = socketio.Server(cors_allowed_origins="*")
 app = socketio.WSGIApp(socketIoServer)
 
-class homeAutomationServer:
+class HomeAutomationServer:
 	"""
 		class representing the home automation server:
 
