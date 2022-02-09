@@ -44,13 +44,13 @@ class HomeAutomationSystem:
     def __init__(self, controllerPath, zwaveConfigPath, logPath):
         self.running = False
         self.home = Home(controllerPath, zwaveConfigPath, logPath)
-        self.socketIoServer = False
+        self.socketIoServer = SocketServer()
 
 
     def start(self):
         self.home.homeDatabase.connect()
         self.home.start_automation_network()
-        self.socketIoServer = SocketServer()
+        self.socketIoServer.start()
         self.running = True
 
     def stop(self):
