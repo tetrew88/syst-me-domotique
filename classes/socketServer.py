@@ -27,6 +27,7 @@ class SocketServer:
 		eventlet.wsgi.server(eventlet.listen(('', 5000)), app)
 
 
+	@staticmethod
 	@socketIoServer.event
 	def connect(sid, environ, auth):
 		print('connect ', sid)
