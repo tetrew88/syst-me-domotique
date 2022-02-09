@@ -4,7 +4,7 @@ import socketio
 socketIoServer = socketio.Server(cors_allowed_origins="*")
 app = socketio.WSGIApp(socketIoServer)
 
-class SocketServer(socketio.ClientNamespace):
+class SocketServer(socketio.Namespace):
 	"""
 		class representing the home automation server:
 
@@ -17,14 +17,20 @@ class SocketServer(socketio.ClientNamespace):
 	"""
 
 
+	def __init__(self):
+		pass
+
+
 	def start(self):
 		eventlet.wsgi.server(eventlet.listen(('', 5000)), app)
 
-	def connect(self, sid, environ, auth):
+
+	@socketIoServer.event
+	def connect(sid, environ, auth):
 		print('connect ', sid)
-		print(self.test)
 
 
-socketIoServer.register_namespace(SocketServer('/self'))
+sio.register_namespace(SocketServer('/test'))
+
 
 #eesayer de nmettre la section eventlet dans home automation system pour que l'attente ce fasse au niveau du systeme et non du sserver
