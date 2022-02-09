@@ -23,7 +23,7 @@ class SocketServer:
 		eventlet.wsgi.server(eventlet.listen(('', 5000)), app)
 
 
-	self.@socketIoServer.event
+	self.socketIoServer.event
 	def connect(sid, environ, auth):
 		print('connect ', sid)
 
