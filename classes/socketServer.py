@@ -4,7 +4,7 @@ import socketio
 socketIoServer = socketio.Server(cors_allowed_origins="*")
 app = socketio.WSGIApp(socketIoServer)
 
-class SocketServer(socketio.ClientNamespace:
+class SocketServer(socketio.ClientNamespace):
 	"""
 		class representing the home automation server:
 
