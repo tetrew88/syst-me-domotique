@@ -29,6 +29,7 @@ class SocketServer:
 	def connect(sid, environ, auth):
 		print('connect ', sid)
 
+	@staticmethod
 	@socketIoServer.event
 	def test(self, **kwargs):
 		print(self.test)
