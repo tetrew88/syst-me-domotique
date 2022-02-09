@@ -9,7 +9,7 @@ from classes.rooms.livingroom import *
 from classes.users.profil import *
 
 def main():
-    homeAutomationServer = HomeAutomationSystem("/dev/ttyACM0",
+    homeAutomationServer = HomeAutomationServer("/dev/ttyACM0",
                     "env/lib/python3.7/site-packages/python_openzwave/ozw_config",
                     "log.log")
 
