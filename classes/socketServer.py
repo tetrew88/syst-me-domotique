@@ -1,3 +1,4 @@
+import eventlet
 import socketio
 
 class SocketServer:
@@ -15,6 +16,8 @@ class SocketServer:
 
 	socketIoServer = socketio.Server()
 	app = socketio.WSGIApp(socketIoServer)
+
+	eventlet.wsgi.server(eventlet.listen(('', 5000)), app)
 
 	print(socketIoServer.__dict__)
 	print(app.__dict__)
