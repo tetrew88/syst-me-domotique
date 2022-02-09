@@ -17,9 +17,6 @@ class SocketServer(socketio.Namespace):
 	"""
 
 
-	def __init__(*args):
-		pass
-
 
 	def start(self):
 		eventlet.wsgi.server(eventlet.listen(('', 5000)), app)
