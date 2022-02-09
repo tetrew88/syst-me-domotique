@@ -26,7 +26,7 @@ class SocketServer(socketio.ClientNamespace):
 	def start(self):
 		eventlet.wsgi.server(eventlet.listen(('', 5000)), app)
 
-	def connect(sid, environ, auth):
+	def connect(self, sid, environ, auth):
 		print('connect ', sid)
 		print(self.test)
 
