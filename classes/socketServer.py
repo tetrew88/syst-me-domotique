@@ -13,10 +13,12 @@ class SocketServer:
 			methods:
 	"""
 
+	socketIoServer = socketio.Server()
+
 	def __init__(self):
-		self.socketIoServer = socketio.Server()
+		self.socketIoServer = socketIoServer
 		self.socketIoApp = socketio.WSGIApp(self.socketIoServer)
 
-	@self.socketIoServer.event
+	@socketIoServer.event
 	def connect(sid, environ, auth):
 		print('connect ', sid)
