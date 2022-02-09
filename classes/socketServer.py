@@ -14,9 +14,6 @@ class SocketServer:
 			methods:
 	"""
 
-	print(socketIoServer.__dict__)
-	print(app.__dict__)
-
 	def __init__(self):
 		self.socketIoServer = socketio.Server(cors_allowed_origins="*")
 		self.app = socketio.WSGIApp(socketIoServer)
