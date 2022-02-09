@@ -14,11 +14,11 @@ class SocketServer:
 	"""
 
 	socketIoServer = socketio.Server()
-	app = socketio.WSGIApp(self.socketIoServer)
+	app = socketio.WSGIApp(socketIoServer)
 
 	def __init__(self):
 		pass
-		
+
 	@socketIoServer.event
 	def connect(sid, environ, auth):
 		print('connect ', sid)
