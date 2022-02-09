@@ -24,12 +24,13 @@ class SocketServer(socketio.ClientNamespace):
 
 
 	def start(self):
-		socketIoServer.register_namespace(MyCustomNamespace('/chat'))
 		eventlet.wsgi.server(eventlet.listen(('', 5000)), app)
 
 	def connect(sid, environ, auth):
 		print('connect ', sid)
 		print(self.test)
 
+
+socketIoServer.register_namespace(SocketServer('/chat'))
 
 #eesayer de nmettre la section eventlet dans home automation system pour que l'attente ce fasse au niveau du systeme et non du sserver
