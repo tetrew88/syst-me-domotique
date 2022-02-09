@@ -1,16 +1,17 @@
 import eventlet
 import socketio
 
+from .homeAutomationSystem import *
+
 socketIoServer = socketio.Server(cors_allowed_origins="*")
 app = socketio.WSGIApp(socketIoServer)
 
-class SocketServer:
+class homeAutomationServer:
 	"""
-		class representing an socket server:
+		class representing the home automation server:
 
 			attributes:
-				socket io server
-				socket io app
+				home automation système
 
 			property:
 
@@ -20,13 +21,14 @@ class SocketServer:
 	print(socketIoServer.__dict__)
 	print(app.__dict__)
 
-	def __init__(self):
-		pass
+	def __init__(self, controllerPath, zwaveConfigPath, logPath):
+		self.homeAutomationSystem = HomeAutomationSystem(controllerPath, zwaveConfigPath, logPath)
 
 
 	def start(self):
 		eventlet.wsgi.server(eventlet.listen(('', 5000)), app)
 
+		self.homeAutomationSystem.start()
 
 	@socketIoServer.event
 	def connect(sid, environ, auth):

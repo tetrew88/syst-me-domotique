@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-from classes.homeAutomationSystem import *
+from classes.homeAutomationServer import *
 from classes.modules.module import *
 
 
@@ -9,14 +9,15 @@ from classes.rooms.livingroom import *
 from classes.users.profil import *
 
 def main():
-    homeAutomationSystem = HomeAutomationSystem("/dev/ttyACM0",
+    homeAutomationServer = HomeAutomationSystem("/dev/ttyACM0",
                     "env/lib/python3.7/site-packages/python_openzwave/ozw_config",
                     "log.log")
 
-    homeAutomationSystem.start()
+    homeAutomationServer.start()
+    homeAutomationSystem = homeAutomationServer.homeAutomationSystem
 
     while homeAutomationSystem.running:
-        tmpChoice = choice = -1
+        tmpChoice = choice = -1homeAutomationServer
 
         while choice < 0 or choice > 3:
             print("Menu principale\n")
