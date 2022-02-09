@@ -17,7 +17,7 @@ def main():
     homeAutomationSystem = homeAutomationServer.homeAutomationSystem
 
     while homeAutomationSystem.running:
-        tmpChoice = choice = -1homeAutomationServer
+        tmpChoice = choice = -1
 
         while choice < 0 or choice > 3:
             print("Menu principale\n")
