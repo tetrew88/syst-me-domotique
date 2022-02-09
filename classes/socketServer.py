@@ -1,6 +1,9 @@
 import eventlet
 import socketio
 
+socketIoServer = socketio.Server()
+app = socketio.WSGIApp(socketIoServer)
+
 class SocketServer:
 	"""
 		class representing an socket server:
@@ -13,9 +16,6 @@ class SocketServer:
 
 			methods:
 	"""
-
-	socketIoServer = socketio.Server()
-	app = socketio.WSGIApp(socketIoServer)
 
 	print(socketIoServer.__dict__)
 	print(app.__dict__)
