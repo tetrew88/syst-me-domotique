@@ -35,7 +35,7 @@ class HomeAutomationServer:
 		print('connect ', sid)
 
 	@socketIoServer.on('*')
-	def catch_all(self, event, sid, data):
+	def catch_all(event, sid, self):
 		print("rooms: {}".format(self.homeAutomationSystem.get_home_rooms))
 
 #eesayer de nmettre la section eventlet dans home automation system pour que l'attente ce fasse au niveau du systeme et non du sserver
