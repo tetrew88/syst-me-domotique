@@ -17,7 +17,7 @@ class SocketServer(socketio.Namespace):
 	"""
 
 
-	def __init__():
+	def __init__(*args):
 		pass
 
 
