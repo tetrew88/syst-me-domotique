@@ -30,7 +30,7 @@ class SocketServer:
 		print('connect ', sid)
 
 	@socketIoServer.event
-	def test(self, *args):
+	def test(self, **kwargs):
 		print(self.test)
 
 
