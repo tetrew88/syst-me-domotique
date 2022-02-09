@@ -17,6 +17,8 @@ class SocketServer:
 	app = socketio.WSGIApp(self.socketIoServer)
 
 	def __init__(self):
+		pass
+		
 	@socketIoServer.event
 	def connect(sid, environ, auth):
 		print('connect ', sid)
