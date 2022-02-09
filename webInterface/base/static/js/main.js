@@ -1,3 +1,4 @@
 console.log('hello world')
 
-var socket = io('http://localhost')
+var socket = io()
+socket.connect('http://localhost')
