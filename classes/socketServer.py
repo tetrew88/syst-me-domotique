@@ -25,6 +25,6 @@ class SocketServer(socketio.ClientNamespace):
 		print(self.test)
 
 
-socketIoServer.register_namespace(SocketServer('/chat'))
+socketIoServer.register_namespace(SocketServer('/self'))
 
 #eesayer de nmettre la section eventlet dans home automation system pour que l'attente ce fasse au niveau du systeme et non du sserver
