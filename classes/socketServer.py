@@ -17,7 +17,7 @@ class SocketServer(socketio.Namespace):
 	"""
 
 
-	def __init__(self, **kwargs):
+	def __init__(self):
 		socketio.Namespace.__init__()
 		self.test = "!!!!!!!"
 
@@ -35,6 +35,6 @@ class SocketServer(socketio.Namespace):
 	def test(self, sid, data):
 		print(data)
 
-socketIoServer.register_namespace(SocketServer('/test'))
+socketIoServer.register_namespace(SocketServer())
 
 #eesayer de nmettre la section eventlet dans home automation system pour que l'attente ce fasse au niveau du systeme et non du sserver
