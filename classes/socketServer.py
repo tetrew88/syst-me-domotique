@@ -18,7 +18,7 @@ class SocketServer(socketio.Namespace):
 
 
 	def __init__(self):
-		socketio.Namespace.__init__(self)
+		socketio.Namespace.__init__(self, '/test')
 		self.test = "!!!!!!!"
 
 
@@ -33,7 +33,7 @@ class SocketServer(socketio.Namespace):
 
 	@socketIoServer.event(namespace='/test')
 	def test(self, sid, data):
-		print(data)
+		print(self.test)
 
 socketIoServer.register_namespace(SocketServer())
 
