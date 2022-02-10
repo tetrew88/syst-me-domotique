@@ -19,6 +19,7 @@ class SocketServer(socketio.Namespace):
 
 	def __init__(self):
 		self.test = "!!!!!!!"
+		self.namespace = '/test'
 
 
 	def start(self):
