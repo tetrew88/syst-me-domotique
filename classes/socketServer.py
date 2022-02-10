@@ -2,7 +2,7 @@ import eventlet
 import socketio
 
 socketIoServer = socketio.Server(cors_allowed_origins="*")
-app = socketio.WSGIApp(socketIoServer, objects)
+app = socketio.WSGIApp(socketIoServer, object)
 
 class SocketServer(socketio.Namespace):
 	"""
