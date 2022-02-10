@@ -17,8 +17,8 @@ class SocketServer(socketio.Namespace):
 	"""
 
 
-	def __init__(self):
-		self.namespace = namespace
+	def __init__(self, **kwargs):
+		socketio.Namespace.__init__()
 		self.test = "!!!!!!!"
 
 
