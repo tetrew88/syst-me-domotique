@@ -209,6 +209,7 @@ class Network:
         dispatcher.connect(self.network_awake, ZWaveNetwork.SIGNAL_NETWORK_AWAKED)
         dispatcher.connect(self.node_event, ZWaveNetwork.SIGNAL_VALUE_CHANGED)
         dispatcher.connect(self.node_added, ZWaveNetwork.SIGNAL_NODE_ADDED)
+        dispatcher.connect(self.scene_event, ZWaveNetwork.SIGNAL_SCENE_EVENT)
 
     def start(self):
         """
