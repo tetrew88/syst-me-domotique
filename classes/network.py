@@ -340,7 +340,7 @@ class Network:
 
                             self.eventList.append(event)
                         else:
-                            pass
+                            print(node.name)
 
     def node_added(self, node):
         print("le noeud {} a été ajouter", node.node_id)
