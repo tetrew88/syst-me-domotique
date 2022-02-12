@@ -16,14 +16,30 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url
 
 from authentification.views.identification import identification
+
 from roomManagement.views.roomListing import room_listing
 from roomManagement.views.room import room
 
+from profilManagement.views.profilListing import profil_listing
+
+from moduleManagement.views.moduleListing import module_listing
+
+from homeManagement.views.homeManagement import home_management
+
+from homeAutomationNetworkManagement.views.homeAutomationNetworkManagement import home_automation_network_management
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^$', room_listing),
     path('identification/', identification),
+    path('/index', room_listing),
     path('roomListing/', room_listing),
-    path('room/', room)
+    path('room/', room),
+    path('profilListing/', profil_listing),
+    path('moduleListing/', module_listing),
+    path('homeManagement/', home_management),
+    path('homeAutomationNetworkManagement/', home_automation_network_management)
 ]

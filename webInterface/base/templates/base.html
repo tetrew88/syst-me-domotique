@@ -9,7 +9,6 @@
     <!-- Required meta tags -->
 
     <meta charset="utf-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
@@ -20,10 +19,12 @@
 	  <!-- Fonts -->
 	  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/html">
 	  <link href="http://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet" type="text/html">
+	  {% block fonts %}{% endblock %}
 
 	  <!-- Personnal CSS -->
 	  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
-	  <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+
+	  {% block css %}{% endblock %}
 
     <title>Hestia Domotics</title>
 
@@ -37,42 +38,98 @@
 				<nav class="col navbar navbar-light navbar-expand-lg bg-dark" id="mainNavbar">
 					<div class="row text-center" style="width: 100%;">
 						<div class="col-1">
-							<a class="navbar-brand" href="#">Hestia Domotics</a>
+							<a class="navbar-brand" href="/">HD</a>
 						</div>
 
 						<div class="col-1"></div>
 
-						<div class="col-9 text-center shortcutsBar rounded">
-							<ul class="navbar-nav">
-							  <li><a class="nav-item nav-link" href="/roomListing">listing pièces</a></li>
-							  <li><a class="nav-item nav-link" href="#">listing profils</a></li>
-							  <li><a class="nav-item nav-link" href="#">...</a></li>
-							  <li><a class="nav-item nav-link" href="#">...</a></li>
-							</ul>
+						<div class="col-8 text-center shortcutsBar rounded">
+							<div id="carousel" class="carousel slide row" data-interval="false">
+								<div class="carousel-inner">
+
+									<div class="carousel-item active">
+										<div class="row">
+											<div class="col-3"></div>
+											<div class="col-2">
+										  	<li><a class="nav-item nav-link" href="/roomListing">listing pièces</a></li>
+										  </div>
+										  <div class="col-2">
+										  	<li><a class="nav-item nav-link" href="/profilListing">listing profils</a></li>
+										  </div>
+										  <div class="col-2">
+										  	<li><a class="nav-item nav-link" href="/moduleListing">listing modules</a></li>
+										  </div>
+										  <div class="col-3"></div>
+										</div>
+									</div>
+										
+									<div class="carousel-item">
+										<div class="row">
+											<div class="col-3"></div>
+											<div class="col-2">
+										  	<li><a class="nav-item nav-link" href="/room">room</a></li>
+										  </div>
+										  <div class="col-2">
+										  	<li><a class="nav-item nav-link" href="/homeManagement">gestion domicile</a></li>
+										  </div>
+										  <div class="col-2">
+										  	<li><a class="nav-item nav-link" href="/homeAutomationNetworkManagement">gestion réseaux domotique</a></li>
+										  </div>
+										</div>
+    							</div>
+
+    							<!-- ... -->
+
+							  </div>
+
+							  <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+							    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							    <span class="sr-only">Previous</span>
+							  </a>
+							  <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+							    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+							    <span class="sr-only">Next</span>
+							  </a>
+							</div>
 						</div>
 
+						<div class="col-1"></div>
+
 						<div class="col-1 text-right">
-							<button type="button" data-toggle="collapse" data-target="#menuContent">
+							<div class="dropdown">
+								<button class="btn btn-secondary dropdown-toggle" type="button" id="menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<span class="navbar-toggler-icon"></span>
+								</button>
+
+				        <div class="dropdown-menu" aria-labelledby="menu">
+				        	<a class="dropdown-item" href="#">profil</a>
+				        	<a class="dropdown-item" href="#">déconnexion</a>
+				        </div>
+		          </div>
+
+							<button type="button" class="dropdown-menu" data-toggle="collapse" data-target="#menuContent">
 								<span class="navbar-toggler-icon"></span>
 							</button>
 						</div>
+
 					</div>
 				</nav>
 
 			</div>
 
 			<div class="row text-center">
-				{% block content %}
-				{% endblock %}
+				{% block content %}{% endblock %}
 			</div>
 			
 		</div>
 
 		<footer>
 			<div class="row">
-				<div class="col-12">
+				<div class="col-4"></div>
+				<div class="col-4 text-center">
 					<a href="#">lien git</a>
 				</div>
+				<div class="col-4"></div>
 			</div>
 		</footer>
 
@@ -80,6 +137,8 @@
     <!-- Optional JavaScript -->
     <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
     <script src="{% static 'js/main.js' %}"></script>
+
+    {% block jsScript %}{% endblock %}
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -89,6 +148,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    {% block script %}{% endblock %}
 
   </body>
 

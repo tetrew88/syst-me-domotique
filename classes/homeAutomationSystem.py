@@ -50,7 +50,7 @@ class HomeAutomationSystem:
     def start(self):
         self.home.homeDatabase.connect()
         self.home.start_automation_network()
-        self.socketIoServer.start()
+        #self.socketIoServer.start()
         self.running = True
 
     def stop(self):

@@ -18,8 +18,8 @@ class SocketServer(socketio.Namespace):
 
 
 	def __init__(self):
+		socketio.Namespace.__init__(self, '/test')
 		self.test = "!!!!!!!"
-		self.namespace = '/test'
 
 
 	def start(self):

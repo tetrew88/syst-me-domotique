@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+	<div class="col container-fluid">
+		<div class="row" style="margin-top: 5%;">
+			<div class="col-3"></div>
+			<div class="col-6">
+				<h3>Habitants</h3>
+			</div>
+			<div class="col-3"></div>
+		</div>
+		<div class="row">
+			<div class="col-3"></div>
+			<div class="col-6 profilList rounded">
+				<div class="row">
+					{% for profil in inhabitantsList %}
+		                <div class="col-lg-4 card profilCard">
+		                    <img class="img-fluid rounded-circle" src="{% static 'pictures/profil.png' %}" alt="product_picture">
+
+		                    <div class="card-title text-center">
+		                    	{{ profil }}
+		                  	</div>
+		                </div>
+	             	{% endfor %}
+	             </div>
+			</div>
+			<div class="col-3"></div>
+		</div>
+
+		<div class="row" style="margin-top:  5%;">
+			<div class="col-3"></div>
+			<div class="col-6">
+				<h3>invités</h3>
+			</div>
+			<div class="col-3"></div>
+		</div>
+		<div class="row">
+			<div class="col-3"></div>
+			<div class="col-6 profilList rounded">
+				<div class="row">
+					{% for profil in guestsList %}
+		                <div class="col-lg-4 card profilCard">
+		                    <img class="iimg-fluid rounded-circle" src="{% static 'pictures/profil.png' %}" alt="product_picture">
+
+		                    <div class="card-title text-center">
+		                    	{{ profil }}
+		                  	</div>
+		                </div>
+	             	{% endfor %}
+	             </div>
+			</div>
+			<div class="col-3"></div>
+		</div>
+
+	</div>
+{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/profilListing.css' %}" />
+{% endblock %}

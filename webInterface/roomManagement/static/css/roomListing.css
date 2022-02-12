@@ -1,0 +1,26 @@
+.roomCard
+{
+
+	background-color: black;
+
+	width: 100%;
+	height: 100%;
+}
+
+.indicator
+{
+	background-color: black;
+
+	width: 100%;
+	height: 100%;
+
+	margin: 2%;
+
+	opacity: 70%;
+}
+
+
+.roomCarousel
+{
+	list-style: none;
+}
