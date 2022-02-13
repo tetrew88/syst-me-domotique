@@ -207,7 +207,8 @@ class Network:
         dispatcher.connect(self.network_started, ZWaveNetwork.SIGNAL_NETWORK_STARTED)
         dispatcher.connect(self.network_ready, ZWaveNetwork.SIGNAL_NETWORK_READY)
         dispatcher.connect(self.network_awake, ZWaveNetwork.SIGNAL_NETWORK_AWAKED)
-        dispatcher.connect(self.node_event, ZWaveNetwork.SIGNAL_VALUE_CHANGED)
+        dispatcher.connect(self.value_changed, ZWaveNetwork.SIGNAL_VALUE_CHANGED)
+        dispatcher.connect(self.node_event, ZWaveNetwork.SIGNAL_NODE_EVENT)
         dispatcher.connect(self.node_added, ZWaveNetwork.SIGNAL_NODE_ADDED)
 
     def start(self):
@@ -327,26 +328,11 @@ class Network:
         print("Hello from network : I'm awake")
 
     def node_event(self, node, value, **kwargs):
-        event=False
-        if self.isReady:
-            if 'sensor' in node.device_type.lower() or 'COMMAND_CLASS_SENSOR_MULTILEVEL' in node.command_classes_as_string:
-                for element in node.get_sensors():
-                    if node.get_sensors()[element].label == "Sensor":
-                        if node.get_sensors()[element].data == True  :
-                            event = MotionDetection(node,
-                                              datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
-
-                            print(event)
-
-                            self.eventList.append(event)
-                        else:
-                            pass
-            else:
-                print(node.name)
-                print('xxxxxxxxxxxxx')
+        print(node.name)
+        print('xxxxxxxxxxxxx')
 
     def node_added(self, node):
-        print("le noeud {} a été ajouter", node.node_id)
+        print("le noeud {} a été ajouter", node.name)
 
     def value_changed(self, node, value):
         print(node.name)
