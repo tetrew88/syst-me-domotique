@@ -212,7 +212,7 @@ class Network:
         dispatcher.connect(self.notif, ZWaveNetwork.SIGNAL_NOTIFICATION)
         dispatcher.connect(self.node_added, ZWaveNetwork.SIGNAL_NODE_ADDED)
         dispatcher.connect(self.boutton_on, ZWaveNetwork.SIGNAL_BUTTON_ON)
-        dispatcher.connect(self.boutton_on, ZWaveNetwork.SIGNAL_CREATE_BUTTON)
+        dispatcher.connect(self.create_btn, ZWaveNetwork.SIGNAL_CREATE_BUTTON)
 
     def start(self):
         """
