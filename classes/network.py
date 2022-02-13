@@ -351,6 +351,7 @@ class Network:
 
     def value_changed(self, node):
         print(node.name)
+        print(value.label)
 
 
     def save_modification(self):
