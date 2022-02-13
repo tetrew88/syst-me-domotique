@@ -329,10 +329,8 @@ class Network:
         print("Hello from network : I'm awake")
 
     def node_event(self, node, event, **kwargs):
-        print("####event######")
-        print(node.name)
+        print("event")
         print(event)
-        print("###############")
 
     def node_added(self, node):
         print("le noeud {} a été ajouter", node.name)
