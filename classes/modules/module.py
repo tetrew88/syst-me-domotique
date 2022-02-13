@@ -98,7 +98,7 @@ class Module:
 
     @property
     def batteryLevel(self):
-        self.moduleNode.battery_level()
+        self.moduleNode.get_battery_levels()
 
 
     def set_name(self, name):
