@@ -338,6 +338,9 @@ class Network:
         print(node.name)
         print(value.label)
 
+    def notif(self, node, notification):
+        print(notification)
+
 
     def save_modification(self):
         self.network.write_config()
