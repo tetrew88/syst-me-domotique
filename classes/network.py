@@ -207,7 +207,7 @@ class Network:
         dispatcher.connect(self.network_started, ZWaveNetwork.SIGNAL_NETWORK_STARTED)
         dispatcher.connect(self.network_ready, ZWaveNetwork.SIGNAL_NETWORK_READY)
         dispatcher.connect(self.network_awake, ZWaveNetwork.SIGNAL_NETWORK_AWAKED)
-        dispatcher.connect(self.node_event, ZWaveNetwork.SIGNAL_VALUE_CHANGED)
+        dispatcher.connect(self.value_changed, ZWaveNetwork.SIGNAL_VALUE_CHANGED)
         dispatcher.connect(self.node_event, ZWaveNetwork.SIGNAL_NODE_EVENT)
         dispatcher.connect(self.node_added, ZWaveNetwork.SIGNAL_NODE_ADDED)
 
