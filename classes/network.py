@@ -350,6 +350,9 @@ class Network:
     def node_added(self, node):
         print("le noeud {} a été ajouter", node.node_id)
 
+    def value_changed(self, node):
+        print(node.name)
+
 
     def save_modification(self):
         self.network.write_config()
