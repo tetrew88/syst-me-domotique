@@ -25,6 +25,8 @@ def main():
             print('2.options domicile')
             print("3.options réseaux")
 
+            print(homeAutomationSystem.home.homeAutomationNetwork.network.get_scenes())
+
             tmpChoice = input("\nentrer votre choix (0: quitter): ")
             try:
                 tmpChoice = int(tmpChoice)
