@@ -208,8 +208,8 @@ class Network:
         dispatcher.connect(self.network_ready, ZWaveNetwork.SIGNAL_NETWORK_READY)
         dispatcher.connect(self.network_awake, ZWaveNetwork.SIGNAL_NETWORK_AWAKED)
         dispatcher.connect(self.node_event, ZWaveNetwork.SIGNAL_VALUE_CHANGED)
+        dispatcher.connect(self.node_event, ZWaveNetwork.SIGNAL_NODE_EVENT)
         dispatcher.connect(self.node_added, ZWaveNetwork.SIGNAL_NODE_ADDED)
-        dispatcher.connect(self.scene_event, ZWaveNetwork.SIGNAL_SCENE_EVENT)
 
     def start(self):
         """
@@ -347,9 +347,6 @@ class Network:
 
     def node_added(self, node):
         print("le noeud {} a été ajouter", node.node_id)
-
-    def scene_event(self):
-        print('scene event')
 
 
     def save_modification(self):
