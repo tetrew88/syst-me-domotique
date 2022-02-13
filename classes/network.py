@@ -328,7 +328,7 @@ class Network:
     def network_awake(self, network):
         print("Hello from network : I'm awake")
 
-    def node_event(self, node, event, **kwargs):
+    def node_event(self, node):
         print("event")
 
     def node_added(self, node):
@@ -337,7 +337,7 @@ class Network:
     def value_changed(self, node, value):
         print("####value changed######")
 
-    def notif(self, node, notification):
+    def notif(self, node):
         print("####notification######")
 
     def scene(self, node):
