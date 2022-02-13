@@ -328,19 +328,31 @@ class Network:
     def network_awake(self, network):
         print("Hello from network : I'm awake")
 
-    def node_event(self, node, value, **kwargs):
+    def node_event(self, node, event, **kwargs):
+        print("####event######")
         print(node.name)
-        print('xxxxxxxxxxxxx')
+        print(event)
+        print("###############")
 
     def node_added(self, node):
         print("le noeud {} a été ajouter", node.name)
 
     def value_changed(self, node, value):
+        print("####value changed######")
         print(node.name)
         print(value.label)
+        print("###############")
 
     def notif(self, node, notification):
+        print("####notification######")
+        print(node.name)
         print(notification)
+        print("###############")
+
+    def scene(self, node):
+        print("####scene######")
+        print(node.name)
+        print("###############")
 
 
     def save_modification(self):
