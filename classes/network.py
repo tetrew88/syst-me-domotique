@@ -207,9 +207,9 @@ class Network:
         dispatcher.connect(self.network_started, ZWaveNetwork.SIGNAL_NETWORK_STARTED)
         dispatcher.connect(self.network_ready, ZWaveNetwork.SIGNAL_NETWORK_READY)
         dispatcher.connect(self.network_awake, ZWaveNetwork.SIGNAL_NETWORK_AWAKED)
+        dispatcher.connect(self.node_event, ZWaveNetwork.SIGNAL_NODE_EVENT)
         dispatcher.connect(self.value_changed, ZWaveNetwork.SIGNAL_VALUE_CHANGED)
         dispatcher.connect(self.notif, ZWaveNetwork.SIGNAL_NOTIFICATION)
-        dispatcher.connect(self.node_event, ZWaveNetwork.SIGNAL_NODE_EVENT)
         dispatcher.connect(self.node_added, ZWaveNetwork.SIGNAL_NODE_ADDED)
 
     def start(self):
@@ -336,20 +336,12 @@ class Network:
 
     def value_changed(self, node, value):
         print("####value changed######")
-        print(node.name)
-        print(value.label)
-        print("###############")
 
     def notif(self, node, notification):
         print("####notification######")
-        print(node.name)
-        print(notification)
-        print("###############")
 
     def scene(self, node):
         print("####scene######")
-        print(node.name)
-        print("###############")
 
 
     def save_modification(self):
