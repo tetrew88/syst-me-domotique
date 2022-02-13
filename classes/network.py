@@ -331,7 +331,7 @@ class Network:
     def network_awake(self, network):
         print("Hello from network : I'm awake")
 
-    def node_event(self, node):
+    def node_event(self):
         print("event")
 
     def node_added(self, node):
@@ -340,16 +340,16 @@ class Network:
     def value_changed(self, node, value):
         print("####value changed######")
 
-    def notif(self, node):
+    def notif(self):
         print("####notification######")
 
-    def scene(self, node):
+    def scene(self):
         print("####scene######")
 
-    def boutton_on(self, node):
+    def boutton_on(self):
         print("#######boutton_on########")
 
-    def create_btn(self, node):
+    def create_btn(self):
         print("#########btn#####")
 
     def cmd(self):
