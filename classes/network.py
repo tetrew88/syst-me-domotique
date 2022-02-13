@@ -213,6 +213,7 @@ class Network:
         dispatcher.connect(self.node_added, ZWaveNetwork.SIGNAL_NODE_ADDED)
         dispatcher.connect(self.boutton_on, ZWaveNetwork.SIGNAL_BUTTON_ON)
         dispatcher.connect(self.create_btn, ZWaveNetwork.SIGNAL_CREATE_BUTTON)
+        dispatcher.connect(self.cmd, ZWaveNetwork.SIGNAL_CONTROLLER_COMMAND)
 
     def start(self):
         """
@@ -350,6 +351,9 @@ class Network:
 
     def create_btn(self, node):
         print("#########btn#####")
+
+    def cmd(self):
+        print('cmd')
 
 
     def save_modification(self):
