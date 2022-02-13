@@ -344,6 +344,7 @@ class Network:
                             pass
             else:
                 print(node.name)
+                print('xxxxxxxxxxxxx')
 
     def node_added(self, node):
         print("le noeud {} a été ajouter", node.node_id)
