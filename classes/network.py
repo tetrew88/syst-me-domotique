@@ -330,7 +330,6 @@ class Network:
 
     def node_event(self, node, event, **kwargs):
         print("event")
-        print(event)
 
     def node_added(self, node):
         print("le noeud {} a été ajouter", node.name)
