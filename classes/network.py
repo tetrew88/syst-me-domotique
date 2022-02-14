@@ -230,7 +230,7 @@ class Network:
         options = ZWaveOption(device, self.zwaveConfigPath, user_path=".", cmd_line="")
         options.set_log_file(self.logPath)
         options.set_append_log_file(True)
-        options.set_console_output(False)
+        options.set_console_output(True)
         options.set_save_log_level(log)
         options.set_logging(True)
         options.lock()
