@@ -15,6 +15,8 @@ def main():
 
     homeAutomationSystem.start()
 
+    homeAutomationSystem.home.homeAutomationNetwork.network.create_scene("test")
+
     while homeAutomationSystem.running:
         tmpChoice = choice = -1
 
