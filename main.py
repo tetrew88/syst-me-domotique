@@ -663,6 +663,7 @@ def main():
                     for element in homeAutomationSystem.get_home_automation_modules():
                         for val in element.moduleNode.get_switches():
                             print(element.moduleNode.get_switches()[val].label)
+                            print(element.moduleNode.get_switches()[val].data)
                         print("--------------------")
                         print(element)
 
