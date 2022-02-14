@@ -208,12 +208,9 @@ class Network:
         dispatcher.connect(self.network_ready, ZWaveNetwork.SIGNAL_NETWORK_READY)
         dispatcher.connect(self.network_awake, ZWaveNetwork.SIGNAL_NETWORK_AWAKED)
         dispatcher.connect(self.node_event, ZWaveNetwork.SIGNAL_NODE_EVENT)
+        dispatcher.connect(self.scene_event, ZWaveNetwork.SIGNAL_SCENE_EVENT)
         dispatcher.connect(self.value_changed, ZWaveNetwork.SIGNAL_VALUE_CHANGED)
-        dispatcher.connect(self.notif, ZWaveNetwork.SIGNAL_NOTIFICATION)
         dispatcher.connect(self.node_added, ZWaveNetwork.SIGNAL_NODE_ADDED)
-        dispatcher.connect(self.boutton_on, ZWaveNetwork.SIGNAL_BUTTON_ON)
-        dispatcher.connect(self.create_btn, ZWaveNetwork.SIGNAL_CREATE_BUTTON)
-        dispatcher.connect(self.cmd, ZWaveNetwork.SIGNAL_CONTROLLER_COMMAND)
 
     def start(self):
         """
@@ -339,21 +336,8 @@ class Network:
 
     def value_changed(self, node, value):
         print("####value changed######")
-
-    def notif(self):
-        print("####notification######")
-
-    def scene(self):
+    def scene_event(self):
         print("####scene######")
-
-    def boutton_on(self):
-        print("#######boutton_on########")
-
-    def create_btn(self):
-        print("#########btn#####")
-
-    def cmd(self):
-        print('cmd')
 
 
     def save_modification(self):
