@@ -664,7 +664,7 @@ def main():
                     for element in homeAutomationSystem.get_home_automation_modules():
                         for val in element.moduleNode.get_values():
                             print(element.moduleNode.get_values()[val].label)
-                            print(element.moduleNode.get_values())[val].data)
+                            print(element.moduleNode.get_values()[val].data)
                         print(element)
 
                 elif optionsChoice == 7:
