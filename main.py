@@ -660,8 +660,8 @@ def main():
 
                 elif optionsChoice == 6:
                     print('listing des modules\n')
-                    print('------------------------------')
                     for element in homeAutomationSystem.get_home_automation_modules():
+                        print("-**-----------------")
                         for val in element.moduleNode.get_values():
                             print(element.moduleNode.get_values()[val].label)
                             print(element.moduleNode.get_values()[val].data)
