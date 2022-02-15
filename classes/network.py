@@ -9,11 +9,8 @@ import sys
 import time
 import datetime
 
-import six
-if six.PY3:
-    from pydispatch import dispatcher
-else:
-    from louie import dispatcher
+from pydispatch import dispatcher
+
 
 from .modules import *
 from.modules.networkController import *
