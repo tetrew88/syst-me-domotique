@@ -569,7 +569,7 @@ def main():
                         print("selectionner un module\n")
                         for module in homeAutomationSystem.get_home_automation_modules():
                             print("{}: {}".format(x, module.name))
-                            sensors = module.moduleNode.get_sensors().keys
+                            sensors = module.moduleNode.get_sensors()
                             for v in sensors:
                                 print("{}: {}".format(module.moduleNode.get_sensors()[v].label,
                                                       module.moduleNode.get_sensors()[v].data))
