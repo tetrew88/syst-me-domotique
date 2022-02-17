@@ -1,6 +1,4 @@
 from .home import *
-from .socketServer import *
-
 
 class HomeAutomationSystem:
     """
