@@ -575,7 +575,7 @@ def main():
                                     valueId = values.value_id
                                     break
 
-                                module.moduleNode.set_dimmer(valueId, intensity)
+                                module.moduleNode.set_dimmer(valueId, True)
                             for v in sensors:
                                 print("{}: {}".format(module.moduleNode.get_values()[v].label,
                                                       module.moduleNode.get_values()[v].data))
