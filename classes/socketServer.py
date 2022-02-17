@@ -45,7 +45,7 @@ class SocketServer(socketio.Namespace):
 
 	@socketIoServer.event(namespace='/test')
 	def test(sid, data):
-		print(SocketServer.homeAutomationSystem.get_home_rooms()[0])
+		print(SocketServer.homeAutomationSystem.name)
 
 socketIoServer.register_namespace(SocketServer())
 

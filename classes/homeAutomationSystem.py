@@ -37,6 +37,7 @@ class HomeAutomationSystem:
     """
 
     def __init__(self, controllerPath, zwaveConfigPath, logPath):
+        self.name = 'test'
         self.running = False
         self.home = Home(controllerPath, zwaveConfigPath, logPath)
         self.socketIoServer = SocketServer()
