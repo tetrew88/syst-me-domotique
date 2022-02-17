@@ -40,10 +40,10 @@ class Room:
     """
 
 
-    def __init__(self, id, name, type, automationNetwork=False):
+    def __init__(self, id, name, Type, automationNetwork=False):
         self.id = int(id)
         self.name = name
-        self.type = type
+        self.type = Type
 
         self.automationNetwork = automationNetwork
 
@@ -72,9 +72,8 @@ class Room:
                     temperatureSensor = module.sensors['temperature']
 
                     return temperatureSensor.temperature
-
             else:
-                return False
+                return "Null"
 
     @property
     def luminosity(self):
@@ -90,7 +89,7 @@ class Room:
                     return luminositySensor.luminosity
 
             else:
-                return False
+                return "Null"
 
     @property
     def events(self):
@@ -112,4 +111,33 @@ class Room:
     def __str__(self):
         return "id: {}\nname: {}\ntype: {}\ncontenu: {}\ntemperature: {}\nluminosity: {}"\
             .format(self.id, self.name, self.type,self.content,self.temperature, self.luminosity)
+
+
+    def serialize(self):
+        data = {}
+
+        data = {"id": self.id,
+        "name": self.name,
+        "type": self.type,
+        "content": [],
+        "temperature": self.temperature,
+        "luminosity": self.luminosity,
+        "events": []
+        }
+
+        content = []
+        for element in self.content:
+            tmp = element.serialize()
+
+            content.append(tmp)
+        data['content'] = content
+
+        events = []
+        for event in self.events:
+            tmp = event.serialize()
+
+            events.append(tmp)
+        data['events'] = events
+
+        return data
 

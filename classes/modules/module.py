@@ -111,8 +111,28 @@ class Module:
 
     def __str__(self):
         return '{}: {}\n{}: {}\n{}: {}\n{}: {}\n{}: {}\n{}: {}\n{}: {}\n{}: {}\n{}: {}\n{}: {}\n{}: {}\n {}: {}'.format(
-            'id', self.id, 'name', self.name, 'location', self.location, "reveiller", self.isAwake,
-            "malfonctionnement", self.isFailed, "pret", self.isReady, "dort", self.isSleeping,
-            "nom du fabriquant", self.manufacturerName, "nom de produit", self.productName,
-            "type de produit", self.productType, "type de systeme", self.deviceType,
-            "nieau de batterie", self.batteryLevel )
+            'id', self.id, 'name', self.name, 'location', self.location, "awake", self.isAwake,
+            "disfunctionnement", self.isFailed, "ready", self.isReady, "sleep", self.isSleeping,
+            "manufacturer name", self.manufacturerName, "product name", self.productName,
+            "product type", self.productType, "system type", self.deviceType,
+            "batterie level", self.batteryLevel)
+
+
+    def serialize(self):
+        data = {}
+
+        data = {'id': self.id,
+        'name': self.name,
+        'location': self.location,
+        "awake": self.isAwake,
+        "disfunctionnement": self.isFailed,
+        "ready": self.isReady,
+        "sleep": self.isSleeping,
+        "manufacturer name": self.manufacturerName,
+        "product name": self.productName,
+        "product type": self.productType,
+        "system type": self.deviceType,
+        "batterie level": self.batteryLevel
+        }
+
+        return data

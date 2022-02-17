@@ -35,7 +35,6 @@ class HomeAutomationSystem:
     """
 
     def __init__(self, controllerPath, zwaveConfigPath, logPath):
-        self.name = 'test!!!!!'
         self.running = False
         self.home = Home(controllerPath, zwaveConfigPath, logPath)
 
@@ -125,3 +124,13 @@ class HomeAutomationSystem:
 
     def save_home_automation_network_modification(self):
         self.home.save_network_modification()
+
+
+    def serialize(self):
+        data = {}
+
+        data = {'running': self.running,
+        'home': self.home.serialize()
+        }
+
+        return data

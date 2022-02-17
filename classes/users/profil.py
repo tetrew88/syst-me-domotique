@@ -12,7 +12,17 @@ class Profil:
             method:
     """
 
-    def __init__(self, id, firstName, lastName):
-        self.id = id
+    def __init__(self, Id, firstName, lastName):
+        self.id = Id
         self.firstName = firstName
         self.lastName = lastName
+
+    def serialize(self):
+        data = {}
+
+        data = {"id": self.id,
+        'firstName': self.firstName,
+        'lastName': self.lastName
+        }
+
+        return data

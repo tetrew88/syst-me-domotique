@@ -13,7 +13,18 @@ class Event:
     """
 
 
-    def __init__(self, type, dateTime, location):
-        self.type = type
+    def __init__(self, Type, dateTime, location):
+        self.type = Type
         self.dateTime = dateTime
         self.location = location
+
+
+    def serialize(self):
+        data = {}
+
+        data = {'type': self.type,
+        'dateTime': self.dateTime,
+        'location': self.location
+        }
+
+        return data

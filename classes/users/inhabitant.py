@@ -11,6 +11,15 @@ class Inhabitant:
             method:
     """
 
-    def __init__(self, id, profil):
-        self.id = id
+    def __init__(self, Id, profil):
+        self.id = Id
         self.profil = profil
+
+    def serialize(self):
+        data = {}
+
+        data = {'id': self.id,
+        'profil': self.profil.serialize()
+        }
+
+        return data

@@ -54,15 +54,15 @@ class HomeAutomationServer(socketio.Namespace):
 
 
 	@socketIoServer.event
-	def get(data):
-		if data == 'rooms':
-			rooms = HomeAutomationServer.homeAutomationSystem.get_home_rooms()
+	def get_rooms_list(data):
+		outputData = {}
 
+		rooms = []
+		for room in HomeAutomationServer.homeAutomationSystem.get_home_rooms():
+			rooms.append(room.serialize())
 
-	@socketIoServer.event(namespace='/HomeAutomationServer')
-	def test(sid, data):
-		print(data)
-		print(HomeAutomationServer.homeAutomationSystem.name)
+		socketIoServer.emit('post_rooms_list', {'data', rooms})
+
 
 socketIoServer.register_namespace(HomeAutomationServer())
 

@@ -23,8 +23,7 @@ class Home:
 
             attributes:
                 home database
-
-
+                home automation network (z-wave network)
                 alarm: True = active/False = inactive
 
             property:
@@ -189,3 +188,52 @@ class Home:
 
     def save_network_modification(self):
         self.homeAutomationNetwork.save_modification()
+
+
+    def serialize(self):
+        data = {}
+
+        data = {'id': self.id,
+        'rooms': [],
+        'inhabitants': [],
+        'guest': [],
+        'events': [],
+        'automationModules': []
+        }
+
+        rooms = []
+        for room in self.rooms:
+            tmp = rooms.serialize()
+
+            rooms.append(tmp)
+        data['rooms'] = rooms
+
+        inhabitants = []
+        for inhabitant in self.inhabitants:
+            tmp = inhabitant.serialize()
+
+            inhabitants.append(tmp)
+        data['inhabitants'] = inhabitants
+
+        guests = []
+        for guest in self.guests:
+            tmp = guest.serialize()
+
+            guests.append(tmp)
+        data['guests'] = guests
+
+        events = []
+        for event in self.events:
+            tmp = event.serialize()
+
+            events.append(tmp)
+        data['events'] = events
+
+        automationModules = []
+        for automationModule in self.automationModules:
+            tmp = automationModule.serialize()
+
+            inhabitants.append(tmp)
+        data['automationModules'] = automationModules
+
+        return data
