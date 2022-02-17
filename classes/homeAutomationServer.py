@@ -26,7 +26,7 @@ class HomeAutomationServer(socketio.Namespace):
 
 
 	def start(self):
-		homeAutomationSystem.start()
+		HomeAutomationServer.homeAutomationSystem.start()
 		eventlet.wsgi.server(eventlet.listen(('', 5000)), app)
 
 	def stop(self):
