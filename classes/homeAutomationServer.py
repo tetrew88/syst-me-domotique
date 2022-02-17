@@ -53,7 +53,7 @@ class HomeAutomationServer(socketio.Namespace):
 		print('connect ', sid)
 
 
-	@socketIoServer.event
+	@socketIoServer.event(namespace='/HomeAutomationServer')
 	def get_rooms_list(data):
 		outputData = {}
 
