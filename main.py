@@ -570,6 +570,12 @@ def main():
                         for module in homeAutomationSystem.get_home_automation_modules():
                             print("{}: {}".format(x, module.name))
                             sensors = module.moduleNode.get_values()
+                            for values in module.moduleNode.get_dimmers().values():
+                                if values.label == 'Sensor':
+                                    valueId = values.value_id
+                                    break
+
+                                module.moduleNode.set_dimmer(valueId, intensity)
                             for v in sensors:
                                 print("{}: {}".format(module.moduleNode.get_values()[v].label,
                                                       module.moduleNode.get_values()[v].data))
