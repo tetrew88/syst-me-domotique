@@ -50,13 +50,13 @@ class HomeAutomationServer(socketio.Namespace):
 
 
 
-	@socketIoServer.event
+	@socketIoServer.event(namespace='/HomeAutomationServer')
 	def connect(sid, environ, auth):
 		print('connect ', sid)
 
 
 	@socketIoServer.event(namespace='/HomeAutomationServer')
-	def get_rooms_list(self, sid, data):
+	def get_rooms_list(sid, data):
 		outputData = {}
 
 		rooms = []
@@ -65,7 +65,10 @@ class HomeAutomationServer(socketio.Namespace):
 
 		print(rooms)
 
-		self.emit('post_rooms_list', {'data', json.dumps(rooms)})
+		self.emit('post_rooms_list', {'data', json.dumps(rooms)}, namespace='/HomeAutomationServer')
+
+	def emitData(self):
+
 
 
 socketIoServer.register_namespace(HomeAutomationServer())
