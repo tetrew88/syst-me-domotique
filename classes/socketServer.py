@@ -16,14 +16,26 @@ class SocketServer(socketio.Namespace):
 			methods:
 	"""
 
+	homeAutomationSystem = False
+
 
 	def __init__(self):
 		socketio.Namespace.__init__(self, '/test')
-		self.test = "!!!!!!!"
 
 
 	def start(self):
+		#homeAutomationSystem.start()
 		eventlet.wsgi.server(eventlet.listen(('', 5000)), app)
+
+	def stop(self):
+			socketIoServer.stop()
+			homeAutomationSystem.stop()
+
+
+	@staticmethod
+	def set_home_automation_system(homeAutomationSystem)
+		SocketServer.homeAutomationSystem = HomeAutomationSystem
+
 
 
 	@socketIoServer.event
@@ -33,7 +45,7 @@ class SocketServer(socketio.Namespace):
 
 	@socketIoServer.event(namespace='/test')
 	def test(self, sid, data):
-		print(self.test)
+		print(SocketServer.homeAutomationSystem)
 
 socketIoServer.register_namespace(SocketServer())
 

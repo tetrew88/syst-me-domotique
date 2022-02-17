@@ -9,7 +9,6 @@ class HomeAutomationSystem:
             Attributes:
                 running
                 home
-                socket.io server (for communication with web interface)
 
             property:
 
@@ -35,10 +34,6 @@ class HomeAutomationSystem:
                 del inhabitant
                 del guest
                 del module
-
-            socketio event:
-                connection
-                disconnection
     """
 
     def __init__(self, controllerPath, zwaveConfigPath, logPath):
@@ -49,15 +44,12 @@ class HomeAutomationSystem:
 
     def start(self):
         self.home.homeDatabase.connect()
-        self.home.start_automation_network()
-        #self.socketIoServer.start()
         self.running = True
 
     def stop(self):
         self.home.stop_automation_network()
         self.home.homeDatabase.disconnect()
         self.running = False
-        self.socketIoServer = False
 
 
     def get_home(self):

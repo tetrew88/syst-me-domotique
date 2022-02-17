@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 
+from classes.socketServer import *
 from classes.homeAutomationSystem import *
 from classes.modules.module import *
 
@@ -13,7 +14,13 @@ def main():
                     "env/lib/python3.7/site-packages/python_openzwave/ozw_config",
                     "log.log")
 
-    homeAutomationSystem.start()
+    socketServer = SocketServer()
+
+    socketServer.set_home_automation_system(homeAutomationSystem)
+
+    socketServer.start()
+
+    homeAutomationSystem = socketServer.homeAutomationSystem
 
     homeAutomationSystem.home.homeAutomationNetwork.network.create_scene("test")
 
@@ -569,10 +576,7 @@ def main():
                         print("selectionner un module\n")
                         for module in homeAutomationSystem.get_home_automation_modules():
                             print("{}: {}".format(x, module.name))
-                            sensors = module.moduleNode.get_dimmers()
-                            for v in sensors:
-                                print("{}: {}".format(module.moduleNode.get_dimmers()[v].label,
-                                                      module.moduleNode.get_dimmers()[v].data))
+                            x+1
 
                         tmpModuleChoice = input('Entrer votre choix: ')
                         try:
