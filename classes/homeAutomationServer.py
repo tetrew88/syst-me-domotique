@@ -1,6 +1,8 @@
 import eventlet
 import socketio
 
+import json
+
 from classes.homeAutomationSystem import *
 
 socketIoServer = socketio.Server(cors_allowed_origins="*")
@@ -63,7 +65,7 @@ class HomeAutomationServer(socketio.Namespace):
 
 		print(rooms)
 
-		socketIoServer.emit('post_rooms_list', {'data', rooms})
+		socketIoServer.emit('post_rooms_list', {'data', json.dump(rooms)})
 
 
 socketIoServer.register_namespace(HomeAutomationServer())
