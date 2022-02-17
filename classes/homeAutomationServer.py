@@ -65,11 +65,7 @@ class HomeAutomationServer(socketio.Namespace):
 
 		print(rooms)
 
-		HomeAutomationServer.post_rooms_list(self = HomeAutomationServer, sid=sid, data = json.dumps(rooms))
-
-
-	def post_rooms_list(self, sid, data):
-		self.emit('post_rooms_list', data)
+		socketIoServer.emit('post_rooms_list', {'data', json.dumps(rooms)})
 
 
 
