@@ -59,7 +59,7 @@ class HomeAutomationServer(socketio.Namespace):
 			rooms = HomeAutomationServer.homeAutomationSystem.get_home_rooms()
 
 
-	@socketIoServer.event(namespace='/test')
+	@socketIoServer.event(namespace='/HomeAutomationServer')
 	def test(sid, data):
 		print(data)
 		print(HomeAutomationServer.homeAutomationSystem.name)
