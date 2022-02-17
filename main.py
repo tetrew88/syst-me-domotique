@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-from classes.socketServer import *
+from classes.homeAutomationServer import *
 from classes.homeAutomationSystem import *
 from classes.modules.module import *
 
@@ -14,14 +14,12 @@ def main():
                     "env/lib/python3.7/site-packages/python_openzwave/ozw_config",
                     "log.log")
 
-    socketServer = SocketServer()
+    homeAutomationServer = HomeAutomationServer()
+    homeAutomationServer.set_home_automation_system(homeAutomationSystem)
 
-    socketServer.set_home_automation_system(homeAutomationSystem)
+    homeAutomationServer.start()
 
-    socketServer.start()
-
-    homeAutomationSystem = socketServer.homeAutomationSystem
-
+"""
     homeAutomationSystem.home.homeAutomationNetwork.network.create_scene("test")
 
     while homeAutomationSystem.running:
@@ -691,7 +689,7 @@ def main():
 
         else:
             pass
-
+"""
 
 
 
