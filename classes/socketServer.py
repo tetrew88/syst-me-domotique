@@ -33,7 +33,7 @@ class SocketServer(socketio.Namespace):
 
 
 	@staticmethod
-	def set_home_automation_system(homeAutomationSystem)
+	def set_home_automation_system(homeAutomationSystem):
 		SocketServer.homeAutomationSystem = HomeAutomationSystem
 
 
