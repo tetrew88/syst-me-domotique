@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/roomListing.css' %}" />
+{% endblock %}
+
 {% block content %}
 
 <div class="col container-fluid">
@@ -39,10 +43,10 @@
 
 {% endblock %}
 
-{% block css %}
-  <link rel="stylesheet" type="text/css" href="{% static 'css/roomListing.css' %}" />
-{% endblock %}
 
+{% block jsScript %}
+  <script src="{% static 'js/roomListing.js' %}"></script>
+{% endblock %}
 
 
 

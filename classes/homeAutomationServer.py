@@ -16,6 +16,14 @@ class HomeAutomationServer(socketio.Namespace):
 			property:
 
 			methods:
+				start
+				stop
+
+				set home automation system
+
+			server event:
+				connection
+				get
 	"""
 
 	homeAutomationSystem = False
@@ -43,6 +51,12 @@ class HomeAutomationServer(socketio.Namespace):
 	@socketIoServer.event
 	def connect(sid, environ, auth):
 		print('connect ', sid)
+
+
+	@socketIoServer.event
+	def get(data):
+		if data == 'rooms':
+			rooms = HomeAutomationServer.homeAutomationSystem.get_home_rooms()
 
 
 	@socketIoServer.event(namespace='/test')
