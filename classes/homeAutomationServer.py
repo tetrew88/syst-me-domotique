@@ -61,6 +61,8 @@ class HomeAutomationServer(socketio.Namespace):
 		for room in HomeAutomationServer.homeAutomationSystem.get_home_rooms():
 			rooms.append(room.serialize())
 
+		print(rooms)
+
 		socketIoServer.emit('post_rooms_list', {'data', rooms})
 
 
