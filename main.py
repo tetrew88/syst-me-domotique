@@ -569,10 +569,10 @@ def main():
                         print("selectionner un module\n")
                         for module in homeAutomationSystem.get_home_automation_modules():
                             print("{}: {}".format(x, module.name))
-                            sensors = module.moduleNode.get_sensors()
+                            sensors = module.moduleNode.get_values()
                             for v in sensors:
-                                print("{}: {}".format(module.moduleNode.get_sensors()[v].label,
-                                                      module.moduleNode.get_sensors()[v].data))
+                                print("{}: {}".format(module.moduleNode.get_values()[v].label,
+                                                      module.moduleNode.get_values()[v].data))
 
                         tmpModuleChoice = input('Entrer votre choix: ')
                         try:
