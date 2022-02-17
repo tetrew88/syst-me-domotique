@@ -1,6 +1,8 @@
 import eventlet
 import socketio
 
+from classes.homeAutomationSystem import *
+
 socketIoServer = socketio.Server(cors_allowed_origins="*")
 app = socketio.WSGIApp(socketIoServer, object)
 
