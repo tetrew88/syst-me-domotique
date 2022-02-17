@@ -65,7 +65,7 @@ class HomeAutomationServer(socketio.Namespace):
 
 		print(rooms)
 
-		socketIoServer.emit('post_rooms_list', {'data', json.dumps(rooms)})
+		self.emit('post_rooms_list', {'data', json.dumps(rooms)})
 
 
 socketIoServer.register_namespace(HomeAutomationServer())
