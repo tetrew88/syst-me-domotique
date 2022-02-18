@@ -27,3 +27,6 @@ socket.on('post_rooms_list', data=>{
 		contentZone.appendChild(roomCard);
 	}
 })
+
+
+console.log('hello')
