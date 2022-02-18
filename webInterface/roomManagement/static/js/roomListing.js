@@ -3,7 +3,7 @@ socket.on('post_rooms_list', data=>{
 	roomList = data;
 
 
-	console.log(data)
+	console.log(data['data'])
 	//for (const element of data) {
 		//console.log(element);
 	//}
