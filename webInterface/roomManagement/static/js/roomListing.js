@@ -2,9 +2,11 @@ socket.emit('get_rooms_list', 'rooms')
 socket.on('post_rooms_list', data=>{
 	roomList = data;
 
-	for (const element of data) {
-		console.log(element);
-	}
+
+	console.log(data)
+	//for (const element of data) {
+		//console.log(element);
+	//}
 })
 
 //const contentZone = document.getElementByClassName('content');
