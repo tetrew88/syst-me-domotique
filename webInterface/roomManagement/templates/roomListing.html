@@ -11,28 +11,8 @@
   <div class="row">
     <div class="col-3"></div>
     <div class="col-6 rounded text-center rounded" id="screen">
-      <div class="row contentS">
-        {% for room in roomsList %}
-          <div class="col-lg-4 card roomCard rounded">
-            {% if room == 'kitchen' %}
-              <img class="img-fluid rounded" src="{% static 'pictures/kitchen.jpeg' %}" alt="product_picture">
-
-            {% elif room == 'bedroom' %}
-            <img class="img-fluid rounded" src="{% static 'pictures/bedroom.jpeg' %}" alt="product_picture">
-
-            {% elif room == 'livingroom' %}
-            <img class="img-fluid rounded" src="{% static 'pictures/livingroom.jpeg' %}" alt="product_picture">
-
-            {% elif room == 'bathroom' %}
-            <img class="img-fluid rounded" src="{% static 'pictures/bathroom.jpeg' %}" alt="product_picture">
-
-            {% endif %}
-
-            <div class="card-title text-center" style="color: blue;">
-              {{ room }}
-            </div>
-          </div>
-        {%endfor%}
+      <div id="screenContent" class="row">
+        
       </div>
     </div>
     <div class="col-3"></div>
