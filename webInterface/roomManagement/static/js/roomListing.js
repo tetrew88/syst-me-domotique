@@ -6,7 +6,7 @@ socket.on('post_rooms_list', data=>{
 	roomList = data['data'];
 })
 
-for (const element of data) {
+for (const element of roomList) {
 	console.log(element);
 }
 //const contentZone = document.getElementByClassName('content');
