@@ -11,17 +11,13 @@ socket.on('post_rooms_list', data=>{
 		let cardPicture = document.createElement('img');
 		let cardTitle =  document.createElement('div');
 
-		let roomCardClasses = ["col-lg-4", "card", "roomCard", "rounded"]
-		let cardPictureClasses = ["img-fluid", "rounded"]
-		let cardTitleClasses = ["card-title", "text-center"]
 
+		roomCard.classList.add("col-lg-4", "card", "roomCard", "rounded");
 
-		roomCard.classList.add(roomCardClasses);
-
-		cardPicture.classList.add(cardPictureClasses);
+		cardPicture.classList.add("img-fluid", "rounded");
 		cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";//element[2];
 
-		cardTitle.classList.add();
+		cardTitle.classList.add("card-title", "text-center");
 		cardTitle.style.color = 'blue';
 		cardTitle.textContent = element["name"]
 
