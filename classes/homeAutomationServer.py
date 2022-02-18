@@ -69,7 +69,7 @@ class HomeAutomationServer(socketio.Namespace):
 		print(rooms)
 		print("\ni\n")
 		
-		socketIoServer.emit('post_rooms_list', {'dict', rooms}, namespace='/HomeAutomationServer')
+		socketIoServer.emit('post_rooms_list', {'list', rooms}, namespace='/HomeAutomationServer')
 
 
 
