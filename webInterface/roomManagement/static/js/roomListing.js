@@ -19,11 +19,11 @@ socket.on('post_rooms_list', data=>{
 		roomCard.classList.add(roomCardClasses);
 
 		cardPicture.classList.add(cardPictureClasses);
-		cardPicture.src = "/static/pictures/" + "kitchen.jpeg";//element[2];
+		cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";//element[2];
 
 		cardTitle.classList.add();
 		cardTitle.style.color = 'blue';
-		cardTitle.textContent = element[1]
+		cardTitle.textContent = element["name"]
 
 		roomCard.appendChild(cardPicture);
 		roomCard.appendChild(cardTitle);
