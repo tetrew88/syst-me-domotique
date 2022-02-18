@@ -63,11 +63,7 @@ class HomeAutomationServer(socketio.Namespace):
 		for room in HomeAutomationServer.homeAutomationSystem.get_home_rooms():
 			rooms.append(room.serialize())
 
-		
-
-		print("\ni\n")
 		print(rooms)
-		print("\ni\n")
 		
 		socketIoServer.emit('post_rooms_list', {'data': rooms}, namespace='/HomeAutomationServer')
 
