@@ -6,6 +6,8 @@ socket.on('post_rooms_list', data=>{
 	roomList = data['data'];
 })
 
+console.log(roomList)
+
 for (const element of roomList) {
 	console.log(element);
 }
