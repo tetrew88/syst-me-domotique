@@ -22,7 +22,7 @@ socket.on('post_rooms_list', data=>{
 		cardPicture.src = "static/pictures/" + element[2];
 
 		cardTitle.classList.add();
-		cardTitle.style.color = blue;
+		cardTitle.style.color = 'blue';
 		cardTitle.textContent = element[1]
 
 		roomCard.appendChild(cardPicture);
