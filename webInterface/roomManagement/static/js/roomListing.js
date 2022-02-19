@@ -17,8 +17,10 @@ socket.on('post_rooms_list', data=>{
 			let cardPicture = document.createElement('img');
 			let cardTitle =  document.createElement('div');
 
+			let row = document.createElement('div');
 
-			roomCard.classList.add("col-lg-4", "card", "roomCard", "rounded");
+
+			roomCard.classList.add("col-lg-3", "card", "roomCard", "rounded");
 
 			cardPicture.classList.add("img-fluid", "rounded");
 			cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";//element[2];
@@ -50,9 +52,6 @@ socket.on('post_rooms_list', data=>{
 
 		const carouselActiveItem = document.createElement('div');
 		const carouselItemList = [];
-
-		let row = document.createElement('div');
-		row.classList.add('row');
 
 		carousel.id = 'roomCarousel'
 		carousel.classList.add("carousel", "slide", "row");
@@ -86,7 +85,7 @@ socket.on('post_rooms_list', data=>{
 			let cardTitle =  document.createElement('div');
 			
 
-			roomCard.classList.add("col-lg-4", "card", "roomCard", "rounded");
+			roomCard.classList.add("col-lg-3", "card", "roomCard", "rounded");
 
 			cardPicture.classList.add("img-fluid", "rounded");
 			cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";
@@ -96,8 +95,6 @@ socket.on('post_rooms_list', data=>{
 
 			roomCard.appendChild(cardPicture);
 			roomCard.appendChild(cardTitle);
-
-			carouselActiveItem.appendChild(row);
 
 			if(x <= 5)
 			{
