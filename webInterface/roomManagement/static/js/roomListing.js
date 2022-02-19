@@ -33,7 +33,7 @@ socket.on('post_rooms_list', data=>{
 	}
 	else
 	{
-		let x = 0
+		let x = 1
 
 		const carousel = document.createElement('div');
 		const carouselInner = document.createElement('div');
@@ -128,6 +128,8 @@ socket.on('post_rooms_list', data=>{
 
 		carousel.appendChild(carouselControlPrev);
 		carousel.appendChild(carouselControlNext);
+
+		contentZone.appendChild(carousel);
 
 
 	}
