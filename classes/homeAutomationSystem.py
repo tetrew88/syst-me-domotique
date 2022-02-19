@@ -41,6 +41,7 @@ class HomeAutomationSystem:
 
     def start(self):
         self.home.homeDatabase.connect()
+        self.home.stop_automation_network()
         self.running = True
 
     def stop(self):
