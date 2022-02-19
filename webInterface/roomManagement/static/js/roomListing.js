@@ -51,6 +51,9 @@ socket.on('post_rooms_list', data=>{
 		const carouselActiveItem = document.createElement('div');
 		const carouselItemList = [];
 
+		let row = document.createElement('div');
+		row.classList.add('row');
+
 		carousel.id = 'roomCarousel'
 		carousel.classList.add("carousel", "slide", "row");
 		carousel.setAttribute('data-interval', "false");
@@ -93,6 +96,8 @@ socket.on('post_rooms_list', data=>{
 
 			roomCard.appendChild(cardPicture);
 			roomCard.appendChild(cardTitle);
+
+			carouselActiveItem.appendChild(row);
 
 			if(x <= 5)
 			{
