@@ -8,3 +8,9 @@
 
 	margin: auto;
 }
+
+.roomCaroussel
+{
+	display: flex;
+	flex-direction: row;
+}
