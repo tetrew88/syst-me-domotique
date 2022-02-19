@@ -68,7 +68,7 @@ socket.on('post_rooms_list', data=>{
 		carouselControlNext.role="button";
 		carouselControlNext.setAttribute('data-slide','next');
 
-		nextIcon.classList.add('carousel-control-prev-icon');
+		nextIcon.classList.add('carousel-control-next-icon');
 		nextIcon.setAttribute('aria-hidden', "true");
 
 		for (const element of data) {
