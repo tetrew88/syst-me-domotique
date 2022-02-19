@@ -47,7 +47,7 @@ socket.on('post_rooms_list', data=>{
 		const carouselActiveItem = document.createElement('div');
 		const carouselItemList = [];
 
-		carousel.id = 'carousel'
+		carousel.id = 'roomCarousel'
 		carousel.classList.add("carousel", "slide", "row");
 		carousel.setAttribute('data-interval', "false");
 
@@ -56,7 +56,7 @@ socket.on('post_rooms_list', data=>{
 		carouselActiveItem.classList.add("carousel-item", "active");
 
 		carouselControlPrev.classList.add("carousel-control-prev");
-		carouselControlPrev.href = "#carousel";
+		carouselControlPrev.href = "#roomCarousel";
 		carouselControlPrev.role="button";
 		carouselControlPrev.setAttribute('data-slide',"prev");
 
@@ -64,7 +64,7 @@ socket.on('post_rooms_list', data=>{
 		prevIcon.setAttribute('aria-hidden', "true");
 
 		carouselControlNext.classList.add("carousel-control-next");
-		carouselControlNext.href = "#carousel";
+		carouselControlNext.href = "#roomCarousel";
 		carouselControlNext.role="button";
 		carouselControlNext.setAttribute('data-slide','next');
 
