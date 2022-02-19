@@ -20,5 +20,5 @@
 
 .carousel-item
 {
-	display: flex;
+	align-self: center;
 }
