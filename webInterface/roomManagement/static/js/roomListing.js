@@ -48,12 +48,12 @@ socket.on('post_rooms_list', data=>{
 		const carouselItemList = [];
 
 		carousel.id = 'roomCarousel'
-		carousel.classList.add("carousel", "slide");
+		carousel.classList.add("carousel", "slide", "row");
 		carousel.setAttribute('data-interval', "false");
 
-		carouselInner.classList.add("carousel-inner");
+		carouselInner.classList.add("carousel-inner", "col");
 
-		carouselActiveItem.classList.add("carousel-item", "active",);
+		carouselActiveItem.classList.add("carousel-item", "active", "row");
 
 		carouselControlPrev.classList.add("carousel-control-prev");
 		carouselControlPrev.href = "#roomCarousel";
