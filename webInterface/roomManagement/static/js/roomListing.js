@@ -95,7 +95,8 @@ socket.on('post_rooms_list', data=>{
 			else
 			{
 				let result = x % 6
-				if(result = 0)
+
+				if(result == 0)
 				{
 					let carouselItem = document.createElement('div');
 					carouselItem.classList.add("carousel-item");
