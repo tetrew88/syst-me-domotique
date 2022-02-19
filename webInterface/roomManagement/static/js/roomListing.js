@@ -41,9 +41,6 @@ socket.on('post_rooms_list', data=>{
 
 		const carousel = document.createElement('div');
 		const carouselInner = document.createElement('div');
-
-		const controlZone = document.createElement('div');
-
 		let carouselControlPrev = document.createElement('a');
 		let prevIcon = document.createElement('span');
 
@@ -65,8 +62,6 @@ socket.on('post_rooms_list', data=>{
 
 		carouselActiveItem.classList.add("carousel-item", "active", "row", "roomCarouselItem");
 		carouselActiveItem.appendChild(row)
-
-		controlZone.classList.add("row");
 
 		carouselControlPrev.classList.add("carousel-control-prev");
 		carouselControlPrev.href = "#roomCarousel";
@@ -134,18 +129,14 @@ socket.on('post_rooms_list', data=>{
 			}
 		}
 
-		carouselControlPrev.appendChild(prevIcon);
-		carouselControlNext.appendChild(nextIcon);
-
 		carousel.appendChild(carouselInner);
 
+		carousel.appendChild(carouselControlPrev);
+		carousel.appendChild(carouselControlNext);
 
 		contentZone.appendChild(carousel);
 
-		controlZone.appendChild(carouselControlPrev);
-		controlZone.appendChild(carouselControlNext);
-
-		contentZone.appendChild(controlZone);
+		
 
 
 	}
