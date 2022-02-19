@@ -8,6 +8,8 @@ socket.on('post_rooms_list', data=>{
 
 	if(data.lenght <= 6)
 	{
+		contentZone.classList.add("row");
+
 		for (const element of data) {
 			console.log(element);
 
@@ -128,10 +130,11 @@ socket.on('post_rooms_list', data=>{
 
 		carousel.appendChild(carouselInner);
 
-		carousel.appendChild(carouselControlPrev);
-		carousel.appendChild(carouselControlNext);
 
 		contentZone.appendChild(carousel);
+
+		contentZone.appendChild(carouselControlPrev);
+		contentZone.appendChild(carouselControlNext);
 
 
 	}
