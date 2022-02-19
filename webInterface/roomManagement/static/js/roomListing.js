@@ -61,7 +61,7 @@ socket.on('post_rooms_list', data=>{
 		carouselControlPrev.setAttribute('data-slide',"prev");
 
 		prevIcon.classList.add('carousel-control-prev-icon');
-		prevIcon.aria-hidden = "true";
+		prevIcon.setAttribute('aria-hidden', "true");
 
 		carouselControlNext.classList.add("carousel-control-next");
 		carouselControlNext.href = "#carousel";
@@ -69,7 +69,7 @@ socket.on('post_rooms_list', data=>{
 		carouselControlNext.setAttribute('data-slide','next');
 
 		nextIcon.classList.add('carousel-control-prev-icon');
-		nextIcon.aria-hidden = "true";
+		nextIcon.setAttribute('aria-hidden', "true");
 
 		for (const element of data) {
 			let roomCard = document.createElement('div');
