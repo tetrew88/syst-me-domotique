@@ -102,7 +102,7 @@ socket.on('post_rooms_list', data=>{
 				{
 					console.log('gggggggggg')
 					let carouselItem = document.createElement('div');
-					carouselItem.classList.add("carousel-item");
+					carouselItem.classList.add("carousel-item", "row");
 
 					carouselItemList.push(carouselItem);
 				}
