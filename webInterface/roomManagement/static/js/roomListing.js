@@ -49,6 +49,7 @@ socket.on('post_rooms_list', data=>{
 
 		carousel.id = 'carousel'
 		carousel.classList.add("carousel", "slide", "row");
+		carousel.setAttribute('data-interval', "false");
 
 		carouselInner.classList.add("carousel-inner");
 
@@ -57,15 +58,15 @@ socket.on('post_rooms_list', data=>{
 		carouselControlPrev.classList.add("carousel-control-prev");
 		carouselControlPrev.href = "#carousel";
 		carouselControlPrev.role="button";
-		carouselControlPrev.data-slide="prev";
+		carouselControlPrev.setAttribute('data-slide',"prev");
 
 		prevIcon.classList.add('carousel-control-prev-icon');
 		prevIcon.aria-hidden = "true";
 
-		carouselControlNext.classList.add("carousel-control-prev");
+		carouselControlNext.classList.add("carousel-control-next");
 		carouselControlNext.href = "#carousel";
 		carouselControlNext.role="button";
-		carouselControlNext.data-slide="prev";
+		carouselControlNext.setAttribute('data-slide','next');
 
 		nextIcon.classList.add('carousel-control-prev-icon');
 		nextIcon.aria-hidden = "true";
@@ -125,8 +126,5 @@ socket.on('post_rooms_list', data=>{
 	}
 })
 
-$('.carousel').carousel({
-  interval: 0
-});
 
 console.log('hello')
