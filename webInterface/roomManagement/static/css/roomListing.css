@@ -17,10 +17,3 @@
     justify-content: space-around;
 	margin: auto;
 }
-
-.carousel-item
-{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-}
