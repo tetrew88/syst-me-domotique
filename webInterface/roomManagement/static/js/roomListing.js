@@ -35,6 +35,8 @@ socket.on('post_rooms_list', data=>{
 	{
 		let x = 1
 
+		console.log("!!!!!!!!!!!!!!!!")
+
 		const carousel = document.createElement('div');
 		const carouselInner = document.createElement('div');
 
@@ -102,7 +104,6 @@ socket.on('post_rooms_list', data=>{
 					carouselItem.classList.add("carousel-item");
 
 					carouselItemList.push(carouselItem);
-					console.log("!!!!!!!!!!!!!!!!")
 				}
 
 				carouselItemList[carouselItemList.lenght].appendChild(roomCard);
