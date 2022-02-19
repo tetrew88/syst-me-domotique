@@ -7,7 +7,7 @@
 	height: 100%;
 }
 
-.carousel-inner
+.roomCarousel
 {
 	display: flex;
 	flex-direction: row;
