@@ -79,6 +79,9 @@ socket.on('post_rooms_list', data=>{
 		nextIcon.classList.add('carousel-control-next-icon');
 		nextIcon.setAttribute('aria-hidden', "true");
 
+		carouselControlPrev.appendChild(prevIcon);
+		carouselControlNext.appendChild(nextIcon);
+
 		for (const element of data) {
 			let roomCard = document.createElement('div');
 			let cardPicture = document.createElement('img');
