@@ -117,6 +117,7 @@ socket.on('post_rooms_list', data=>{
 		if(carouselItemList.lenght >! 0)
 		{
 			for (const item of carouselItemList) {
+				console.log(item)
 				carouselInner.appendChild(item);
 			}
 		}
