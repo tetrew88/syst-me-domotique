@@ -51,6 +51,8 @@ socket.on('post_rooms_list', data=>{
 		const carouselActiveItem = document.createElement('div');
 		const carouselItemList = [];
 
+		contentZone.classList.add("col");
+
 		carousel.id = 'roomCarousel'
 		carousel.classList.add("carousel", "slide", "row");
 		carousel.setAttribute('data-interval', "false");
