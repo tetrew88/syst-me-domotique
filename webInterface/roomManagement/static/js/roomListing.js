@@ -128,4 +128,4 @@ socket.on('post_rooms_list', data=>{
 })
 
 
-console.log('hello')
+console.log(carouselItemList[carouselItemList.lenght - 1])
