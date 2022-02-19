@@ -49,7 +49,6 @@ socket.on('post_rooms_list', data=>{
 
 		carousel.id = 'carousel'
 		carousel.classList.add("carousel", "slide", "row");
-		carousel.data-interval = "false";
 
 		carouselInner.classList.add("carousel-inner");
 
@@ -126,5 +125,8 @@ socket.on('post_rooms_list', data=>{
 	}
 })
 
+$('.carousel').carousel({
+  interval: 0
+});
 
 console.log('hello')
