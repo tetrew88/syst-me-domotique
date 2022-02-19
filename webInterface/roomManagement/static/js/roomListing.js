@@ -63,8 +63,8 @@ socket.on('post_rooms_list', data=>{
 
 		carouselInner.classList.add("carousel-inner", "col");
 
-		carouselActiveItem.classList.add("carousel-item", "active", "row");
-		//carouselActiveItem.appendChild(row)
+		carouselActiveItem.classList.add("carousel-item", "active", "row", "roomCarouselItem");
+		carouselActiveItem.appendChild(row)
 
 		controlZone.classList.add("row");
 
@@ -112,8 +112,8 @@ socket.on('post_rooms_list', data=>{
 				if(result == 0)
 				{
 					let carouselItem = document.createElement('div');
-					carouselItem.classList.add("carousel-item", "row");
-					//carouselItem.appendChild(row);
+					carouselItem.classList.add("carousel-item", "row", "roomCarouselItem");
+					carouselItem.appendChild(row);
 
 					carouselItemList.push(carouselItem);
 				}
