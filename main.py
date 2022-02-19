@@ -19,7 +19,7 @@ def main():
 
     homeAutomationServer.start()
 
-"""
+
     homeAutomationSystem.home.homeAutomationNetwork.network.create_scene("test")
 
     while homeAutomationSystem.running:
@@ -689,7 +689,6 @@ def main():
 
         else:
             pass
-"""
 
 
 
