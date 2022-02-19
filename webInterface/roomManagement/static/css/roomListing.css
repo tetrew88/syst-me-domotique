@@ -5,22 +5,18 @@
 
 	width: 100%;
 	height: 100%;
-}
 
-.carousel-inner
-{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-
-	align-items: center;
-    justify-content: space-around;
 	margin: auto;
 }
 
-.roomCarouselItem
+.indicator
 {
-	flex-direction: row;
-	align-content: center;
-	flex-wrap: wrap;
+	background-color: black;
+
+	width: 100%;
+	height: 100%;
+
+	margin: 2%;
+
+	opacity: 70%;
 }
