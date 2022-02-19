@@ -107,8 +107,7 @@ socket.on('post_rooms_list', data=>{
 					carouselItemList.push(carouselItem);
 				}
 
-				console.log(carouselItemList[carouselItemList.lenght])
-				carouselItemList[carouselItemList.lenght - 1].appendChild(roomCard);
+				carouselItemList[carouselItemList.length - 1].appendChild(roomCard);
 			}
 
 			x++;
