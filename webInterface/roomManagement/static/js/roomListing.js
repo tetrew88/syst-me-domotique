@@ -33,7 +33,7 @@ socket.on('post_rooms_list', data=>{
 	}
 	else
 	{
-		let x = 1
+		let x = 0
 
 		const carousel = document.createElement('div');
 		const carouselInner = document.createElement('div');
@@ -88,7 +88,7 @@ socket.on('post_rooms_list', data=>{
 			roomCard.appendChild(cardPicture);
 			roomCard.appendChild(cardTitle);
 
-			if(x <= 6)
+			if(x <= 5)
 			{
 				carouselActiveItem.appendChild(roomCard);
 				console.log("!!!!!!!!!!!!!!!!")
