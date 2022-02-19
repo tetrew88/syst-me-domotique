@@ -48,12 +48,12 @@ socket.on('post_rooms_list', data=>{
 		const carouselItemList = [];
 
 		carousel.id = 'roomCarousel'
-		carousel.classList.add("carousel", "slide", "col");
+		carousel.classList.add("carousel", "slide");
 		carousel.setAttribute('data-interval', "false");
 
 		carouselInner.classList.add("carousel-inner");
 
-		carouselActiveItem.classList.add("carousel-item", "active", "row");
+		carouselActiveItem.classList.add("carousel-item", "active",);
 
 		carouselControlPrev.classList.add("carousel-control-prev");
 		carouselControlPrev.href = "#roomCarousel";
@@ -102,7 +102,7 @@ socket.on('post_rooms_list', data=>{
 				{
 					console.log('gggggggggg')
 					let carouselItem = document.createElement('div');
-					carouselItem.classList.add("carousel-item", "row");
+					carouselItem.classList.add("carousel-item");
 
 					carouselItemList.push(carouselItem);
 				}

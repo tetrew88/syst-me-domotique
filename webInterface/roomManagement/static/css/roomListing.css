@@ -6,33 +6,3 @@
 	width: 100%;
 	height: 100%;
 }
-
-.indicator
-{
-	background-color: black;
-
-	width: 100%;
-	height: 100%;
-
-	margin: 2%;
-
-	opacity: 70%;
-}
-
-
-.roomCarousel
-{
-	list-style: none;
-}
-
-
-.carousel-item
-{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-
-	justify-content: flex-start;
-	align-items: center;
-
-}
