@@ -33,9 +33,7 @@ socket.on('post_rooms_list', data=>{
 	}
 	else
 	{
-		let x = 1
-
-		console.log("!!!!!!!!!!!!!!!!")
+		let x = 0
 
 		const carousel = document.createElement('div');
 		const carouselInner = document.createElement('div');
@@ -93,9 +91,11 @@ socket.on('post_rooms_list', data=>{
 			if(x <= 6)
 			{
 				carouselActiveItem.appendChild(roomCard);
+				console.log("!!!!!!!!!!!!!!!!")
 			}
 			else
 			{
+				console.log("?????????")
 				let result = x % 6
 
 				if(result == 0)
@@ -113,8 +113,12 @@ socket.on('post_rooms_list', data=>{
 		}
 
 		carouselInner.appendChild(carouselActiveItem);
-		for (const item of carouselItemList) {
-			carouselInner.appendChild(item);
+
+		if(carouselItemList.lenght <! 0)
+		{
+			for (const item of carouselItemList) {
+				carouselInner.appendChild(item);
+			}
 		}
 
 		carouselControlPrev.appendChild(prevIcon);
