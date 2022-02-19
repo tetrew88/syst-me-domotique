@@ -59,7 +59,7 @@ socket.on('post_rooms_list', data=>{
 
 		carouselActiveItem.classList.add("carousel-item", "active", "row");
 
-		contentZone.classList.add("row");
+		controlZone.classList.add("row");
 
 		carouselControlPrev.classList.add("carousel-control-prev");
 		carouselControlPrev.href = "#roomCarousel";
