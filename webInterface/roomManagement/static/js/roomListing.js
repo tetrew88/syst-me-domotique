@@ -104,16 +104,13 @@ socket.on('post_rooms_list', data=>{
 			if(x <= 5)
 			{
 				carouselActiveItem.appendChild(roomCard);
-				console.log("!!!!!!!!!!!!!!!!")
 			}
 			else
 			{
-				console.log("?????????")
 				let result = x % 6
 
 				if(result == 0)
 				{
-					console.log('gggggggggg')
 					let carouselItem = document.createElement('div');
 					carouselItem.classList.add("carousel-item");
 					carouselItem.appendChild(row);
