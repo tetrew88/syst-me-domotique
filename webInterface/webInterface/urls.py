@@ -41,5 +41,5 @@ urlpatterns = [
     path('moduleListing/', module_listing),
     path('homeManagement/', home_management),
     path('homeAutomationNetworkManagement/', home_automation_network_management),
-    path('room/<int:roomId>/', room)
+    re_path(r'room/(?P<roomId>)/$', room),
 ]
