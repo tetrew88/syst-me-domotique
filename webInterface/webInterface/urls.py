@@ -32,14 +32,14 @@ from homeManagement.views.homeManagement import home_management
 from homeAutomationNetworkManagement.views.homeAutomationNetworkManagement import home_automation_network_management
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     url(r'^$', room_listing),
+    path('admin/', admin.site.urls),
     path('identification/', identification),
     path('/index', room_listing),
     path('roomListing/', room_listing),
-    path('room/', room),
     path('profilListing/', profil_listing),
     path('moduleListing/', module_listing),
     path('homeManagement/', home_management),
-    path('homeAutomationNetworkManagement/', home_automation_network_management)
+    path('homeAutomationNetworkManagement/', home_automation_network_management),
+    path('room/<int:roomId>/', room)
 ]

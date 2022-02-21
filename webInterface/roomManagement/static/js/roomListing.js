@@ -13,12 +13,14 @@ socket.on('post_rooms_list', data=>{
 		for (const element of data) {
 			console.log(element);
 
+			let link = document.createElement('a')
 			let roomCard = document.createElement('div');
 			let cardPicture = document.createElement('img');
 			let cardTitle =  document.createElement('div');
 
 			let row = document.createElement('div');
 
+			link.href = '/room/' + element['id'] + "/"
 
 			roomCard.classList.add("col-lg-4", "card", "roomCard", "rounded");
 
@@ -32,7 +34,9 @@ socket.on('post_rooms_list', data=>{
 			roomCard.appendChild(cardPicture);
 			roomCard.appendChild(cardTitle);
 
-			contentZone.appendChild(roomCard);
+			link.appendChild(roomCard);
+
+			contentZone.appendChild(link);
 		}
 	}
 	else
@@ -83,10 +87,12 @@ socket.on('post_rooms_list', data=>{
 		carouselControlNext.appendChild(nextIcon);
 
 		for (const element of data) {
+			let link = document.createElement('a')
 			let roomCard = document.createElement('div');
 			let cardPicture = document.createElement('img');
 			let cardTitle =  document.createElement('div');
-			
+
+			link.href = '/room/' + element['id'] + "/"
 
 			roomCard.classList.add("col-lg-4", "card", "roomCard", "rounded");
 
@@ -99,9 +105,11 @@ socket.on('post_rooms_list', data=>{
 			roomCard.appendChild(cardPicture);
 			roomCard.appendChild(cardTitle);
 
+			link.appendChild(roomCard);
+
 			if(x <= 5)
 			{
-				carouselActiveItem.appendChild(roomCard);
+				carouselActiveItem.appendChild(link);
 			}
 			else
 			{
@@ -116,7 +124,7 @@ socket.on('post_rooms_list', data=>{
 					carouselItemList.push(carouselItem);
 				}
 
-				carouselItemList[carouselItemList.length - 1].appendChild(roomCard);
+				carouselItemList[carouselItemList.length - 1].appendChild(link);
 			}
 
 			x++;
