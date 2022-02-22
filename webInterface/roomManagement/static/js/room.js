@@ -45,6 +45,7 @@ socket.on('post_room', data=>{
 		moduleListScreen.classList.add("row");
 
 		for (const element of moduleList) {
+			console.log(element);
 
 			let link = document.createElement('a')
 			let moduleCard = document.createElement('div');
@@ -53,7 +54,7 @@ socket.on('post_room', data=>{
 
 			let row = document.createElement('div');
 
-			link.href = '/module/' + element['id'] + "/"
+			link.href = '/module/' + element['id'] + "/";
 
 			moduleCard.classList.add("col-lg-4", "card", "moduleCard", "rounded");
 
@@ -61,7 +62,7 @@ socket.on('post_room', data=>{
 			cardPicture.src = "moduleManagement/static/pictures/" + 'bulb' + ".jpeg";
 
 			cardTitle.classList.add("card-title", "text-center");
-			cardTitle.textContent = element["name"]
+			cardTitle.textContent = element["name"];
 
 			moduleCard.appendChild(cardPicture);
 			moduleCard.appendChild(cardTitle);
