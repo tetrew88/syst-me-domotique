@@ -41,11 +41,11 @@ class HomeAutomationSystem:
 
     def start(self):
         self.home.homeDatabase.connect()
-        #self.home.start_automation_network()
+        self.home.start_automation_network()
         self.running = True
 
     def stop(self):
-        #self.home.stop_automation_network()
+        self.home.stop_automation_network()
         self.home.homeDatabase.disconnect()
         self.running = False
 
