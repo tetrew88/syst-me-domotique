@@ -83,6 +83,9 @@ class Room:
             if isinstance(module, LuminositySensor):
                 return module.luminosity
             elif isinstance(module, MultiSensor):
+                print("\n")
+                print(module.sensors.keys())
+                print("\n")
                 if 'luminosity' in module.sensors.keys():
                     print('iiiiiiiiiii')
                     luminositySensor = module.sensors['luminosity']
