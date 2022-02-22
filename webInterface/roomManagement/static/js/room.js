@@ -12,6 +12,7 @@ socket.emit('get_room', roomId)
 socket.on('post_room', data=>{
 	let indicatorColor = ""
 	let bannerTitle = document.createElement('h2');
+	let moduleList = []
 
 	data = data["data"]
 
@@ -39,6 +40,8 @@ socket.on('post_room', data=>{
 	luminosityIndicator.style.color = indicatorColor;
 
 	moduleList = data['content'];
+
+	console.log(moduleList)
 
 	if(moduleList.lenght <= 6)
 	{
