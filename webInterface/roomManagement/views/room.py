@@ -9,7 +9,6 @@ def room(request, roomId):
 	modulesList = ['bulb', 'multiSensor', "bulb", 'bulb', 'bulb']
 
 	return render(request, template, {'room': room,
-		'indicatorColor': indicatorColor,
 		'roomName': roomName,
 		'modulesList': modulesList,
 		'roomId': roomId})
