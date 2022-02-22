@@ -140,6 +140,8 @@ class Network:
                                 sensors['temperature'] = TemperatureSensor(node)
                             if node.get_sensors()[element].label == 'Luminance':
                                 sensors['luminosity'] = LuminositySensor(node)
+                                print('test')
+                                print(sensors)
                             if node.get_sensors()[element].label == 'Seismic Intensity':
                                 sensors['seismic intensity'] = SeismicIntensitySensor(node)
 
