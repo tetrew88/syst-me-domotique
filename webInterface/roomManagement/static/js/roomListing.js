@@ -6,7 +6,7 @@ socket.on('post_rooms_list', data=>{
 
 	data = data["data"]
 
-	if(data.lenght <= 6)
+	if(data.length <= 6)
 	{
 		contentZone.classList.add("row");
 

@@ -43,7 +43,7 @@ socket.on('post_room', data=>{
 
 	console.log(moduleList)
 
-	if(moduleList.lenght <= 6)
+	if(moduleList.length <= 6)
 	{
 		console.log('!!!!!!!!!!!!')
 		moduleListScreen.classList.add("row");
