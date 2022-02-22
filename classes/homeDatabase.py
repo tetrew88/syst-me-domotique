@@ -252,7 +252,7 @@ class HomeDatabase:
         self.del_profil(profilId)
 
 
-    def get_room(roomId):
+    def get_room(self, roomId):
         request = "SELECT * FROM Rooms WHERE id = {}".format(roomId)
 
         self.db_cursor.execute(request)
