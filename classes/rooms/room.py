@@ -88,6 +88,7 @@ class Room:
         for module in self.content:
             print('****')
             print(module.name)
+            print(type(module))
             print('****')
 
         for module in self.content:
