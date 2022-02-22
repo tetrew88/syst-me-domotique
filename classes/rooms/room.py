@@ -57,10 +57,6 @@ class Room:
                     modules.append(module)
 
                     if isinstance(module, MultiSensor):
-                        print("iiiiiiiiii")
-                        print(module.name)
-                        print(module.sensors.keys())
-                        print("iiiiiiiiii")
                 else:
                     pass
 
