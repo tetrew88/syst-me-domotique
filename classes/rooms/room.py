@@ -64,42 +64,39 @@ class Room:
     def temperature(self):
         temperatureSensor = False
 
+        temperature = 'NULL'
+
         for module in self.content:
             if isinstance(module, TemperatureSensor):
                 return module.temperature
             elif isinstance(module, MultiSensor):
                 if 'temperature' in module.sensors.keys():
                     temperatureSensor = module.sensors['temperature']
-
-                    return temperatureSensor.temperature
+                    temperature =  temperatureSensor.temperature
+                    break
             else:
-                return "Null"
+                pass
+
+        return temperature
 
     @property
     def luminosity(self):
         luminositySensor = False
-
-        for module in self.content:
-            print('****')
-            print(module.name)
-            print(type(module))
-            print('****')
+        luminosity = 'NULL'
 
         for module in self.content:
             if isinstance(module, LuminositySensor):
                 return module.luminosity
             elif isinstance(module, MultiSensor):
-                print("\n")
-                print(module.name)
-                print("\n")
                 if 'luminosity' in module.sensors.keys():
-                    print('oooooooooooo')
                     luminositySensor = module.sensors['luminosity']
-
-                    return luminositySensor.luminosity
+                    luminosity = luminositySensor.luminosity
+                    break
 
             else:
-                return "Null"
+                pass
+
+        return luminosity
 
     @property
     def events(self):
