@@ -15,7 +15,7 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path, re_path
+from django.urls import path
 from django.conf.urls import url
 
 from authentification.views.identification import identification
@@ -41,5 +41,5 @@ urlpatterns = [
     path('moduleListing/', module_listing),
     path('homeManagement/', home_management),
     path('homeAutomationNetworkManagement/', home_automation_network_management),
-    re_path(r'room/(?P<roomId>)/$', room),
+    path('room/<int:roomId>/', room)
 ]
