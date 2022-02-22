@@ -10,9 +10,9 @@ socket.on('post_room', data=>{
 
 	data = data["data"]
 
-	temperatureIndicator.textContent = data["temperature"];
+	temperatureIndicator.textContent = data["temperature"] + "°c";
 
-	luminosityIndicator.textContent = data['luminosity'];
+	luminosityIndicator.textContent = data['luminosity'] + "lux";
 
 	if( data["temperature"] < 20)
 	{
