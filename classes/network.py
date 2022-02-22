@@ -134,7 +134,6 @@ class Network:
                         sensors = {}
 
                         for element in node.get_sensors():
-                            print(node.get_sensors()[element].label)
                             if node.get_sensors()[element].label == 'Sensor':
                                 sensors['motion sensor'] = MotionSensor(node)
                             if node.get_sensors()[element].label == 'Temperature':
