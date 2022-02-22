@@ -45,17 +45,17 @@ socket.on('post_room', data=>{
 
 	if(moduleList.lenght <= 6)
 	{
+		console.log('!!!!!!!!!!!!')
 		moduleListScreen.classList.add("row");
 
-		for (const element of moduleList) {
+		for (const element of moduleList)
+		{
 			console.log(element);
 
 			let link = document.createElement('a')
 			let moduleCard = document.createElement('div');
 			let cardPicture = document.createElement('img');
 			let cardTitle =  document.createElement('div');
-
-			let row = document.createElement('div');
 
 			link.href = '/module/' + element['id'] + "/";
 
