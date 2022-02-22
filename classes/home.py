@@ -179,6 +179,23 @@ class Home:
     def set_guest_last_name(self, guestId, newLastName):
         self.homeDatabase.set_guest_last_name(guestId, newLastName)
 
+    def get_room(self, roomId):
+        tmpRoom = self.homeDatabase.get_room(roomId)
+        room = False
+
+        if tmpRoom[2].lower() == "bathroom":
+            room = Bathroom(tmpRoom[0], tmpRoom[1], self.homeAutomationNetwork)
+        elif tmpRoom[2].lower() == "bedroom":
+            room = Bedroom(tmpRoom[0], tmpRoom[1], self.homeAutomationNetwork)
+        elif tmpRoom[2].lower() == "kitchen":
+            room = Kitchen(tmpRoom[0], tmpRoom[1], self.homeAutomationNetwork)
+        elif tmpRoom[2].lower() == "livingroom":
+            room = Livingroom(tmpRoom[0], tmpRoom[1], self.homeAutomationNetwork)
+        else:
+            room = Room(tmpRoom[0], tmpRoom[1], tmpRoom[2])
+
+        return room
+
 
     def heal_network(self):
         self.homeAutomationNetwork.heal()

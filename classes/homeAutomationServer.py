@@ -57,8 +57,6 @@ class HomeAutomationServer(socketio.Namespace):
 
 	@socketIoServer.event(namespace='/HomeAutomationServer')
 	def get_rooms_list(sid, data):
-		outputData = {}
-
 		rooms = []
 		for room in HomeAutomationServer.homeAutomationSystem.get_home_rooms():
 			rooms.append(room.serialize())
@@ -66,6 +64,17 @@ class HomeAutomationServer(socketio.Namespace):
 		print(rooms)
 		
 		socketIoServer.emit('post_rooms_list', {'data': rooms}, namespace='/HomeAutomationServer')
+
+
+	@socketIoServer.event(namespace='/HomeAutomationServer')
+	def get_room(sid, data):
+		room = HomeAutomationServer.homeAutomationSystem.get_room(data)
+		room = room.serialize()
+
+		print(room)
+
+		socketIoServer.emit('post_room', {"data": room}, namespace='/HomeAutomationServer')
+
 
 
 

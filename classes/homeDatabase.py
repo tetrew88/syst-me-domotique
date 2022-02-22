@@ -47,6 +47,8 @@ class HomeDatabase:
                 del inhabitant
                 del guest
 
+                get room
+
                 set room name
 
     """
@@ -248,6 +250,16 @@ class HomeDatabase:
         self.commit_change()
 
         self.del_profil(profilId)
+
+
+    def get_room(roomId):
+        request = "SELECT * FROM Rooms WHERE id = {}".format(roomId)
+
+        self.db_cursor.execute(request)
+
+        room = self.db_cursor.fetchall()[0]
+
+        return room
 
 
     def set_room_name(self, roomId, newName):

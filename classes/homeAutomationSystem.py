@@ -116,6 +116,9 @@ class HomeAutomationSystem:
     def set_home_guest_first_name(self, guestId, newFirstName):
         self.home.set_guest_first_name(guestId, newFirstName)
 
+    def get_room(self, roomId):
+        return self.home.get_room(roomId)
+
 
     def heal_automation_network(self):
         self.home.heal_network()
