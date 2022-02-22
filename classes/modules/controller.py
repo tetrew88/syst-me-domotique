@@ -13,3 +13,4 @@ class Controller(Module):
 
     def __init_(self, moduleNode):
         Module.__init__(self, moduleNode)
+        self.type = "controller"

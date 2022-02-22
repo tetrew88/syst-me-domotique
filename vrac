@@ -1,3 +1,20 @@
 tester l'ajout et suppression de noeud
 
 https://www.cosmiclearn.com/lang-fr/python-static.php
+
+<div class="row">
+              {% for module in modulesList %}
+                <div class="col-lg-4 card moduleCard rounded">
+                  {% if module == 'bulb' %}
+                    <img class="img-fluid rounded" src="{% static 'pictures/bulb.jpeg' %}" alt="product_picture">
+
+                  {% elif module == 'multiSensor' %}
+                    <img class="img-fluid rounded" src="{% static 'pictures/multisensor.jpeg' %}" alt="product_picture">
+                  {% endif %}
+
+                  <div class="card-title text-center">
+                    {{ module }}
+                  </div>
+                </div>
+              {% endfor %}
+            </div>

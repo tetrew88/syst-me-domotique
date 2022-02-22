@@ -6,6 +6,8 @@ let luminosityIndicator = document.getElementById('luminosity');
 
 let banner = document.getElementById('banner');
 
+let moduleListScreen = document.getElementById('moduleList');
+
 socket.emit('get_room', roomId)
 socket.on('post_room', data=>{
 	let indicatorColor = ""
@@ -35,5 +37,39 @@ socket.on('post_room', data=>{
 
 	temperatureIndicator.style.color = indicatorColor;
 	luminosityIndicator.style.color = indicatorColor;
+
+	moduleList = data['content'];
+
+	if(moduleList.lenght <= 6)
+	{
+		moduleListScreen.classList.add("row");
+
+		for (const element of moduleList) {
+
+			let link = document.createElement('a')
+			let moduleCard = document.createElement('div');
+			let cardPicture = document.createElement('img');
+			let cardTitle =  document.createElement('div');
+
+			let row = document.createElement('div');
+
+			link.href = '/module/' + element['id'] + "/"
+
+			moduleCard.classList.add("col-lg-4", "card", "moduleCard", "rounded");
+
+			cardPicture.classList.add("img-fluid", "rounded");
+			cardPicture.src = "moduleManagement/static/pictures/" + 'bulb' + ".jpeg";
+
+			cardTitle.classList.add("card-title", "text-center");
+			cardTitle.textContent = element["name"]
+
+			moduleCard.appendChild(cardPicture);
+			moduleCard.appendChild(cardTitle);
+
+			link.appendChild(roomCard);
+
+			moduleListScreen.appendChild(link);
+		}
+	}
 
 })

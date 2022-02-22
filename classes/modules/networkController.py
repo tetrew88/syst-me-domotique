@@ -28,6 +28,7 @@ class NetworkController(Module):
         """
 
         Module.__init__(self, moduleNode)
+        self.type = 'network controller'
 
 
     def hard_reset(self):

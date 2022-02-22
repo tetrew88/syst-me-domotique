@@ -22,6 +22,7 @@ class RgbBulb(Bulb):
                              Color("blanc", '#FFFFFF', '#FFFFFF0000'),
                              Color("bleu", "#0000FF", '#0000FF0000'),
                              Color("vert", "#008000", "#0080000000")]
+        self.type = 'rgb bulb'
 
     @property
     def color(self):

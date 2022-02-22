@@ -4,6 +4,7 @@ class Module:
 
             attributes:
                 moduleNode; network node of the module
+                type: type of module (bulb, captor, ...)
 
             property:
                 id; id of the module
@@ -40,6 +41,7 @@ class Module:
         """
 
         self.moduleNode = moduleNode
+        self.type = "module"
 
 
     @property
@@ -132,7 +134,8 @@ class Module:
         "product name": self.productName,
         "product type": self.productType,
         "system type": self.deviceType,
-        "batterie level": self.batteryLevel
+        "batterie level": self.batteryLevel,
+        "type": self.type
         }
 
         return data

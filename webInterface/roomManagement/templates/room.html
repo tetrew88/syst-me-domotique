@@ -62,23 +62,8 @@
 
         <div class="row" style="margin-top: 2%;">
           <div class="col-3"></div>
-          <div class="col-6 moduleList rounded">
-            <div class="row">
-              {% for module in modulesList %}
-                <div class="col-lg-4 card moduleCard rounded">
-                  {% if module == 'bulb' %}
-                    <img class="img-fluid rounded" src="{% static 'pictures/bulb.jpeg' %}" alt="product_picture">
-
-                  {% elif module == 'multiSensor' %}
-                    <img class="img-fluid rounded" src="{% static 'pictures/multisensor.jpeg' %}" alt="product_picture">
-                  {% endif %}
-
-                  <div class="card-title text-center">
-                    {{ module }}
-                  </div>
-                </div>
-              {% endfor %}
-            </div>
+          <div id='moduleList' class="col-6 moduleList rounded">
+            
           </div>
           <div class="col-3"></div>
         </div>

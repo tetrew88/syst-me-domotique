@@ -3,12 +3,7 @@ from django.shortcuts import render
 
 def room(request, roomId):
 	template = 'room.html'
-
-	room = 'bedroom'
-	roomName = 'chambre de donovan'
 	modulesList = ['bulb', 'multiSensor', "bulb", 'bulb', 'bulb']
 
-	return render(request, template, {'room': room,
-		'roomName': roomName,
-		'modulesList': modulesList,
+	return render(request, template, {'modulesList': modulesList,
 		'roomId': roomId})

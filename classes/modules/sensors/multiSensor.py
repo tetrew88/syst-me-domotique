@@ -15,3 +15,4 @@ class MultiSensor(Sensor):
     def __init__(self, modulesNodes, sensors):
         Sensor.__init__(self, modulesNodes)
         self.sensors = sensors
+        self.type = 'multisensor'

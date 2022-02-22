@@ -14,3 +14,4 @@ class Sensor(Module):
 
     def __init__(self, moduleNode):
         Module.__init__(self, moduleNode)
+        self.type = 'sensor'
