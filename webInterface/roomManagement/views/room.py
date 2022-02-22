@@ -24,5 +24,5 @@ def room(request, roomId):
 		'lum': lum,
 		'indicatorColor': indicatorColor,
 		'roomName': roomName,
-		'modulesList': modulesList},
-		'roomId': roomId)
+		'modulesList': modulesList,
+		'roomId': roomId})
