@@ -55,6 +55,13 @@ class Room:
             if module.location != '':
                 if int(module.location) == self.id:
                     modules.append(module)
+
+                    if isinstance(module, MultiSensor):
+                        print("\n")
+                        print("iiiiiiiiii")
+                        print(module.sensors.keys())
+                        print("\n")
+                        print("iiiiiiiiii")
                 else:
                     pass
 
