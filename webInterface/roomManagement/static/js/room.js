@@ -70,7 +70,7 @@ socket.on('post_room', data=>{
 			moduleCard.appendChild(cardPicture);
 			moduleCard.appendChild(cardTitle);
 
-			link.appendChild(roomCard);
+			link.appendChild(moduleCard);
 
 			moduleListScreen.appendChild(link);
 		}
