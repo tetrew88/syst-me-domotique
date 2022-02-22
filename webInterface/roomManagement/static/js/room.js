@@ -4,11 +4,17 @@ let temperatureIndicator = document.getElementById('temperature');
 
 let luminosityIndicator = document.getElementById('luminosity');
 
+let banner = document.getElementById('banner');
+
 socket.emit('get_room', roomId)
 socket.on('post_room', data=>{
 	let indicatorColor = ""
+	let bannerTitle = document.createElement('h2');
 
 	data = data["data"]
+
+	bannerTitle.textContent = data['name'];
+	banner.appendChild(bannerTitle);
 
 	temperatureIndicator.textContent = data["temperature"] + "°c";
 
