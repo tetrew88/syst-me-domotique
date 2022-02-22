@@ -62,7 +62,7 @@ socket.on('post_room', data=>{
 			moduleCard.classList.add("col-lg-4", "card", "moduleCard", "rounded");
 
 			cardPicture.classList.add("img-fluid", "rounded");
-			cardPicture.src = "//moduleManagement/static/pictures/" + 'bulb' + ".jpeg";
+			cardPicture.src = "/moduleManagement/static/pictures/" + 'bulb' + ".jpeg";
 
 			cardTitle.classList.add("card-title", "text-center");
 			cardTitle.textContent = element["name"];
