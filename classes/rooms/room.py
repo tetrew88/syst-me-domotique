@@ -86,6 +86,9 @@ class Room:
         luminositySensor = False
 
         for module in self.content:
+            print('****')
+            print(module.name)
+            print('****')
             if isinstance(module, LuminositySensor):
                 return module.luminosity
             elif isinstance(module, MultiSensor):
