@@ -76,6 +76,18 @@ class HomeAutomationServer(socketio.Namespace):
 		socketIoServer.emit('post_room', {"data": room}, namespace='/HomeAutomationServer')
 
 
+	@socketIoServer.event(namespace='/HomeAutomationServer')
+	def get_inhabitants_list(sid, data):
+		profils = []
+
+		for inhabitant in HomeAutomationServer.homeAutomationSystem.get_home_inhabitants():
+			profils.append(inhabitant)
+
+		print(profils)
+
+		socketIoServer.emit('post_inhabitants_list', {"data": profils}, namespace='/HomeAutomationServer')
+
+
 
 
 socketIoServer.register_namespace(HomeAutomationServer())

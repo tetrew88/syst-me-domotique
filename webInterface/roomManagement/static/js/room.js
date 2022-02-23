@@ -20,7 +20,7 @@ socket.on('post_room', data=>{
 	bannerTitle.textContent = data['name'];
 	banner.appendChild(bannerTitle);
 
-	temperatureIndicator.textContent = Number.parseFloat(data["temperature"]).toFixed(2) + "°c";
+	temperatureIndicator.textContent = Number.parseFloat(data["temperature"]).toFixed(1) + "°c";
 
 	luminosityIndicator.textContent = data['luminosity'] + "lux";
 
@@ -46,7 +46,6 @@ socket.on('post_room', data=>{
 
 	if(moduleList.length <= 6)
 	{
-		console.log('!!!!!!!!!!!!')
 		contentZone.classList.add("row");
 
 		for (const element of moduleList)
