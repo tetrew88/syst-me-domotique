@@ -59,7 +59,7 @@ socket.on('post_rooms_list', data=>{
 		carousel.classList.add("carousel", "slide", "col");
 		carousel.setAttribute('data-interval', "false");
 
-		carouselInner.classList.add("carousel-inner", "row");
+		carouselInner.classList.add("carousel-inner");
 
 		carouselActiveItem.classList.add("carousel-item", "active", "row", "roomCarouselItem");
 
