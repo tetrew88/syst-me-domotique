@@ -81,7 +81,7 @@ class HomeAutomationServer(socketio.Namespace):
 		profils = []
 
 		for inhabitant in HomeAutomationServer.homeAutomationSystem.get_home_inhabitants():
-			profils.append(inhabitant)
+			profils.append(inhabitant.serialize())
 
 		print(profils)
 
