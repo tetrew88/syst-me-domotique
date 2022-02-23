@@ -9,7 +9,9 @@
 	margin: auto;
 }
 
+
 .roomCarouselItem
 {
-	
+	display: flex;
+	flex-direction: row;
 }
