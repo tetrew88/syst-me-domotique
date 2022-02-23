@@ -59,8 +59,9 @@ socket.on('post_room', data=>{
 			let cardTitle =  document.createElement('div');
 
 			link.href = '/module/' + element['id'] + "/";
+			link.classList.add("col-lg-4");
 
-			moduleCard.classList.add("col-lg-4", "card", "moduleCard", "rounded");
+			moduleCard.classList.add("card", "moduleCard", "rounded");
 
 			cardPicture.classList.add("img-fluid", "rounded");
 			cardPicture.src = "/moduleManagement/static/pictures/" + element['type'] + ".jpeg";
