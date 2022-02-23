@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/profilListing.css' %}" />
+{% endblock %}
+
 {% block content %}
 	<div class="col container-fluid">
 		<div class="row" style="margin-top: 5%;">
@@ -56,6 +60,6 @@
 	</div>
 {% endblock %}
 
-{% block css %}
-	<link rel="stylesheet" type="text/css" href="{% static 'css/profilListing.css' %}" />
+{% block jsScript %}
+  <script src="{% static 'js/profilListing.js' %}"></script>
 {% endblock %}
