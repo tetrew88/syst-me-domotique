@@ -21,8 +21,9 @@ socket.on('post_rooms_list', data=>{
 			let row = document.createElement('div');
 
 			link.href = '/room/' + element['id'] + "/"
+			link.classList.add("col-lg-4")
 
-			roomCard.classList.add("col-lg-4", "card", "roomCard", "rounded");
+			roomCard.classList.add("card", "roomCard", "rounded");
 
 			cardPicture.classList.add("img-fluid", "rounded");
 			cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";//element[2];
@@ -93,8 +94,9 @@ socket.on('post_rooms_list', data=>{
 			let cardTitle =  document.createElement('div');
 
 			link.href = '/room/' + element['id'] + "/"
+			link.classList.add("col-lg-4")
 
-			roomCard.classList.add("col-lg-4", "card", "roomCard", "rounded");
+			roomCard.classList.add("card", "roomCard", "rounded");
 
 			cardPicture.classList.add("img-fluid", "rounded");
 			cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";
@@ -146,9 +148,5 @@ socket.on('post_rooms_list', data=>{
 		carousel.appendChild(carouselControlNext);
 
 		contentZone.appendChild(carousel);
-
-		
-
-
 	}
 })
