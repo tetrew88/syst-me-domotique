@@ -13,6 +13,7 @@ socket.on('post_room', data=>{
 	let indicatorColor = ""
 	let bannerTitle = document.createElement('h2');
 	let moduleList = []
+	let contentZone = document.createElement('div')
 
 	data = data["data"]
 
@@ -46,7 +47,7 @@ socket.on('post_room', data=>{
 	if(moduleList.length <= 6)
 	{
 		console.log('!!!!!!!!!!!!')
-		//moduleListScreen.classList.add("row");
+		contentZone.classList.add("row");
 
 		for (const element of moduleList)
 		{
@@ -72,7 +73,9 @@ socket.on('post_room', data=>{
 
 			link.appendChild(moduleCard);
 
-			moduleListScreen.appendChild(link);
+			contentZone.appendChild(link);
+
+			moduleListScreen.appendChild(contentZone);
 		}
 	}
 
