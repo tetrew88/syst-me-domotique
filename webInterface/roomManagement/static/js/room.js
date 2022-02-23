@@ -20,7 +20,7 @@ socket.on('post_room', data=>{
 	bannerTitle.textContent = data['name'];
 	banner.appendChild(bannerTitle);
 
-	temperatureIndicator.textContent = data["temperature"] + "°c";
+	temperatureIndicator.textContent = Number.parseFloat(data["temperature"]).toFixed(2) + "°c";
 
 	luminosityIndicator.textContent = data['luminosity'] + "lux";
 
