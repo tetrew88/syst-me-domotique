@@ -1,24 +1,22 @@
-const contentZone = document.getElementById('screenContent');
+const screen = document.getElementById('screen');
 
 
 socket.emit('get_rooms_list', 'rooms')
 socket.on('post_rooms_list', data=>{
+	let contentZone = document.createElement('div');
+	contentZone = document.classList.add('row');
 
 	data = data["data"]
 
 	if(data.length <= 6)
 	{
-		contentZone.classList.add("row");
-
 		for (const element of data) {
 			console.log(element);
 
-			let link = document.createElement('a')
+			let link = document.createElement('a');
 			let roomCard = document.createElement('div');
 			let cardPicture = document.createElement('img');
-			let cardTitle =  document.createElement('div');
-
-			let row = document.createElement('div');
+			let cardTitle =  document.createElement('div');                                                                                         
 
 			link.href = '/room/' + element['id'] + "/"
 			link.classList.add("col-lg-4")
@@ -38,6 +36,8 @@ socket.on('post_rooms_list', data=>{
 			link.appendChild(roomCard);
 
 			contentZone.appendChild(link);
+
+			screen.appendChild(contentZone);
 		}
 	}
 	else
@@ -55,15 +55,11 @@ socket.on('post_rooms_list', data=>{
 		const carouselActiveItem = document.createElement('div');
 		const carouselItemList = [];
 
-		const row = document.createElement('div')
-
-		row.classList.add('row')
-
 		carousel.id = 'roomCarousel'
-		carousel.classList.add("carousel", "slide", "row");
+		carousel.classList.add("carousel", "slide", "col");
 		carousel.setAttribute('data-interval', "false");
 
-		carouselInner.classList.add("carousel-inner", "col");
+		carouselInner.classList.add("carousel-inner");
 
 		carouselActiveItem.classList.add("carousel-item", "active", "row", "roomCarouselItem");
 		carouselActiveItem.appendChild(row)
@@ -147,6 +143,8 @@ socket.on('post_rooms_list', data=>{
 		carousel.appendChild(carouselControlPrev);
 		carousel.appendChild(carouselControlNext);
 
-		contentZone.appendChild(carousel);
+		contentZone.appendChild(carousel)
+
+		screen.appendChild(contentZone);
 	}
 })
