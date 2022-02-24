@@ -78,18 +78,28 @@ class HomeAutomationServer(socketio.Namespace):
 
 	@socketIoServer.event(namespace='/HomeAutomationServer')
 	def get_inhabitants_list(sid, data):
-		profils = []
+		inhabitants = []
 
 		for inhabitant in HomeAutomationServer.homeAutomationSystem.get_home_inhabitants():
-			profils.append(inhabitant.serialize())
+			inhabitants.append(inhabitant.serialize())
 
-		print(profils)
+		print(inhabitants)
 
-		socketIoServer.emit('post_inhabitants_list', {"data": profils}, namespace='/HomeAutomationServer')
+		socketIoServer.emit('post_inhabitants_list', {"data": inhabitants}, namespace='/HomeAutomationServer')
+
+
+	@socketIoServer.event(namespace='/HomeAutomationServer')
+	def get_guests_list():
+		guests = []
+
+		for guest in HomeAutomationServer.homeAutomationSystem.get_home_guests():
+			guests.append(guest.serialize())
+
+		print(guests)
+
+		socketIoServer.emit('post_guests_list', {"data": guests}, namespace='/HomeAutomationServer')
 
 
 
 
 socketIoServer.register_namespace(HomeAutomationServer())
-
-#eesayer de nmettre la section eventlet dans home automation system pour que l'attente ce fasse au niveau du systeme et non du sserver
