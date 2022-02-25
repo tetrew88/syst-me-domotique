@@ -46,14 +46,13 @@ class Bulb(Module):
             method used for modify the intensity of the light
         """
 
-        """
             for values in self.moduleNode.get_dimmers().values():
                 if values.label == 'Level':
                     valueId = values.value_id
                     break
     
             self.moduleNode.set_dimmer(valueId, intensity)
-        """
+            
 
     def on(self, intensity = 30):
         """
