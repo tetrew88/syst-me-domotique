@@ -95,5 +95,10 @@ function light_on()
 		}
 	}
 
-	socket.emit('set_on_light', bulbId);
+	console.log(bulbId)
+
+	if (bulbId.length > 0)
+	{
+		socket.emit('set_on_light', bulbId);
+	}
 }
