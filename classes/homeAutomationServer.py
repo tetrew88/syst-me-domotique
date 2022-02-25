@@ -118,6 +118,8 @@ class HomeAutomationServer(socketio.Namespace):
 				else:
 					bulb.off()
 
+				print(bulb.lightUp)
+
 		elif type(data) == int():
 			bulb = False
 
@@ -129,6 +131,8 @@ class HomeAutomationServer(socketio.Namespace):
 				bulb.off()
 			else:
 				bulb.off()
+
+			print(bulb.lightUp)
 
 
 
