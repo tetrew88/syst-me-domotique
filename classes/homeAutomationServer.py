@@ -101,7 +101,7 @@ class HomeAutomationServer(socketio.Namespace):
 
 	@socketIoServer.event(namespace='/HomeAutomationServer')
 	def set_on_light(sid, data):
-		if type(data) == list():
+		if isinstance(data, list):
 			bulbs = []
 
 			for module in HomeAutomationServer.homeAutomationSystem.get_home_automation_modules():
@@ -120,7 +120,7 @@ class HomeAutomationServer(socketio.Namespace):
 
 				print(bulb.lightUp)
 
-		elif type(data) == int():
+		elif isinstance(data, int):
 			bulb = False
 
 			for module in HomeAutomationServer.homeAutomationSystem.get_home_automation_modules():
