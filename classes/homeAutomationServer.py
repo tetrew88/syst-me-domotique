@@ -118,7 +118,7 @@ class HomeAutomationServer(socketio.Namespace):
 				else:
 					bulb.off()
 
-		else if type(data) == int():
+		elif type(data) == int():
 			bulb = False
 
 			for module in HomeAutomationServer.homeAutomationSystem.get_home_automation_modules():
