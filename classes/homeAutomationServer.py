@@ -89,7 +89,7 @@ class HomeAutomationServer(socketio.Namespace):
 
 
 	@socketIoServer.event(namespace='/HomeAutomationServer')
-	def get_guests_list():
+	def get_guests_list(sid, data):
 		guests = []
 
 		for guest in HomeAutomationServer.homeAutomationSystem.get_home_guests():
@@ -99,6 +99,36 @@ class HomeAutomationServer(socketio.Namespace):
 
 		socketIoServer.emit('post_guests_list', {"data": guests}, namespace='/HomeAutomationServer')
 
+	@socketIoServer.event(namespace='/HomeAutomationServer')
+	def set_on_light(sid, data):
+		if type(data) == list():
+			bulbs = []
+
+			for module in HomeAutomationServer.homeAutomationSystem.get_home_automation_modules():
+				for moduleId in data:
+					if module.id == moduleId:
+						bulbs.append(module)
+						break
+					else:
+						pass
+
+			for bulb in bulbs:
+				if bulb.lightUp:
+					bulb.off()
+				else:
+					bulb.off()
+
+		else if type(data) == int():
+			bulb = False
+
+			for module in HomeAutomationServer.homeAutomationSystem.get_home_automation_modules():
+				if module.id == data:
+					bulb = module
+
+			if bulb.lightUp:
+				bulb.off()
+			else:
+				bulb.off()
 
 
 

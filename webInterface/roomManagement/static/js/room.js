@@ -8,11 +8,12 @@ let banner = document.getElementById('banner');
 
 let moduleListScreen = document.getElementById('moduleList');
 
+let moduleList = []
+
 socket.emit('get_room', roomId)
 socket.on('post_room', data=>{
 	let indicatorColor = ""
 	let bannerTitle = document.createElement('h2');
-	let moduleList = []
 	let contentZone = document.createElement('div')
 
 	data = data["data"]
@@ -80,3 +81,19 @@ socket.on('post_room', data=>{
 	}
 
 })
+
+
+function light_on()
+{
+	bulbId = []
+
+	for (const element of moduleList)
+	{
+		if(element['type'] == 'bulb' || element['type'] == 'rgb bulb')
+		{
+			bulbId.push(element['id'])
+		}
+	}
+
+	socket.emit('set_on_light', bulbId);
+}
