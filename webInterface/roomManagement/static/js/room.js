@@ -52,7 +52,7 @@ socket.on('post_room', data=>{
 		contentZone.classList.add("row");
 
 		for (const element of moduleList)
-
+		{
 			let link = document.createElement('a');
 			let moduleCard = document.createElement('div');
 			let cardPicture = document.createElement('img');
