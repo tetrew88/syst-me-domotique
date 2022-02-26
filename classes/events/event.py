@@ -32,4 +32,6 @@ class Event:
 
 
     def __str__(self):
-        return "[{}]: {}".format(self.dateTime, self.type)
+        datetimeAlert = []
+        dateTimeAlert = self.dateTime.split(" ")
+        return "[{} {}]: {}".format(self.dateTimeAlert[0], dateTimeAlert[1], self.type)
