@@ -87,7 +87,7 @@ socket.on('post_room', data=>{
 		}
 	}
 
-	for (const element of data["evenement"])
+	for (const element of data["events"])
 	{
 		let notif = document.createElement('div');
 
