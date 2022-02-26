@@ -20,6 +20,8 @@ socket.on('post_room', data=>{
 
 	data = data["data"]
 
+	console.log(data)
+
 	bannerTitle.textContent = data['name'];
 	banner.appendChild(bannerTitle);
 
@@ -45,15 +47,11 @@ socket.on('post_room', data=>{
 
 	moduleList = data['content'];
 
-	console.log(moduleList)
-
 	if(moduleList.length <= 6)
 	{
 		contentZone.classList.add("row");
 
 		for (const element of moduleList)
-		{
-			console.log(element);
 
 			let link = document.createElement('a');
 			let moduleCard = document.createElement('div');
@@ -116,8 +114,6 @@ function light_on()
 			bulbId.push(element['id'])
 		}
 	}
-
-	console.log(bulbId)
 
 	if (bulbId.length > 0)
 	{
