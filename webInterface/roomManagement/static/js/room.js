@@ -8,6 +8,8 @@ let banner = document.getElementById('banner');
 
 let moduleListScreen = document.getElementById('moduleList');
 
+let eventList = document.getElementById("eventList");
+
 let moduleList = []
 
 socket.emit('get_room', roomId)
@@ -53,7 +55,7 @@ socket.on('post_room', data=>{
 		{
 			console.log(element);
 
-			let link = document.createElement('a')
+			let link = document.createElement('a');
 			let moduleCard = document.createElement('div');
 			let cardPicture = document.createElement('img');
 			let cardTitle =  document.createElement('div');
@@ -86,6 +88,19 @@ socket.on('post_room', data=>{
 			moduleListScreen.appendChild(contentZone);
 		}
 	}
+
+	for (const element of data["evenement"])
+	{
+		let notif = document.createElement('div');
+
+		notif.classList.add("row", "eventRapport");
+
+		notif.textContent(element["str"]);
+
+		eventList.appendChild(notif);
+	}
+
+
 
 })
 

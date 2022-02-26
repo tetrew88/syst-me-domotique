@@ -115,7 +115,6 @@ class HomeAutomationServer(socketio.Namespace):
 			for bulb in bulbs:
 				if bulb.lightUp:
 					bulb.off()
-					print('11111111')
 				else:
 					bulb.on()
 
