@@ -25,13 +25,6 @@ class Event:
         data = {'type': self.type,
         'dateTime': self.dateTime,
         'location': self.location,
-        'str': self.__str__()
         }
 
         return data
-
-
-    def __str__(self):
-        datetimeAlert = []
-        dateTimeAlert = self.dateTime.split(" ")
-        return "[{} {}]: {}".format(self.dateTimeAlert[0], dateTimeAlert[1], self.type)
