@@ -33,9 +33,7 @@ socket.on('post_rooms_list', data=>{
 
 			link.appendChild(roomCard);
 
-			contentZone.appendChild(link);
-
-			screen.appendChild(contentZone);
+			screen.appendChild(link);
 		}
 	}
 	else
@@ -139,8 +137,6 @@ socket.on('post_rooms_list', data=>{
 		carousel.appendChild(carouselControlPrev);
 		carousel.appendChild(carouselControlNext);
 
-		contentZone.appendChild(carousel)
-
-		screen.appendChild(contentZone);
+		screen.appendChild(carousel);
 	}
 })
