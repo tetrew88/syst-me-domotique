@@ -352,16 +352,16 @@ class Network:
 
             if isinstance(module, Sensor):
                 if value.label == 'Access Control' and isinstance(module, Door_WindowSensor):
-                    if value.data == 23:
+                    if value.data == 22:
                         event = Door_WindowOpening(node, datetimeEvent)
-                    elif value.data == 22:
+                    elif value.data == 23:
                         event = Door_WindowClosing(node, datetimeEvent)
 
                 elif value.label == 'Access Control' and isinstance(module, MultiSensor):
                     if 'door/window sensor' in module.sensorsList:
-                        if value.data == 23:
+                        if value.data == 22:
                             event = Door_WindowOpening(node, datetimeEvent)
-                        elif value.data == 22:
+                        elif value.data == 23:
                             event = Door_WindowClosing(node, datetimeEvent)
 
 
