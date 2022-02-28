@@ -14,7 +14,6 @@ class Door_WindowSensor(Sensor):
 	def __init__(self, moduleNode):
         Sensor.__init__(self, moduleNode)
 
-
     @property
     def door_windowState(self):
     	valueId = False
