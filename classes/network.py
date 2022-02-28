@@ -343,12 +343,12 @@ class Network:
         print('{}: [{}: {}]'.format(node.name, value.label, value.data))
 
         if self.isReady:
-            print("!!!!!!!!!!!!!!!!")
             for element in self.modulesList:
                 if element.id == node.node_id:
                     module = element
 
             if isinstance(module, Sensor):
+                print('!!!!!!!!sensor!!!!!!!!!')
                 if value.label == 'Access Control' and isinstance(module, Door_WindowSensor):
                     if value.data == 23:
                         event = Door_WindowOpening(node, datetime.datetime.now())
@@ -370,6 +370,7 @@ class Network:
                         event = MotionDetection(node, datetimeEvent)
 
             if isinstance(module, Bulb):
+                print('!!!!!!!!!bublb!!!!!!!')
                 if value.label == 'Level':
                     if value.data > 0:
                         event = LightOn(node, datetimeEvent)
