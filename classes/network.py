@@ -27,10 +27,13 @@ from .modules.sensors.motionSensor import *
 from .modules.sensors.luminositySensor import *
 from .modules.sensors.SeismicIntensitySensor import *
 from .modules.sensors.temperatureSensor import *
+from .modules.sensors.door_windowSensor import *
 
 
 from .events.moduleEvent import *
 from .events.motionDetection import *
+from .events.door_windowEvent import *
+from .events.lightEvent import *
 
 
 class Network:
@@ -146,6 +149,7 @@ class Network:
                         modules.append(MultiSensor(node, sensors))
                     else:
                         for element in node.get_sensors():
+                            print('element')
                             if node.get_sensors()[element].label == 'Sensor':
                                 modules.append(MotionSensor(node))
                             elif node.get_sensors()[element].label == 'Temperature':
@@ -332,8 +336,53 @@ class Network:
         print("le noeud {} a été ajouter".format(node.name))
 
     def value_changed(self, node, value):
+        module = event = False
+
         print("####value changed######")
         print('{}: [{}: {}]'.format(node.name, value.label, value.data))
+
+        if self.isReady:
+            for element in self.modulesList:
+                if element.id == node.node_id:
+                    module = element
+
+            if isinstance(module, Sensor):
+                if value.label == 'Access Control' and isinstance(module, Door_WindowSensor):
+                    if value.data = 23:
+                        event = Door_WindowOpening(node, datetime.datetime.now())
+                    elif value.data == 2:
+                        event = Door_WindowClosing(node, datetime.datetime.now())
+
+                elif value.label == 'Access Control' and isinstance(module, MultiSensor):
+                    if 'door/windows sensor' in module.sensorsList:
+                        if value.data = 23:
+                            event = Door_WindowOpening(node, datetime.datetime.now())
+                        elif value.data == 2:
+                            event = Door_WindowClosing(node, datetime.datetime.now())
+
+
+                elif value.label == 'Sensor' and isinstance(module, MotionSensor):
+                    event = MotionDetection(node, datetime.datetime.now())
+                elif value.label == 'Sensor' and isinstance(module, MultiSensor):
+                    if 'motion sensor' in module.sensorsList:
+                        event = MotionDetection(node, datetime.datetime.now())
+
+            if isinstance(module, Bulb):
+                if value.label == 'Level':
+                    if value.data > 0:
+                        event = LightOn(node, datetime.datetime.now())
+                    else:
+                        event = LightOff(node, datetime.datetime.now)
+
+                elif isinstance(module, RgbBulb):
+                    if value.label == 'Color':
+                        pass
+
+
+        if event != False:
+            self.eventList.append(event)
+        else:
+            pass
 
 
     def scene_event(self):

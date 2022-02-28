@@ -16,3 +16,8 @@ class MultiSensor(Sensor):
         Sensor.__init__(self, modulesNodes)
         self.sensors = sensors
         self.type = 'multisensor'
+
+
+    @property
+    def sensorsList(self):
+        return sensors.keys()

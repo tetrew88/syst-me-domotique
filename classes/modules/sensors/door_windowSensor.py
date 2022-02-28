@@ -17,4 +17,17 @@ class Door_WindowSensor(Sensor):
 
     @property
     def door_windowState(self):
-    	pass
+    	valueId = False
+
+    	for value in self.moduleNode.get_values():
+            if self.moduleNode.get_values()[value].label == 'Access Control':
+            	valueId = value
+            	break
+
+        if valueId != False:
+            if self.moduleNode.get_values()[value].data == 23:
+            	return 'closed'
+            elif self.moduleNode.get_values()[value].data == 22:
+            	return 'open'
+        else:
+        	return 'None'
