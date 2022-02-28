@@ -1,6 +1,6 @@
 from .sensor import *
 
-class Door_WindowsSensor(Sensor):
+class Door_WindowSensor(Sensor):
 	"""
 		classes representing an door/windows sensor
 
