@@ -1,3 +1,5 @@
+from datetime import datetime
+
 class Event:
     """
         class representing an event
@@ -23,7 +25,7 @@ class Event:
         data = {}
 
         data = {'type': self.type,
-        'dateTime': self.dateTime,
+        'dateTime': self.dateTime.strftime("%d/%m/%y, %H:%M:%S")
         'location': self.location,
         }
 
