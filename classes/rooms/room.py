@@ -141,6 +141,7 @@ class Room:
 
         events = []
         for event in self.events:
+            print(event)
             tmp = event.serialize()
 
             events.append(tmp)
