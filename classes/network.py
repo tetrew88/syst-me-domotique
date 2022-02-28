@@ -343,6 +343,7 @@ class Network:
         print('{}: [{}: {}]'.format(node.name, value.label, value.data))
 
         if self.isReady:
+            print("!!!!!!!!!!!!!!!!")
             for element in self.modulesList:
                 if element.id == node.node_id:
                     module = element
