@@ -372,7 +372,7 @@ class Network:
                     if 'motion sensor' in module.sensorsList:
                         print('11111111111111')
                         if value.data == True:
-                        event = MotionDetection(node, datetimeEvent)
+                            event = MotionDetection(node, datetimeEvent)
 
             if isinstance(module, Bulb):
                 if value.label == 'Level':
