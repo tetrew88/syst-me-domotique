@@ -25,7 +25,7 @@ class Event:
         data = {}
 
         data = {'type': self.type,
-        'dateTime': self.dateTime.strftime("%d/%m/%y, %H:%M:%S")
+        'dateTime': self.dateTime.strftime("%d/%m/%y, %H:%M:%S"),
         'location': self.location,
         }
 
