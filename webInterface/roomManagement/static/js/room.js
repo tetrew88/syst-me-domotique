@@ -112,6 +112,11 @@ socket.on('post_room', data=>{
 			notif.textContent = dateTime + 'la porte/fenètre as été fermé'
 		}
 
+		else if(element['type'] == 'motion detection')
+		{
+			notif.textContent = dateTime + 'un mouvement as été détecté'
+		}
+
 		eventList.appendChild(notif);
 	}
 
