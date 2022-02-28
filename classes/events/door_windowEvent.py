@@ -20,10 +20,9 @@ class Door_WindowEvent(ModuleEvent):
 class Door_WindowOpening(Door_WindowEvent):
 
 	def __init__(self, moduleNode, datetime):
-       	Door_WindowEvent.__init__(self, moduleNode, datetime, 'open', "door/window opening")
+		Door_WindowEvent.__init__(self, moduleNode, datetime, 'open', "door/window opening")
 
 
 class Door_WindowClosing(Door_WindowEvent):
-
 	def __init__(self, moduleNode, datetime):
-        Door_WindowEvent.__init__(self, moduleNode, datetime, 'closed', "door/window closing")
+		Door_WindowEvent.__init__(self, moduleNode, datetime, 'closed', "door/window closing")
