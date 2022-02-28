@@ -93,7 +93,15 @@ socket.on('post_room', data=>{
 
 		notif.classList.add("row", "eventRapport");
 
-		notif.textContent(element["str"]);
+		if(element['type'] == 'turn on light')
+		{
+			notif.textContent("[" + element["dateTime"] + "]: " + "la lumière as été allumé");
+		}
+
+		else if(element['type'] == 'turn on light')
+		{
+			notif.textContent("[" + element["dateTime"] + "]: " + "la lumière as été éteinte");
+		}
 
 		eventList.appendChild(notif);
 	}
