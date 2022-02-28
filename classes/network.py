@@ -337,8 +337,7 @@ class Network:
 
     def value_changed(self, node, value):
         module = event = False
-        tmpDatetime = datetime.datetime.now()
-        datetimeEvent = tmpDatetime.strftime("%d-%m-%Y %H:%M:%S")
+        datetimeEvent= datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S")
 
         print("####value changed######")
         print('{}: [{}: {}]'.format(node.name, value.label, value.data))
