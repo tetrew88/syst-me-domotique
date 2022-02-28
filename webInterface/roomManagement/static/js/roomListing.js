@@ -3,7 +3,6 @@ const screen = document.getElementById('screen');
 
 socket.emit('get_rooms_list', 'rooms')
 socket.on('post_rooms_list', data=>{
-	let contentZone = document.createElement('div');
 
 	data = data["data"]
 
