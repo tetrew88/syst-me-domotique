@@ -90,17 +90,26 @@ socket.on('post_room', data=>{
 	for (const element of data["events"])
 	{
 		let notif = document.createElement('div');
+		let dateTime = '[' + element["dateTime"] + ']: ';
 
 		notif.classList.add("row", "eventRapport");
 
 		if(element['type'] == 'turn on light')
 		{
-			notif.textContent = "[" + element["dateTime"] + "]: " + "la lumière as été allumé";
+			notif.textContent = dateTime + "la lumière as été allumé";
 		}
-
 		else if(element['type'] == 'turn off light')
 		{
-			notif.textContent = "[" + element["dateTime"] + "]: " + "la lumière as été éteinte";
+			notif.textContent =  dateTime + "la lumière as été éteinte";
+		}
+
+		else if(element['type'] == 'door/window opening')
+		{
+			notif.textContent = dateTime + 'la porte/fenètre as été ouverte'
+		}
+		else if(element['type'] == 'door/window closing')
+		{
+			notif.textContent = dateTime + 'la porte/fenètre as été fermé'
 		}
 
 		eventList.appendChild(notif);
