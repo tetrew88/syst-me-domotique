@@ -20,4 +20,4 @@ class MultiSensor(Sensor):
 
     @property
     def sensorsList(self):
-        return sensors.keys()
+        return list(sensors.keys())

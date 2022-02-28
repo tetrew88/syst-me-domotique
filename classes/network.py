@@ -140,7 +140,7 @@ class Network:
                             if node.get_sensors()[element].label == 'Sensor' and 'Motion Sensor' in node.product_name.lower():
                                 sensors['motion sensor'] = MotionSensor(node)
                             if node.get_sensors()[element].label == 'Sensor' and 'door' in node.product_name.lower() or 'window' in node.product_name.lower():
-                                sensors['door/windows sensor'] = Door_WindowSensor(node)
+                                sensors['door/window sensor'] = Door_WindowSensor(node)
                             if node.get_sensors()[element].label == 'Temperature':
                                 sensors['temperature'] = TemperatureSensor(node)
                             if node.get_sensors()[element].label == 'Luminance':
@@ -359,7 +359,7 @@ class Network:
                         event = Door_WindowClosing(node, datetimeEvent)
 
                 elif value.label == 'Access Control' and isinstance(module, MultiSensor):
-                    if 'door/windows sensor' in module.sensorsList:
+                    if 'door/window sensor' in module.sensorsList:
                         print('11111111111')
                         if value.data == 23:
                             event = Door_WindowOpening(node, datetimeEvent)
