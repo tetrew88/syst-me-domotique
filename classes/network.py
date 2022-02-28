@@ -137,7 +137,7 @@ class Network:
                         sensors = {}
 
                         for element in node.get_sensors():
-                            if node.get_sensors()[element].label == 'Sensor' and 'Motion Sensor' in node.product_name.lower():
+                            if node.get_sensors()[element].label == 'Sensor' and 'motion sensor' in node.product_name.lower():
                                 sensors['motion sensor'] = MotionSensor(node)
                             if node.get_sensors()[element].label == 'Sensor' and 'door' in node.product_name.lower() or 'window' in node.product_name.lower():
                                 sensors['door/window sensor'] = Door_WindowSensor(node)
@@ -151,8 +151,7 @@ class Network:
                         modules.append(MultiSensor(node, sensors))
                     else:
                         for element in node.get_sensors():
-                            print('element')
-                            if node.get_sensors()[element].label == 'Sensor' and 'Motion Sensor' in node.product_name.lower():
+                            if node.get_sensors()[element].label == 'Sensor' and 'motion sensor' in node.product_name.lower():
                                 modules.append(MotionSensor(node))
                             elif node.get_sensors()[element].label == 'Sensor' and 'door' in node.product_name.lower() or 'window' in node.product_name.lower():
                                 modules.append(Door_WindowSensor(node))
@@ -367,10 +366,12 @@ class Network:
 
 
                 elif value.label == 'Sensor' and isinstance(module, MotionSensor):
-                    event = MotionDetection(node, datetimeEvent)
+                    if value.data == True:
+                        event = MotionDetection(node, datetimeEvent)
                 elif value.label == 'Sensor' and isinstance(module, MultiSensor):
                     if 'motion sensor' in module.sensorsList:
                         print('11111111111111')
+                        if value.data == True:
                         event = MotionDetection(node, datetimeEvent)
 
             if isinstance(module, Bulb):
