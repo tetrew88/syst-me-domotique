@@ -137,8 +137,10 @@ class Network:
                         sensors = {}
 
                         for element in node.get_sensors():
-                            if node.get_sensors()[element].label == 'Sensor':
+                            if node.get_sensors()[element].label == 'Sensor' and 'Motion Sensor' in node.product_name.lower():
                                 sensors['motion sensor'] = MotionSensor(node)
+                            if node.get_sensors()[element].label == 'Sensor' and 'door' in node.product_name.lower() or 'window' in node.product_name.lower():
+                                sensors['door/windows sensor'] = Door_WindowSensor(node)
                             if node.get_sensors()[element].label == 'Temperature':
                                 sensors['temperature'] = TemperatureSensor(node)
                             if node.get_sensors()[element].label == 'Luminance':
@@ -150,8 +152,10 @@ class Network:
                     else:
                         for element in node.get_sensors():
                             print('element')
-                            if node.get_sensors()[element].label == 'Sensor':
+                            if node.get_sensors()[element].label == 'Sensor' and 'Motion Sensor' in node.product_name.lower():
                                 modules.append(MotionSensor(node))
+                            elif node.get_sensors()[element].label == 'Sensor' and 'door' in node.product_name.lower() or 'window' in node.product_name.lower():
+                                modules.append(Door_WindowSensor(node))
                             elif node.get_sensors()[element].label == 'Temperature':
                                 modules.append(TemperatureSensor(node))
                             elif node.get_sensors()[element].label == 'Luminance':
