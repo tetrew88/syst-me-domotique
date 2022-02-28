@@ -335,12 +335,6 @@ class Network:
         print("####value changed######")
         print('{}: [{}: {}]'.format(node.name, value.label, value.data))
 
-        for module in self.modulesList():
-            print(module.id)
-            print(node.node_id)
-            if module.id == node.node_id:
-                print(module)
-
 
     def scene_event(self):
         print("####scene######")

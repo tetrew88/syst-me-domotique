@@ -587,6 +587,9 @@ def main():
                     selectedModule = homeAutomationSystem.get_home_automation_modules()[moduleChoice - 1]
 
                     print('\n')
+                    print('####################')
+                    for value in selectedModule.moduleNode.get_values():
+                        print("{}: {}".format(selectedModule.moduleNode.get_values()[values].label, selectedModule.moduleNode.get_values()[values].data))
 
                     if isinstance(selectedModule, Bulb):
                         optionsChoice = tmpOptionsChoice = 0
