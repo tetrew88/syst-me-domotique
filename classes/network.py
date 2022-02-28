@@ -213,7 +213,7 @@ class Network:
         dispatcher.connect(self.network_awake, ZWaveNetwork.SIGNAL_NETWORK_AWAKED)
         dispatcher.connect(self.node_event, ZWaveNetwork.SIGNAL_NODE_EVENT)
         dispatcher.connect(self.scene_event, ZWaveNetwork.SIGNAL_SCENE_EVENT)
-        dispatcher.connect(self.value_changed, ZWaveNetwork.SIGNAL_VALUE_CHANGED)
+        #dispatcher.connect(self.value_changed, ZWaveNetwork.SIGNAL_VALUE_CHANGED)
         dispatcher.connect(self.node_added, ZWaveNetwork.SIGNAL_NODE_ADDED)
 
     def start(self):
@@ -332,13 +332,7 @@ class Network:
     def network_awake(self, network):
         print("Hello from network : I'm awake")
 
-    def node_event(self, event, node):
-        print("######event########")
-
-    def node_added(self, node):
-        print("le noeud {} a été ajouter".format(node.name))
-
-    def value_changed(self, node, value):
+    def node_event(self, event, node, value):
         module = event = False
         datetimeEvent = datetime.datetime.now().strftime('%d-%m-%Y %H:%M:%S')
 
@@ -370,7 +364,6 @@ class Network:
                         event = MotionDetection(node, datetimeEvent)
                 elif value.label == 'Sensor' and isinstance(module, MultiSensor):
                     if 'motion sensor' in module.sensorsList:
-                        print('11111111111111')
                         if value.data == True:
                             event = MotionDetection(node, datetimeEvent)
 
@@ -390,6 +383,12 @@ class Network:
             self.eventList.append(event)
         else:
             pass
+
+    def node_added(self, node):
+        print("le noeud {} a été ajouter".format(node.name))
+
+    def value_changed(self, node, value):
+        
 
 
     def scene_event(self):
