@@ -332,7 +332,7 @@ class Network:
     def network_awake(self, network):
         print("Hello from network : I'm awake")
 
-    def node_event(self, event, node, value):
+    def node_event(self, node, value):
         print("###########Node Event##########")
 
     def node_added(self, node):
