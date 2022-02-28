@@ -333,7 +333,7 @@ class Network:
     def network_awake(self, network):
         print("Hello from network : I'm awake")
 
-    def node_event(self):
+    def node_event(self, event, node):
         print("######event########")
 
     def node_added(self, node):
@@ -341,7 +341,7 @@ class Network:
 
     def value_changed(self, node, value):
         module = event = False
-        datetimeEvent= datetime.datetime.now().strftime('%d-%m-%Y %H:%M:%S')
+        datetimeEvent = datetime.datetime.now().strftime('%d-%m-%Y %H:%M:%S')
 
         print("####value changed######")
         print('{}: [{}: {}]'.format(node.name, value.label, value.data))
