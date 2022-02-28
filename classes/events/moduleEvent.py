@@ -14,13 +14,6 @@ class ModuleEvent(Event):
         method:
     """
 
-    def __init__(self, moduleNode, type, dateTime):
-        Event.__init__(self, type, dateTime, moduleNode.location)
+    def __init__(self, moduleNode, Type, dateTime):
+        Event.__init__(self, Type, dateTime, moduleNode.location)
         self.moduleNode = moduleNode
-
-    def __str__(self):
-        return "type: {}\tdatetime: {}\tlocation: {}".format(
-            self.type,
-            self.dateTime,
-            self.location
-        )
