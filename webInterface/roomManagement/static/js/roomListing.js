@@ -4,7 +4,6 @@ const screen = document.getElementById('screen');
 socket.emit('get_rooms_list', 'rooms')
 socket.on('post_rooms_list', data=>{
 	let contentZone = document.createElement('div');
-	contentZone.classList.add('row');
 
 	data = data["data"]
 
@@ -56,10 +55,10 @@ socket.on('post_rooms_list', data=>{
 		const carouselItemList = [];
 
 		carousel.id = 'roomCarousel'
-		carousel.classList.add("carousel", "slide");
+		carousel.classList.add("carousel", "slide", "col-lg");
 		carousel.setAttribute('data-interval', "false");
 
-		carouselInner.classList.add("carousel-inner");
+		carouselInner.classList.add("carousel-inner", "row");
 
 		carouselActiveItem.classList.add("carousel-item", "active", "roomCarouselItem");
 
