@@ -17,7 +17,7 @@ class Event:
 
     def __init__(self, Type, dateTime, location):
         self.type = Type
-        self.dateTime = dateTime
+        self.dateTime = dateTime.strftime("%d/%m/%y, %H:%M:%S")
         self.location = location
 
 
@@ -25,7 +25,7 @@ class Event:
         data = {}
 
         data = {'type': self.type,
-        'dateTime': self.dateTime.strftime("%d/%m/%y, %H:%M:%S"),
+        'dateTime': self.dateTime,
         'location': self.location,
         }
 
