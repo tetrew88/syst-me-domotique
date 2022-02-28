@@ -337,7 +337,7 @@ class Network:
 
     def value_changed(self, node, value):
         module = event = False
-        datetimeEvent = 'lol'#datetime.datetime.now().strftime("%d/%m/%y, %H:%M:%S")
+        datetimeEvent = datetime.datetime.now().strftime("%d/%m/%y, %H:%M:%S")
 
         print("####value changed######")
         print('{}: [{}: {}]'.format(node.name, value.label, value.data))
@@ -348,7 +348,6 @@ class Network:
                     module = element
 
             if isinstance(module, Sensor):
-                print('!!!!!!!!sensor!!!!!!!!!')
                 if value.label == 'Access Control' and isinstance(module, Door_WindowSensor):
                     if value.data == 23:
                         event = Door_WindowOpening(node, datetime.datetime.now())
@@ -370,7 +369,6 @@ class Network:
                         event = MotionDetection(node, datetimeEvent)
 
             if isinstance(module, Bulb):
-                print('!!!!!!!!!bublb!!!!!!!')
                 if value.label == 'Level':
                     if value.data > 0:
                         event = LightOn(node, datetimeEvent)
@@ -383,7 +381,6 @@ class Network:
 
 
         if event != False:
-            print(event)
             self.eventList.append(event)
         else:
             pass
