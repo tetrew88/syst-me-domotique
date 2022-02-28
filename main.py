@@ -589,7 +589,7 @@ def main():
                     print('\n')
                     print('####################')
                     for value in selectedModule.moduleNode.get_values():
-                        print("{}: {}".format(selectedModule.moduleNode.get_values()[values].label, selectedModule.moduleNode.get_values()[values].data))
+                        print("{}: {}".format(selectedModule.moduleNode.get_values()[value].label, selectedModule.moduleNode.get_values()[value].data))
 
                     if isinstance(selectedModule, Bulb):
                         optionsChoice = tmpOptionsChoice = 0
