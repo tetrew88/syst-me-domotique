@@ -103,7 +103,7 @@ class Room:
         events = []
 
         for event in self.automationNetwork.eventList:
-            if event.node.location != '':
+            if event.location != '':
                 if int(event.location) == self.id:
                     events.append(event)
 
