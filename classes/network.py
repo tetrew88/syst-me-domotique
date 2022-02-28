@@ -381,6 +381,7 @@ class Network:
 
 
         if event != False:
+            print(event)
             self.eventList.append(event)
         else:
             pass
