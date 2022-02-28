@@ -326,13 +326,15 @@ class Network:
         print("Hello from network : I'm awake")
 
     def node_event(self):
-        print("event")
+        print("######event########")
 
     def node_added(self, node):
-        print("le noeud {} a été ajouter", node.name)
+        print("le noeud {} a été ajouter".format(node.name))
 
     def value_changed(self, node, value):
         print("####value changed######")
+        print('{}: [{}: {}]'.format(node.name, value.label, value.data))
+
     def scene_event(self):
         print("####scene######")
 
