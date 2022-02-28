@@ -14,8 +14,8 @@ class Door_WindowEvent(ModuleEvent):
 	"""
 
 	def __init__(self, moduleNode,datetime, door_windowState, eventType = "window/door event"):
-        ModuleEvent.__init__(self, moduleNode, eventType, datetime)
-        self.door_windowState = door_windowState
+		ModuleEvent.__init__(self, moduleNode, eventType, datetime)
+		self.door_windowState = door_windowState
 
 class Door_WindowOpening(Door_WindowEvent):
 
