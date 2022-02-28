@@ -386,8 +386,6 @@ class Network:
 
     def node_added(self, node):
         print("le noeud {} a été ajouter".format(node.name))
-
-    def value_changed(self, node, value):
         
 
 
