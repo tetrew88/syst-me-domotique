@@ -26,7 +26,7 @@ socket.on('post_inhabitants_list', data=>{
 			cardPicture.src = "/static/pictures/profil.png";
 			cardTitle.classList.add("card-title", "text-center");
 			cardTitle.style.color = 'blue';
-			cardTitle.textContent = element["firstName"] +'\n'+ element["lastName"];
+			cardTitle.textContent = element["profil"]["firstName"] +'\n'+ element["profil"]["lastName"];
 
 			profilCard.appendChild(cardPicture);
 			profilCard.appendChild(cardTitle);
@@ -96,7 +96,7 @@ socket.on('post_inhabitants_list', data=>{
 			cardPicture.src = "/static/pictures/profil.png";
 			cardTitle.classList.add("card-title", "text-center");
 			cardTitle.style.color = 'blue';
-			cardTitle.textContent = element["firstName"] +'\n'+ element["lastName"];
+			cardTitle.textContent = element["profil"]["firstName"] +'\n'+ element["profil"]["lastName"];
 
 			roomCard.appendChild(cardPicture);
 			roomCard.appendChild(cardTitle);

@@ -11,7 +11,9 @@
 .profilList
 {
 	background-color: white;
-	opacity: 80%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	padding: 2%;
 
-	margin-top: 2%;
+	opacity: 80%;
 }
