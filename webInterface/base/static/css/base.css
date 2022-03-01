@@ -33,18 +33,6 @@
 }
 
 
-/* personnal css */
-#screen
-{
-	background-color: black;
-
-	margin-top: 5%;
-	margin-bottom: 5%;
-	padding: 2%;
-
-	opacity: 80%;
-}
-
 #carousel
 {
 	list-style: none;

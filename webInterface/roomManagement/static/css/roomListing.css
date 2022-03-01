@@ -8,3 +8,10 @@
 
 	margin: auto;
 }
+
+#screen
+{
+	background-color: black;
+	
+	opacity: 80%;
+}
