@@ -55,6 +55,7 @@ socket.on('post_inhabitants_list', data=>{
 		carousel.id = 'inhabitantCarousel'
 		carousel.classList.add("carousel", "slide", "container-fluid");
 		carousel.setAttribute('data-interval', "false");
+		carousel.style.color('black');
 
 		carouselInner.classList.add("carousel-inner", "container-fluid");
 
