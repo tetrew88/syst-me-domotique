@@ -8,7 +8,7 @@ let banner = document.getElementById('banner');
 
 let moduleListScreen = document.getElementById('moduleList');
 
-let eventList = document.getElementById("eventList");
+let eventListScreen = document.getElementById("eventList");
 
 let moduleList = []
 let eventList = []
