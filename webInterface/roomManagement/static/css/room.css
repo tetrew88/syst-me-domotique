@@ -39,3 +39,13 @@
 
 	margin: 1%;
 }
+
+#roomCarousel .carousel-control-prev-icon
+{
+	filter: invert(100%);
+}
+
+#roomCarousel .carousel-control-next-icon
+{
+	filter: invert(100%);
+}
