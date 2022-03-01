@@ -8,10 +8,9 @@ let banner = document.getElementById('banner');
 
 let moduleListScreen = document.getElementById('moduleList');
 
-let eventListScreen = document.getElementById("eventList");
+let eventList = document.getElementById("eventList");
 
 let moduleList = []
-let eventList = []
 
 socket.emit('get_room', roomId)
 socket.on('post_room', data=>{
@@ -209,8 +208,40 @@ socket.on('post_room', data=>{
 		moduleListScreen.appendChild(carousel);
 	}
 
-////////////////////////////////////////////////////////////////////////////////////////////////
-	
+///////////////////////////////////////////////////
+
+	for (const element of data["events"])
+	{
+		let notif = document.createElement('div');
+		let dateTime = '[' + element["dateTime"] + ']: ';
+
+		notif.classList.add("row", "eventRapport");
+
+		if(element['type'] == 'turn on light')
+		{
+			notif.textContent = dateTime + "la lumière as été allumé";
+		}
+		else if(element['type'] == 'turn off light')
+		{
+			notif.textContent =  dateTime + "la lumière as été éteinte";
+		}
+
+		else if(element['type'] == 'door/window opening')
+		{
+			notif.textContent = dateTime + 'la porte/fenètre as été ouverte'
+		}
+		else if(element['type'] == 'door/window closing')
+		{
+			notif.textContent = dateTime + 'la porte/fenètre as été fermé'
+		}
+
+		else if(element['type'] == 'motion detection')
+		{
+			notif.textContent = dateTime + 'un mouvement as été détecté'
+		}
+
+		eventList.appendChild(notif);
+	}
 
 
 
