@@ -19,7 +19,7 @@
 	opacity: 80%;
 }
 
-#roomCarousel
+.carousel-item active
 {
 	display: flex;
 	flex-direction: row;
