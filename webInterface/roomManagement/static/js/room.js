@@ -11,6 +11,7 @@ let moduleListScreen = document.getElementById('moduleList');
 let eventList = document.getElementById("eventList");
 
 let moduleList = []
+let eventList = []
 
 socket.emit('get_room', roomId)
 socket.on('post_room', data=>{
@@ -200,39 +201,125 @@ socket.on('post_room', data=>{
 		moduleListScreen.appendChild(carousel);
 	}
 
+	eventList = data['events'];
 
-
-	for (const element of data["events"])
+	if(eventList.length <= 3)
 	{
-		let notif = document.createElement('div');
-		let dateTime = '[' + element["dateTime"] + ']: ';
-
-		notif.classList.add("row", "eventRapport");
-
-		if(element['type'] == 'turn on light')
+		for (const element of eventList)
 		{
-			notif.textContent = dateTime + "la lumière as été allumé";
+			let eventNotif = document.createElement('div');
+			
+
+			eventNotif.classList.add("row", "eventRapport");
+
+			eventNotif.textContent = element['str'];
+			
+
+			eventListScreen.appendChild(eventNotif);
 		}
-		else if(element['type'] == 'turn off light')
-		{
-			notif.textContent =  dateTime + "la lumière as été éteinte";
+	}
+	else
+	{
+		let x = 0
+
+		const eventCarousel = document.createElement('div');
+		const eventCarouselInner = document.createElement('div');
+
+		const eventCarouselActiveItem = document.createElement('div');
+		let activeCol = document.createElement('div');
+		const eventCarouselItemList = [];
+
+		let eventCarouselControlPrev = document.createElement('a');
+		let eventPrevIcon = document.createElement('span');
+
+		let eventCarouselControlNext = document.createElement('a');
+		let eventNextIcon = document.createElement('span');
+
+		eventCarousel.id = 'eventCarousel'
+		eventCarousel.classList.add("carousel", "slide", "container-fluid");
+		eventCarousel.setAttribute('data-interval', "false");
+
+		eventCarouselInner.classList.add("carousel-inner", "container-fluid");
+
+		eventCarouselActiveItem.classList.add("carousel-item", "active", "container-fluid");
+
+		activeCol.classList.add('col')
+
+		eventCarouselControlPrev.classList.add("carousel-control-prev", "container-fluid");
+		eventCarouselControlPrev.href = "#eventCarousel";
+		eventCarouselControlPrev.role="button";
+		eventCarouselControlPrev.setAttribute('data-slide',"prev");
+
+		eventPrevIcon.classList.add('carousel-control-prev-icon', "container-fluid");
+		eventPrevIcon.setAttribute('aria-hidden', "true");
+
+		eventCarouselControlNext.classList.add("carousel-control-next", "container-fluid");
+		eventCarouselControlNext.href = "#eventCarousel";
+		eventCarouselControlNext.role="button";
+		eventCarouselControlNext.setAttribute('data-slide','next');
+
+		eventNextIcon.classList.add('carousel-control-next-icon', "container-fluid");
+		eventNextIcon.setAttribute('aria-hidden', 'true');
+
+		eventCarouselControlPrev.appendChild(eventPrevIcon);
+		eventCarouselControlNext.appendChild(eventNextIcon);
+
+		for (const element of data) {
+			let eventNotif = document.createElement('div');
+			
+
+			eventNotif.classList.add("row", "eventRapport");
+
+			eventNotif.textContent = element['str'];
+
+			if(x <= 2)
+			{
+				activeCol.appendChild(eventNotif);
+			}
+			else
+			{
+				let result = x % 3
+
+				if(result == 0)
+				{
+					let eventCarouselItem = document.createElement('div');
+					let passiveCol = document.createElement('div');
+
+					passiveCol.classList.add('col');
+
+					eventCarouselItemList.push(passiveCol);
+				}
+
+				eventCarouselItemList[eventCarouselItemList.length - 1].appendChild(eventNotif);
+			}
+
+			x++;
 		}
 
-		else if(element['type'] == 'door/window opening')
+		eventCarouselActiveItem.appendChild(activeCol);
+
+		eventCarouselInner.appendChild(eventCarouselActiveItem);
+
+		let y = 0
+
+		if(eventCarouselItemList.length > 0)
 		{
-			notif.textContent = dateTime + 'la porte/fenètre as été ouverte'
-		}
-		else if(element['type'] == 'door/window closing')
-		{
-			notif.textContent = dateTime + 'la porte/fenètre as été fermé'
+			for (const item of eventCarouselItemList)
+			{
+				let eventCarouselItem = document.createElement('div');
+				eventCarouselItem.classList.add("carousel-item", "container-fluid");
+
+				eventCarouselItem.appendChild(item);
+				eventCarouselInner.appendChild(eventCarouselItem);
+			}
 		}
 
-		else if(element['type'] == 'motion detection')
-		{
-			notif.textContent = dateTime + 'un mouvement as été détecté'
-		}
+		eventCarousel.appendChild(eventCarouselInner);
 
-		eventList.appendChild(notif);
+		eventCarousel.appendChild(eventCarouselControlPrev);
+		eventCarousel.appendChild(eventCarouselControlNext);
+
+		eventListScreen.appendChild(eventCarousel);
 	}
 
 
