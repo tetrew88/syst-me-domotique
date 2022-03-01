@@ -119,7 +119,7 @@ socket.on('post_rooms_list', data=>{
 
 					passiveRow.classList.add('row');
 
-					carouselItemList.push(row);
+					carouselItemList.push(passiveRow);
 				}
 
 				carouselItemList[carouselItemList.length - 1].appendChild(link);
