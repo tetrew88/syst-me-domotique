@@ -84,14 +84,14 @@ socket.on('post_inhabitants_list', data=>{
 
 		for (const element of inhabitantList) {
 			let link = document.createElement('a')
-			let roomCard = document.createElement('div');
+			let profilCard = document.createElement('div');
 			let cardPicture = document.createElement('img');
 			let cardTitle =  document.createElement('div');
 
 			link.href = '/inhabitant/' + element['id'] + "/"
 			link.classList.add("col-lg-4")
 
-			roomCard.classList.add("card", "roomCard", "rounded", "container-fluid");
+			profilCard.classList.add("card", "profilCard", "rounded");
 
 			cardPicture.classList.add("img-fluid", "rounded");
 			cardPicture.src = "/static/pictures/profil.png";
@@ -99,10 +99,10 @@ socket.on('post_inhabitants_list', data=>{
 			cardTitle.style.color = 'blue';
 			cardTitle.textContent = element["profil"]["firstName"] +'\n'+ element["profil"]["lastName"];
 
-			roomCard.appendChild(cardPicture);
-			roomCard.appendChild(cardTitle);
+			profilCard.appendChild(cardPicture);
+			profilCard.appendChild(cardTitle);
 
-			link.appendChild(roomCard);
+			link.appendChild(profilCard);
 
 			if(x <= 2)
 			{
