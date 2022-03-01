@@ -16,18 +16,10 @@
 		</div>
 		<div class="row">
 			<div class="col-3"></div>
-			<div class="col-6 profilList rounded">
-				<div class="row">
-					{% for profil in inhabitantsList %}
-		                <div class="col-lg-4 card profilCard">
-		                    <img class="img-fluid rounded-circle" src="{% static 'pictures/profil.png' %}" alt="product_picture">
-
-		                    <div class="card-title text-center">
-		                    	{{ profil }}
-		                  	</div>
-		                </div>
-	             	{% endfor %}
-	             </div>
+			<div class="col-6">
+				<div id="inhabitantsScreen" class="row profilList rounded">
+					
+	      </div>
 			</div>
 			<div class="col-3"></div>
 		</div>
@@ -41,18 +33,10 @@
 		</div>
 		<div class="row">
 			<div class="col-3"></div>
-			<div class="col-6 profilList rounded">
-				<div class="row">
-					{% for profil in guestsList %}
-		                <div class="col-lg-4 card profilCard">
-		                    <img class="iimg-fluid rounded-circle" src="{% static 'pictures/profil.png' %}" alt="product_picture">
-
-		                    <div class="card-title text-center">
-		                    	{{ profil }}
-		                  	</div>
-		                </div>
-	             	{% endfor %}
-	             </div>
+			<div class="col-6">
+				<div id='guestsScreen' class="row profilList rounded">
+					
+	      </div>
 			</div>
 			<div class="col-3"></div>
 		</div>
