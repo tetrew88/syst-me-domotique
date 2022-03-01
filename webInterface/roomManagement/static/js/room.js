@@ -16,7 +16,6 @@ socket.emit('get_room', roomId)
 socket.on('post_room', data=>{
 	let indicatorColor = ""
 	let bannerTitle = document.createElement('h2');
-	let contentZone = document.createElement('div')
 
 	data = data["data"]
 
@@ -49,7 +48,6 @@ socket.on('post_room', data=>{
 
 	if(moduleList.length <= 6)
 	{
-		contentZone.classList.add("row");
 
 		for (const element of moduleList)
 		{
@@ -81,9 +79,7 @@ socket.on('post_room', data=>{
 
 			link.appendChild(moduleCard);
 
-			contentZone.appendChild(link);
-
-			moduleListScreen.appendChild(contentZone);
+			moduleListScreen.appendChild(link);
 		}
 	}
 	else
@@ -201,7 +197,7 @@ socket.on('post_room', data=>{
 		carousel.appendChild(carouselControlPrev);
 		carousel.appendChild(carouselControlNext);
 
-		screen.appendChild(carousel);
+		moduleListScreen.appendChild(carousel);
 	}
 
 
