@@ -66,19 +66,19 @@ socket.on('post_inhabitants_list', data=>{
 		carouselControlPrev.href = "#inhabitantCarousel";
 		carouselControlPrev.role="button";
 		carouselControlPrev.setAttribute('data-slide',"prev");
-		carouselControlPrev.style.color = 'black';
 
 		prevIcon.classList.add('carousel-control-prev-icon', "container-fluid");
 		prevIcon.setAttribute('aria-hidden', "true");
+		prevIcon.style.color = 'black';
 
 		carouselControlNext.classList.add("carousel-control-next", "container-fluid");
 		carouselControlNext.href = "#inhabitantCarousel";
 		carouselControlNext.role="button";
 		carouselControlNext.setAttribute('data-slide','next');
-		carouselControlNext.style.color = 'black';
 
 		nextIcon.classList.add('carousel-control-next-icon', "container-fluid");
 		nextIcon.setAttribute('aria-hidden', 'true');
+		nextIcon.style.color = 'black';
 
 		carouselControlPrev.appendChild(prevIcon);
 		carouselControlNext.appendChild(nextIcon);
