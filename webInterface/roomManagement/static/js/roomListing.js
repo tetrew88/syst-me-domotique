@@ -44,6 +44,7 @@ socket.on('post_rooms_list', data=>{
 		const carouselInner = document.createElement('div');
 
 		const carouselActiveItem = document.createElement('div');
+		let activeRow = document.createElement('div');
 		const carouselItemList = [];
 
 		let carouselControlPrev = document.createElement('a');
@@ -59,6 +60,8 @@ socket.on('post_rooms_list', data=>{
 		carouselInner.classList.add("carousel-inner", "container-fluid");
 
 		carouselActiveItem.classList.add("carousel-item", "active", "container-fluid");
+
+		activeRow.classList.add('row')
 
 		carouselControlPrev.classList.add("carousel-control-prev", "container-fluid");
 		carouselControlPrev.href = "#roomCarousel";
@@ -103,7 +106,7 @@ socket.on('post_rooms_list', data=>{
 
 			if(x <= 5)
 			{
-				carouselActiveItem.appendChild(link);
+				activeRow.appendChild(link);
 			}
 			else
 			{
@@ -112,9 +115,11 @@ socket.on('post_rooms_list', data=>{
 				if(result == 0)
 				{
 					let carouselItem = document.createElement('div');
-					carouselItem.classList.add("carousel-item", "container-fluid");
+					let passiveRow = document.createElement('div');
 
-					carouselItemList.push(carouselItem);
+					passiveRow.classList.add('row');
+
+					carouselItemList.push(row);
 				}
 
 				carouselItemList[carouselItemList.length - 1].appendChild(link);
@@ -123,12 +128,21 @@ socket.on('post_rooms_list', data=>{
 			x++;
 		}
 
+		carouselActiveItem.appendChild(activeRow);
+
 		carouselInner.appendChild(carouselActiveItem);
+
+		let y = 0
 
 		if(carouselItemList.length > 0)
 		{
-			for (const item of carouselItemList) {
-				carouselInner.appendChild(item);
+			for (const item of carouselItemList)
+			{
+				let carouselItem = document.createElement('div');
+				carouselItem.classList.add("carousel-item", "container-fluid");
+
+				carouselItem.appendChild(item);
+				carouselInner.appendChild(carouselItem);
 			}
 		}
 
