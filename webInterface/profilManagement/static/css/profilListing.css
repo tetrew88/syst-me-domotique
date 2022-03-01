@@ -18,10 +18,12 @@
 	opacity: 80%;
 }
 
-inhabitantCarousel .carousel-control-prev:hover::before {
-    color: black;
+#inhabitantCarousel .carousel-control-prev-icon
+{
+	filter: invert(100%);
 }
 
-inhabitantCarousel .carousel-control-prev:hover::after {
-    color: black;
+#inhabitantCarousel .carousel-control-next-icon
+{
+	filter: invert(100%);
 }
