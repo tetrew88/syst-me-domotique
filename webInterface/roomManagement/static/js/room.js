@@ -8,7 +8,7 @@ let banner = document.getElementById('banner');
 
 let moduleListScreen = document.getElementById('moduleList');
 
-let eventListScreen = document.getElementById("eventList");
+let eventList = document.getElementById("eventList");
 
 let moduleList = []
 let eventList = []
@@ -214,6 +214,7 @@ socket.on('post_room', data=>{
 
 	if(moduleList.length <= 3)
 	{
+
 		for (const element of data["events"])
 		{
 			let notif = document.createElement('div');
@@ -224,115 +225,9 @@ socket.on('post_room', data=>{
 			notif.textContent = element['str'];
 			
 
-			eventListScreen.appendChild(notif);
+			eventList.appendChild(notif);
 		}
 	}
-	else
-	{
-		let x = 0
-
-		const carousel = document.createElement('div');
-		const carouselInner = document.createElement('div');
-
-		const carouselActiveItem = document.createElement('div');
-		let activeCol = document.createElement('div');
-		const carouselItemList = [];
-
-		let carouselControlPrev = document.createElement('a');
-		let prevIcon = document.createElement('span');
-
-		let carouselControlNext = document.createElement('a');
-		let nextIcon = document.createElement('span');
-
-		carousel.id = 'roomCarousel'
-		carousel.classList.add("carousel", "slide", "container-fluid");
-		carousel.setAttribute('data-interval', "false");
-
-		carouselInner.classList.add("carousel-inner", "container-fluid");
-
-		carouselActiveItem.classList.add("carousel-item", "active", "container-fluid");
-
-		activeCol.classList.add('col')
-
-		carouselControlPrev.classList.add("carousel-control-prev", "container-fluid");
-		carouselControlPrev.href = "#roomCarousel";
-		carouselControlPrev.role="button";
-		carouselControlPrev.setAttribute('data-slide',"prev");
-
-		prevIcon.classList.add('carousel-control-prev-icon', "container-fluid");
-		prevIcon.setAttribute('aria-hidden', "true");
-
-		carouselControlNext.classList.add("carousel-control-next", "container-fluid");
-		carouselControlNext.href = "#roomCarousel";
-		carouselControlNext.role="button";
-		carouselControlNext.setAttribute('data-slide','next');
-
-		nextIcon.classList.add('carousel-control-next-icon', "container-fluid");
-		nextIcon.setAttribute('aria-hidden', 'true');
-
-		carouselControlPrev.appendChild(prevIcon);
-		carouselControlNext.appendChild(nextIcon);
-
-		for (const element of data) {
-			let notif = document.createElement('div');
-			
-
-			notif.classList.add("row", "eventRapport");
-
-			notif.textContent = element['str'];
-
-			if(x <= 2)
-			{
-				activeCol.appendChild(notif);
-			}
-			else
-			{
-				let result = x % 3
-
-				if(result == 0)
-				{
-					let carouselItem = document.createElement('div');
-					let passiveCol = document.createElement('div');
-
-					passiveCol.classList.add('col');
-
-					carouselItemList.push(passiveCol);
-				}
-
-				carouselItemList[carouselItemList.length - 1].appendChild(notif);
-			}
-
-			x++;
-		}
-
-		carouselActiveItem.appendChild(activeCol);
-
-		carouselInner.appendChild(carouselActiveItem);
-
-		let y = 0
-
-		if(carouselItemList.length > 0)
-		{
-			for (const item of carouselItemList)
-			{
-				let carouselItem = document.createElement('div');
-				carouselItem.classList.add("carousel-item", "container-fluid");
-
-				carouselItem.appendChild(item);
-				carouselInner.appendChild(carouselItem);
-			}
-		}
-
-		carousel.appendChild(carouselInner);
-
-		carousel.appendChild(carouselControlPrev);
-		carousel.appendChild(carouselControlNext);
-
-		eventListScreen.appendChild(carousel);
-	}
-
-
-
 
 })
 
