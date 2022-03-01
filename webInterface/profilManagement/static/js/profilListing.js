@@ -81,7 +81,7 @@ socket.on('post_inhabitants_list', data=>{
 		carouselControlPrev.appendChild(prevIcon);
 		carouselControlNext.appendChild(nextIcon);
 
-		for (const element of data) {
+		for (const element of inhabitantList) {
 			let link = document.createElement('a')
 			let roomCard = document.createElement('div');
 			let cardPicture = document.createElement('img');
@@ -103,13 +103,13 @@ socket.on('post_inhabitants_list', data=>{
 
 			link.appendChild(roomCard);
 
-			if(x <= 5)
+			if(x <= 2)
 			{
 				activeRow.appendChild(link);
 			}
 			else
 			{
-				let result = x % 6
+				let result = x % 3
 
 				if(result == 0)
 				{
