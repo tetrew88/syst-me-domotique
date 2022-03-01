@@ -1,8 +1,8 @@
-const inhabitantsScreen = document.getElementById("inhabitantScreens");
 const guestsScreen = document.getElementById('guestsScreen');
 
 socket.emit('get_inhabitants_list', '')
 socket.on('post_inhabitants_list', data=>{
+	const inhabitantsScreen = document.getElementById("inhabitantScreens");
 	let inhabitantList = [];
 
 	inhabitantList = data["data"];
