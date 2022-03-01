@@ -66,7 +66,6 @@ socket.on('post_inhabitants_list', data=>{
 		carouselControlPrev.href = "#inhabitantCarousel";
 		carouselControlPrev.role="button";
 		carouselControlPrev.setAttribute('data-slide',"prev");
-		carouselControlPrev.setAttribute('carousel-control-color', 'black');
 
 		prevIcon.classList.add('carousel-control-prev-icon', "container-fluid");
 		prevIcon.setAttribute('aria-hidden', "true");
