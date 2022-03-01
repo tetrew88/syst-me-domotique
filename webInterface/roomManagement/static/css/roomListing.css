@@ -18,9 +18,3 @@
 
 	opacity: 80%;
 }
-
-.carousel-inner
-{
-	display: flex;
-	flex-direction: row;
-}
