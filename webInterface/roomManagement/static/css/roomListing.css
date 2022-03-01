@@ -10,7 +10,7 @@
 }
 
 
-.carousel-item
+#roomCarousel
 {
 	display: flex;
 	flex-direction: row;
