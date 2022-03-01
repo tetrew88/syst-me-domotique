@@ -25,6 +25,10 @@ class Event:
         data = {'type': self.type,
         'dateTime': self.dateTime,
         'location': self.location,
+        'str': self.__str__()
         }
 
         return data
+
+    def __str__(self):
+        return "[{}]: {}".format(self.dateTime, self.type)

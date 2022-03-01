@@ -14,3 +14,6 @@ class MotionDetection(ModuleEvent):
 
     def __init__(self, moduleNode, datetime):
         ModuleEvent.__init__(self, moduleNode, "motion detection", datetime)
+
+    def __str__(self):
+        return "[{}]: un mouvement as été détécter".format(self.dateTime)
