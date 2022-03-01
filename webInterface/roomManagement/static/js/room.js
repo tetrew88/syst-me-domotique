@@ -264,7 +264,7 @@ socket.on('post_room', data=>{
 		eventCarouselControlPrev.appendChild(eventPrevIcon);
 		eventCarouselControlNext.appendChild(eventNextIcon);
 
-		for (const element of data) {
+		for (const element of eventList) {
 			let eventNotif = document.createElement('div');
 			
 
