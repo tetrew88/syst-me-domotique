@@ -22,7 +22,7 @@ socket.on('post_inhabitants_list', data=>{
 
 			profilCard.classList.add("card", "profilCard", "rounded");
 
-			cardPicture.classList.add("img-fluid", "rounded");
+			cardPicture.classList.add("img-fluid", "img-circle");
 			cardPicture.src = "/static/pictures/profil.png";
 			cardTitle.classList.add("card-title", "text-center");
 			cardTitle.style.color = 'blue';
@@ -93,7 +93,7 @@ socket.on('post_inhabitants_list', data=>{
 
 			profilCard.classList.add("card", "profilCard", "rounded");
 
-			cardPicture.classList.add("img-fluid", "rounded");
+			cardPicture.classList.add("img-fluid", "img-circle");
 			cardPicture.src = "/static/pictures/profil.png";
 			cardTitle.classList.add("card-title", "text-center");
 			cardTitle.style.color = 'blue';
