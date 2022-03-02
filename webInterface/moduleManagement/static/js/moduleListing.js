@@ -101,7 +101,7 @@ socket.on('post_modules_list', data=>{
 
 				link.appendChild(moduleCard);
 
-				moduleListScreen.appendChild(link);
+				listContent.appendChild(link);
 			}
 		}
 
