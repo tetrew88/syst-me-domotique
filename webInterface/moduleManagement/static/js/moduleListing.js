@@ -81,7 +81,7 @@ socket.on('post_modules_list', data=>{
 				link.href = '/module/' + element['id'] + "/";
 				link.classList.add("col-lg-4", 'container-fluid');
 
-				moduleCard.classList.add("card", "moduleCard", "rounded");
+				moduleCard.classList.add("card", "moduleCard", "rounded", 'container-fluid');
 
 				cardPicture.classList.add("img-fluid", "rounded");
 				if(element['type'] == 'rgb bulb')
