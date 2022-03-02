@@ -2,6 +2,8 @@
 {
 	background-color: white;
 	opacity: 80%;
+
+	min-height: 2em;
 }
 
 #eventList
@@ -13,6 +15,8 @@
 	height: 100%;
 
 	opacity: 70%;
+
+	min-height: 2em;
 }
 
 

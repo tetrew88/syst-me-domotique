@@ -9,7 +9,7 @@ socket.on('post_modules_list', data=>{
 
 	for (const element of moduleList)
 	{
-		if(moduleList.includes(element["type"]))
+		if(moduleTypeList.includes(element["type"]))
 		{
 
 		}
@@ -22,6 +22,9 @@ socket.on('post_modules_list', data=>{
 
 	for (const element of moduleTypeList)
 	{
+		let selectedModules = [];
+		let selectedType = element;
+
 		let moduleSection = document.createElement('div');
 		let content = document.createElement('div');
 
@@ -38,6 +41,15 @@ socket.on('post_modules_list', data=>{
 		let listContent = document.createElement('div');
 
 
+		for(const element of moduleList)
+		{
+			if(element['type'] == selectedType)
+			{
+				selectedModules.push(element);
+			}
+		}
+
+
 		moduleSection.classList.add('row', 'moduleSection');
 		content.classList.add('col');
 
@@ -47,13 +59,51 @@ socket.on('post_modules_list', data=>{
 		titleZone.classList.add('col-4', 'text-center');
 
 		listSection.classList.add("row");
-		listMargin1.classList.add('col-4');
-		listMargin2.classList.add('col-4');
+		listMargin1.classList.add('col-3');
+		listMargin2.classList.add('col-3');
 
-		listZone.classList.add('col-4');
-		listContent.classList.add('row', 'moduleList');
+		listZone.classList.add('col-6');
+		listContent.classList.add('row', 'moduleList', "rounded");
 
 		titleZone.textContent = element;
+
+
+		if(moduleList.length <= 3)
+		{
+
+			for (const element of moduleList)
+			{
+				let link = document.createElement('a');
+				let moduleCard = document.createElement('div');
+				let cardPicture = document.createElement('img');
+				let cardTitle =  document.createElement('div');
+
+				link.href = '/module/' + element['id'] + "/";
+				link.classList.add("col-lg-4");
+
+				moduleCard.classList.add("card", "moduleCard", "rounded");
+
+				cardPicture.classList.add("img-fluid", "rounded");
+				if(element['type'] == 'rgb bulb')
+				{
+					cardPicture.src = "/static/pictures/" + 'bulb' + ".jpeg";
+				}
+				else
+				{
+					cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";
+				}
+
+				cardTitle.classList.add("card-title", "text-center");
+				cardTitle.textContent = element["name"];
+
+				moduleCard.appendChild(cardPicture);
+				moduleCard.appendChild(cardTitle);
+
+				link.appendChild(moduleCard);
+
+				moduleListScreen.appendChild(link);
+			}
+		}
 
 
 		bannerSection.appendChild(bannerMargin1);
