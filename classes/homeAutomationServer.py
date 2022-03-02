@@ -134,6 +134,17 @@ class HomeAutomationServer(socketio.Namespace):
 
 			print(bulb.lightUp)
 
+	@socketIoServer.event(namespace='/HomeAutomationServer')
+	def get_modules_list(sid, data):
+		modules = []
+
+		for element in HomeAutomationServer.homeAutomationSystem.get_home_automation_modules():
+			modules.append(element.serialize())
+
+		print(modules)
+
+		socketIoServer.emit('post_modules_list', {"data": modules}, namespace='/HomeAutomationServer')
+
 
 
 socketIoServer.register_namespace(HomeAutomationServer())

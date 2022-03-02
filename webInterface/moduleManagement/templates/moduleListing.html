@@ -1,17 +1,23 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/moduleListing.css' %}" />
+{% endblock %}
+
 {% block content %}
 
 <div class="col container-fluid">
   <div class="row">
-    hello
+    <div id="screen" class="col container-fluid">
+      
+    </div>
   </div>
 </div>
 
 
 {% endblock %}
 
-{% block css %}
-  <link rel="stylesheet" type="text/css" href="{% static 'css/moduleListing.css' %}" />
+{% block jsScript %}
+  <script src="{% static 'js/moduleListing.js' %}"></script>
 {% endblock %}
