@@ -68,10 +68,10 @@ socket.on('post_modules_list', data=>{
 		titleZone.textContent = element;
 
 
-		if(moduleList.length <= 3)
+		if(selectedModules.length <= 3)
 		{
 
-			for (const element of moduleList)
+			for (const element of selectedModules)
 			{
 				let link = document.createElement('a');
 				let moduleCard = document.createElement('div');
