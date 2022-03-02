@@ -38,20 +38,20 @@ socket.on('post_modules_list', data=>{
 		let listContent = document.createElement('div');
 
 
-		moduleSection.classList.add('row', 'moduleSection', "container-fluid");
-		content.classList.add('col', "container-fluid");
+		moduleSection.classList.add('row', 'moduleSection');
+		content.classList.add('col');
 
-		bannerSection.classList.add('row', 'container-fluid');
+		bannerSection.classList.add('row');
 		bannerMargin1.classList.add('col-4');
 		bannerMargin2.classList.add('col-4');
 		titleZone.classList.add('col-4', 'text-center');
 
-		listSection.classList.add("row", 'container-fluid');
+		listSection.classList.add("row");
 		listMargin1.classList.add('col-4');
 		listMargin2.classList.add('col-4');
 
-		listZone.classList.add('col-4', 'container-fluid');
-		listContent.classList.add('row', 'container-fluid', 'moduleList');
+		listZone.classList.add('col-4');
+		listContent.classList.add('row', 'moduleList');
 
 		titleZone.textContent = element;
 
