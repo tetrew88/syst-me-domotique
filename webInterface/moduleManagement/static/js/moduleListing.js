@@ -50,20 +50,20 @@ socket.on('post_modules_list', data=>{
 		}
 
 
-		moduleSection.classList.add('row', 'moduleSection');
+		moduleSection.classList.add('row', 'moduleSection', 'container-fluid');
 		content.classList.add('col');
 
-		bannerSection.classList.add('row');
+		bannerSection.classList.add('row', 'container-fluid');
 		bannerMargin1.classList.add('col-4');
 		bannerMargin2.classList.add('col-4');
-		titleZone.classList.add('col-4', 'text-center');
+		titleZone.classList.add('col-4', 'text-center', 'container-fluid');
 
-		listSection.classList.add("row");
+		listSection.classList.add("row", 'container-fluid');
 		listMargin1.classList.add('col-3');
 		listMargin2.classList.add('col-3');
 
-		listZone.classList.add('col-6');
-		listContent.classList.add('row', 'moduleList', "rounded");
+		listZone.classList.add('col-6', 'container-fluid');
+		listContent.classList.add('row', 'moduleList', "rounded", 'container-fluid');
 
 		titleZone.textContent = element;
 
@@ -79,7 +79,7 @@ socket.on('post_modules_list', data=>{
 				let cardTitle =  document.createElement('div');
 
 				link.href = '/module/' + element['id'] + "/";
-				link.classList.add("col-lg-4");
+				link.classList.add("col-lg-4", 'container-fluid');
 
 				moduleCard.classList.add("card", "moduleCard", "rounded");
 
