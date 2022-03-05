@@ -201,6 +201,8 @@ class Home:
 
         for element in self.automationModules:
             if element.id == moduleId:
+                print(element.id)
+                print(module.id)
                 module = element
                 break
 
