@@ -199,10 +199,12 @@ class Home:
     def get_automation_module(self, moduleId):
         module = False
 
+        print(self.automationModules)
+
         for element in self.automationModules:
             print(element.id)
             print(module.id)
-            
+
             if element.id == moduleId:
                 module = element
                 break
