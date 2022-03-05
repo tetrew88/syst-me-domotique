@@ -196,7 +196,7 @@ class Home:
 
         return room
 
-    def get_automation_module(moduleId):
+    def get_automation_module(self, moduleId):
         module = False
 
         for element in self.automationModules:
