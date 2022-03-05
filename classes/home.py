@@ -202,14 +202,8 @@ class Home:
         print(self.automationModules)
 
         for element in self.automationModules:
-            print(element.id)
-            print(moduleId)
-
             if int(element.id) == int(moduleId):
-                print("!!!!!!!!!!!!!!!")
                 module = element
-                print(module)
-                print('!!!!!!!!!!!!!!!')
                 break
 
         return module

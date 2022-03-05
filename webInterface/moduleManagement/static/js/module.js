@@ -12,13 +12,13 @@ socket.on('post_module', data=>{
 	data = data["data"];
 
 	modulePicture.classList.add("img-fluid", "rounded");
-	if(element['type'] == 'rgb bulb')
+	if(data['type'] == 'rgb bulb')
 	{
 		modulePicture.src = "/static/pictures/" + 'bulb' + ".jpeg";
 	}
 	else
 	{
-		modulePicture.src = "/static/pictures/" + element['type'] + ".jpeg";
+		modulePicture.src = "/static/pictures/" + data['type'] + ".jpeg";
 	}
 
 
