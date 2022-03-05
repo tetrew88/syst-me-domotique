@@ -1,5 +1,12 @@
+#modulePicture
+{
+	margin: 2%;
+}
+
 .separation
 {
 	background-color: black;
-	height: 1px;
+	height: 2px;
+
+	margin: 2%;
 }
