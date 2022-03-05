@@ -200,9 +200,10 @@ class Home:
         module = False
 
         for element in self.automationModules:
+            print(element.id)
+            print(module.id)
+            
             if element.id == moduleId:
-                print(element.id)
-                print(module.id)
                 module = element
                 break
 
