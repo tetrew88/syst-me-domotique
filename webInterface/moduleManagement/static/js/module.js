@@ -11,7 +11,7 @@ socket.on('post_module', data=>{
 
 	data = data["data"];
 
-	modulePicture.classList.add("img-fluid", "rounded-circle");
+	modulePicture.classList.add("img-fluid", "rounded-circle", "container-fluid");
 	if(data['type'] == 'rgb bulb')
 	{
 		modulePicture.src = "/static/pictures/" + 'bulb' + ".jpeg";
