@@ -203,7 +203,7 @@ class Home:
 
         for element in self.automationModules:
             print(element.id)
-            print(module.id)
+            print(moduleId)
 
             if element.id == moduleId:
                 module = element
