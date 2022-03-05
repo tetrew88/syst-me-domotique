@@ -196,6 +196,16 @@ class Home:
 
         return room
 
+    def get_automation_module(moduleId):
+        module = False
+
+        for element in self.automationModules:
+            if element.id == moduleId:
+                module = element
+                break
+
+        return module
+
 
     def heal_network(self):
         self.homeAutomationNetwork.heal()

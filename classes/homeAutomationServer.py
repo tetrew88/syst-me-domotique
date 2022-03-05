@@ -58,7 +58,7 @@ class HomeAutomationServer(socketio.Namespace):
 	@socketIoServer.event(namespace='/HomeAutomationServer')
 	def get_rooms_list(sid, data):
 		rooms = []
-		for room in HomeAutomationServer.homeAutomationSystem.get_home_rooms():
+		for room in HomeAutomationServer.homeAutomationSystem.get_home_rooms_list():
 			rooms.append(room.serialize())
 
 		print(rooms)
@@ -67,20 +67,10 @@ class HomeAutomationServer(socketio.Namespace):
 
 
 	@socketIoServer.event(namespace='/HomeAutomationServer')
-	def get_room(sid, data):
-		room = HomeAutomationServer.homeAutomationSystem.get_room(data)
-		room = room.serialize()
-
-		print(room)
-
-		socketIoServer.emit('post_room', {"data": room}, namespace='/HomeAutomationServer')
-
-
-	@socketIoServer.event(namespace='/HomeAutomationServer')
 	def get_inhabitants_list(sid, data):
 		inhabitants = []
 
-		for inhabitant in HomeAutomationServer.homeAutomationSystem.get_home_inhabitants():
+		for inhabitant in HomeAutomationServer.homeAutomationSystem.get_home_inhabitants_list():
 			inhabitants.append(inhabitant.serialize())
 
 		print(inhabitants)
@@ -92,19 +82,54 @@ class HomeAutomationServer(socketio.Namespace):
 	def get_guests_list(sid, data):
 		guests = []
 
-		for guest in HomeAutomationServer.homeAutomationSystem.get_home_guests():
+		for guest in HomeAutomationServer.homeAutomationSystem.get_home_guests_list():
 			guests.append(guest.serialize())
 
 		print(guests)
 
 		socketIoServer.emit('post_guests_list', {"data": guests}, namespace='/HomeAutomationServer')
 
+
+	@socketIoServer.event(namespace='/HomeAutomationServer')
+	def get_modules_list(sid, data):
+		modules = []
+
+		for element in HomeAutomationServer.homeAutomationSystem.get_home_automation_modules_list():
+			modules.append(element.serialize())
+
+		print(modules)
+
+		socketIoServer.emit('post_modules_list', {"data": modules}, namespace='/HomeAutomationServer')
+
+
+
+	@socketIoServer.event(namespace='/HomeAutomationServer')
+	def get_room(sid, data):
+		room = HomeAutomationServer.homeAutomationSystem.get_home_room(data)
+		room = room.serialize()
+
+		print(room)
+
+		socketIoServer.emit('post_room', {"data": room}, namespace='/HomeAutomationServer')
+
+
+	@socketIoServer.event(namespace='/HomeAutomationServer')
+	def get_module(sid, data):
+		module = HomeAutomationServer.homeAutomationSystem.get_home_automation_module(data)
+		module = module.serialize()
+
+		print(module)
+
+		socketIoServer.emit('post_module', {"data": module}, namespace='/HomeAutomationServer')
+
+	
+
 	@socketIoServer.event(namespace='/HomeAutomationServer')
 	def set_on_light(sid, data):
 		if isinstance(data, list):
 			bulbs = []
 
-			for module in HomeAutomationServer.homeAutomationSystem.get_home_automation_modules():
+			for module in HomeAutomationServer.homeAutomationSystem.get_home_automation_modules_list():
 				for moduleId in data:
 					if module.id == moduleId:
 						bulbs.append(module)
@@ -123,7 +148,7 @@ class HomeAutomationServer(socketio.Namespace):
 		elif isinstance(data, int):
 			bulb = False
 
-			for module in HomeAutomationServer.homeAutomationSystem.get_home_automation_modules():
+			for module in HomeAutomationServer.homeAutomationSystem.get_home_automation_modules_list():
 				if module.id == data:
 					bulb = module
 
@@ -133,18 +158,6 @@ class HomeAutomationServer(socketio.Namespace):
 				bulb.off()
 
 			print(bulb.lightUp)
-
-	@socketIoServer.event(namespace='/HomeAutomationServer')
-	def get_modules_list(sid, data):
-		modules = []
-
-		for element in HomeAutomationServer.homeAutomationSystem.get_home_automation_modules():
-			modules.append(element.serialize())
-
-		print(modules)
-
-		socketIoServer.emit('post_modules_list', {"data": modules}, namespace='/HomeAutomationServer')
-
 
 
 socketIoServer.register_namespace(HomeAutomationServer())

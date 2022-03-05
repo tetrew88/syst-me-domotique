@@ -31,6 +31,8 @@ from homeManagement.views.homeManagement import home_management
 
 from homeAutomationNetworkManagement.views.homeAutomationNetworkManagement import home_automation_network_management
 
+from moduleManagement.views.module import module
+
 urlpatterns = [
     url(r'^$', room_listing),
     path('admin/', admin.site.urls),
@@ -41,5 +43,6 @@ urlpatterns = [
     path('moduleListing/', module_listing),
     path('homeManagement/', home_management),
     path('homeAutomationNetworkManagement/', home_automation_network_management),
-    path('room/<int:roomId>/', room)
+    path('room/<int:roomId>/', room),
+    path('module/<int:moduleId>/', module)
 ]

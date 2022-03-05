@@ -53,23 +53,30 @@ class HomeAutomationSystem:
     def get_home(self):
         return self.home
 
-    def get_home_rooms(self):
+    def get_home_rooms_list(self):
         return self.home.rooms
 
-    def get_home_inhabitants(self):
+    def get_home_inhabitants_list(self):
         return self.home.inhabitants
 
-    def get_home_guests(self):
+    def get_home_guests_list(self):
         return self.home.guests
 
-    def get_home_automation_modules(self):
+    def get_home_automation_modules_list(self):
         return self.home.automationModules
 
-    def get_event(self):
+    def get_home_event_list(self):
         return self.home.events
+
 
     def get_home_automation_network(self):
         return self.home.homeAutomationEngine.network
+
+    def get_home_room(self, roomId):
+        return self.home.get_room(roomId)
+
+    def get_home_automation_module(self, moduleId):
+        return self.home.get_automation_module(moduleId)
 
 
     def add_home_room(self, room):
@@ -115,9 +122,6 @@ class HomeAutomationSystem:
 
     def set_home_guest_first_name(self, guestId, newFirstName):
         self.home.set_guest_first_name(guestId, newFirstName)
-
-    def get_room(self, roomId):
-        return self.home.get_room(roomId)
 
 
     def heal_automation_network(self):
