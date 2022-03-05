@@ -205,8 +205,11 @@ class Home:
             print(element.id)
             print(moduleId)
 
-            if element.id == moduleId:
+            if int(element.id) == int(moduleId):
+                print("!!!!!!!!!!!!!!!")
                 module = element
+                print(module)
+                print('!!!!!!!!!!!!!!!')
                 break
 
         return module
