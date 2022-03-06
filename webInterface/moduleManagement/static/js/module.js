@@ -35,7 +35,7 @@ socket.on('post_module', data=>{
 	nameInput.id = "moduleName";
 	nameInput.type = "text";
 	nameInput.value = data["name"];
-	nameInput.classList.add('col-5');
+	nameInput.classList.add('col-5', 'rounded');
 
 	nameButton.type = "button";
 	nameButton.setAttribute('onclick', 'set_module_name();');

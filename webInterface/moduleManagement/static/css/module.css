@@ -11,8 +11,9 @@
 	margin: 2%;
 }
 
-.moduleInformation
+#moduleInformation
 {
 	background-color: white;
-	margin: 2%;
+	margin: auto;
+	border-color: black;
 }
