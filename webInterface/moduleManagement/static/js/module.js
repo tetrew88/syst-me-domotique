@@ -171,7 +171,7 @@ socket.on('post_module', data=>{
 	systemTypeData.classList.add('col-7', 'rounded', 'data');
 
 	systemTypeSection.appendChild(systemTypeLabel);
-	systemTypeSection.appendChild(systemTypeData);system
+	systemTypeSection.appendChild(systemTypeData);
 
 
 	modulePictureZone.appendChild(modulePicture);
