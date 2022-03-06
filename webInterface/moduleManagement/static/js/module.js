@@ -116,6 +116,7 @@ socket.on('post_module', data=>{
 
 
 	//product information
+	//t
 
 })
 
