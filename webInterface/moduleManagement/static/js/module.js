@@ -27,7 +27,7 @@ socket.on('post_module', data=>{
 		modulePicture.src = "/static/pictures/" + data['type'] + ".jpeg";
 	}
 
-	nameSection.classList.add('row', 'container-fluid');
+	nameSection.classList.add('row', 'container-fluid', 'nameSection');
 
 	nameLabel.classList.add('col-5');
 	nameLabel.textContent = "Name:";

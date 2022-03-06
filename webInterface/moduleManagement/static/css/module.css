@@ -16,7 +16,10 @@
 	background-color: white;
 	margin: auto;
 	border-color: black;
+}
 
+.nameSection
+{
 	display: flex;
 	justify-content: space-around;
 }
