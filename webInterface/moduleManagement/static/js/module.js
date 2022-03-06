@@ -2,6 +2,9 @@ let moduleId = document.getElementById("moduleId").value;
 
 socket.emit('get_module', moduleId)
 socket.on('post_module', data=>{
+
+	data = data["data"];
+
 	let modulePictureZone = document.getElementById("modulePicture");
 	let moduleInformationZone = document.getElementById("moduleInformation");
 	let productInformationZone = document.getElementById("productInformation");
@@ -9,7 +12,10 @@ socket.on('post_module', data=>{
 
 	let modulePicture = document.createElement('img');
 
-	data = data["data"];
+	let nameSection = document.createElement('div');
+	let nameLabel = document.createElement('div');
+	let nameInput = document.createElement('input');
+	let nameButton = document.createElement('button');
 
 	modulePicture.classList.add("img-fluid", "rounded-circle", "container-fluid");
 	if(data['type'] == 'rgb bulb')
@@ -21,7 +27,32 @@ socket.on('post_module', data=>{
 		modulePicture.src = "/static/pictures/" + data['type'] + ".jpeg";
 	}
 
+	nameSection.classList.add('row', 'container-fluid');
+
+	nameLabel.classList.add('col-5');
+	
+	nameInput.id = "moduleName";
+	nameInput.type = "text";
+	nameInput.value = data["name"];
+	nameInput.classList.add('col-5');
+
+	nameButton.type = "button";
+	nameButton.setAttribute('onclick', 'set_module_name();');
+	nameButton.classList.add('col-2');
+
+
+	nameSection.appendChild(nameLabel);
+	nameSection.appendChild(nameInput);
+	nameSection.appendChild(nameButton);
+
 
 	modulePictureZone.appendChild(modulePicture);
 
+	moduleInformationZone.appendChild(nameSection);
+
 })
+
+function set_module_name()
+{
+
+}

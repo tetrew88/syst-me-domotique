@@ -6,7 +6,12 @@
 .separation
 {
 	background-color: black;
-	height: 2px;
+	height: 3px;
 
 	margin: 2%;
+}
+
+.moduleInformation
+{
+	background-color: white;
 }
