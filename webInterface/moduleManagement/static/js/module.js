@@ -17,6 +17,11 @@ socket.on('post_module', data=>{
 	let nameInput = document.createElement('input');
 	let nameButton = document.createElement('button');
 
+	let locationSection = document.createElement('div');
+	let locationLabel = document.createElement('div');
+	let locationInput = document.createElement('input');
+	let locationButton = document.createElement('button');
+
 	modulePicture.classList.add("img-fluid", "rounded-circle", "container-fluid");
 	if(data['type'] == 'rgb bulb')
 	{
@@ -44,12 +49,33 @@ socket.on('post_module', data=>{
 
 	nameSection.appendChild(nameLabel);
 	nameSection.appendChild(nameInput);
-	nameSection.appendChild(nameButton);
+	nameSection.appendChild(nameButton);/////
+
+
+	locationSection.classList.add('row', 'container-fluid', 'locationSection');
+
+	locationLabel.classList.add('col-5');
+	locationLabel.textContent = "Location:";
+	
+	locationInput.id = "moduleLocation";
+	locationInput.type = "text";
+	locationInput.value = data["location"];
+	locationInput.classList.add('col-5', 'rounded');
+
+	locationButton.type = "button";
+	locationButton.setAttribute('onclick', 'set_module_location();');
+	locationButton.classList.add('col-2');
+
+
+	nameSection.appendChild(nameLabel);
+	nameSection.appendChild(nameInput);
+	nameSection.appendChild(nameButton);///
 
 
 	modulePictureZone.appendChild(modulePicture);
 
 	moduleInformationZone.appendChild(nameSection);
+	moduleInformationZone.appendChild(locationSection);
 
 })
 
