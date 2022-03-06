@@ -34,10 +34,12 @@
 {
 	border-color: black;
 	border-width: 2%;
+	border: solid;
 }
 
 .typeData
 {
+	border: solid;
 	border-color: black;
 	border-width: 2%;
 }
