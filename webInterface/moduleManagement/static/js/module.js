@@ -76,14 +76,14 @@ socket.on('post_module', data=>{
 	locationSection.appendChild(locationButton);
 
 	//id section
-	idSection.classList.add('row', 'container-fluid', 'locationSection');
+	idSection.classList.add('row', 'container-fluid', 'idSection');
 
-	idLabel.classList.add('col-6');
-	idLabel.textContent = "Location:";
+	idLabel.classList.add('col-5');
+	idLabel.textContent = "Id:";
 	
 	idData.id = "moduleId";
 	idData.textContent = data["id"];
-	idData.classList.add('col-6', 'rounded');
+	idData.classList.add('col-7', 'rounded');
 
 	idSection.appendChild(idLabel);
 	idSection.appendChild(idData);
