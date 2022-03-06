@@ -92,6 +92,7 @@ socket.on('post_module', data=>{
 
 	moduleInformationZone.appendChild(nameSection);
 	moduleInformationZone.appendChild(locationSection);
+	moduleInformationZone.appendChild(idSection);
 
 })
 
