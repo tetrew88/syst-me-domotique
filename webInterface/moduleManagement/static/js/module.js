@@ -30,6 +30,10 @@ socket.on('post_module', data=>{
 	let typeLabel = document.createElement('div');
 	let typeData = document.createElement('div');
 
+	let manufacturerNameSection = document.createElement('div');
+	let manufacturerNameLabel = document.createElement('div');
+	let manufacturerNameData = document.createElement('div');
+
 	modulePicture.classList.add("img-fluid", "rounded-circle", "container-fluid");
 	if(data['type'] == 'rgb bulb')
 	{
@@ -89,7 +93,7 @@ socket.on('post_module', data=>{
 	
 	idData.id = "moduleId";
 	idData.textContent = data["id"];
-	idData.classList.add('col-7', 'rounded', 'idData');
+	idData.classList.add('col-7', 'rounded', 'data');
 
 	idSection.appendChild(idLabel);
 	idSection.appendChild(idData);
@@ -102,10 +106,28 @@ socket.on('post_module', data=>{
 	
 	typeData.id = "moduleId";
 	typeData.textContent = data["type"];
-	typeData.classList.add('col-7', 'rounded', 'typeData');
+	typeData.classList.add('col-7', 'rounded', 'data');
 
 	typeSection.appendChild(typeLabel);
 	typeSection.appendChild(typeData);
+
+
+	//product information
+
+	//manufacturerNameSection
+	manufacturerNameSection.classList.add('row', 'container-fluid', 'typeSection');
+
+	manufacturerNameLabel.classList.add('col-5');
+	manufacturerNameLabel.textContent = "Manufacturer name:";
+	
+	manufacturerNameData.id = "moduleId";
+	manufacturerNameData.textContent = data["manufacturer name"];
+	manufacturerNameData.classList.add('col-7', 'rounded', 'data');
+
+	manufacturerNameSection.appendChild(manufacturerNameLabel);
+	manufacturerNameSection.appendChild(manufacturerNameData);
+
+
 
 	modulePictureZone.appendChild(modulePicture);
 
@@ -114,9 +136,7 @@ socket.on('post_module', data=>{
 	moduleInformationZone.appendChild(idSection);
 	moduleInformationZone.appendChild(typeSection);
 
-
-	//product information
-	//t
+	productInformationZone.appendChild(manufacturerNameSection);
 
 })
 
