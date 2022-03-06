@@ -89,20 +89,20 @@ socket.on('post_module', data=>{
 	
 	idData.id = "moduleId";
 	idData.textContent = data["id"];
-	idData.classList.add('col-7', 'rounded');
+	idData.classList.add('col-7', 'rounded', 'idData');
 
 	idSection.appendChild(idLabel);
 	idSection.appendChild(idData);
 
 	//type section
-	typeSection.classList.add('row', 'container-fluid', 'idSection');
+	typeSection.classList.add('row', 'container-fluid', 'typeSection');
 
 	typeLabel.classList.add('col-5');
 	typeLabel.textContent = "Type:";
 	
 	typeData.id = "moduleId";
 	typeData.textContent = data["type"];
-	typeData.classList.add('col-7', 'rounded');
+	typeData.classList.add('col-7', 'rounded', 'typeData');
 
 	typeSection.appendChild(typeLabel);
 	typeSection.appendChild(typeData);
