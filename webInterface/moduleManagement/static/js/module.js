@@ -30,6 +30,7 @@ socket.on('post_module', data=>{
 	nameSection.classList.add('row', 'container-fluid');
 
 	nameLabel.classList.add('col-5');
+	nameLabel.textContent = "Name";
 	
 	nameInput.id = "moduleName";
 	nameInput.type = "text";
