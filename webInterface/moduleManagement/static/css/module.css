@@ -33,7 +33,6 @@
 .idData
 {
 	border-color: black;
-	border-width: 1%;
 	border: solid;
 }
 
@@ -41,5 +40,4 @@
 {
 	border: solid;
 	border-color: black;
-	border-width: 1%;
 }
