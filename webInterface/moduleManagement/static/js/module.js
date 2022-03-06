@@ -34,6 +34,19 @@ socket.on('post_module', data=>{
 	let manufacturerNameLabel = document.createElement('div');
 	let manufacturerNameData = document.createElement('div');
 
+	let productNameSection = document.createElement('div');
+	let productNameLabel = document.createElement('div');
+	let productNameData = document.createElement('div');
+
+	let productTypeSection = document.createElement('div');
+	let productTypeLabel = document.createElement('div');
+	let productTypeData = document.createElement('div');
+
+	let systemTypeSection = document.createElement('div');
+	let systemTypeLabel = document.createElement('div');
+	let systemTypeData = document.createElement('div');
+
+
 	modulePicture.classList.add("img-fluid", "rounded-circle", "container-fluid");
 	if(data['type'] == 'rgb bulb')
 	{
@@ -91,7 +104,6 @@ socket.on('post_module', data=>{
 	idLabel.classList.add('col-5');
 	idLabel.textContent = "Id:";
 	
-	idData.id = "moduleId";
 	idData.textContent = data["id"];
 	idData.classList.add('col-7', 'rounded', 'data');
 
@@ -104,7 +116,6 @@ socket.on('post_module', data=>{
 	typeLabel.classList.add('col-5');
 	typeLabel.textContent = "Type:";
 	
-	typeData.id = "moduleId";
 	typeData.textContent = data["type"];
 	typeData.classList.add('col-7', 'rounded', 'data');
 
@@ -120,13 +131,47 @@ socket.on('post_module', data=>{
 	manufacturerNameLabel.classList.add('col-5');
 	manufacturerNameLabel.textContent = "Manufacturer name:";
 	
-	manufacturerNameData.id = "moduleId";
 	manufacturerNameData.textContent = data["manufacturer name"];
 	manufacturerNameData.classList.add('col-7', 'rounded', 'data');
 
 	manufacturerNameSection.appendChild(manufacturerNameLabel);
 	manufacturerNameSection.appendChild(manufacturerNameData);
 
+	//productNameSection
+	productNameSection.classList.add('row', 'container-fluid', 'typeSection');
+
+	productNameLabel.classList.add('col-5');
+	productNameLabel.textContent = "Product name:";
+	
+	productNameData.textContent = data["product name"];
+	productNameData.classList.add('col-7', 'rounded', 'data');
+
+	productNameSection.appendChild(productNameLabel);
+	productNameSection.appendChild(productNameData);
+
+	//productTypeSection
+	productTypeSection.classList.add('row', 'container-fluid', 'typeSection');
+
+	productTypeLabel.classList.add('col-5');
+	productTypeLabel.textContent = "Product type:";
+	
+	productTypeData.textContent = data["product type"];
+	productTypeData.classList.add('col-7', 'rounded', 'data');
+
+	productTypeSection.appendChild(productTypeLabel);
+	productTypeSection.appendChild(productTypeData);
+
+	//systemTypeSection
+	systemTypeSection.classList.add('row', 'container-fluid', 'typeSection');
+
+	systemTypeLabel.classList.add('col-5');
+	systemTypeLabel.textContent = "System type:";
+	
+	systemTypeData.textContent = data["system type"];
+	systemTypeData.classList.add('col-7', 'rounded', 'data');
+
+	systemTypeSection.appendChild(systemTypeLabel);
+	systemTypeSection.appendChild(systemTypeData);system
 
 
 	modulePictureZone.appendChild(modulePicture);
@@ -137,6 +182,9 @@ socket.on('post_module', data=>{
 	moduleInformationZone.appendChild(typeSection);
 
 	productInformationZone.appendChild(manufacturerNameSection);
+	productInformationZone.appendChild(productNameSection);
+	productInformationZone.appendChild(productTypeSection);
+	productInformationZone.appendChild(systemTypeSection);
 
 })
 
