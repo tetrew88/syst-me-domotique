@@ -32,10 +32,12 @@
 
 .idData
 {
-	border: black;
+	border-color: black;
+	border-width: 2%;
 }
 
 .typeData
 {
-	border: black;
+	border-color: black;
+	border-width: 2%;
 }
