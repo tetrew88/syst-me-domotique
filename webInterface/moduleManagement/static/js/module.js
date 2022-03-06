@@ -22,6 +22,10 @@ socket.on('post_module', data=>{
 	let locationInput = document.createElement('input');
 	let locationButton = document.createElement('button');
 
+	let idSection = document.createElement('div');
+	let idLabel = document.createElement('div');
+	let idData = document.createElement('div');
+
 	modulePicture.classList.add("img-fluid", "rounded-circle", "container-fluid");
 	if(data['type'] == 'rgb bulb')
 	{
@@ -32,10 +36,11 @@ socket.on('post_module', data=>{
 		modulePicture.src = "/static/pictures/" + data['type'] + ".jpeg";
 	}
 
+	//name section
 	nameSection.classList.add('row', 'container-fluid', 'nameSection');
 
 	nameLabel.classList.add('col-5');
-	nameLabel.textContent = "Name:";
+	nameLabel.textContent = "Nom:";
 	
 	nameInput.id = "moduleName";
 	nameInput.type = "text";
@@ -46,12 +51,11 @@ socket.on('post_module', data=>{
 	nameButton.setAttribute('onclick', 'set_module_name();');
 	nameButton.classList.add('col-2');
 
-
 	nameSection.appendChild(nameLabel);
 	nameSection.appendChild(nameInput);
 	nameSection.appendChild(nameButton);
 
-
+	//location section
 	locationSection.classList.add('row', 'container-fluid', 'locationSection');
 
 	locationLabel.classList.add('col-5');
@@ -71,6 +75,18 @@ socket.on('post_module', data=>{
 	locationSection.appendChild(locationInput);
 	locationSection.appendChild(locationButton);
 
+	//id section
+	idSection.classList.add('row', 'container-fluid', 'locationSection');
+
+	idLabel.classList.add('col-6');
+	idLabel.textContent = "Location:";
+	
+	idData.id = "moduleId";
+	idData.textContent = data["id"];
+	idData.classList.add('col-6', 'rounded');
+
+	idSection.appendChild(idLabel);
+	idSection.appendChild(idData);
 
 	modulePictureZone.appendChild(modulePicture);
 
