@@ -49,7 +49,7 @@ socket.on('post_module', data=>{
 
 	nameSection.appendChild(nameLabel);
 	nameSection.appendChild(nameInput);
-	nameSection.appendChild(nameButton);/////
+	nameSection.appendChild(nameButton);
 
 
 	locationSection.classList.add('row', 'container-fluid', 'locationSection');
@@ -67,9 +67,9 @@ socket.on('post_module', data=>{
 	locationButton.classList.add('col-2');
 
 
-	nameSection.appendChild(nameLabel);
-	nameSection.appendChild(nameInput);
-	nameSection.appendChild(nameButton);///
+	locationSection.appendChild(nameLabel);
+	locationSection.appendChild(nameInput);
+	locationSection.appendChild(nameButton);
 
 
 	modulePictureZone.appendChild(modulePicture);
