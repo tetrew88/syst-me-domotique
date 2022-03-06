@@ -67,9 +67,9 @@ socket.on('post_module', data=>{
 	locationButton.classList.add('col-2');
 
 
-	locationSection.appendChild(nameLabel);
-	locationSection.appendChild(nameInput);
-	locationSection.appendChild(nameButton);
+	locationSection.appendChild(locationLabel);
+	locationSection.appendChild(locationInput);
+	locationSection.appendChild(locationButton);
 
 
 	modulePictureZone.appendChild(modulePicture);
