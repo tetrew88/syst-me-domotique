@@ -26,6 +26,10 @@ socket.on('post_module', data=>{
 	let idLabel = document.createElement('div');
 	let idData = document.createElement('div');
 
+	let typeSection = document.createElement('div');
+	let typeLabel = document.createElement('div');
+	let typeData = document.createElement('div');
+
 	modulePicture.classList.add("img-fluid", "rounded-circle", "container-fluid");
 	if(data['type'] == 'rgb bulb')
 	{
@@ -35,6 +39,8 @@ socket.on('post_module', data=>{
 	{
 		modulePicture.src = "/static/pictures/" + data['type'] + ".jpeg";
 	}
+
+	//module information
 
 	//name section
 	nameSection.classList.add('row', 'container-fluid', 'nameSection');
@@ -88,11 +94,28 @@ socket.on('post_module', data=>{
 	idSection.appendChild(idLabel);
 	idSection.appendChild(idData);
 
+	//type section
+	typeSection.classList.add('row', 'container-fluid', 'idSection');
+
+	typeLabel.classList.add('col-5');
+	typeLabel.textContent = "Type:";
+	
+	typeData.id = "moduleId";
+	typeData.textContent = data["type"];
+	typeData.classList.add('col-7', 'rounded');
+
+	typeSection.appendChild(typeLabel);
+	typeSection.appendChild(typeData);
+
 	modulePictureZone.appendChild(modulePicture);
 
 	moduleInformationZone.appendChild(nameSection);
 	moduleInformationZone.appendChild(locationSection);
 	moduleInformationZone.appendChild(idSection);
+	moduleInformationZone.appendChild(typeSection);
+
+
+	//product information
 
 })
 

@@ -6,9 +6,10 @@
 .separation
 {
 	background-color: black;
-	height: 3px;
+	height: 4px;
 
 	margin: 2%;
+	margin-bottom: 3%;
 }
 
 #moduleInformation
@@ -17,8 +18,8 @@
 	margin: auto;
 	border-color: black;
 
-	padding-top: 3%;
-	padding-bottom: 3%;
+	padding-top: 2%;
+	padding-bottom: 2%;
 }
 
 .nameSection
