@@ -158,7 +158,7 @@ socket.on('post_module', data=>{
 		
 		intensityInput.id = "intensity";
 		intensityInput.type = "number";
-		intensityInput.value = data["intensity"];
+		//intensityInput.value = data["intensity"];
 		intensityInput.classList.add('col-5', 'rounded');
 
 		intensityButton.type = "button";
@@ -181,7 +181,7 @@ socket.on('post_module', data=>{
 		
 			colorInput.id = "color";
 			colorInput.type = "text";
-			colorInput.value = data["color"];
+			//colorInput.value = data["color"];
 			colorInput.classList.add('col-5', 'rounded');
 
 			colorButton.type = "button";
