@@ -362,6 +362,7 @@ function set_module_name()
 
 function switch_light()
 {
+	let moduleId = document.getElementById("moduleId").value;
 
 	socket.emit('switch_light', moduleId);
 
