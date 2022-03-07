@@ -62,26 +62,20 @@ socket.on('post_module', data=>{
 	let sleepLabel = document.createElement('div');
 	let sleepData = document.createElement('div');
 
-	if(data['type'] == 'bulb' || data['type'] == 'rgb bulb')
-	{
-		let lightUpSection = document.createElement('div');
-		let lightUpLabel = document.createElement('div');
-		let lightUpData = document.createElement('div');
-		let switchLightButton = document.createElement('button');
+	let lightUpSection = document.createElement('div');
+	let lightUpLabel = document.createElement('div');
+	let lightUpData = document.createElement('div');
+	let switchLightButton = document.createElement('button');
 
-		let intensitySection = document.createElement('div');
-		let intensityLabel = document.createElement('div');
-		let intensityInput = document.createElement('div');
-		let intensityButton = document.createElement('button');
+	let intensitySection = document.createElement('div');
+	let intensityLabel = document.createElement('div');
+	let intensityInput = document.createElement('div');
+	let intensityButton = document.createElement('button');
 
-		if(data['type'] == 'rgb bulb')
-		{
-			let colorSection = document.createElement('div');
-			let colorLabel = document.createElement('div');
-			let colorInput = document.createElement('div');
-			let colorButton = document.createElement('button');
-		}
-	}
+	let colorSection = document.createElement('div');
+	let colorLabel = document.createElement('div');
+	let colorInput = document.createElement('div');
+	let colorButton = document.createElement('button');
 
 
 	modulePicture.classList.add("img-fluid", "rounded-circle", "container-fluid");
