@@ -139,12 +139,11 @@ socket.on('post_module', data=>{
 		lightUpLabel.textContent = "Allumé:";
 		
 		lightUpData.textContent = data["lightUp"];
-		lightUpData.classList.add('col-7', 'rounded', 'data');
+		lightUpData.classList.add('col-5', 'rounded', 'data');
 
 		switchLightButton.type = "button";
 		switchLightButton.setAttribute('onclick', 'switch_light();');
 		switchLightButton.classList.add('col-2');
-
 
 		lightUpSection.appendChild(lightUpLabel);
 		lightUpSection.appendChild(lightUpData);
