@@ -46,6 +46,22 @@ socket.on('post_module', data=>{
 	let systemTypeLabel = document.createElement('div');
 	let systemTypeData = document.createElement('div');
 
+	let awakeSection = document.createElement('div');
+	let awakeLabel = document.createElement('div');
+	let awakeData = document.createElement('div');
+
+	let disfunctionnementSection = document.createElement('div');
+	let disfunctionnementLabel = document.createElement('div');
+	let disfunctionnementData = document.createElement('div');
+
+	let readySection = document.createElement('div');
+	let readyLabel = document.createElement('div');
+	let readyData = document.createElement('div');
+
+	let sleepSection = document.createElement('div');
+	let sleepLabel = document.createElement('div');
+	let sleepData = document.createElement('div');
+
 
 	modulePicture.classList.add("img-fluid", "rounded-circle", "container-fluid");
 	if(data['type'] == 'rgb bulb')
@@ -82,7 +98,7 @@ socket.on('post_module', data=>{
 	locationSection.classList.add('row', 'container-fluid', 'locationSection');
 
 	locationLabel.classList.add('col-5');
-	locationLabel.textContent = "Location:";
+	locationLabel.textContent = "emplacement:";
 	
 	locationInput.id = "moduleLocation";
 	locationInput.type = "text";
@@ -126,10 +142,10 @@ socket.on('post_module', data=>{
 	//product information
 
 	//manufacturerNameSection
-	manufacturerNameSection.classList.add('row', 'container-fluid', 'typeSection');
+	manufacturerNameSection.classList.add('row', 'container-fluid', 'ManufacturerNameSection');
 
 	manufacturerNameLabel.classList.add('col-5');
-	manufacturerNameLabel.textContent = "Manufacturer name:";
+	manufacturerNameLabel.textContent = "Nom du fabriquant:";
 	
 	manufacturerNameData.textContent = data["manufacturer name"];
 	manufacturerNameData.classList.add('col-7', 'rounded', 'data');
@@ -138,10 +154,10 @@ socket.on('post_module', data=>{
 	manufacturerNameSection.appendChild(manufacturerNameData);
 
 	//productNameSection
-	productNameSection.classList.add('row', 'container-fluid', 'typeSection');
+	productNameSection.classList.add('row', 'container-fluid', 'productNameSection');
 
 	productNameLabel.classList.add('col-5');
-	productNameLabel.textContent = "Product name:";
+	productNameLabel.textContent = "Nom de produit:";
 	
 	productNameData.textContent = data["product name"];
 	productNameData.classList.add('col-7', 'rounded', 'data');
@@ -150,10 +166,10 @@ socket.on('post_module', data=>{
 	productNameSection.appendChild(productNameData);
 
 	//productTypeSection
-	productTypeSection.classList.add('row', 'container-fluid', 'typeSection');
+	productTypeSection.classList.add('row', 'container-fluid', 'productTypeSection');
 
 	productTypeLabel.classList.add('col-5');
-	productTypeLabel.textContent = "Product type:";
+	productTypeLabel.textContent = "Type de produit:";
 	
 	productTypeData.textContent = data["product type"];
 	productTypeData.classList.add('col-7', 'rounded', 'data');
@@ -162,16 +178,66 @@ socket.on('post_module', data=>{
 	productTypeSection.appendChild(productTypeData);
 
 	//systemTypeSection
-	systemTypeSection.classList.add('row', 'container-fluid', 'typeSection');
+	systemTypeSection.classList.add('row', 'container-fluid', 'systemTypeSection');
 
 	systemTypeLabel.classList.add('col-5');
-	systemTypeLabel.textContent = "System type:";
+	systemTypeLabel.textContent = "Type de système:";
 	
 	systemTypeData.textContent = data["system type"];
 	systemTypeData.classList.add('col-7', 'rounded', 'data');
 
 	systemTypeSection.appendChild(systemTypeLabel);
 	systemTypeSection.appendChild(systemTypeData);
+
+	//state information
+
+	//awake section
+	awakeSection.classList.add('row', 'container-fluid', 'awakeSection');
+
+	awakeLabel.classList.add('col-5');
+	awakeLabel.textContent = "Réveillé:";
+	
+	awakeData.textContent = data["awake"];
+	awakeData.classList.add('col-7', 'rounded', 'data');
+
+	awakeSection.appendChild(awakeLabel);
+	awakeSection.appendChild(awakeData);
+
+	//disfunctionnement section
+	disfunctionnementSection.classList.add('row', 'container-fluid', 'disfunctionnementSection');
+
+	disfunctionnementLabel.classList.add('col-5');
+	disfunctionnementLabel.textContent = "Disfonctionnement:";
+	
+	disfunctionnementData.textContent = data["disfunctionnement"];
+	disfunctionnementData.classList.add('col-7', 'rounded', 'data');
+
+	disfunctionnementSection.appendChild(disfunctionnementLabel);
+	disfunctionnementSection.appendChild(disfunctionnementData);
+
+	//ready section
+	readySection.classList.add('row', 'container-fluid', 'readySection');
+
+	readyLabel.classList.add('col-5');
+	readyLabel.textContent = "Prêt:";
+	
+	readyData.textContent = data["ready"];
+	readyData.classList.add('col-7', 'rounded', 'data');
+
+	readySection.appendChild(readyLabel);
+	readySection.appendChild(readyData);
+
+	//sleep section
+	sleepSection.classList.add('row', 'container-fluid', 'sleepSection');
+
+	sleepLabel.classList.add('col-5');
+	sleepLabel.textContent = "Dort:";
+	
+	sleepData.textContent = data["sleep"];
+	sleepData.classList.add('col-7', 'rounded', 'data');
+
+	sleepSection.appendChild(sleepLabel);
+	sleepSection.appendChild(sleepData);
 
 
 	modulePictureZone.appendChild(modulePicture);
@@ -186,7 +252,13 @@ socket.on('post_module', data=>{
 	productInformationZone.appendChild(productTypeSection);
 	productInformationZone.appendChild(systemTypeSection);
 
+	moduleStateInformationZone.appendChild(awakeSection);
+	moduleStateInformationZone.appendChild(disfunctionnementSection);
+	moduleStateInformationZone.appendChild(readySection);
+
+
 })
+ "sleep": self.isSleeping,
 
 function set_module_name()
 {

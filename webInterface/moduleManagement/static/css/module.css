@@ -24,11 +24,6 @@
 	margin-bottom: 3%;
 }
 
-.nameSection
-{
-	display: flex;
-	justify-content: space-around;
-}
 
 .data
 {
@@ -38,6 +33,18 @@
 
 
 #productInformation
+{
+	background-color: white;
+	margin: auto;
+	border-color: black;
+
+	padding-top: 2%;
+	padding-bottom: 2%;
+
+	margin-bottom: 3%;
+}
+
+#moduleStateInformation
 {
 	background-color: white;
 	margin: auto;
