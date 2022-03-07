@@ -147,7 +147,7 @@ socket.on('post_module', data=>{
 
 
 		lightUpSection.appendChild(lightUpLabel);
-		lightUpSection.appendChild(lightUpInput);
+		lightUpSection.appendChild(lightUpData);
 		lightUpSection.appendChild(switchLightButton);
 
 		//intensity section
