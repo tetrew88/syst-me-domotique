@@ -62,6 +62,27 @@ socket.on('post_module', data=>{
 	let sleepLabel = document.createElement('div');
 	let sleepData = document.createElement('div');
 
+	if(data['type'] == 'bulb' || data['type'] == 'rgb bulb')
+	{
+		let lightUpSection = document.createElement('div');
+		let lightUpLabel = document.createElement('div');
+		let lightUpData = document.createElement('div');
+		let switchLightButton = document.createElement('button');
+
+		let intensitySection = document.createElement('div');
+		let intensityLabel = document.createElement('div');
+		let intensityInput = document.createElement('div');
+		let intensityButton = document.createElement('button');
+
+		if(data['type'] == 'rgb bulb')
+		{
+			let colorSection = document.createElement('div');
+			let colorLabel = document.createElement('div');
+			let colorInput = document.createElement('div');
+			let colorButton = document.createElement('button');
+		}
+	}
+
 
 	modulePicture.classList.add("img-fluid", "rounded-circle", "container-fluid");
 	if(data['type'] == 'rgb bulb')
@@ -113,6 +134,74 @@ socket.on('post_module', data=>{
 	locationSection.appendChild(locationLabel);
 	locationSection.appendChild(locationInput);
 	locationSection.appendChild(locationButton);
+
+	////Bulb section
+	if(data['type'] == 'bulb' || data['type'] == 'rgb bulb')
+	{
+		//light up section
+		lightUpSection.classList.add('row', 'container-fluid', 'lightUpSection');
+
+		lightUpLabel.classList.add('col-5');
+		lightUpLabel.textContent = "Allumé:";
+		
+		lightUpData.textContent = data["lightUp"];
+		lightUpData.classList.add('col-7', 'rounded', 'data');
+
+		lightUpButton.type = "button";
+		lightUpButton.setAttribute('onclick', 'switch_light();');
+		lightUpButton.classList.add('col-2');
+
+
+		lightUpSection.appendChild(lightUpLabel);
+		lightUpSection.appendChild(lightUpInput);
+		lightUpSection.appendChild(lightUpButton);
+
+		//intensity section
+		intensitySection.classList.add('row', 'container-fluid', 'intensitySection');
+
+		intensityLabel.classList.add('col-5');
+		intensityLabel.textContent = "intensité:";
+		
+		intensityInput.id = "intensity";
+		intensityInput.type = "number";
+		intensityInput.value = data["intensity"];
+		intensityInput.classList.add('col-5', 'rounded');
+
+		intensityButton.type = "button";
+		intensityButton.setAttribute('onclick', 'set_intensity();');
+		intensityButton.classList.add('col-2');
+
+
+		intensitySection.appendChild(intensityLabel);
+		intensitySection.appendChild(intensityInput);
+		intensitySection.appendChild(intensityButton);
+
+		////rgb bulb section
+		if(data['type'] == 'rgb bulb')
+		{
+			//color section
+			colorSection.classList.add('row', 'container-fluid', 'colorSection');
+
+			colorLabel.classList.add('col-5');
+			colorLabel.textContent = "couleur:";
+		
+			colorInput.id = "color";
+			colorInput.type = "text";
+			colorInput.value = data["color"];
+			colorInput.classList.add('col-5', 'rounded');
+
+			colorButton.type = "button";
+			colorButton.setAttribute('onclick', 'set_color();');
+			colorButton.classList.add('col-2');
+
+
+			colorSection.appendChild(colorLabel);
+			colorSection.appendChild(colorInput);
+			colorSection.appendChild(colorButton);
+		}
+
+
+	}
 
 	//id section
 	idSection.classList.add('row', 'container-fluid', 'idSection');
@@ -244,6 +333,18 @@ socket.on('post_module', data=>{
 
 	moduleInformationZone.appendChild(nameSection);
 	moduleInformationZone.appendChild(locationSection);
+
+	if(data['type'] == 'bulb' || data['type'] == 'rgb bulb')
+	{
+		moduleInformationZone.appendChild(lightUpSection);
+		moduleInformationZone.appendChild(intensitySection);
+
+		if(data['type'] == 'rgb bulb')
+		{
+			moduleInformationZone.appendChild(colorSection);
+		}
+	}
+
 	moduleInformationZone.appendChild(idSection);
 	moduleInformationZone.appendChild(typeSection);
 
@@ -263,5 +364,12 @@ socket.on('post_module', data=>{
 
 function set_module_name()
 {
+
+}
+
+function switch_light()
+{
+
+	socket.emit('switch_light', moduleId);
 
 }

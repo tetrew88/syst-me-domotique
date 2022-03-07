@@ -125,7 +125,7 @@ class HomeAutomationServer(socketio.Namespace):
 	
 
 	@socketIoServer.event(namespace='/HomeAutomationServer')
-	def set_on_light(sid, data):
+	def switch_light(sid, data):
 		if isinstance(data, list):
 			bulbs = []
 

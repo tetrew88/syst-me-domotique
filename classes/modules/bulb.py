@@ -68,3 +68,26 @@ class Bulb(Module):
         """
 
         self.set_intensity(0)
+
+
+    def serialize(self):
+        data = {}
+
+        data = {'id': self.id,
+        'name': self.name,
+        'location': self.location,
+        "awake": self.isAwake,
+        "disfunctionnement": self.isFailed,
+        "ready": self.isReady,
+        "sleep": self.isSleeping,
+        "manufacturer name": self.manufacturerName,
+        "product name": self.productName,
+        "product type": self.productType,
+        "system type": self.deviceType,
+        "batterie level": self.batteryLevel,
+        "type": self.type,
+        "lightUp": self.lightUp,
+        "intensity" : self.intensity
+        }
+
+        return data

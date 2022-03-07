@@ -13,3 +13,12 @@ class Color:
         self.name = name
         self.rgbValue = rgbValue
         self.rgbwValue= rgbwValue
+
+    def serialize(self):
+        data = {}
+
+        data = {'name': self.name,
+        'rgbValue': self.rgbValue,
+        'rgbwValue': self.rgbwValue}
+
+        return data

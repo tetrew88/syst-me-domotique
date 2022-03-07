@@ -39,3 +39,33 @@ class RgbBulb(Bulb):
                 valueId = values.value_id
 
         self.moduleNode.set_rgbw(valueId, color.rgbwValue)
+
+
+    def serialize(self):
+        data = {}
+
+        colorPalette = []
+
+        for color in self.colorPalette:
+            colorPalette.append(color.serialize())
+
+        data = {'id': self.id,
+        'name': self.name,
+        'location': self.location,
+        "awake": self.isAwake,
+        "disfunctionnement": self.isFailed,
+        "ready": self.isReady,
+        "sleep": self.isSleeping,
+        "manufacturer name": self.manufacturerName,
+        "product name": self.productName,
+        "product type": self.productType,
+        "system type": self.deviceType,
+        "batterie level": self.batteryLevel,
+        "type": self.type,
+        "lightUp": self.lightUp,
+        "intensity" : self.intensity,
+        "color": self.color,
+        "color palette": colorPalette
+        }
+
+        return data

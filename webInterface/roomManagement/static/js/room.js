@@ -327,7 +327,7 @@ socket.on('post_room', data=>{
 })
 
 
-function light_on()
+function switch_light()
 {
 	bulbId = []
 
@@ -341,6 +341,6 @@ function light_on()
 
 	if (bulbId.length > 0)
 	{
-		socket.emit('set_on_light', bulbId);
+		socket.emit('switch_light', bulbId);
 	}
 }
