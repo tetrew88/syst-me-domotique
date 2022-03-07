@@ -255,10 +255,11 @@ socket.on('post_module', data=>{
 	moduleStateInformationZone.appendChild(awakeSection);
 	moduleStateInformationZone.appendChild(disfunctionnementSection);
 	moduleStateInformationZone.appendChild(readySection);
+	moduleStateInformationZone.appendChild(sleepSection);
 
 
 })
- "sleep": self.isSleeping,
+
 
 function set_module_name()
 {
