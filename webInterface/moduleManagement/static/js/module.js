@@ -141,14 +141,14 @@ socket.on('post_module', data=>{
 		lightUpData.textContent = data["lightUp"];
 		lightUpData.classList.add('col-7', 'rounded', 'data');
 
-		lightUpButton.type = "button";
-		lightUpButton.setAttribute('onclick', 'switch_light();');
-		lightUpButton.classList.add('col-2');
+		switchLightButton.type = "button";
+		switchLightButton.setAttribute('onclick', 'switch_light();');
+		switchLightButton.classList.add('col-2');
 
 
 		lightUpSection.appendChild(lightUpLabel);
 		lightUpSection.appendChild(lightUpInput);
-		lightUpSection.appendChild(lightUpButton);
+		lightUpSection.appendChild(switchLightButton);
 
 		//intensity section
 		intensitySection.classList.add('row', 'container-fluid', 'intensitySection');
