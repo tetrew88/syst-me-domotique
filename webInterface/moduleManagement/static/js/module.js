@@ -186,7 +186,7 @@ socket.on('post_module', data=>{
 			let firstOption = document.createElement('option');
 			let optionList = []
 
-			firstOption.value = data["color"]["name"];
+			firstOption.text = data["color"]["name"];
 
 			console.log(data["color"]["name"])
 
@@ -200,7 +200,7 @@ socket.on('post_module', data=>{
 				{
 					let option = document.createElement('option');
 
-					option.value = element['name']
+					option.text = element['name']
 					console.log(element['name'])
 
 					optionList.push(option);
