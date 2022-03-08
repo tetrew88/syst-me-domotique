@@ -5,6 +5,8 @@ socket.on('post_module', data=>{
 
 	data = data["data"];
 
+	console.log(data);
+
 	let modulePictureZone = document.getElementById("modulePicture");
 	let moduleInformationZone = document.getElementById("moduleInformation");
 	let productInformationZone = document.getElementById("productInformation");
