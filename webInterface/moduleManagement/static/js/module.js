@@ -188,6 +188,8 @@ socket.on('post_module', data=>{
 
 			firstOption.value = data["color"]["name"];
 
+			console.log(data["color"]["name"])
+
 			for (const element of data["color palette"])
 			{
 				if(element['name'] == data["color"]["name"])
@@ -199,6 +201,7 @@ socket.on('post_module', data=>{
 					let option = document.createElement('option');
 
 					option.value = element['name']
+					console.log(element['name'])
 
 					optionList.push(option);
 				}
