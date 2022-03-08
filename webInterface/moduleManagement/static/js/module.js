@@ -77,7 +77,6 @@ socket.on('post_module', data=>{
 	let colorSection = document.createElement('div');
 	let colorLabel = document.createElement('div');
 	let colorInput = document.createElement('select');
-	let colorButton = document.createElement('button');
 
 
 	modulePicture.classList.add("img-fluid", "rounded-circle", "container-fluid");
@@ -181,14 +180,14 @@ socket.on('post_module', data=>{
 			colorLabel.textContent = "couleur:";
 		
 			colorInput.id = "color";
-			colorInput.classList.add('col-5', 'rounded');
+			colorInput.classList.add('col-7', 'rounded');
+			colorInput.setAttribute('onchange', 'set_color();');
 
 			let firstOption = document.createElement('option');
 			let optionList = []
 
 			firstOption.text = data["color"]["name"];
-
-			console.log(data["color"]["name"])
+			firstOption.value = data["color"]["name"];
 
 			for (const element of data["color palette"])
 			{
@@ -201,7 +200,7 @@ socket.on('post_module', data=>{
 					let option = document.createElement('option');
 
 					option.text = element['name']
-					console.log(element['name'])
+					option.value = element['name']
 
 					optionList.push(option);
 				}
@@ -214,14 +213,8 @@ socket.on('post_module', data=>{
 				colorInput.appendChild(element);
 			}
 
-			colorButton.type = "button";
-			colorButton.setAttribute('onclick', 'set_color();');
-			colorButton.classList.add('col-2');
-
-
 			colorSection.appendChild(colorLabel);
 			colorSection.appendChild(colorInput);
-			colorSection.appendChild(colorButton);
 		}
 
 
