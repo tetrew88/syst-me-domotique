@@ -145,11 +145,11 @@ class HomeAutomationServer(socketio.Namespace):
 
 				print(bulb.lightUp)
 
-		elif isinstance(data, int):
+		elif isinstance(data, int) or isinstance(data, str):
 			bulb = False
 
 			for module in HomeAutomationServer.homeAutomationSystem.get_home_automation_modules_list():
-				if module.id == data:
+				if module.id == int(data):
 					bulb = module
 
 			if bulb.lightUp:
