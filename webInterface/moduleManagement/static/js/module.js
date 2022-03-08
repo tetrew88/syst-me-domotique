@@ -74,7 +74,7 @@ socket.on('post_module', data=>{
 
 	let colorSection = document.createElement('div');
 	let colorLabel = document.createElement('div');
-	let colorInput = document.createElement('input');
+	let colorInput = document.createElement('select');
 	let colorButton = document.createElement('button');
 
 
@@ -179,9 +179,35 @@ socket.on('post_module', data=>{
 			colorLabel.textContent = "couleur:";
 		
 			colorInput.id = "color";
-			colorInput.type = "text";
-			colorInput.value = data["color"];
 			colorInput.classList.add('col-5', 'rounded');
+
+			let firstOption = document.createElement('option');
+			let optionList = []
+
+			firstOption.value = data["color"]["name"];
+
+			for (const element of data["color palette"])
+			{
+				if(element['name'] == data["color"]["name"])
+				{
+
+				}
+				else
+				{
+					let option = document.createElement('option');
+
+					option.value = element['name']
+
+					optionList.push(option);
+				}
+			}
+
+			colorInput.appendChild(firstOption);
+
+			for (const element of optionList)
+			{
+				colorInput.appendChild(element);
+			}
 
 			colorButton.type = "button";
 			colorButton.setAttribute('onclick', 'set_color();');

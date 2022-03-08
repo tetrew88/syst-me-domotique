@@ -28,7 +28,9 @@ class RgbBulb(Bulb):
     def color(self):
         for values in self.moduleNode.get_rgbbulbs().values():
             if values.label == 'Color':
-                return values.data
+                for element in self.colorPalette:
+                    if values.data == element.rgbwValue:
+                        return element
 
 
     def set_color(self, color):
@@ -64,7 +66,7 @@ class RgbBulb(Bulb):
         "type": self.type,
         "lightUp": self.lightUp,
         "intensity" : self.intensity,
-        "color": self.color,
+        "color": self.color.serialize(),
         "color palette": colorPalette
         }
 
