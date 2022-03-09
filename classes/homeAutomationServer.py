@@ -187,4 +187,15 @@ class HomeAutomationServer(socketio.Namespace):
 		bulb.set_intensity(int(data['intensity']))
 
 
+	@socketIoServer.event(namespace='/HomeAutomationServer')
+	def set_module_name(sid, data):
+		selectedModule = False
+
+		for module in HomeAutomationServer.homeAutomationSystem.get_home_automation_modules_list():
+			if module.id == int(data['moduleId']):
+				selectedModule = module
+
+		selectedModule.set_name(data['name'])
+
+
 socketIoServer.register_namespace(HomeAutomationServer())

@@ -378,7 +378,12 @@ socket.on('post_module', data=>{
 
 function set_module_name()
 {
+	let moduleId = document.getElementById("moduleId").value;
+	let value = document.getElementById("moduleName").value;
 
+	socket.emit('set_module_name', {'moduleId': moduleId,
+	'name': value
+	});
 }
 
 function switch_light()
