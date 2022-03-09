@@ -157,13 +157,12 @@ socket.on('post_module', data=>{
 		intensityLabel.textContent = "intensité:";
 		
 		intensityInput.id = "intensity";
-		intensityInput.type = "number";
+		intensityInput.type = "range";
 		intensityInput.value = data["intensity"];
-		intensityInput.classList.add('col-5', 'rounded');
-
-		intensityButton.type = "button";
-		intensityButton.setAttribute('onclick', 'set_intensity();');
-		intensityButton.classList.add('col-2');
+		intensityInput.classList.add('col-7', 'rounded');
+		intensityInput.setAttribute('min', '0');
+		intensityInput.setAttribute('max', '100');
+		intensityInput.setAttribute('onchange', 'set_intensity();');
 
 
 		intensitySection.appendChild(intensityLabel);
