@@ -170,7 +170,7 @@ class HomeAutomationServer(socketio.Namespace):
 				bulb = module
 
 		for element in bulb.colorPalette:
-			if element.rgbwValue == data["colorValue"]
+			if element.rgbwValue == data["colorValue"]:
 				color = element
 
 		bulb.set_color(color)
