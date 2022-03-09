@@ -405,4 +405,10 @@ function set_intensity()
 {
 	let moduleId = document.getElementById("moduleId").value;
 	let value = document.getElementById("intensity").value;
+
+	console.log(value);
+
+	socket.emit('set_bulb_intensity', {'moduleId': moduleId,
+	'intensity': value
+	});
 }
