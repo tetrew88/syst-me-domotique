@@ -140,7 +140,7 @@ socket.on('post_module', data=>{
 			let option = document.createElement('option');
 
 			option.text = element['name']
-			option.value = element['rgbwValue']
+			option.value = element['id']
 
 			optionList.push(option);
 		}
