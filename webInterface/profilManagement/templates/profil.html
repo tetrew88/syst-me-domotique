@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/profil.css' %}" />
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="col container-fluid">
+
+    <div class="row container-fluid">
+      <div class="col-4"></div>
+      <div id="profilPicture" class="col-4 text-center container-fluid"></div>
+        <img src="/static/pictures/profil.png">
+      <div class="col-4"></div>
+    </div>
+
+    <div class="row container-fluid">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <div class="row separation rounded"></div>
+      </div>
+      <div class="col-3"></div>
+    </div>
+
+    <div class="row container-fluid">
+      <div class="col-4"></div>
+      <div id="profilInformation" class="col-4 container-fluid rounded">
+        
+      </div>
+      <div class="col-4"></div>
+    </div>
+
+  </div>
+
+
+  <input type="hidden" id="profilId" name="profilId" value="{{ profilId }}">
+
+
+{% endblock %}
+
+{% block jsScript %}
+  <script src="{% static 'js/profil.js' %}"></script>
+{% endblock %}

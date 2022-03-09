@@ -202,6 +202,7 @@ socket.on('post_room', data=>{
 	}
 
 	eventList = data['events'];
+	eventList = eventList.reverse()
 
 	if(eventList.length <= 3)
 	{

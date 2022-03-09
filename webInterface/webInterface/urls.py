@@ -24,6 +24,7 @@ from roomManagement.views.roomListing import room_listing
 from roomManagement.views.room import room
 
 from profilManagement.views.profilListing import profil_listing
+from profilManagement.views.profil import profil
 
 from moduleManagement.views.moduleListing import module_listing
 
@@ -44,5 +45,6 @@ urlpatterns = [
     path('homeManagement/', home_management),
     path('homeAutomationNetworkManagement/', home_automation_network_management),
     path('room/<int:roomId>/', room),
-    path('module/<int:moduleId>/', module)
+    path('module/<int:moduleId>/', module),
+    path('profil/<int:profilId>/', profil)
 ]
