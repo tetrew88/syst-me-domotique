@@ -207,7 +207,7 @@ class HomeAutomationServer(socketio.Namespace):
 			if module.id == int(data['moduleId']):
 				selectedModule = module
 
-		selectedModule.set_location(data['location'])
+		selectedModule.set_location(int(data['location']))
 		HomeAutomationServer.homeAutomationSystem.home.homeAutomationNetwork.save_modification()
 
 
