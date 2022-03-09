@@ -46,5 +46,6 @@ urlpatterns = [
     path('homeAutomationNetworkManagement/', home_automation_network_management),
     path('room/<int:roomId>/', room),
     path('module/<int:moduleId>/', module),
-    path('profil/<int:profilId>/', profil)
+    path('inhabitant/<int:profilId>/', profil),
+    path('guest/<int:profilId>/', profil),
 ]
