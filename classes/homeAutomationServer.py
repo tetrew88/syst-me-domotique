@@ -196,6 +196,19 @@ class HomeAutomationServer(socketio.Namespace):
 				selectedModule = module
 
 		selectedModule.set_name(data['name'])
+		HomeAutomationServer.homeAutomationSystem.home.homeAutomationNetwork.save_modification()
+
+
+	@socketIoServer.event(namespace='/HomeAutomationServer')
+	def set_module_location(sid, data):
+		selectedModule = False
+
+		for module in HomeAutomationServer.homeAutomationSystem.get_home_automation_modules_list():
+			if module.id == int(data['moduleId']):
+				selectedModule = module
+
+		selectedModule.set_location(data['location'])
+		HomeAutomationServer.homeAutomationSystem.home.homeAutomationNetwork.save_modification()
 
 
 socketIoServer.register_namespace(HomeAutomationServer())

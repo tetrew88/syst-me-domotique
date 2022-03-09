@@ -444,3 +444,13 @@ function set_intensity()
 	'intensity': value
 	});
 }
+
+function set_module_location()
+{
+	let moduleId = document.getElementById("moduleId").value;
+	let value = document.getElementById("moduleLocation").value;
+
+	socket.emit('set_module_location', {'moduleId': moduleId,
+	'location': value
+	});
+}
