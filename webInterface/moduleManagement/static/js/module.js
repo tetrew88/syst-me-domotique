@@ -4,7 +4,7 @@ socket.emit('get_rooms_list', 'rooms')
 socket.on('post_rooms_list', data=>{
 
 	locationList = data["data"]
-}
+})
 
 socket.emit('get_module', moduleId)
 socket.on('post_module', data=>{
