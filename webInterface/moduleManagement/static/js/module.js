@@ -72,7 +72,6 @@ socket.on('post_module', data=>{
 	let intensitySection = document.createElement('div');
 	let intensityLabel = document.createElement('div');
 	let intensityInput = document.createElement('input');
-	let intensityButton = document.createElement('button');
 
 	let colorSection = document.createElement('div');
 	let colorLabel = document.createElement('div');
@@ -167,7 +166,6 @@ socket.on('post_module', data=>{
 
 		intensitySection.appendChild(intensityLabel);
 		intensitySection.appendChild(intensityInput);
-		intensitySection.appendChild(intensityButton);
 
 		////rgb bulb section
 		if(data['type'] == 'rgb bulb')
