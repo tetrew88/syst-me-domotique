@@ -187,7 +187,7 @@ socket.on('post_module', data=>{
 			let optionList = []
 
 			firstOption.text = data["color"]["name"];
-			firstOption.value = data["color"]["name"];
+			firstOption.value = data["color"]["rgbwValue"];
 
 			for (const element of data["color palette"])
 			{
@@ -200,7 +200,7 @@ socket.on('post_module', data=>{
 					let option = document.createElement('option');
 
 					option.text = element['name']
-					option.value = element['name']
+					option.value = element['rgbwValue']
 
 					optionList.push(option);
 				}
@@ -390,4 +390,16 @@ function switch_light()
 
 	socket.emit('switch_light', moduleId);
 
+}
+
+function set_color()
+{
+	let moduleId = document.getElementById("moduleId").value;
+	let select = document.getElementById("color");
+	let choice = select.selectedIndex
+	let value = select.options[choice].value;
+
+	socket.emit('set_rbgBulb_color', {'moduleId': moduleId,
+	'colorValue': value
+	});
 }

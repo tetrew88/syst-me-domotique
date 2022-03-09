@@ -160,4 +160,20 @@ class HomeAutomationServer(socketio.Namespace):
 			print(bulb.lightUp)
 
 
+	@socketIoServer.event(namespace='/HomeAutomationServer')
+	def set_rbgBulb_color(sid, data):
+		bulb = False
+		color = False
+
+		for module in HomeAutomationServer.homeAutomationSystem.get_home_automation_modules_list():
+			if module.id == int(data['moduleId']):
+				bulb = module
+
+		for element in bulb.colorPalette:
+			if element.rgbwValue == data["colorValue"]
+				color = element
+
+		bulb.set_color(color)
+
+
 socketIoServer.register_namespace(HomeAutomationServer())
