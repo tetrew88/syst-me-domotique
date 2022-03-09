@@ -55,3 +55,15 @@
 
 	margin-bottom: 3%;
 }
+
+#color
+{
+	border-color: black;
+	border: solid;
+}
+
+#intensity
+{
+	border-color: black;
+	border: solid;
+}
