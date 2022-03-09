@@ -1,1 +1,1 @@
-var socket = io.connect("http://192.168.0.15:5000/HomeAutomationServer", { transports: ['websocket', 'polling', 'flashsocket'] })
+var socket = io.connect("http://141.101.68.218:5000/HomeAutomationServer", { transports: ['websocket', 'polling', 'flashsocket'] })
