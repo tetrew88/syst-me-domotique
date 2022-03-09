@@ -505,7 +505,7 @@ def main():
 
                     print("modification de module\n\n")
 
-                    while moduleChoice < 1 or moduleChoice > len(homeAutomationSystem.get_home_automation_modules()):
+                    while moduleChoice < 1 or moduleChoice > len(homeAutomationSystem.get_home_automation_modules_list()):
                         print("selectionner un module\n")
                         for module in homeAutomationSystem.get_home_automation_modules_list():
                             print("{}: {}".format(x, module.name))
@@ -519,7 +519,7 @@ def main():
                         finally:
                             moduleChoice = tmpModuleChoice
 
-                    selectedModule = homeAutomationSystem.get_home_automation_modules()[moduleChoice - 1]
+                    selectedModule = homeAutomationSystem.get_home_automation_modules_list()[moduleChoice - 1]
 
                     while settingChoice < 1 or settingChoice > 2:
                         print("1.modifier le nom")
