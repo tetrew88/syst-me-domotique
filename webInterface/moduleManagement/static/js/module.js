@@ -400,3 +400,9 @@ function set_color()
 	'colorValue': value
 	});
 }
+
+function set_intensity()
+{
+	let moduleId = document.getElementById("moduleId").value;
+	let value = document.getElementById("intensity").value;
+}

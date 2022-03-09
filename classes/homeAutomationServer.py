@@ -176,4 +176,15 @@ class HomeAutomationServer(socketio.Namespace):
 		bulb.set_color(color)
 
 
+	@socketIoServer.event(namespace='/HomeAutomationServer')
+	def set_bulb_intensity(sid, data):
+		bulb = False
+
+		for module in HomeAutomationServer.homeAutomationSystem.get_home_automation_modules_list():
+			if module.id == int(data['moduleId']):
+				bulb = module
+
+		bulb.set_intensity(data['intensity'])
+
+
 socketIoServer.register_namespace(HomeAutomationServer())
