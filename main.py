@@ -558,7 +558,7 @@ def main():
                             finally:
                                 roomChoice = tmpRoomChoice
 
-                        location = str(homeAutomationSystem.get_home_rooms()[roomChoice - 1].id)
+                        location = str(homeAutomationSystem.get_home_rooms_list()[roomChoice - 1].id)
 
                         selectedModule.set_location(location)
                         homeAutomationSystem.save_home_automation_network_modification()
