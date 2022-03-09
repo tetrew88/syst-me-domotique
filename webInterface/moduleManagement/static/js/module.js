@@ -1,4 +1,10 @@
 let moduleId = document.getElementById("moduleId").value;
+let locationList = []
+socket.emit('get_rooms_list', 'rooms')
+socket.on('post_rooms_list', data=>{
+
+	locationList = data["data"]
+}
 
 socket.emit('get_module', moduleId)
 socket.on('post_module', data=>{
@@ -21,8 +27,7 @@ socket.on('post_module', data=>{
 
 	let locationSection = document.createElement('div');
 	let locationLabel = document.createElement('div');
-	let locationInput = document.createElement('input');
-	let locationButton = document.createElement('button');
+	let locationInput = document.createElement('select');
 
 	let idSection = document.createElement('div');
 	let idLabel = document.createElement('div');
@@ -116,18 +121,40 @@ socket.on('post_module', data=>{
 	locationLabel.textContent = "emplacement:";
 	
 	locationInput.id = "moduleLocation";
-	locationInput.type = "text";
 	locationInput.value = data["location"];
-	locationInput.classList.add('col-5', 'rounded');
+	locationInput.classList.add('col-7', 'rounded');
+	locationInput.setAttribute('onchange', 'set_module_location();');
 
-	locationButton.type = "button";
-	locationButton.setAttribute('onclick', 'set_module_location();');
-	locationButton.classList.add('col-2');
+	let firstOption = document.createElement('option');
+	let optionList = []
 
+	for (const element of locationList)
+	{
+		if(element['id'] == data["location"])
+		{
+			firstOption.text = element["name"];
+			firstOption.value = element["id"];
+		}
+		else
+		{
+			let option = document.createElement('option');
+
+			option.text = element['name']
+			option.value = element['rgbwValue']
+
+			optionList.push(option);
+		}
+	}
+
+	locationInput.appendChild(firstOption);
+
+	for (const element of optionList)
+	{
+		locationInput.appendChild(element);
+	}
 
 	locationSection.appendChild(locationLabel);
 	locationSection.appendChild(locationInput);
-	locationSection.appendChild(locationButton);
 
 	////Bulb section
 	if(data['type'] == 'bulb' || data['type'] == 'rgb bulb')
