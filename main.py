@@ -507,7 +507,7 @@ def main():
 
                     while moduleChoice < 1 or moduleChoice > len(homeAutomationSystem.get_home_automation_modules()):
                         print("selectionner un module\n")
-                        for module in homeAutomationSystem.get_home_automation_modules():
+                        for module in homeAutomationSystem.get_home_automation_modules_list():
                             print("{}: {}".format(x, module.name))
                             x += 1
 
