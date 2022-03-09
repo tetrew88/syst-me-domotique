@@ -450,6 +450,8 @@ function set_module_location()
 	let moduleId = document.getElementById("moduleId").value;
 	let value = document.getElementById("moduleLocation").value;
 
+	console.log(value)
+
 	socket.emit('set_module_location', {'moduleId': moduleId,
 	'location': value
 	});
