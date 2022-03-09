@@ -545,7 +545,7 @@ def main():
                         roomChoice = tmpRoomChoice = 0
                         x = 1
 
-                        while roomChoice < 1 or roomChoice > len(homeAutomationSystem.get_home_rooms()):
+                        while roomChoice < 1 or roomChoice > len(homeAutomationSystem.get_home_rooms_list()):
                             print("selectionner un emplacement\n")
                             for room in homeAutomationSystem.get_home_rooms_list():
                                 print("{}: {}".format(x, room.name))
