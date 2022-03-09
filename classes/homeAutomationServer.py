@@ -184,7 +184,7 @@ class HomeAutomationServer(socketio.Namespace):
 			if module.id == int(data['moduleId']):
 				bulb = module
 
-		bulb.set_intensity(data['intensity'])
+		bulb.set_intensity(int(data['intensity']))
 
 
 socketIoServer.register_namespace(HomeAutomationServer())
