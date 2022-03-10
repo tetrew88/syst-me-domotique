@@ -152,4 +152,4 @@ socket.on('post_rooms_list', data=>{
 
 		screen.appendChild(carousel);
 	}
-}
+})
