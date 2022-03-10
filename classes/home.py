@@ -183,10 +183,6 @@ class Home:
         tmpRoom = self.homeDatabase.get_room(roomId)
         room = False
 
-        print('////////////')
-        print(room)
-        ptiny("///////////")
-
         if tmpRoom[2].lower() == "bathroom":
             room = Bathroom(tmpRoom[0], tmpRoom[1], self.homeAutomationNetwork)
         elif tmpRoom[2].lower() == "bedroom":
@@ -211,7 +207,7 @@ class Home:
         return module
 
     def get_profil(self, profilId):
-        profil = self.homeDatabase.get_profil(profilId)
+        profil = self.homeDatabase.get_profil(profilId)[0]
         print(profil)
 
         profil = Profil(profil[0], profil[1], profil[2])

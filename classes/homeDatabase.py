@@ -137,7 +137,7 @@ class HomeDatabase:
 
         self.db_cursor.execute(request)
 
-        profil = self.db_cursor.fetchall()[0]
+        profil = self.db_cursor.fetchall()
 
         return profil
 
