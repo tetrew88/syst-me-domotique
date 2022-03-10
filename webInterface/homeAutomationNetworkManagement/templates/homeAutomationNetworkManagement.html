@@ -1,17 +1,46 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/homeAutomationNetworkManagement.css' %}" />
+{% endblock %}
+
 {% block content %}
 
 <div class="col container-fluid">
   <div class="row">
-    hello
+
+    <div class="col-3 container-fluid">
+      <div class="row container-fluid"></div>
+
+      <div id="homeIdSection" class="col container-fluid rounded">
+        <div class="row container-fluid">
+          <h2 class="text-center">Home id</h2>
+        </div>
+        <div id ="homeId" class="row text-center">52</div>
+      </div>
+    </div>
+
+    <div class="col-6 container-fluid">
+      <h1 class="text-center">Réseau</h1>
+    </div>
+
+    <div class="col-3 container-fluid">
+      <div class="row container-fluid"></div>
+
+      <div id="stateSection" class="col container-fluid rounded">
+        <div class="row container-fluid">
+          <h2 class="text-center">état</h2>
+        </div>
+        <div id ="state" class="row text-center">prêt</div>
+      </div>
+    </div> 
+
   </div>
 </div>
 
-
 {% endblock %}
 
-{% block css %}
-  <link rel="stylesheet" type="text/css" href="{% static 'css/homeAutomationNetworkManagement.css' %}" />
+{% block jsScript %}
+  <script src="{% static 'js/homeAutomationNetworkManagement.js' %}"></script>
 {% endblock %}
