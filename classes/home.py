@@ -183,6 +183,8 @@ class Home:
         tmpRoom = self.homeDatabase.get_room(roomId)
         room = False
 
+        print(room)
+
         if tmpRoom[2].lower() == "bathroom":
             room = Bathroom(tmpRoom[0], tmpRoom[1], self.homeAutomationNetwork)
         elif tmpRoom[2].lower() == "bedroom":
@@ -198,8 +200,6 @@ class Home:
 
     def get_automation_module(self, moduleId):
         module = False
-
-        print(self.automationModules)
 
         for element in self.automationModules:
             if int(element.id) == int(moduleId):
