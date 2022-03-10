@@ -73,6 +73,13 @@
 	margin: auto;
 }
 
+.buttonContainer
+{
+	width: 100%;
+	height: 50%;
+	margin:auto;
+}
+
 #roomCarousel .carousel-control-prev-icon
 {
 	filter: invert(100%);
