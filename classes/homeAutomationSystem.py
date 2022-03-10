@@ -114,6 +114,12 @@ class HomeAutomationSystem:
     def set_home_room_type(self, roomId, newType):
         self.home.set_room_type(roomId, newType)
 
+    def set_home_profil_last_name(self, profilId, newLastName):
+        self.home.set_profil_last_name(profilId, newLastName)
+
+    def set_home_profil_first_name(self, profilId, newFirstName):
+        self.home.set_profil_first_name(profilId, newFirstName)
+
     def set_home_inhabitant_last_name(self, inhabitantId, newLastName):
         self.home.set_inhabitant_last_name(inhabitantId, newLastName)
 

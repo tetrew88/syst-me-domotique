@@ -167,6 +167,12 @@ class Home:
     def set_room_type(self, roomId, newType):
         self.homeDatabase.set_room_type(roomId, newType)
 
+    def set_profil_first_name(self, profilId, newFirstName):
+        self.homeDatabase.set_profil_first_name(profil, newFirstName)
+
+    def set_profil_last_name(self, profilId, newLastName):
+        self.homeDatabase.set_profil_last_name(profil, newLastName)
+
     def set_inhabitant_first_name(self, inhabitantId, newFirstName):
         self.homeDatabase.set_inhabitant_first_name(inhabitantId, newFirstName)
 
