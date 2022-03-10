@@ -106,7 +106,7 @@ class HomeAutomationServer(socketio.Namespace):
 	def get_events_list(sid, data):
 		eventList = []
 
-		for element in HomeAutomationServer.homeAutomationSystem.get_events_list():
+		for element in HomeAutomationServer.homeAutomationSystem.get_home_events_list():
 			eventList.append(element.serialize())
 
 		print(eventList)
