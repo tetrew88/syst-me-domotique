@@ -212,6 +212,8 @@ class Home:
         profil = Profil(tmpProfil[0], tmpProfil[1], tmpProfil[2])
         print(profil)
 
+        return profil
+
 
     def heal_network(self):
         self.homeAutomationNetwork.heal()
