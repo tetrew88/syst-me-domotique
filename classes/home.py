@@ -210,6 +210,7 @@ class Home:
 
     def get_profil(self, profilId):
         profil = self.homeDatabase.get_profil(profilId)
+        print(profil)
 
         profil = Profil(profil[0], profil[1], profil[2])
 
