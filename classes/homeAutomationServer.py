@@ -124,7 +124,7 @@ class HomeAutomationServer(socketio.Namespace):
 
 	@socketIoServer.event(namespace='/HomeAutomationServer')
 	def get_profil(sid, data):
-		profil = HomeAutomationServer.homeAutomationSystem.get_profil(data)
+		profil = HomeAutomationServer.homeAutomationSystem.get_profil(data).serialize()
 
 		print(profil)
 

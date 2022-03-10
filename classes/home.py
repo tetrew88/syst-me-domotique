@@ -211,7 +211,7 @@ class Home:
     def get_profil(self, profilId):
         profil = self.homeDatabase.get_profil(profilId)
 
-        profil = Profil(profil[1], profil[2], profil[3])
+        profil = Profil(profil[0], profil[1], profil[2])
 
 
     def heal_network(self):
