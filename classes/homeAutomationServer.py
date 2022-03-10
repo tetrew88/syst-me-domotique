@@ -221,11 +221,11 @@ class HomeAutomationServer(socketio.Namespace):
 
 	@socketIoServer.event(namespace='/HomeAutomationServer')
 	def set_profil_lastName(sid, data):
-		HomeAutomationServer.homeAutomationSystem.set_home_profil_last_Name(data['profilId'], data["lastName"])
+		HomeAutomationServer.homeAutomationSystem.set_home_profil_last_name(data['profilId'], data["lastName"])
 
 	@socketIoServer.event(namespace='/HomeAutomationServer')
 	def set_profil_firstName(sid, data):
-		HomeAutomationServer.homeAutomationSystem.set_home_profil_first_Name(data['profilId'], data["firstName"])
+		HomeAutomationServer.homeAutomationSystem.set_home_profil_first_name(data['profilId'], data["firstName"])
 
 
 socketIoServer.register_namespace(HomeAutomationServer())
