@@ -24,6 +24,28 @@
 	min-height: 2em;
 }
 
+.profilCard
+{
+
+	background-color: white;
+
+	border: none;
+	padding: 2%;
+}
+
+
+.profilList
+{
+	background-color: white;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	padding: 2%;
+
+	opacity: 80%;
+
+	min-height: 2em;
+}
+
 #roomCarousel .carousel-control-prev-icon
 {
 	filter: invert(100%);
@@ -32,4 +54,34 @@
 #roomCarousel .carousel-control-next-icon
 {
 	filter: invert(100%);
+}
+
+#inhabitantCarousel .carousel-control-prev-icon
+{
+	filter: invert(100%);
+}
+
+#inhabitantCarousel .carousel-control-next-icon
+{
+	filter: invert(100%);
+}
+
+#guestCarousel .carousel-control-prev-icon
+{
+	filter: invert(100%);
+}
+
+#guestCarousel .carousel-control-next-icon
+{
+	filter: invert(100%);
+}
+
+#roomsSection
+{
+	margin-top: 3%;
+}
+
+#inhabitantsSection
+{
+	margin-top: 3%;
 }
