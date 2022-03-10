@@ -183,7 +183,9 @@ class Home:
         tmpRoom = self.homeDatabase.get_room(roomId)
         room = False
 
+        print('////////////')
         print(room)
+        ptiny("///////////")
 
         if tmpRoom[2].lower() == "bathroom":
             room = Bathroom(tmpRoom[0], tmpRoom[1], self.homeAutomationNetwork)

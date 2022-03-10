@@ -18,9 +18,5 @@ class LuminositySensor(Sensor):
     @property
     def luminosity(self):
         for element in self.moduleNode.get_sensors():
-            print(self.moduleNode.get_sensors()[element].label)
             if self.moduleNode.get_sensors()[element].label == 'Luminance':
-                print('//////////////')
-                print(self.moduleNode.get_sensors()[element].data)
-                print('/////////////////')
                 return self.moduleNode.get_sensors()[element].data
