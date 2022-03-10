@@ -1,17 +1,37 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/homeManagement.css' %}" />
+{% endblock %}
+
 {% block content %}
 
 <div class="col container-fluid">
-  <div class="row">
-    hello
+
+  <div id="roomsSection" class="row container-fluid">
+    <div class="col-4 container-fluid"></div>
+      <div class="col-4 container-fluid">
+
+        <div id="roomBanner" class="row container-fluid text-center">
+          <h2>Pièces</h2>
+        </div>
+
+        <div class="row container-fluid text-center">
+          <div class="col-4 container-fluid">
+            <div id="roomScreen" class="row container-fluid screen">
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+    <div class="col-4 container-fluid"></div>
   </div>
 </div>
 
-
+{% block jsScript %}
+  <script src="{% static 'js/homeManagement.js' %}"></script>
 {% endblock %}
 
-{% block css %}
-  <link rel="stylesheet" type="text/css" href="{% static 'css/homeManagement.css' %}" />
 {% endblock %}
