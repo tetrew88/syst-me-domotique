@@ -209,7 +209,9 @@ class Home:
         return module
 
     def get_profil(self, profilId):
-        return self.homeDatabase.get_profil(profilId)
+        profil = self.homeDatabase.get_profil(profilId)
+
+        profil = Profil(profil[1], profil[2], profil[3])
 
 
     def heal_network(self):
