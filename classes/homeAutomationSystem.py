@@ -78,6 +78,9 @@ class HomeAutomationSystem:
     def get_home_automation_module(self, moduleId):
         return self.home.get_automation_module(moduleId)
 
+    def get_profil(self, profilId):
+        return self.home.get_profil(profilId)
+
 
     def add_home_room(self, room):
         self.home.add_room(room)

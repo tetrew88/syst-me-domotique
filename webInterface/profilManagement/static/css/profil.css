@@ -1,0 +1,32 @@
+#profilPicture
+{
+	margin: 2%;
+}
+
+.separation
+{
+	background-color: black;
+	height: 4px;
+
+	margin: 2%;
+	margin-bottom: 3%;
+}
+
+#profilInformation
+{
+	background-color: white;
+	margin: auto;
+	border-color: black;
+
+	padding-top: 2%;
+	padding-bottom: 2%;
+
+	margin-bottom: 3%;
+}
+
+
+.data
+{
+	border-color: black;
+	border: solid;
+}

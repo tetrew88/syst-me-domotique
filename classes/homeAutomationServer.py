@@ -122,6 +122,14 @@ class HomeAutomationServer(socketio.Namespace):
 
 		socketIoServer.emit('post_module', {"data": module}, namespace='/HomeAutomationServer')
 
+	@socketIoServer.event(namespace='/HomeAutomationServer')
+	def get_profil(sid, data):
+		profil = HomeAutomationServer.homeAutomationSystem.get_profil(data)
+
+		print(profil)
+
+		socketIoServer.emit('post_profil', {"data": profil}, namespace='/HomeAutomationServer')
+
 	
 
 	@socketIoServer.event(namespace='/HomeAutomationServer')

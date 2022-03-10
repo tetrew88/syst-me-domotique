@@ -13,7 +13,7 @@
     <div class="row container-fluid">
       <div class="col-4"></div>
       <div id="profilPicture" class="col-4 text-center container-fluid">
-        <img src="/static/pictures/profil.png" class="img-fluid img-rounded">
+        <img src="/static/pictures/profil.png" class="img-fluid rounded-circle container-fluid">
       </div>
       <div class="col-4"></div>
     </div>
@@ -29,6 +29,30 @@
     <div class="row container-fluid">
       <div class="col-4"></div>
       <div id="profilInformation" class="col-4 container-fluid rounded">
+        
+        <div id="lastNameSection" class="row container-fluid">
+          <div id="lastNameLabel" class="col-4 container-fluid">
+            Nom:
+          </div>
+          <div id="LastNameInput" class="col-6 container-fluid">
+            <input type="text" id="lastName" value="">
+          </div>
+          <div id="LastNameButton" class="col-2 container-fluid">
+            <button type="button" onclick="set_lastName_profil();"></button>
+          </div>
+        </div>
+
+        <div id="firstNameSection" class="row container-fluid">
+          <div id="firstNameLabel" class="col-4 container-fluid">
+            Prenom:
+          </div>
+          <div id="firstNameInput" class="col-4 container-fluid">
+            <input type="text" id="firstName" value="">
+          </div>
+          <div id="firstNameButton" class="col-2 container-fluid">
+            <button type="button" onclick="set_firstName_profil();"></button>
+          </div>
+        </div>
         
       </div>
       <div class="col-4"></div>
