@@ -65,7 +65,7 @@ class HomeAutomationSystem:
     def get_home_automation_modules_list(self):
         return self.home.automationModules
 
-    def get_home_event_list(self):
+    def get_home_events_list(self):
         return self.home.events
 
 

@@ -46,6 +46,26 @@
 	min-height: 2em;
 }
 
+.eventsList
+{
+
+	background-color: black;
+
+	width: 100%;
+	height: 100%;
+
+	opacity: 70%;
+
+	min-height: 2em;
+}
+
+
+.eventRapport
+{
+	color:  white;
+	width: 100%;
+}
+
 #roomCarousel .carousel-control-prev-icon
 {
 	filter: invert(100%);
