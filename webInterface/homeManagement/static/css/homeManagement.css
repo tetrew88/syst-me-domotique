@@ -7,6 +7,8 @@
 	height: 100%;
 
 	margin: auto;
+
+	border: none;
 }
 
 .screen
@@ -20,4 +22,14 @@
 	opacity: 80%;
 
 	min-height: 2em;
+}
+
+#roomCarousel .carousel-control-prev-icon
+{
+	filter: invert(100%);
+}
+
+#roomCarousel .carousel-control-next-icon
+{
+	filter: invert(100%);
 }
