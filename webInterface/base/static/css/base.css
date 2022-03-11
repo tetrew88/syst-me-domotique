@@ -24,6 +24,11 @@
 	align-items: space-around;
 }
 
+#logo
+{
+	margin: auto;
+}
+
 
 .shortcutsBar
 {
@@ -51,9 +56,4 @@
 footer
 {
 	background: #000000;
-}
-
-#logo
-{
-	margin: auto;
 }
