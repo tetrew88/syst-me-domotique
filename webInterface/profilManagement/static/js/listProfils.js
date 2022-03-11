@@ -76,27 +76,27 @@ function list_inhabitants(socket, screen)
 			carousel.classList.add("carousel", "slide", "container-fluid");
 			carousel.setAttribute('data-interval', "false");
 
-			carouselInner.classList.add("carousel-inner", "container-fluid");
+			carouselInner.classList.add("carousel-inner");
 
-			carouselActiveItem.classList.add("carousel-item", "active", "container-fluid");
+			carouselActiveItem.classList.add("carousel-item", "active");
 
 			activeRow.classList.add('row')
 
-			carouselControlPrev.classList.add("carousel-control-prev", "container-fluid");
+			carouselControlPrev.classList.add("carousel-control-prev");
 			carouselControlPrev.href = "#inhabitantCarousel";
 			carouselControlPrev.role="button";
 			carouselControlPrev.setAttribute('data-slide',"prev");
 
-			prevIcon.classList.add('carousel-control-prev-icon', "container-fluid");
+			prevIcon.classList.add('carousel-control-prev-icon');
 			prevIcon.setAttribute('aria-hidden', "true");
 			prevIcon.style.color = 'black';
 
-			carouselControlNext.classList.add("carousel-control-next", "container-fluid");
+			carouselControlNext.classList.add("carousel-control-next");
 			carouselControlNext.href = "#inhabitantCarousel";
 			carouselControlNext.role="button";
 			carouselControlNext.setAttribute('data-slide','next');
 
-			nextIcon.classList.add('carousel-control-next-icon', "container-fluid");
+			nextIcon.classList.add('carousel-control-next-icon');
 			nextIcon.setAttribute('aria-hidden', 'true');
 			nextIcon.style.color = 'black';
 
@@ -112,9 +112,9 @@ function list_inhabitants(socket, screen)
 				link.href = '/inhabitant/' + element['id'] + "/"
 				link.classList.add("col-lg-4", "col-md-6","col-sm-12", "container-fluid")
 
-				profilCard.classList.add("card", "profilCard", "rounded");
+				profilCard.classList.add("card", "profilCard", "rounded", "container-fluid");
 
-				cardPicture.classList.add("img-fluid", "rounded-circle");
+				cardPicture.classList.add("img-fluid", "rounded-circle", "container-fluid");
 				cardPicture.src = "/static/pictures/profil.png";
 				cardTitle.classList.add("card-title", "text-center");
 				cardTitle.style.color = 'blue';
@@ -238,27 +238,27 @@ function list_guests(socket, screen)
 			carousel.classList.add("carousel", "slide", "container-fluid");
 			carousel.setAttribute('data-interval', "false");
 
-			carouselInner.classList.add("carousel-inner", "container-fluid");
+			carouselInner.classList.add("carousel-inner");
 
-			carouselActiveItem.classList.add("carousel-item", "active", "container-fluid");
+			carouselActiveItem.classList.add("carousel-item", "active");
 
 			activeRow.classList.add('row')
 
-			carouselControlPrev.classList.add("carousel-control-prev", "container-fluid");
+			carouselControlPrev.classList.add("carousel-control-prev");
 			carouselControlPrev.href = "#guestCarousel";
 			carouselControlPrev.role="button";
 			carouselControlPrev.setAttribute('data-slide',"prev");
 
-			prevIcon.classList.add('carousel-control-prev-icon', "container-fluid");
+			prevIcon.classList.add('carousel-control-prev-icon');
 			prevIcon.setAttribute('aria-hidden', "true");
 			prevIcon.style.color = 'black';
 
-			carouselControlNext.classList.add("carousel-control-next", "container-fluid");
+			carouselControlNext.classList.add("carousel-control-next");
 			carouselControlNext.href = "#guestCarousel";
 			carouselControlNext.role="button";
 			carouselControlNext.setAttribute('data-slide','next');
 
-			nextIcon.classList.add('carousel-control-next-icon', "container-fluid");
+			nextIcon.classList.add('carousel-control-next-icon');
 			nextIcon.setAttribute('aria-hidden', 'true');
 			nextIcon.style.color = 'black';
 
@@ -274,9 +274,9 @@ function list_guests(socket, screen)
 				link.href = '/inhabitant/' + element['id'] + "/"
 				link.classList.add("col-lg-4", "col-md-6","col-sm-12", "container-fluid")
 
-				profilCard.classList.add("card", "profilCard", "rounded");
+				profilCard.classList.add("card", "profilCard", "rounded", "container-fluid");
 
-				cardPicture.classList.add("img-fluid", "rounded-circle");
+				cardPicture.classList.add("img-fluid", "rounded-circle", "container-fluid");
 				cardPicture.src = "/static/pictures/profil.png";
 				cardTitle.classList.add("card-title", "text-center");
 				cardTitle.style.color = 'blue';
