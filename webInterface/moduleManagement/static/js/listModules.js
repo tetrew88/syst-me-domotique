@@ -158,7 +158,7 @@ function list_modules_by_type(socket, screen)
 				prevIcon.classList.add('carousel-control-prev-icon');
 				prevIcon.setAttribute('aria-hidden', "true");
 
-				carouselControlNext.classList.add("carousel-control-next";
+				carouselControlNext.classList.add("carousel-control-next");
 				carouselControlNext.href = "#moduleCarousel";
 				carouselControlNext.role="button";
 				carouselControlNext.setAttribute('data-slide','next');
