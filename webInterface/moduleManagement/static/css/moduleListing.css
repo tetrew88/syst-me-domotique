@@ -56,7 +56,7 @@
     }
 }
 
-@media all and (max-width: 549px) and (min-width:  480px)
+@media all and (max-width: 549px)
 {
     .card-title
     {
@@ -65,19 +65,7 @@
 
     .moduleSection h2
     {
-    	font-size: x-small;
+    	font-size: small;
     }
 }
-
-@media all and (max-width: 479px)
-{
-    .card-title
-    {
-    	font-size: xx-small;
-    }
-
-    .moduleSection h2
-    {
-    	font-size: xx-small;
-    }
 }
