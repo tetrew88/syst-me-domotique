@@ -160,7 +160,7 @@ function list_inhabitants(socket, screen)
 				for (const item of carouselItemList)
 				{
 					let carouselItem = document.createElement('div');
-					carouselItem.classList.add("carousel-item", "container-fluid");
+					carouselItem.classList.add("carousel-item");
 
 					carouselItem.appendChild(item);
 					carouselInner.appendChild(carouselItem);
@@ -322,7 +322,7 @@ function list_guests(socket, screen)
 				for (const item of carouselItemList)
 				{
 					let carouselItem = document.createElement('div');
-					carouselItem.classList.add("carousel-item", "container-fluid");
+					carouselItem.classList.add("carousel-item");
 
 					carouselItem.appendChild(item);
 					carouselInner.appendChild(carouselItem);

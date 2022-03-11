@@ -44,3 +44,36 @@
 {
 	filter: invert(100%);
 }
+
+@media all and (max-width: 899px) and (min-width:  550px)
+{
+    .card-title
+    {
+    	font-size: small;
+    }
+}
+
+@media all and (max-width: 549px) and (min-width:  480px)
+{
+    .card-title
+    {
+    	font-size: x-small;
+    }
+}
+
+@media all and (max-width: 479px)
+{
+    .card-title
+    {
+    	font-size: xx-small;
+    }
+}
+
+
+@media all and (max-width: 549px)
+{
+	card-title
+	{
+		font-size: large;
+	}
+}

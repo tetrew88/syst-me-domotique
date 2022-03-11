@@ -226,7 +226,7 @@ function list_modules_by_type(socket, screen)
 					for (const item of carouselItemList)
 					{
 						let carouselItem = document.createElement('div');
-						carouselItem.classList.add("carousel-item", "container-fluid");
+						carouselItem.classList.add("carousel-item");
 
 						carouselItem.appendChild(item);
 						carouselInner.appendChild(carouselItem);
