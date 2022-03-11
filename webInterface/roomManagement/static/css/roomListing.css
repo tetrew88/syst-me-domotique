@@ -17,3 +17,11 @@
 
 	min-height: 2em;
 }
+
+@media all and (max-width: 1199px)
+{
+	.card-title
+	{
+		font-size: small;
+	}
+}

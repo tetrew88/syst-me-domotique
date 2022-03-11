@@ -19,7 +19,7 @@ socket.on('post_rooms_list', data=>{
 			let cardTitle =  document.createElement('div');                                                                                         
 
 			link.href = '/room/' + element['id'] + "/"
-			link.classList.add("col-lg-4", "container-fluid")
+			link.classList.add("col-4", "container-fluid")
 
 			roomCard.classList.add("card", "roomCard", "rounded");
 
@@ -91,7 +91,7 @@ socket.on('post_rooms_list', data=>{
 			let cardTitle =  document.createElement('div');
 
 			link.href = '/room/' + element['id'] + "/"
-			link.classList.add("col-lg-4")
+			link.classList.add("col-4")
 
 			roomCard.classList.add("card", "roomCard", "rounded", "container-fluid");
 
