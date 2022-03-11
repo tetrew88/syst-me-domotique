@@ -74,9 +74,6 @@ function list_modules_by_type(socket, screen)
 			content.classList.add('col');
 
 			bannerSection.classList.add('row', 'container-fluid');
-			bannerMargin1.classList.add('col-4');
-			bannerMargin2.classList.add('col-4');
-			titleZone.classList.add('col-4', 'text-center', 'container-fluid');
 
 			title.classList.add("text-center");
 
@@ -91,7 +88,8 @@ function list_modules_by_type(socket, screen)
 			listSection.style.margin = "auto";
 
 			title.textContent = element;
-			titleZone.appendChild(title);
+
+			bannerSection.appendChild(title);
 
 
 			if(selectedModules.length <= maxModule)
@@ -247,11 +245,6 @@ function list_modules_by_type(socket, screen)
 
 				listContent.appendChild(carousel);
 			}
-
-
-			bannerSection.appendChild(bannerMargin1);
-			bannerSection.appendChild(titleZone);
-			bannerSection.appendChild(bannerMargin2);
 
 
 			listZone.appendChild(listContent);
