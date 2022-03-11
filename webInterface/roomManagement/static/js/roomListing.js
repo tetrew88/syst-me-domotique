@@ -19,7 +19,7 @@ socket.on('post_rooms_list', data=>{
 			let cardTitle =  document.createElement('div');                                                                                         
 
 			link.href = '/room/' + element['id'] + "/";
-			link.classList.add("col-lg-4", "col-md-6", "col-sm-12", "container-fluid")
+			link.classList.add("col-lg-4", "col-md-6", "col-sm-12")
 
 			roomCard.classList.add("card", "roomCard", "rounded");
 
@@ -56,29 +56,29 @@ socket.on('post_rooms_list', data=>{
 		let nextIcon = document.createElement('span');
 
 		carousel.id = 'roomCarousel'
-		carousel.classList.add("carousel", "slide", "container-fluid");
+		carousel.classList.add("carousel", "slide");
 		carousel.setAttribute('data-interval', "false");
 
-		carouselInner.classList.add("carousel-inner", "container-fluid");
+		carouselInner.classList.add("carousel-inner");
 
-		carouselActiveItem.classList.add("carousel-item", "active", "container-fluid");
+		carouselActiveItem.classList.add("carousel-item", "active");
 
 		activeRow.classList.add('row')
 
-		carouselControlPrev.classList.add("carousel-control-prev", "container-fluid");
+		carouselControlPrev.classList.add("carousel-control-prev");
 		carouselControlPrev.href = "#roomCarousel";
 		carouselControlPrev.role="button";
 		carouselControlPrev.setAttribute('data-slide',"prev");
 
-		prevIcon.classList.add('carousel-control-prev-icon', "container-fluid");
+		prevIcon.classList.add('carousel-control-prev-icon');
 		prevIcon.setAttribute('aria-hidden', "true");
 
-		carouselControlNext.classList.add("carousel-control-next", "container-fluid");
+		carouselControlNext.classList.add("carousel-control-next");
 		carouselControlNext.href = "#roomCarousel";
 		carouselControlNext.role="button";
 		carouselControlNext.setAttribute('data-slide','next');
 
-		nextIcon.classList.add('carousel-control-next-icon', "container-fluid");
+		nextIcon.classList.add('carousel-control-next-icon');
 		nextIcon.setAttribute('aria-hidden', 'true');
 
 		carouselControlPrev.appendChild(prevIcon);
@@ -91,9 +91,9 @@ socket.on('post_rooms_list', data=>{
 			let cardTitle =  document.createElement('div');
 
 			link.href = '/room/' + element['id'] + "/";
-			link.classList.add("col-lg-4", "col-md-6", "col-sm-12", "container-fluid")
+			link.classList.add("col-lg-4", "col-md-6", "col-sm-12")
 
-			roomCard.classList.add("card", "roomCard", "rounded", "container-fluid");
+			roomCard.classList.add("card", "roomCard", "rounded");
 
 			cardPicture.classList.add("img-fluid", "rounded");
 			cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";
@@ -141,7 +141,7 @@ socket.on('post_rooms_list', data=>{
 			for (const item of carouselItemList)
 			{
 				let carouselItem = document.createElement('div');
-				carouselItem.classList.add("carousel-item", "container-fluid");
+				carouselItem.classList.add("carousel-item");
 
 				carouselItem.appendChild(item);
 				carouselInner.appendChild(carouselItem);
