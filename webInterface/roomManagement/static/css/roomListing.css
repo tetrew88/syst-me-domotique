@@ -18,10 +18,18 @@
 	min-height: 2em;
 }
 
-@media all and (max-width: 1199px)
+@media all and (max-width: 1199px) and (min-width:  1000px)
 {
 	.card-title
 	{
 		font-size: small;
+	}
+}
+
+@media all and (max-width: 999px) and (min-width:  700px)
+{
+	.card-title
+	{
+		font-size: x-small;
 	}
 }
