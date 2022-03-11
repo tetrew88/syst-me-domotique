@@ -1,7 +1,7 @@
 const inhabitantsScreen = document.getElementById("inhabitantsScreen");
 const guestsScreen = document.getElementById('guestsScreen');
 
-listRooms(socket, inhabitantsScreen);
+list_inhabitants(socket, inhabitantsScreen);
 
 socket.emit('get_guests_list', '')
 socket.on('post_guests_list', data=>{
