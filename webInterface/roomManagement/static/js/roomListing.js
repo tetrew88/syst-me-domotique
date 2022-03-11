@@ -1,4 +1,4 @@
-const screen = document.getElementById('screen');
+const screen = document.getElementById('roomsScreen');
 
 
 socket.emit('get_rooms_list', 'rooms')
@@ -21,7 +21,7 @@ socket.on('post_rooms_list', data=>{
 			link.href = '/room/' + element['id'] + "/";
 			link.classList.add("col-lg-4", "col-md-6", "col-sm-12", "container-fluid")
 
-			roomCard.classList.add("card", "roomCard", "rounded");
+			roomCard.classList.add("card", "roomCard", "rounded", "container-fluid");
 
 			cardPicture.classList.add("img-fluid", "rounded", "container-fluid");
 			cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";//element[2];
