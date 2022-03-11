@@ -171,14 +171,14 @@ function list_modules_by_type(socket, screen)
 
 				for (const element of selectedModules) {
 					let link = document.createElement('a')
-					let roomCard = document.createElement('div');
+					let moduleCard = document.createElement('div');
 					let cardPicture = document.createElement('img');
 					let cardTitle =  document.createElement('div');
 
 					link.href = '/room/' + element['id'] + "/"
 					link.classList.add("col-lg-4", "col-md-6","col-sm-12", "container-fluid")
 
-					roomCard.classList.add("card", "roomCard", "rounded", "container-fluid");
+					moduleCard.classList.add("card", "moduleCard", "rounded", "container-fluid");
 
 					cardPicture.classList.add("img-fluid", "rounded", "container-fluid");
 					cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";
@@ -186,10 +186,10 @@ function list_modules_by_type(socket, screen)
 					cardTitle.style.color = 'blue';
 					cardTitle.textContent = element["name"];
 
-					roomCard.appendChild(cardPicture);
-					roomCard.appendChild(cardTitle);
+					moduleCard.appendChild(cardPicture);
+					moduleCard.appendChild(cardTitle);
 
-					link.appendChild(roomCard);
+					link.appendChild(moduleCard);
 
 					if(x <= maxModule - 1)
 					{
