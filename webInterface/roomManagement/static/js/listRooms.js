@@ -5,7 +5,7 @@ if (window.matchMedia("(min-width: 1000px)").matches) {
 }
 else
 {
-	if (window.matchMedia("(min-width: 600px)").matches)
+	if (window.matchMedia("(min-width: 800px)").matches)
 	{
 		maxRoom = 2
 	}
