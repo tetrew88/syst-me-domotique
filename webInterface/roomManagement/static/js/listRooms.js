@@ -1,3 +1,21 @@
+let maxRoom = 0
+
+if (window.matchMedia("(min-width: 900px)").matches) {
+	maxRoom = 6
+}
+else
+{
+	if (window.matchMedia("(min-width: 500px)").matches)
+	{
+		maxRoom = 2
+	}
+	else
+	{
+		maxRoom = 1
+	}
+}
+
+
 function listRooms(socket, screen)
 {
 	socket.emit('get_rooms_list', 'rooms')
@@ -7,7 +25,7 @@ function listRooms(socket, screen)
 
 		data = data["data"]
 
-		if(data.length <= 6)
+		if(data.length <= maxRoom)
 		{
 
 			for (const element of data) {
@@ -19,7 +37,7 @@ function listRooms(socket, screen)
 				let cardTitle =  document.createElement('div');                                                                                         
 
 				link.href = '/room/' + element['id'] + "/";
-				link.classList.add("col-lg-4", "col-6", "container-fluid")
+				link.classList.add("col-lg-4", "col-md-6","col-sm-12" "container-fluid")
 
 				roomCard.classList.add("card", "roomCard", "rounded", "container-fluid");
 
@@ -106,13 +124,13 @@ function listRooms(socket, screen)
 
 				link.appendChild(roomCard);
 
-				if(x <= 5)
+				if(x <= maxRoom-1)
 				{
 					activeRow.appendChild(link);
 				}
 				else
 				{
-					let result = x % 6
+					let result = x % maxRoom
 
 					if(result == 0)
 					{
