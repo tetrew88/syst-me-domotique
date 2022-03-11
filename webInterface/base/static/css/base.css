@@ -36,6 +36,16 @@
 	list-style: none;
 }
 
+#roomCarousel .carousel-control-prev-icon
+{
+	margin: auto;
+}
+
+#roomCarousel .carousel-control-next-icon
+{
+	margin: auto;
+}
+
 
 /* generic css */
 footer
