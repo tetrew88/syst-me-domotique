@@ -62,7 +62,7 @@ socket.on('post_rooms_list', data=>{
 		let nextIcon = document.createElement('span');
 
 		carousel.id = 'roomCarousel'
-		carousel.classList.add("carousel", "slide");
+		carousel.classList.add("carousel", "slide", 'container-fluid');
 		carousel.setAttribute('data-interval', "false");
 
 		carouselInner.classList.add("carousel-inner");
