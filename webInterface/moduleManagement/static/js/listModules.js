@@ -45,6 +45,7 @@ function list_modules_by_type(socket, screen)
 			let selectedType = element;
 
 			let moduleSection = document.createElement('div');
+			let content = document.createElement('div');
 
 			let bannerSection = document.createElement('div');
 			let bannerMargin1 = document.createElement('div');
@@ -69,6 +70,7 @@ function list_modules_by_type(socket, screen)
 
 
 			moduleSection.classList.add('row', 'moduleSection', 'container-fluid');
+			content.classList.add('col');
 
 			bannerSection.classList.add('row', 'container-fluid');
 			bannerMargin1.classList.add('col-4');
@@ -253,8 +255,11 @@ function list_modules_by_type(socket, screen)
 			listSection.appendChild(listMargin2);
 
 
-			moduleSection.appendChild(bannerSection);
-			moduleSection.appendChild(listSection);
+			content.appendChild(bannerSection);
+			content.appendChild(listSection);
+
+
+			moduleSection.appendChild(content);
 
 
 			screen.appendChild(moduleSection);
