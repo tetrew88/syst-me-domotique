@@ -55,6 +55,11 @@
 	right: -2%;
 }
 
+.nav-link
+{
+	margin: auto;
+}
+
 
 /* generic css */
 footer
