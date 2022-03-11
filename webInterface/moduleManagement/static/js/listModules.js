@@ -82,7 +82,7 @@ function list_modules_by_type(socket, screen)
 			listMargin2.classList.add('col-3');
 
 			listZone.classList.add('col-6', 'container-fluid');
-			listContent.classList.add('row', 'moduleList', "rounded", 'container-fluid');
+			listContent.classList.add('row', 'moduleList', "rounded");
 
 			titleZone.textContent = element;
 
