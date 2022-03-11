@@ -1,8 +1,14 @@
-#roomCarousel .carousel-inner
+#roomsScreen
 {
+	background-color: black;
+
+	opacity: 80%;
+
+	min-height: 2em;
 	margin-top: 5%;
 	margin-bottom: 5%;
 }
+
 
 .roomCard
 {
@@ -15,14 +21,6 @@
 	margin: auto;
 }
 
-#roomsScreen
-{
-	background-color: black;
-
-	opacity: 80%;
-
-	min-height: 2em;
-}
 
 @media all and (max-width: 1199px) and (min-width:  1000px)
 {
