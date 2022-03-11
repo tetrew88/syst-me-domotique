@@ -68,3 +68,11 @@ footer
 {
 	background: #000000;
 }
+
+@media all and (max-width: 1024px)
+{
+    .nav-link
+    {
+    	font-size: x-small;
+    }
+}
