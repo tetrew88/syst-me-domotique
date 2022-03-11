@@ -76,6 +76,11 @@ footer
     	font-size: small;
     }
 
+    .dropdown-item
+    {
+    	font-size: small;
+    }
+
 }
 
 @media all and (max-width: 549px) and (min-width:  480px)
@@ -84,11 +89,21 @@ footer
     {
     	font-size: x-small;
     }
+
+    .dropdown-item
+    {
+    	font-size: x-small;
+    }
 }
 
 @media all and (max-width: 479px)
 {
     .nav-link
+    {
+    	font-size: xx-small;
+    }
+
+    .dropdown-item
     {
     	font-size: xx-small;
     }
