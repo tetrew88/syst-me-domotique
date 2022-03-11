@@ -51,7 +51,7 @@ function list_modules_by_type(socket, screen)
 			let bannerMargin1 = document.createElement('div');
 			let bannerMargin2 = document.createElement('div');
 			let titleZone = document.createElement('div');
-			let title = document.createElement('<h2>')
+			let title = document.createElement('h2')
 
 			let listSection = document.createElement('div');
 			let listMargin1 = document.createElement('div');
