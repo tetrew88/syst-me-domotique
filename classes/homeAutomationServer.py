@@ -63,15 +63,7 @@ class HomeAutomationServer(socketio.Namespace):
 
 		print(rooms)
 
-		tmpRoom = []
-
-		x=0
-		while x < 3:
-			tmpRoom.append(rooms[x])
-
-			x+=1
-
-		socketIoServer.emit('post_rooms_list', {'data': tmpRoom}, namespace='/HomeAutomationServer')
+		socketIoServer.emit('post_rooms_list', {'data': rooms}, namespace='/HomeAutomationServer')
 
 
 	@socketIoServer.event(namespace='/HomeAutomationServer')
