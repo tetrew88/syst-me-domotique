@@ -46,7 +46,7 @@ socket.on('post_rooms_list', data=>{
 	{
 		let x = 0
 
-		pageContent.style.marginBottom = "3%";
+		pageContent.style.marginTop = "5%";
 
 		const carousel = document.createElement('div');
 		const carouselInner = document.createElement('div');
