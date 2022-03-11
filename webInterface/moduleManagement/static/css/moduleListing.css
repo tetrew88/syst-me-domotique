@@ -60,12 +60,12 @@
 {
     .card-title
     {
-    	font-size: x-small;
+    	font-size: small;
     }
 
     .moduleSection h2
     {
-    	font-size: small;
+    	font-size: large;
     }
 }
 }
