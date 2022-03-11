@@ -8,6 +8,8 @@ socket.on('post_inhabitants_list', data=>{
 
 	inhabitantList = data["data"];
 
+	inhabitantsScreen.innerHTML = "";
+
 	if(inhabitantList.length <= 3)
 	{
 		for (const element of inhabitantList) {
@@ -166,6 +168,8 @@ socket.on('post_guests_list', data=>{
 	let guestsList = [];
 
 	guestsList = data["data"];
+
+	guestsScreen.innerHTML = ""
 
 	if(guestsList.length <= 3)
 	{
