@@ -76,3 +76,11 @@ footer
     	font-size: x-small;
     }
 }
+
+@media all and (max-width: 1000px)
+{
+    .nav-link
+    {
+    	font-size: small;
+    }
+}
