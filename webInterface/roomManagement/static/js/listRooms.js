@@ -1,6 +1,6 @@
 let maxRoom = 0
 
-if (window.matchMedia("(min-width: 900px)").matches) {
+if (window.matchMedia("(min-width: 1000px)").matches) {
 	maxRoom = 6
 }
 else
