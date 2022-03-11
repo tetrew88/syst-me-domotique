@@ -46,7 +46,7 @@ socket.on('post_rooms_list', data=>{
 	{
 		let x = 0
 
-		pageContent.style.marginTop = "2%";
+		pageContent.style.marginTop = "3%";
 
 		const carousel = document.createElement('div');
 		const carouselInner = document.createElement('div');
@@ -62,14 +62,14 @@ socket.on('post_rooms_list', data=>{
 		let nextIcon = document.createElement('span');
 
 		carousel.id = 'roomCarousel'
-		carousel.classList.add("carousel", "slide");
+		carousel.classList.add("carousel", "slide", 'container-fluid');
 		carousel.setAttribute('data-interval', "false");
 
-		carouselInner.classList.add("carousel-inner");
+		carouselInner.classList.add("carousel-inner", "container-fluid");
 
 		carouselActiveItem.classList.add("carousel-item", "active");
 
-		activeRow.classList.add('row')
+		activeRow.classList.add('row', 'container-fluid')
 
 		carouselControlPrev.classList.add("carousel-control-prev");
 		carouselControlPrev.href = "#roomCarousel";
