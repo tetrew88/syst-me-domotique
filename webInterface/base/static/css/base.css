@@ -8,7 +8,7 @@
 	background: url(../pictures/background.jpeg);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 100%;
+	background-size: auto;
 
 }
 
@@ -21,7 +21,7 @@
 	flex-wrap: nowrap;
 
 	justify-content: flex-start;
-	align-items: center;
+	align-items: space-around;
 
 	margin: auto;
 }
@@ -34,7 +34,7 @@
 }
 
 
-#carousel
+#shortcutsCarousel
 {
 	list-style: none;
 }
@@ -44,4 +44,9 @@
 footer
 {
 	background: #000000;
+}
+
+#logo
+{
+	margin: auto;
 }
