@@ -75,7 +75,7 @@ function list_modules_by_type(socket, screen)
 
 			bannerSection.classList.add('row', 'container-fluid');
 
-			title.classList.add("text-center");
+			title.classList.add("text-center", "col");
 
 			listSection.classList.add("row", 'container-fluid');
 			listMargin1.classList.add('col-3');
