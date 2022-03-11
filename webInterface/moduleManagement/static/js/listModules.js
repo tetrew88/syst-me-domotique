@@ -169,7 +169,7 @@ function list_modules_by_type(socket, screen)
 				carouselControlPrev.appendChild(prevIcon);
 				carouselControlNext.appendChild(nextIcon);
 
-				for (const element of data) {
+				for (const element of selectedModules) {
 					let link = document.createElement('a')
 					let roomCard = document.createElement('div');
 					let cardPicture = document.createElement('img');
