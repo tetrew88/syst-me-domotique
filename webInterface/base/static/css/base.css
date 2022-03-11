@@ -76,10 +76,6 @@ footer
     	font-size: small;
     }
 
-    #logo h2
-	{
-		font-size: large;
-	}
 }
 
 @media all and (max-width: 549px) and (min-width:  480px)
@@ -96,4 +92,13 @@ footer
     {
     	font-size: xx-small;
     }
+}
+
+
+@media all and (max-width: 549px)
+{
+	#logo h2
+	{
+		font-size: large;
+	}
 }
