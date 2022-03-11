@@ -13,6 +13,7 @@ socket.on('post_rooms_list', data=>{
 	{
 		pageContent.style.marginBottom = "5%";
 		pageContent.style.marginTop = "10%";
+
 		for (const element of data) {
 			console.log(element);
 
@@ -44,6 +45,8 @@ socket.on('post_rooms_list', data=>{
 	else
 	{
 		let x = 0
+
+		pageContent.style.marginTop = "2%";
 
 		const carousel = document.createElement('div');
 		const carouselInner = document.createElement('div');
