@@ -66,7 +66,7 @@ class HomeAutomationServer(socketio.Namespace):
 		tmpRoom = []
 
 		x=0
-		while x < 2:
+		while x < 3:
 			tmpRoom.append(rooms[x])
 
 			x+=1
