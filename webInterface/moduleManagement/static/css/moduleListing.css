@@ -4,6 +4,11 @@
 	padding-bottom: 5%;
 }
 
+.moduleSection
+{
+	margin: auto;
+}
+
 .moduleList
 {
 	background-color: white;

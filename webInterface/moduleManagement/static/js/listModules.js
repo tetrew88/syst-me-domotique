@@ -51,6 +51,7 @@ function list_modules_by_type(socket, screen)
 			let bannerMargin1 = document.createElement('div');
 			let bannerMargin2 = document.createElement('div');
 			let titleZone = document.createElement('div');
+			let title = document.createElement('<h2>')
 
 			let listSection = document.createElement('div');
 			let listMargin1 = document.createElement('div');
@@ -77,6 +78,8 @@ function list_modules_by_type(socket, screen)
 			bannerMargin2.classList.add('col-4');
 			titleZone.classList.add('col-4', 'text-center', 'container-fluid');
 
+			title.classList.add("text-center");
+
 			listSection.classList.add("row", 'container-fluid');
 			listMargin1.classList.add('col-3');
 			listMargin2.classList.add('col-3');
@@ -84,7 +87,11 @@ function list_modules_by_type(socket, screen)
 			listZone.classList.add('col-6', 'container-fluid');
 			listContent.classList.add('row', 'moduleList', "rounded");
 
-			titleZone.textContent = element;
+			bannerSection.style.margin = "auto";
+			listSection.style.margin = "auto";
+
+			title.textContent = element;
+			titleZone.appendChild(title);
 
 
 			if(selectedModules.length <= maxModule)
