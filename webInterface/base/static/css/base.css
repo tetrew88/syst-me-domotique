@@ -75,6 +75,11 @@ footer
     {
     	font-size: small;
     }
+
+    #logo h2
+	{
+		font-size: large;
+	}
 }
 
 @media all and (max-width: 549px) and (min-width:  480px)
