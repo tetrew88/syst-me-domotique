@@ -23,7 +23,7 @@ socket.on('post_rooms_list', data=>{
 
 			roomCard.classList.add("card", "roomCard", "rounded");
 
-			cardPicture.classList.add("img-fluid", "rounded");
+			cardPicture.classList.add("img-fluid", "rounded", "container-fluid");
 			cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";//element[2];
 
 			cardTitle.classList.add("card-title", "text-center");
