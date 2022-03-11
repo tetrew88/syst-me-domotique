@@ -8,6 +8,8 @@ socket.on('post_rooms_list', data=>{
 
 	data = data["data"]
 
+	data = data[:2]
+
 	if(data.length <= 6)
 	{
 		for (const element of data) {
