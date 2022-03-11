@@ -77,7 +77,7 @@ footer
     }
 }
 
-@media all and (max-width: 899px)
+@media all and (max-width: 899px) and (min-width:  500px)
 {
     .nav-link
     {
