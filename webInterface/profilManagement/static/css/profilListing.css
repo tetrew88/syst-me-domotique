@@ -9,6 +9,7 @@
 	margin: auto;
 }
 
+
 .profilsScreen
 {
 	background-color: white;
@@ -16,9 +17,6 @@
 	opacity: 80%;
 
 	min-height: 2em;
-
-	padding-top: 2%;
-	padding-bottom: 5%;
 }
 
 
