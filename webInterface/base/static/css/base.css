@@ -34,7 +34,7 @@
 
 #logo h2
 {
-	font-size: inherit;
+	margin: auto;
 }
 
 
@@ -44,10 +44,6 @@
 	background-color: darkgray;
 }
 
-.carousel
-{
-	list-style: none;
-}
 
 .carousel-control-prev
 {
