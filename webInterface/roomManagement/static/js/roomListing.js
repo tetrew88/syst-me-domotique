@@ -6,9 +6,9 @@ socket.on('post_rooms_list', data=>{
 
 	screen.innerHTML = "";
 
-	data = data["data"]
+	tmpdata = data["data"]
 
-	data = data[:2]
+	data = data.slice(1)
 
 	if(data.length <= 6)
 	{
