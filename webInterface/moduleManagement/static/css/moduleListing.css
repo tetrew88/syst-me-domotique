@@ -52,7 +52,7 @@
 
     .moduleSection h2
     {
-    	font-size: xx-large;
+    	font-size: x-large;
     }
 }
 
@@ -65,7 +65,7 @@
 
     .moduleSection h2
     {
-    	font-size: x-large;
+    	font-size: unset;
     }
 }
 }
