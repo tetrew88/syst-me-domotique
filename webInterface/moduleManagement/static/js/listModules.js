@@ -144,26 +144,26 @@ function list_modules_by_type(socket, screen)
 				carousel.classList.add("carousel", "slide", "container-fluid");
 				carousel.setAttribute('data-interval', "false");
 
-				carouselInner.classList.add("carousel-inner", "container-fluid");
+				carouselInner.classList.add("carousel-inner");
 
-				carouselActiveItem.classList.add("carousel-item", "active", "container-fluid");
+				carouselActiveItem.classList.add("carousel-item", "active");
 
 				activeRow.classList.add('row')
 
-				carouselControlPrev.classList.add("carousel-control-prev", "container-fluid");
+				carouselControlPrev.classList.add("carousel-control-prev");
 				carouselControlPrev.href = "#moduleCarousel";
 				carouselControlPrev.role="button";
 				carouselControlPrev.setAttribute('data-slide',"prev");
 
-				prevIcon.classList.add('carousel-control-prev-icon', "container-fluid");
+				prevIcon.classList.add('carousel-control-prev-icon');
 				prevIcon.setAttribute('aria-hidden', "true");
 
-				carouselControlNext.classList.add("carousel-control-next", "container-fluid");
+				carouselControlNext.classList.add("carousel-control-next";
 				carouselControlNext.href = "#moduleCarousel";
 				carouselControlNext.role="button";
 				carouselControlNext.setAttribute('data-slide','next');
 
-				nextIcon.classList.add('carousel-control-next-icon', "container-fluid");
+				nextIcon.classList.add('carousel-control-next-icon';
 				nextIcon.setAttribute('aria-hidden', 'true');
 
 				carouselControlPrev.appendChild(prevIcon);
