@@ -36,14 +36,14 @@
 	list-style: none;
 }
 
-.carousel-control-prev-icon
+.carousel-control-prev
 {
-	margin: auto;
+	left: -2%;
 }
 
-.carousel-control-next-icon
+.carousel-control-next
 {
-	margin: auto;
+	right: -2%;
 }
 
 
