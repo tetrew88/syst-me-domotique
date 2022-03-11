@@ -1,3 +1,8 @@
+.carousel-inner
+{
+	margin: auto;
+}
+
 .roomCard
 {
 
@@ -20,7 +25,7 @@
 
 @media all and (max-width: 1199px) and (min-width:  1000px)
 {
-	.card-title
+	.card-title8
 	{
 		font-size: small;
 	}
@@ -29,6 +34,14 @@
 @media all and (max-width: 999px) and (min-width:  700px)
 {
 	.card-title
+	{
+		font-size: x-small;
+	}
+}
+
+@media all and (max-width: 579px)
+{
+    .card-title
 	{
 		font-size: x-small;
 	}
