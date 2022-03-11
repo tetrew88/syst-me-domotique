@@ -31,8 +31,7 @@
 	background-color: darkgray;
 }
 
-
-#shortcutsCarousel .carousel
+.carousel
 {
 	list-style: none;
 }
