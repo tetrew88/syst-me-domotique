@@ -69,6 +69,8 @@ class HomeAutomationServer(socketio.Namespace):
 		while x < 2:
 			tmpRoom.append(rooms[x])
 
+			x+=1
+
 		socketIoServer.emit('post_rooms_list', {'data': tmpRoom}, namespace='/HomeAutomationServer')
 
 
