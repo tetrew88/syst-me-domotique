@@ -78,7 +78,7 @@ socket.on('post_modules_list', data=>{
 				let cardPicture = document.createElement('img');
 				let cardTitle =  document.createElement('div');
 
-				link.href = '/module/' + element['profil']['id'] + "/";
+				link.href = '/module/' + element['id'] + "/";
 				link.classList.add("col-lg-4", 'container-fluid');
 
 				moduleCard.classList.add("card", "moduleCard", "rounded", 'container-fluid');

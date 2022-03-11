@@ -25,6 +25,12 @@
 	border: none;
 }
 
+#Screen
+{
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
 #moduleCarousel .carousel-control-prev-icon
 {
 	filter: invert(100%);
