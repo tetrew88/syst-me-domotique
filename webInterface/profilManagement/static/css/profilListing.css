@@ -68,12 +68,3 @@
     	font-size: xx-small;
     }
 }
-
-
-@media all and (max-width: 549px)
-{
-	card-title
-	{
-		font-size: large;
-	}
-}
