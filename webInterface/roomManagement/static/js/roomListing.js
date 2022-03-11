@@ -8,7 +8,7 @@ socket.on('post_rooms_list', data=>{
 
 	tmpdata = data["data"]
 
-	data = data.slice(1)
+	data = data.toString().slice(1)
 
 	if(data.length <= 6)
 	{
