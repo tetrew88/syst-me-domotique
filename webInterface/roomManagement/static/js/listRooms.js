@@ -5,7 +5,7 @@ if (window.matchMedia("(min-width: 900px)").matches) {
 }
 else
 {
-	if (window.matchMedia("(min-width: 500px)").matches)
+	if (window.matchMedia("(min-width: 600px)").matches)
 	{
 		maxRoom = 2
 	}
@@ -109,7 +109,7 @@ function listRooms(socket, screen)
 				let cardTitle =  document.createElement('div');
 
 				link.href = '/room/' + element['id'] + "/";
-				link.classList.add("col-lg-4", "col-6", "col-sm-12", "container-fluid")
+				link.classList.add("col-lg-4", "col-md-6", "col-sm-12", "container-fluid")
 
 				roomCard.classList.add("card", "roomCard", "rounded", "container-fluid");
 
