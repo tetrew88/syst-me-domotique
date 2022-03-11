@@ -21,35 +21,3 @@
 	margin: auto;
 }
 
-
-@media all and (max-width: 1199px) and (min-width:  1000px)
-{
-	.card-title
-	{
-		font-size: small;
-	}
-}
-
-@media all and (max-width: 999px) and (min-width:  700px)
-{
-	.card-title
-	{
-		font-size: x-small;
-	}
-}
-
-@media all and (max-width: 579px)  and (min-width:  450px)
-{
-    .card-title
-	{
-		font-size: xx-small;
-	}
-}
-
-@media all and (max-width: 449px)
-{
-    .card-title
-	{
-		font-size: 10%;
-	}
-}
