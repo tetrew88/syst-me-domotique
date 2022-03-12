@@ -1,23 +1,25 @@
-let maxRoom = 0
-
-if (window.matchMedia("(min-width: 1000px)").matches) {
-	maxRoom = 6
-}
-else
+function listRooms(socket, screen, maxRoom = 0)
 {
-	if (window.matchMedia("(min-width: 800px)").matches)
-	{
-		maxRoom = 2
-	}
-	else
-	{
-		maxRoom = 1
-	}
-}
 
+	if (maxRoom == 0)
+	{
+		if (window.matchMedia("(min-width: 1000px)").matches) 
+		{
+			maxRoom = 6
+		}
+		else
+		{
+			if (window.matchMedia("(min-width: 800px)").matches)
+			{
+				maxRoom = 2
+			}
+			else
+			{
+				maxRoom = 1
+			}
+		}
+	}
 
-function listRooms(socket, screen)
-{
 	socket.emit('get_rooms_list', 'rooms')
 	socket.on('post_rooms_list', data=>{
 
