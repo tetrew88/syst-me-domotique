@@ -112,7 +112,7 @@ function list_inhabitants(socket, screen)
 				link.href = '/inhabitant/' + element['id'] + "/"
 				link.classList.add("col-lg-4", "col-md-6","col-sm-12", "container-fluid")
 
-				profilCard.classList.add("card", "profilCard", "rounded", "container-fluid");
+				profilCard.classList.add("card", "profilCard", "rounded");
 
 				cardPicture.classList.add("img-fluid", "rounded-circle", "container-fluid");
 				cardPicture.src = "/static/pictures/profil.png";
@@ -274,7 +274,7 @@ function list_guests(socket, screen)
 				link.href = '/inhabitant/' + element['id'] + "/"
 				link.classList.add("col-lg-4", "col-md-6","col-sm-12", "container-fluid")
 
-				profilCard.classList.add("card", "profilCard", "rounded", "container-fluid");
+				profilCard.classList.add("card", "profilCard", "rounded");
 
 				cardPicture.classList.add("img-fluid", "rounded-circle", "container-fluid");
 				cardPicture.src = "/static/pictures/profil.png";
