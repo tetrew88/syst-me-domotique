@@ -1,22 +1,27 @@
-function listRooms(socket, screen, maxRoom = 0)
+function listRooms(socket, screen, theoricMaxRoom = 0)
 {
+	let maxRoom = 0
 
-	if (maxRoom == 0)
+	if (window.matchMedia("(min-width: 1000px)").matches) 
 	{
-		if (window.matchMedia("(min-width: 1000px)").matches) 
+		if (theoricMaxRoom == 0)
 		{
 			maxRoom = 6
 		}
 		else
 		{
-			if (window.matchMedia("(min-width: 800px)").matches)
-			{
-				maxRoom = 2
-			}
-			else
-			{
-				maxRoom = 1
-			}
+			maxRoom = theoricMaxRoom
+		}
+	}
+	else
+	{
+		if (window.matchMedia("(min-width: 800px)").matches)
+		{
+			maxRoom = 2
+		}
+		else
+		{
+			maxRoom = 1
 		}
 	}
 
