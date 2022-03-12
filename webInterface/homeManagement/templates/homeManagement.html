@@ -37,32 +37,26 @@
       <div class="col-4 container-fluid"></div>
     </div>
 
-    <div id="inhabitantsSection" class="row container-fluid">
+    <div id="inhabitantsSection" class="row">
       <div class="col-4 container-fluid"></div>
         <div class="col-4 container-fluid">
 
-          <div class="row container-fluid text-center">
-            <div id="inhabitantsBanner" class="col container-fluid text-center">
-              <h2>Habitants</h2>
-            </div>
+          <div class="row container-fluid">
+            <h2 class="text-center title">Habitants</h2>
           </div>
 
-          <div class="row container-fluid text-center">
-            <div id="inhabitantsScreen" class="col-10 rounded text-center rounded container-fluid profilList screen">
+          <div class="row text-center" style="flex-wrap: nowrap;">
+            <div id="inhabitantsScreen" class="col-10 rounded text-center rounded profilsList screen">
 
             </div>
 
-            <div class="col-2 container-fluid">
-              <div class="row buttonContainer">
-                <button type="button" class="col container-fluid personnalButton">
-                  <h2 class="text-center" style="margin: auto;">+</h2>
-                </button>
-              </div>
-              <div class="row buttonContainer">
-                <button type="button" class="col container-fluid personnalButton">
-                  <h2 class="text-center" style="margin: auto;">-</h2>
-                </button>
-              </div>
+            <div class="col-2 buttonContainer">
+              <button type="button" class="row personnalButton">
+                <h2 class="text-center" style="margin: auto;">+</h2>
+              </button>
+              <button type="button" class="row personnalButton">
+                <h2 class="text-center" style="margin: auto;">-</h2>
+              </button>
             </div>
           </div>
 
@@ -70,32 +64,26 @@
       <div class="col-4 container-fluid"></div>
     </div>
 
-    <div id="guestsSection" class="row container-fluid">
+    <div id="guestsSection" class="row">
       <div class="col-4 container-fluid"></div>
         <div class="col-4 container-fluid">
 
-          <div class="row container-fluid text-center">
-            <div id="guestsBanner" class="col container-fluid text-center">
-              <h2>Invités</h2>
-            </div>
+          <div class="row container-fluid">
+            <h2 class="text-center title">Habitants</h2>
           </div>
 
-          <div class="row container-fluid text-center">
-            <div id="guestsScreen" class="col-10 rounded text-center rounded container-fluid profilList screen">
+          <div class="row text-center" style="flex-wrap: nowrap;">
+            <div id="guestsScreen" class="col-10 rounded text-center rounded profilsList screen">
 
             </div>
 
-            <div class="col-2 container-fluid">
-              <div class="row buttonContainer">
-                <button type="button" class="col container-fluid personnalButton">
-                  <h2 class="text-center" style="margin: auto;">+</h2>
-                </button>
-              </div>
-              <div class="row buttonContainer">
-                <button type="button" class="col container-fluid personnalButton">
-                  <h2 class="text-center" style="margin: auto;">-</h2>
-                </button>
-              </div>
+            <div class="col-2 buttonContainer">
+              <button type="button" class="row personnalButton">
+                <h2 class="text-center" style="margin: auto;">+</h2>
+              </button>
+              <button type="button" class="row personnalButton">
+                <h2 class="text-center" style="margin: auto;">-</h2>
+              </button>
             </div>
           </div>
 
@@ -130,5 +118,6 @@
 
 {% block jsScript %}
   <script src="{% static 'js/listRooms.js' %}"></script>
+  <script src="{% static 'js/listProfils.js' %}"></script>
   <script src="{% static 'js/homeManagement.js' %}"></script>
 {% endblock %}
