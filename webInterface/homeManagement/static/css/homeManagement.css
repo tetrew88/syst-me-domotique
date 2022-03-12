@@ -1,3 +1,18 @@
+#roomsSection
+{
+	margin-top: 3%;
+}
+
+#inhabitantsSection
+{
+	margin-top: 3%;
+}
+
+#eventsSection
+{
+	margin-top: 3%;
+}
+
 .roomCard
 {
 
@@ -110,17 +125,19 @@
 	filter: invert(100%);
 }
 
-#roomsSection
+
+@media all and (max-width: 1199px) and (min-width:  450px)
 {
-	margin-top: 3%;
+    .card-title
+	{
+		font-size: large;
+	}
 }
 
-#inhabitantsSection
+@media all and (max-width: 449px)
 {
-	margin-top: 3%;
-}
-
-#eventsSection
-{
-	margin-top: 3%;
+    .card-title
+	{
+		font-size: small;
+	}
 }
