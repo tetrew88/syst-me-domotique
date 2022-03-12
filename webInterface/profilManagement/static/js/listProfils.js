@@ -114,7 +114,7 @@ function list_inhabitants(socket, screen)
 
 				profilCard.classList.add("card", "profilCard", "rounded");
 
-				cardPicture.classList.add("img-fluid", "rounded-circle", "container-fluid");
+				cardPicture.classList.add("img-fluid", "rounded-circle");
 				cardPicture.src = "/static/pictures/profil.png";
 				cardTitle.classList.add("card-title", "text-center");
 				cardTitle.style.color = 'blue';
@@ -276,7 +276,7 @@ function list_guests(socket, screen)
 
 				profilCard.classList.add("card", "profilCard", "rounded");
 
-				cardPicture.classList.add("img-fluid", "rounded-circle", "container-fluid");
+				cardPicture.classList.add("img-fluid", "rounded-circle");
 				cardPicture.src = "/static/pictures/profil.png";
 				cardTitle.classList.add("card-title", "text-center");
 				cardTitle.style.color = 'blue';
