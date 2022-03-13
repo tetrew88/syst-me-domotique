@@ -1,4 +1,10 @@
-#moduleList
+.pageContent
+{
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+.moduleList
 {
 	background-color: white;
 	opacity: 80%;
@@ -6,7 +12,31 @@
 	min-height: 2em;
 }
 
-#eventList
+.modulesSection
+{
+	margin: auto;
+	margin-bottom: 5%;
+}
+
+.eventsSection
+{
+	margin: auto;
+	margin-bottom: 5%;
+}
+
+.moduleList
+{
+	background-color: white;
+
+	padding-top: 5%;
+	padding-bottom: 5%;
+
+	opacity: 80%;
+
+	min-height: 2em;
+}
+
+.eventList
 {
 
 	background-color: black;
@@ -52,4 +82,37 @@
 #roomCarousel .carousel-control-next-icon
 {
 	filter: invert(100%);
+}
+
+
+@media all and (max-width: 1199px) and (min-width:  450px)
+{
+    .card-title
+	{
+		font-size: large;
+	}
+}
+
+@media all and (max-width: 449px)
+{
+    .card-title
+	{
+		font-size: small;
+	}
+}
+
+@media all and (max-width: 1199px) and (min-width:  450px)
+{
+    .eventRapport
+	{
+		font-size: large;
+	}
+}
+
+@media all and (max-width: 449px)
+{
+    .eventRapport
+	{
+		font-size: small;
+	}
 }

@@ -8,63 +8,70 @@
 
 {% block content %}
 
-  <div class="col container-fluid">
-    <div class="row">
+  <div class="row pageContent">
+    <div class="col">
 
-      <div class="col-1"></div>
-      <div class="col-1 container-fluid">
-        <button type="button" class="btn btn-primary btn-lg mb-2" onclick="switch_light();">
-          light
-        </button>
-      </div>
+      <div class="row">
+        <div class="col-1"></div>
 
-      <div class="col-7"></div>
-
-      <div class="col-2 container-fluid">
-
-        <div class="row container-fluid">
-          <div class="col-4 container-fluid"></div>
-          <div id='temperature' class="col indicator rounded text-center">
-          </div>
-          <div class="col-4"></div>
+        <div class="col-1 container-fluid">
+          <button type="button" class="btn btn-primary btn-lg mb-2" onclick="switch_light();">
+            light
+          </button>
         </div>
 
-        <div class="row container-fluid">
-          <div class="col-4 container-fluid"></div>
-          <div id='luminosity' class="col indicator rounded text-center">
+        <div class="col-7"></div>
+
+        <div class="col-2 container-fluid">
+          <div class="row container-fluid">
+            <div class="col-4 container-fluid"></div>
+            <div id='temperature' class="col indicator rounded text-center">
+
+            </div>
+            <div class="col-4"></div>
           </div>
-          <div class="col-4"></div>
+
+          <div class="row container-fluid">
+            <div class="col-4 container-fluid"></div>
+            <div id='luminosity' class="col indicator rounded text-center">
+
+            </div>
+            <div class="col-4"></div>
+          </div>
+
         </div>
-
-      </div>
       <div class="col-1"></div>
-
     </div>
 
 
-    <div class="row container-fluid" style="margin-top: 3%;">
+    <div id="bannerSection" class="row container-fluid">
       <div class="col-4"></div>
-      <div id='banner' class="col-4 text-center">
+      <div class="col-4 text-center">
+        <div class="row">
+          <h1 id="pageTitle text-center"></h1>
+        </div>
       </div>
       <div class="col-4"></div>
     </div>
 
 
-    <div class="row container-fluid" style="margin-top: 2%;">
+    <div id="modulesSection" class="row container-fluid">
       <div class="col-3"></div>
       <div class="col-6">
 
         <div class="row container-fluid">
           <div class="col-4"></div>
           <div class="col-4 text-center">
-            <h3>Modules:</h3>
+            <div class="row">
+              <h2>Modules:</h2>
+            </div>
           </div>
           <div class="col-4"></div>
         </div>
 
         <div class="row" style="margin-top: 2%;">
           <div class="col-3"></div>
-          <div id='moduleList' class="col-6 rounded container-fluid text-center row">
+          <div id='modulesScreen' class="col-6 rounded container-fluid text-center row moduleList">
             
           </div>
           <div class="col-3"></div>
@@ -74,7 +81,7 @@
       <div class="col-3"></div>
     </div>
 
-    <div class="row container-fluid" style="margin-top: 2%;">
+    <div id="eventSection" class="row container-fluid">
       <div class="col-3"></div>
       <div class="col-6">
 
@@ -86,9 +93,9 @@
           <div class="col-4"></div>
         </div>
 
-        <div class="row container-fluid" style="margin-top: 2%; margin-bottom: 3%;">
+        <div class="row container-fluid">
           <div class="col-1"></div>
-          <div id="eventList" class="col-10 rounded">
+          <div id="eventsScreen" class="col-10 rounded eventList">
           <div class="col-1"></div>
         </div>
 
