@@ -25,6 +25,8 @@ function list_events(socket, screen)
 
 		data = data["data"]
 
+		screen.innerHTML = "";
+
 		if(data.length <= maxEvent)
 		{
 			for (const element of data)
