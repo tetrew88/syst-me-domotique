@@ -65,7 +65,7 @@ function list_events(socket, screen)
 
 			eventCarouselInner.classList.add("carousel-inner");
 
-			eventCarouselActiveItem.classList.add("carousel-item", "active", "container-fluid");
+			eventCarouselActiveItem.classList.add("carousel-item", "active");
 
 			activeCol.classList.add('col')
 
@@ -110,6 +110,7 @@ function list_events(socket, screen)
 						let passiveCol = document.createElement('div');
 
 						passiveCol.classList.add('col');
+						eventCarousel.classList.add('carousel-item')
 
 						eventCarouselItemList.push(passiveCol);
 					}
