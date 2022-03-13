@@ -1,4 +1,4 @@
-function listRooms(socket, screen, theoricMaxRoom = 0)
+function list_rooms(socket, screen, theoricMaxRoom = 0)
 {
 	let maxRoom = 0
 

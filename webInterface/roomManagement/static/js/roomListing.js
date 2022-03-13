@@ -2,4 +2,4 @@ const screen = document.getElementById('roomsScreen');
 const pageContent = document.getElementById('pageContent');
 
 
-listRooms(socket, screen);
+list_rooms(socket, screen);
