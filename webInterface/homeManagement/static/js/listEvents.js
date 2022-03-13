@@ -110,7 +110,7 @@ function list_events(socket, screen)
 						let passiveCol = document.createElement('div');
 
 						passiveCol.classList.add('col');
-						eventCarousel.classList.add('carousel-item')
+						eventCarouselItem.classList.add('carousel-item');
 
 						eventCarouselItemList.push(passiveCol);
 					}
