@@ -1,25 +1,29 @@
-function list_events(socket, screen)
-{
-	let maxEvent = 0
+let maxEvent = 0
 
-	if (window.matchMedia("(min-width: 1000px)").matches) 
+if (window.matchMedia("(min-width: 1000px)").matches) 
+{
+	maxEvent = 3
+}
+else
+{
+	if (window.matchMedia("(min-width: 800px)").matches)
 	{
-		maxEvent = 3
+		maxEvent = 2
 	}
 	else
 	{
-		if (window.matchMedia("(min-width: 800px)").matches)
-		{
-			maxEvent = 2
-		}
-		else
-		{
-			maxEvent = 1
-		}
+		maxEvent = 1
 	}
+}
+
+function list_events(socket, screen)
+{
+	
 
 	socket.emit('get_events_list', 'rooms')
 	socket.on('post_events_list', data=>{
+
+		data = data["data"]
 
 		if(data.length <= maxEvent)
 		{
