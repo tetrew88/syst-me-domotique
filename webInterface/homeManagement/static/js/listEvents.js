@@ -65,9 +65,7 @@ function list_events(socket, screen)
 
 			eventCarouselInner.classList.add("carousel-inner");
 
-			eventCarouselActiveItem.classList.add("carousel-item", "active");
-
-			activeCol.classList.add('col')
+			eventCarouselActiveItem.classList.add("carousel-item", "active", 'col');
 
 			eventCarouselControlPrev.classList.add("carousel-control-prev", "container-fluid");
 			eventCarouselControlPrev.href = "#eventCarousel";
@@ -98,7 +96,7 @@ function list_events(socket, screen)
 
 				if(x <= maxEvent - 1)
 				{
-					activeCol.appendChild(eventNotif);
+					eventCarouselActiveItem.appendChild(eventNotif);
 				}
 				else
 				{
@@ -107,12 +105,9 @@ function list_events(socket, screen)
 					if(result == 0)
 					{
 						let eventCarouselItem = document.createElement('div');
-						let passiveCol = document.createElement('div');
+						eventCarouselItem.classList.add('carousel-item', 'col');
 
-						passiveCol.classList.add('col');
-						eventCarouselItem.classList.add('carousel-item');
-
-						eventCarouselItemList.push(passiveCol);
+						eventCarouselItemList.push(eventCarouselItem);
 					}
 
 					eventCarouselItemList[eventCarouselItemList.length - 1].appendChild(eventNotif);
@@ -120,8 +115,6 @@ function list_events(socket, screen)
 
 				x++;
 			}
-
-			eventCarouselActiveItem.appendChild(activeCol);
 
 			eventCarouselInner.appendChild(eventCarouselActiveItem);
 
@@ -131,11 +124,7 @@ function list_events(socket, screen)
 			{
 				for (const item of eventCarouselItemList)
 				{
-					let eventCarouselItem = document.createElement('div');
-					eventCarouselItem.classList.add("carousel-item", "container-fluid");
-
-					eventCarouselItem.appendChild(item);
-					eventCarouselInner.appendChild(eventCarouselItem);
+					eventCarouselInner.appendChild(item);
 				}
 			}
 
