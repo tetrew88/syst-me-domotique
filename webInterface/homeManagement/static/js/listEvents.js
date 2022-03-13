@@ -63,7 +63,7 @@ function list_events(socket, screen)
 			eventCarousel.classList.add("carousel", "slide", "container-fluid");
 			eventCarousel.setAttribute('data-interval', "false");
 
-			eventCarouselInner.classList.add("carousel-inner");
+			eventCarouselInner.classList.add("carousel-inner", 'container-fluid');
 
 			eventCarouselActiveItem.classList.add("carousel-item", "active", 'col');
 
