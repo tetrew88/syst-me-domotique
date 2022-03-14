@@ -15,6 +15,8 @@ else
 	}
 }
 
+let moduleList = []
+
 
 function list_room_content(socket, screen, roomId)
 {
@@ -25,6 +27,8 @@ function list_room_content(socket, screen, roomId)
 			screen.innerHTML = "";
 
 			data = data["data"];
+
+			moduleList = data
 
 
 			if(data.length <= maxModule)
