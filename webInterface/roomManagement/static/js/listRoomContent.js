@@ -28,7 +28,8 @@ function list_room_content(socket, screen, roomId)
 
 			data = data["data"];
 
-			moduleList = data
+			moduleList = data;
+			console.log(moduleList);
 
 
 			if(data.length <= maxModule)
@@ -187,7 +188,7 @@ function list_room_content(socket, screen, roomId)
 		}
 	})
 
-	console.log(moduleList)
+	console.log(moduleList);
 
-	return moduleList
+	return moduleList;
 }
