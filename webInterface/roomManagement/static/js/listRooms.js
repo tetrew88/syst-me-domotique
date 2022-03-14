@@ -1,4 +1,7 @@
-let maxRoom = 0
+function list_rooms(socket, screen, theoricMaxRoom = 0)
+{
+
+	let maxRoom = 0
 
 	if (window.matchMedia("(min-width: 1000px)").matches) 
 	{
@@ -23,8 +26,6 @@ let maxRoom = 0
 		}
 	}
 
-function list_rooms(socket, screen, theoricMaxRoom = 0)
-{
 	socket.emit('get_rooms_list', 'rooms')
 	socket.on('post_rooms_list', data=>{
 
