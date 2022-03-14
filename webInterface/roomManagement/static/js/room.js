@@ -77,6 +77,6 @@ lightButton.addEventListener('click', e => {
     	console.log('click1')
     } // mouse event
     else {
-    	switch_light
+    	switch_light()
     } // touch event
 });
