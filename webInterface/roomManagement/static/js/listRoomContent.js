@@ -182,4 +182,6 @@ function list_room_content(socket, screen, roomId)
 			}
 		}
 	})
+
+	return data
 }

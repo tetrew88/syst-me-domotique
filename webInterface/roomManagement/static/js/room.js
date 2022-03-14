@@ -11,7 +11,7 @@ let eventListScreen = document.getElementById("eventsScreen");
 let moduleList = []
 let eventList = []
 
-list_room_content(socket, moduleScreen, roomId);
+let moduleList = list_room_content(socket, moduleScreen, roomId);
 
 socket.emit('get_room', roomId)
 socket.on('post_room', data=>{
