@@ -15,11 +15,11 @@ else
 	}
 }
 
-let moduleList = []
-
 
 function list_room_content(socket, screen, roomId)
 {
+	let moduleList = []
+	
 	socket.emit('get_room_content', roomId)
 	socket.on('post_room_content', data=>{
 		if(data["roomId"] == roomId)
