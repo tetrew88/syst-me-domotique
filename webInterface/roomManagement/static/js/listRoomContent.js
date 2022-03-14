@@ -40,7 +40,7 @@ function list_room_content(socket, screen, roomId)
 					link.href = '/module/' + element['id'] + "/";
 					link.classList.add("col-lg-4", "col-md-6","col-sm-12", "container-fluid");
 
-					moduleCard.classList.add("card", "moduleCard", "rounded", 'container-fluid');
+					moduleCard.classList.add("card", "moduleCard", "rounded");
 
 					cardPicture.classList.add("img-fluid", "rounded");
 					if(element['type'] == 'rgb bulb')
@@ -118,7 +118,7 @@ function list_room_content(socket, screen, roomId)
 					link.href = '/room/' + element['id'] + "/"
 					link.classList.add("col-lg-4", "col-md-6","col-sm-12", "container-fluid")
 
-					moduleCard.classList.add("card", "moduleCard", "rounded", "container-fluid");
+					moduleCard.classList.add("card", "moduleCard", "rounded");
 
 					cardPicture.classList.add("img-fluid", "rounded", "container-fluid");
 					cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";
