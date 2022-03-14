@@ -9,6 +9,8 @@ let moduleScreen = document.getElementById('modulesScreen');
 let eventListScreen = document.getElementById("eventsScreen");
 let eventList = []
 
+let lightButton = document.getElementById('lightButton');
+
 let moduleList = []
 socket.on('post_room_content', data=>{
 	if(data["roomId"] == roomId)
@@ -72,7 +74,7 @@ function switch_light()
 	}
 }
 
-element.addEventListener('click', e => {
+lightButton.addEventListener('click', e => {
     if (e.pointerType === "mouse") {
     	console.log('click1')
     } // mouse event
