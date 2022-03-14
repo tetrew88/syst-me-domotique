@@ -18,8 +18,6 @@ else
 
 function list_room_content(socket, screen, roomId)
 {
-	let moduleList = []
-
 	socket.emit('get_room_content', roomId)
 	socket.on('post_room_content', data=>{
 		if(data["roomId"] == roomId)
@@ -27,10 +25,6 @@ function list_room_content(socket, screen, roomId)
 			screen.innerHTML = "";
 
 			data = data["data"];
-
-			moduleList = data;
-			console.log(moduleList);
-
 
 			if(data.length <= maxModule)
 			{
@@ -187,8 +181,4 @@ function list_room_content(socket, screen, roomId)
 			}
 		}
 	})
-
-	console.log(moduleList);
-
-	return moduleList;
 }
