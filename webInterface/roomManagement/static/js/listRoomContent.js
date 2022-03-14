@@ -187,5 +187,7 @@ function list_room_content(socket, screen, roomId)
 		}
 	})
 
+	console.log(moduleList)
+
 	return moduleList
 }
