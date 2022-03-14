@@ -9,7 +9,15 @@ let moduleScreen = document.getElementById('modulesScreen');
 let eventListScreen = document.getElementById("eventsScreen");
 let eventList = []
 
-let moduleList = list_room_content(socket, moduleScreen, roomId);
+let moduleList = []
+socket.on('post_room_content', data=>{
+	if(data["roomId"] == roomId)
+	{
+		moduleList = data["data"];
+	}
+})
+
+list_room_content(socket, moduleScreen, roomId);
 
 console.log(moduleList)
 
