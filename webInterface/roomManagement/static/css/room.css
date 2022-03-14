@@ -28,12 +28,6 @@ h2
 	margin-bottom: 5%;
 }
 
-#eventsSection
-{
-	margin: auto;
-	margin-bottom: 5%;
-}
-
 .moduleList
 {
 	background-color: white;
@@ -44,6 +38,28 @@ h2
 	opacity: 80%;
 
 	min-height: 2em;
+}
+
+#modulesScreen
+{
+	margin: auto;
+}
+
+.moduleCard
+{
+
+	background-color: white;
+
+	width: 100%;
+	height: 100%;
+
+	border: none;
+}
+
+#eventsSection
+{
+	margin: auto;
+	margin-bottom: 5%;
 }
 
 .eventList
@@ -59,22 +75,10 @@ h2
 	min-height: 2em;
 }
 
-
 .eventRapport
 {
 	color:  white;
 	width: 100%;
-}
-
-.moduleCard
-{
-
-	background-color: white;
-
-	width: 100%;
-	height: 100%;
-
-	border: none;
 }
 
 .indicator
@@ -84,12 +88,12 @@ h2
 	margin: 1%;
 }
 
-#roomCarousel .carousel-control-prev-icon
+#moduleCarousel .carousel-control-prev-icon
 {
 	filter: invert(100%);
 }
 
-#roomCarousel .carousel-control-next-icon
+#moduleCarousel .carousel-control-next-icon
 {
 	filter: invert(100%);
 }
