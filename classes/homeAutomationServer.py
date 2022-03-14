@@ -126,11 +126,11 @@ class HomeAutomationServer(socketio.Namespace):
 
 
 	@socketIoServer.event(namespace='/HomeAutomationServer')
-	def get_room(sid, data):
+	def get_room_content(sid, data):
 		room = False
-		content = False
+		content = []
 
-		room = HomeAutomationServer.homeAutomationSystem.get_home_room(data)
+		roomlist = HomeAutomationServer.homeAutomationSystem.get_home_room(data)
 		for element in room.content:
 			content.append(element.serialize())
 
