@@ -74,9 +74,9 @@ function switch_light()
 
 lightButton.addEventListener('click', e => {
     if (e.pointerType === "mouse") {
-    	console.log('click1')
+    	switch_light();
     } // mouse event
     else {
-    	switch_light()
+    	switch_light();
     } // touch event
 });
