@@ -19,6 +19,12 @@ h2
 	padding-bottom: 5%;
 }
 
+
+#lightButton
+{
+	z-index: 99;
+}
+
 .moduleList
 {
 	background-color: white;
