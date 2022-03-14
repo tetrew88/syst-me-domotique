@@ -71,3 +71,12 @@ function switch_light()
 		socket.emit('switch_light', bulbId);
 	}
 }
+
+element.addEventListener('click', e => {
+    if (e.pointerType === "mouse") {
+    	console.log('click1')
+    } // mouse event
+    else {
+    	console.log('click2')
+    } // touch event
+});
