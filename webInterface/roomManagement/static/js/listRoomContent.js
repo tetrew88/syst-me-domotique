@@ -200,3 +200,4 @@ function list_room_content(socket, screen, roomId)
 			screen.appendChild(moduleSection);
 		}
 	})
+}

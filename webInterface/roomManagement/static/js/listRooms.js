@@ -1,6 +1,4 @@
-function list_rooms(socket, screen, theoricMaxRoom = 0)
-{
-	let maxRoom = 0
+let maxRoom = 0
 
 	if (window.matchMedia("(min-width: 1000px)").matches) 
 	{
@@ -25,6 +23,8 @@ function list_rooms(socket, screen, theoricMaxRoom = 0)
 		}
 	}
 
+function list_rooms(socket, screen, theoricMaxRoom = 0)
+{
 	socket.emit('get_rooms_list', 'rooms')
 	socket.on('post_rooms_list', data=>{
 
@@ -109,7 +109,8 @@ function list_rooms(socket, screen, theoricMaxRoom = 0)
 			carouselControlPrev.appendChild(prevIcon);
 			carouselControlNext.appendChild(nextIcon);
 
-			for (const element of data) {
+			for (const element of data) 
+			{
 				let link = document.createElement('a')
 				let roomCard = document.createElement('div');
 				let cardPicture = document.createElement('img');
