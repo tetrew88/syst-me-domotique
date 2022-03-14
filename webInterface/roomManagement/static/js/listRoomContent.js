@@ -60,7 +60,7 @@ function list_room_content(socket, screen, roomId)
 
 					link.appendChild(moduleCard);
 
-					listContent.appendChild(link);
+					screen.appendChild(link);
 				}
 			}
 			else
@@ -178,26 +178,8 @@ function list_room_content(socket, screen, roomId)
 				carousel.appendChild(carouselControlPrev);
 				carousel.appendChild(carouselControlNext);
 
-				listContent.appendChild(carousel);
+				screen.appendChild(carousel);
 			}
-
-
-			listZone.appendChild(listContent);
-
-
-			listSection.appendChild(listMargin1);
-			listSection.appendChild(listZone);
-			listSection.appendChild(listMargin2);
-
-
-			content.appendChild(bannerSection);
-			content.appendChild(listSection);
-
-
-			moduleSection.appendChild(content);
-
-
-			screen.appendChild(moduleSection);
 		}
 	})
 }
