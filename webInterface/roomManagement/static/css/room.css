@@ -90,7 +90,7 @@ h2
 {
 	background-color: black;
 
-	margin: 1%;
+	padding: inherit;
 }
 
 #moduleCarousel .carousel-control-prev-icon
