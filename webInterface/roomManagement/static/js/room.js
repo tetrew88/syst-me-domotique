@@ -11,6 +11,8 @@ let eventList = []
 
 let moduleList = list_room_content(socket, moduleScreen, roomId);
 
+console.log(moduleList)
+
 socket.emit('get_room', roomId)
 socket.on('post_room', data=>{
 	let indicatorColor = ""
