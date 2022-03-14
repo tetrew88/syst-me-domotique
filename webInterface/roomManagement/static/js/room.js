@@ -10,22 +10,6 @@ let eventListScreen = document.getElementById("eventsScreen");
 let eventList = []
 
 let lightButton = document.getElementById('lightButton');
-lightButton.addEventListener('click', e => {
-    if (e.pointerType === "mouse") {
-    	console.log('click1')
-    } // mouse event
-    else {
-    	console.log('click2')
-    } // touch event
-});
-
-let moduleList = []
-socket.on('post_room_content', data=>{
-	if(data["roomId"] == roomId)
-	{
-		moduleList = data["data"];
-	}
-})
 
 list_room_content(socket, moduleScreen, roomId);
 
@@ -62,6 +46,14 @@ socket.on('post_room', data=>{
 })
 
 
+let moduleList = []
+socket.on('post_room_content', data=>{
+	if(data["roomId"] == roomId)
+	{
+		moduleList = data["data"];
+	}
+})
+
 function switch_light()
 {
 	bulbId = []
@@ -80,3 +72,11 @@ function switch_light()
 	}
 }
 
+lightButton.addEventListener('click', e => {
+    if (e.pointerType === "mouse") {
+    	console.log('click1')
+    } // mouse event
+    else {
+    	switch_light
+    } // touch event
+});
