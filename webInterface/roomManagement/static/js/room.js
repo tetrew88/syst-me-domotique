@@ -7,8 +7,6 @@ let luminosityIndicator = document.getElementById('luminosity');
 let pageTitle = document.getElementById('pageTitle');
 let moduleScreen = document.getElementById('modulesScreen');
 let eventListScreen = document.getElementById("eventsScreen");
-
-let moduleList = []
 let eventList = []
 
 let moduleList = list_room_content(socket, moduleScreen, roomId);
