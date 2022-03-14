@@ -126,6 +126,20 @@ class HomeAutomationServer(socketio.Namespace):
 
 
 	@socketIoServer.event(namespace='/HomeAutomationServer')
+	def get_room(sid, data):
+		room = False
+		content = False
+
+		room = HomeAutomationServer.homeAutomationSystem.get_home_room(data)
+		for element in room.content:
+			content.append(element.serialize())
+
+		print(content)
+
+		socketIoServer.emit('post_room_content', {"data": room, "roomId": room.id}, namespace='/HomeAutomationServer')
+
+
+	@socketIoServer.event(namespace='/HomeAutomationServer')
 	def get_module(sid, data):
 		module = HomeAutomationServer.homeAutomationSystem.get_home_automation_module(data)
 		module = module.serialize()

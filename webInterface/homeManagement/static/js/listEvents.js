@@ -24,6 +24,7 @@ function list_events(socket, screen)
 	socket.on('post_events_list', data=>{
 
 		data = data["data"]
+		data = data.reverse()
 
 		screen.innerHTML = "";
 
