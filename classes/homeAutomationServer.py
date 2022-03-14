@@ -130,13 +130,13 @@ class HomeAutomationServer(socketio.Namespace):
 		room = False
 		content = []
 
-		roomlist = HomeAutomationServer.homeAutomationSystem.get_home_room(data)
+		room = HomeAutomationServer.homeAutomationSystem.get_home_room(data)
 		for element in room.content:
 			content.append(element.serialize())
 
 		print(content)
 
-		socketIoServer.emit('post_room_content', {"data": room, "roomId": room.id}, namespace='/HomeAutomationServer')
+		socketIoServer.emit('post_room_content', {"data": content, "roomId": room.id}, namespace='/HomeAutomationServer')
 
 
 	@socketIoServer.event(namespace='/HomeAutomationServer')
