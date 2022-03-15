@@ -8,6 +8,11 @@ h2
 	margin: auto;
 }
 
+h3
+{
+	margin: auto;
+}
+
 .pageContent
 {
 	padding-top: 5%;
@@ -81,6 +86,11 @@ h2
 	min-height: 2em;
 }
 
+#eventsScreen
+{
+	margin: auto;
+}
+
 .eventRapport
 {
 	color:  white;
@@ -90,8 +100,8 @@ h2
 .indicator
 {
 	background-color: black;
-
 	padding: inherit;
+	width: fit-content;
 }
 
 #moduleCarousel .carousel-control-prev-icon
@@ -132,6 +142,11 @@ h2
 @media all and (max-width: 449px)
 {
     .eventRapport
+	{
+		font-size: small;
+	}
+
+	.indicator
 	{
 		font-size: small;
 	}
