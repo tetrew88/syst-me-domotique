@@ -61,7 +61,7 @@ function list_room_events(socket, screen, roomId)
 				eventCarousel.classList.add("carousel", "slide", "container-fluid");
 				eventCarousel.setAttribute('data-interval', "false");
 
-				eventCarouselInner.classList.add("carousel-inner", 'container-fluid');
+				eventCarouselInner.classList.add("carousel-inner");
 
 				eventCarouselActiveItem.classList.add("carousel-item", "active", 'col');
 
