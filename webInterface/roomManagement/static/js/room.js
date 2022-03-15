@@ -6,12 +6,12 @@ let luminosityIndicator = document.getElementById('luminosity');
 
 let pageTitle = document.getElementById('pageTitle');
 let moduleScreen = document.getElementById('modulesScreen');
-let eventListScreen = document.getElementById("eventsScreen");
-let eventList = []
+let eventScreen = document.getElementById("eventsScreen");
 
 let lightButton = document.getElementById('lightButton');
 
 list_room_content(socket, moduleScreen, roomId);
+list_room_events(socket, eventsScreen, roomId);
 
 socket.emit('get_room', roomId)
 socket.on('post_room', data=>{
