@@ -24,6 +24,7 @@ function list_room_events(socket, screen, roomId)
 			screen.innerHTML = "";
 
 			data = data["data"];
+			data = data.reverse();
 
 			if(data.length <= maxEvent)
 			{
