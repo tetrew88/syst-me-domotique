@@ -54,7 +54,7 @@
 
 .carousel-control-prev
 {
-	padding: inherit;
+	left: -5%;
 }
 
 .carousel-control-next
