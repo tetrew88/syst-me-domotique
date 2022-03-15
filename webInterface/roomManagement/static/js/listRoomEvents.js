@@ -1,17 +1,17 @@
-let maxEvents = 0
+let maxEvent = 0
 
 if (window.matchMedia("(min-width: 1000px)").matches) {
-	maxEvents = 3
+	maxEvent = 3
 }
 else
 {
 	if (window.matchMedia("(min-width: 800px)").matches)
 	{
-		maxEvents = 2
+		maxEvent = 2
 	}
 	else
 	{
-		maxEvents = 1
+		maxEvent = 1
 	}
 }
 
