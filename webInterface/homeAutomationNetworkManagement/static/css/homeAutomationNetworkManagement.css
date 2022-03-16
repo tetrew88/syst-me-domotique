@@ -1,15 +1,19 @@
 #homeIdSection
 {
 	border: solid;
-	width: 60%;
 	margin: auto;
+
+	background-color: black;
+	color: white;
 }
 
 #networkStateSection
 {
 	border: solid;
-	width: 60%;
 	margin: auto;
+
+	background-color: black;
+	color: white;
 }
 
 h1
