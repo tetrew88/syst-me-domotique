@@ -7,37 +7,40 @@
 
 {% block content %}
 
-<div class="col container-fluid">
-  <div class="row">
+<div class="pageContent row">
+  <div class="col">
 
-    <div class="col-3 container-fluid">
-      <div class="row container-fluid">
-        <div id="homeIdSection" class="col container-fluid rounded">
-          <div class="row container-fluid">
-            <h2 class="text-center" style="margin: auto;">Home id</h2>
-          </div>
-          <div id ="homeId" class="row text-center" style="margin: auto;">52</div>
+    <div class="row">
+      <div id="homeIdSection" class="col-3 rounded">
+        <div class="row">
+          <h2>id domicile</h2>
+        </div>
+        <div id="HomeId" class="row">
+          560
         </div>
       </div>
-    </div>
 
-    <div class="col-6 container-fluid">
-      <h1 class="text-center">Réseau</h1>
-    </div>
-
-    <div class="col-3 container-fluid">
-      <div class="row container-fluid">
-        <div id="stateSection" class="col container-fluid rounded">
-          <div class="row container-fluid">
-            <h2 class="text-center" style="margin: auto;">Home id</h2>
+      <div class="row">
+        <div id="bannerSection" class="col-6">
+          <div class="row">
+            <h1>Réseau</h1>
           </div>
-          <div id ="stateId" class="row text-center" style="margin: auto;">54</div>
+        </div>
+      </div>
+
+      <div id="networkStateSection" class="col-3 rounded">
+        <div class="row">
+          <h2>état réseau</h2>
+        </div>
+        <div id="networkState" class="row">
+          actif
         </div>
       </div>
     </div>
 
   </div>
 </div>
+
 
 {% endblock %}
 
