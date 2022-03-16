@@ -77,7 +77,7 @@
 
 
 
-@media all and (max-width: 1199px) and (min-width:  450px)
+@media all and (max-width: 1199px) and (min-width:  600px)
 {
     #pageContent
 	{
@@ -85,10 +85,18 @@
 	}
 }
 
-@media all and (max-width: 449px)
+@media all and (max-width: 599px) and (min-width:  450px)
 {
     #pageContent
 	{
 		font-size: x-small;
+	}
+}
+
+@media all and (max-width: 449px)
+{
+    #pageContent
+	{
+		font-size: xx-small;
 	}
 }
