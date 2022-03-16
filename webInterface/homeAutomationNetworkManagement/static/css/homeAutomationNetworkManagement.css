@@ -4,9 +4,6 @@
 
 	background-color: black;
 	color: white;
-
-	border-top: solid;
-	border-top-color: blue;
 }
 
 #networkStateSection
@@ -15,9 +12,6 @@
 
 	background-color: black;
 	color: white;
-
-	border-top: solid;
-	border-top-color: blue;
 }
 
 h1
@@ -26,6 +20,16 @@ h1
 }
 
 h2
+{
+	margin: auto;
+}
+
+#networkState
+{
+	margin: auto;
+}
+
+#homeId
 {
 	margin: auto;
 }
