@@ -75,11 +75,13 @@
 }
 
 
+
+
 @media all and (max-width: 1199px) and (min-width:  450px)
 {
     #pageContent
 	{
-		font-size: large;
+		font-size: medium;
 	}
 }
 
@@ -87,22 +89,6 @@
 {
     #pageContent
 	{
-		font-size: small;
-	}
-}
-
-@media all and (max-width: 1199px) and (min-width:  450px)
-{
-    #pageContent
-	{
-		font-size: large;
-	}
-}
-
-@media all and (max-width: 449px)
-{
-    #pageContent
-	{
-		font-size: small;
+		font-size: x-small;
 	}
 }
