@@ -13,391 +13,400 @@ socket.on('post_module', data=>{
 
 	console.log(data);
 
-	let modulePictureZone = document.getElementById("modulePicture");
-	let moduleInformationZone = document.getElementById("moduleInformation");
-	let productInformationZone = document.getElementById("productInformation");
-	let moduleStateInformationZone = document.getElementById("moduleStateInformation");
-
-	let modulePicture = document.createElement('img');
-
-	let nameSection = document.createElement('div');
-	let nameLabel = document.createElement('div');
-	let nameInput = document.createElement('input');
-	let nameButton = document.createElement('button');
-
-	let locationSection = document.createElement('div');
-	let locationLabel = document.createElement('div');
-	let locationInput = document.createElement('select');
-
-	let idSection = document.createElement('div');
-	let idLabel = document.createElement('div');
-	let idData = document.createElement('div');
-
-	let typeSection = document.createElement('div');
-	let typeLabel = document.createElement('div');
-	let typeData = document.createElement('div');
-
-	let manufacturerNameSection = document.createElement('div');
-	let manufacturerNameLabel = document.createElement('div');
-	let manufacturerNameData = document.createElement('div');
-
-	let productNameSection = document.createElement('div');
-	let productNameLabel = document.createElement('div');
-	let productNameData = document.createElement('div');
-
-	let productTypeSection = document.createElement('div');
-	let productTypeLabel = document.createElement('div');
-	let productTypeData = document.createElement('div');
-
-	let systemTypeSection = document.createElement('div');
-	let systemTypeLabel = document.createElement('div');
-	let systemTypeData = document.createElement('div');
-
-	let awakeSection = document.createElement('div');
-	let awakeLabel = document.createElement('div');
-	let awakeData = document.createElement('div');
-
-	let disfunctionnementSection = document.createElement('div');
-	let disfunctionnementLabel = document.createElement('div');
-	let disfunctionnementData = document.createElement('div');
-
-	let readySection = document.createElement('div');
-	let readyLabel = document.createElement('div');
-	let readyData = document.createElement('div');
-
-	let sleepSection = document.createElement('div');
-	let sleepLabel = document.createElement('div');
-	let sleepData = document.createElement('div');
-
-	let lightUpSection = document.createElement('div');
-	let lightUpLabel = document.createElement('div');
-	let lightUpData = document.createElement('div');
-	let switchLightButton = document.createElement('button');
-
-	let intensitySection = document.createElement('div');
-	let intensityLabel = document.createElement('div');
-	let intensityInput = document.createElement('input');
-
-	let colorSection = document.createElement('div');
-	let colorLabel = document.createElement('div');
-	let colorInput = document.createElement('select');
-
-
-	modulePicture.classList.add("img-fluid", "rounded-circle");
-	if(data['type'] == 'rgb bulb')
+	if(data['id'] == moduleId)
 	{
-		modulePicture.src = "/static/pictures/" + 'bulb' + ".jpeg";
-	}
-	else
-	{
-		modulePicture.src = "/static/pictures/" + data['type'] + ".jpeg";
-	}
 
-	//module information
+		let modulePictureZone = document.getElementById("modulePicture");
+		let moduleInformationZone = document.getElementById("moduleInformation");
+		let productInformationZone = document.getElementById("productInformation");
+		let moduleStateInformationZone = document.getElementById("moduleStateInformation");
 
-	//name section
-	nameSection.classList.add('row', 'informationSection');
+		modulePictureZone.innerHTML = "";
+		moduleInformationZone.innerHTML = "";
+		productInformationZone.innerHTML = "";
+		moduleStateInformationZone.innerHTML = "";
 
-	nameLabel.classList.add('col-5');
-	nameLabel.textContent = "Nom:";
-	
-	nameInput.id = "moduleName";
-	nameInput.type = "text";
-	nameInput.value = data["name"];
-	nameInput.classList.add('col-5', 'rounded');
+		let modulePicture = document.createElement('img');
 
-	nameButton.type = "button";
-	nameButton.setAttribute('onclick', 'set_module_name();');
-	nameButton.classList.add('col-2');
+		let nameSection = document.createElement('div');
+		let nameLabel = document.createElement('div');
+		let nameInput = document.createElement('input');
+		let nameButton = document.createElement('button');
 
-	nameSection.appendChild(nameLabel);
-	nameSection.appendChild(nameInput);
-	nameSection.appendChild(nameButton);
+		let locationSection = document.createElement('div');
+		let locationLabel = document.createElement('div');
+		let locationInput = document.createElement('select');
 
-	//location section
-	locationSection.classList.add('row', 'informationSection');
+		let idSection = document.createElement('div');
+		let idLabel = document.createElement('div');
+		let idData = document.createElement('div');
 
-	locationLabel.classList.add('col-5');
-	locationLabel.textContent = "emplacement:";
-	
-	locationInput.id = "moduleLocation";
-	locationInput.value = data["location"];
-	locationInput.classList.add('col-7', 'rounded');
-	locationInput.setAttribute('onchange', 'set_module_location();');
+		let typeSection = document.createElement('div');
+		let typeLabel = document.createElement('div');
+		let typeData = document.createElement('div');
 
-	let firstOption = document.createElement('option');
-	let optionList = []
+		let manufacturerNameSection = document.createElement('div');
+		let manufacturerNameLabel = document.createElement('div');
+		let manufacturerNameData = document.createElement('div');
 
-	for (const element of locationList)
-	{
-		if(element['id'] == data["location"])
+		let productNameSection = document.createElement('div');
+		let productNameLabel = document.createElement('div');
+		let productNameData = document.createElement('div');
+
+		let productTypeSection = document.createElement('div');
+		let productTypeLabel = document.createElement('div');
+		let productTypeData = document.createElement('div');
+
+		let systemTypeSection = document.createElement('div');
+		let systemTypeLabel = document.createElement('div');
+		let systemTypeData = document.createElement('div');
+
+		let awakeSection = document.createElement('div');
+		let awakeLabel = document.createElement('div');
+		let awakeData = document.createElement('div');
+
+		let disfunctionnementSection = document.createElement('div');
+		let disfunctionnementLabel = document.createElement('div');
+		let disfunctionnementData = document.createElement('div');
+
+		let readySection = document.createElement('div');
+		let readyLabel = document.createElement('div');
+		let readyData = document.createElement('div');
+
+		let sleepSection = document.createElement('div');
+		let sleepLabel = document.createElement('div');
+		let sleepData = document.createElement('div');
+
+		let lightUpSection = document.createElement('div');
+		let lightUpLabel = document.createElement('div');
+		let lightUpData = document.createElement('div');
+		let switchLightButton = document.createElement('button');
+
+		let intensitySection = document.createElement('div');
+		let intensityLabel = document.createElement('div');
+		let intensityInput = document.createElement('input');
+
+		let colorSection = document.createElement('div');
+		let colorLabel = document.createElement('div');
+		let colorInput = document.createElement('select');
+
+
+		modulePicture.classList.add("img-fluid", "rounded-circle");
+		if(data['type'] == 'rgb bulb')
 		{
-			firstOption.text = element["name"];
-			firstOption.value = element["id"];
+			modulePicture.src = "/static/pictures/" + 'bulb' + ".jpeg";
 		}
 		else
 		{
-			let option = document.createElement('option');
-
-			option.text = element['name']
-			option.value = element['id']
-
-			optionList.push(option);
+			modulePicture.src = "/static/pictures/" + data['type'] + ".jpeg";
 		}
-	}
 
-	locationInput.appendChild(firstOption);
+		//module information
 
-	for (const element of optionList)
-	{
-		locationInput.appendChild(element);
-	}
+		//name section
+		nameSection.classList.add('row', 'informationSection');
 
-	locationSection.appendChild(locationLabel);
-	locationSection.appendChild(locationInput);
-
-	////Bulb section
-	if(data['type'] == 'bulb' || data['type'] == 'rgb bulb')
-	{
-		//light up section
-		lightUpSection.classList.add('row', 'informationSection');
-
-		lightUpLabel.classList.add('col-5');
-		lightUpLabel.textContent = "Allumé:";
+		nameLabel.classList.add('col-5');
+		nameLabel.textContent = "Nom:";
 		
-		lightUpData.textContent = data["lightUp"];
-		lightUpData.classList.add('col-5', 'rounded', 'data');
+		nameInput.id = "moduleName";
+		nameInput.type = "text";
+		nameInput.value = data["name"];
+		nameInput.classList.add('col-5', 'rounded');
 
-		switchLightButton.type = "button";
-		switchLightButton.setAttribute('onclick', 'switch_light();');
-		switchLightButton.classList.add('col-2');
+		nameButton.type = "button";
+		nameButton.setAttribute('onclick', 'set_module_name();');
+		nameButton.classList.add('col-2');
 
-		lightUpSection.appendChild(lightUpLabel);
-		lightUpSection.appendChild(lightUpData);
-		lightUpSection.appendChild(switchLightButton);
+		nameSection.appendChild(nameLabel);
+		nameSection.appendChild(nameInput);
+		nameSection.appendChild(nameButton);
 
-		//intensity section
-		intensitySection.classList.add('row', 'informationSection');
+		//location section
+		locationSection.classList.add('row', 'informationSection');
 
-		intensityLabel.classList.add('col-5');
-		intensityLabel.textContent = "intensité:";
+		locationLabel.classList.add('col-5');
+		locationLabel.textContent = "emplacement:";
 		
-		intensityInput.id = "intensity";
-		intensityInput.type = "range";
-		intensityInput.value = data["intensity"];
-		intensityInput.classList.add('col-7', 'rounded');
-		intensityInput.setAttribute('min', '0');
-		intensityInput.setAttribute('max', '100');
-		intensityInput.setAttribute('onchange', 'set_intensity();');
+		locationInput.id = "moduleLocation";
+		locationInput.value = data["location"];
+		locationInput.classList.add('col-7', 'rounded');
+		locationInput.setAttribute('onchange', 'set_module_location();');
 
+		let firstOption = document.createElement('option');
+		let optionList = []
 
-		intensitySection.appendChild(intensityLabel);
-		intensitySection.appendChild(intensityInput);
-
-		////rgb bulb section
-		if(data['type'] == 'rgb bulb')
+		for (const element of locationList)
 		{
-			//color section
-			colorSection.classList.add('row', 'informationSection');
-
-			colorLabel.classList.add('col-5');
-			colorLabel.textContent = "couleur:";
-		
-			colorInput.id = "color";
-			colorInput.classList.add('col-7', 'rounded');
-			colorInput.setAttribute('onchange', 'set_color();');
-
-			let firstOption = document.createElement('option');
-			let optionList = []
-
-			firstOption.text = data["color"]["name"];
-			firstOption.value = data["color"]["rgbwValue"];
-
-			for (const element of data["color palette"])
+			if(element['id'] == data["location"])
 			{
-				if(element['name'] == data["color"]["name"])
+				firstOption.text = element["name"];
+				firstOption.value = element["id"];
+			}
+			else
+			{
+				let option = document.createElement('option');
+
+				option.text = element['name']
+				option.value = element['id']
+
+				optionList.push(option);
+			}
+		}
+
+		locationInput.appendChild(firstOption);
+
+		for (const element of optionList)
+		{
+			locationInput.appendChild(element);
+		}
+
+		locationSection.appendChild(locationLabel);
+		locationSection.appendChild(locationInput);
+
+		////Bulb section
+		if(data['type'] == 'bulb' || data['type'] == 'rgb bulb')
+		{
+			//light up section
+			lightUpSection.classList.add('row', 'informationSection');
+
+			lightUpLabel.classList.add('col-5');
+			lightUpLabel.textContent = "Allumé:";
+			
+			lightUpData.textContent = data["lightUp"];
+			lightUpData.classList.add('col-5', 'rounded', 'data');
+
+			switchLightButton.type = "button";
+			switchLightButton.setAttribute('onclick', 'switch_light();');
+			switchLightButton.classList.add('col-2');
+
+			lightUpSection.appendChild(lightUpLabel);
+			lightUpSection.appendChild(lightUpData);
+			lightUpSection.appendChild(switchLightButton);
+
+			//intensity section
+			intensitySection.classList.add('row', 'informationSection');
+
+			intensityLabel.classList.add('col-5');
+			intensityLabel.textContent = "intensité:";
+			
+			intensityInput.id = "intensity";
+			intensityInput.type = "range";
+			intensityInput.value = data["intensity"];
+			intensityInput.classList.add('col-7', 'rounded');
+			intensityInput.setAttribute('min', '0');
+			intensityInput.setAttribute('max', '100');
+			intensityInput.setAttribute('onchange', 'set_intensity();');
+
+
+			intensitySection.appendChild(intensityLabel);
+			intensitySection.appendChild(intensityInput);
+
+			////rgb bulb section
+			if(data['type'] == 'rgb bulb')
+			{
+				//color section
+				colorSection.classList.add('row', 'informationSection');
+
+				colorLabel.classList.add('col-5');
+				colorLabel.textContent = "couleur:";
+			
+				colorInput.id = "color";
+				colorInput.classList.add('col-7', 'rounded');
+				colorInput.setAttribute('onchange', 'set_color();');
+
+				let firstOption = document.createElement('option');
+				let optionList = []
+
+				firstOption.text = data["color"]["name"];
+				firstOption.value = data["color"]["rgbwValue"];
+
+				for (const element of data["color palette"])
 				{
+					if(element['name'] == data["color"]["name"])
+					{
 
+					}
+					else
+					{
+						let option = document.createElement('option');
+
+						option.text = element['name']
+						option.value = element['rgbwValue']
+
+						optionList.push(option);
+					}
 				}
-				else
+
+				colorInput.appendChild(firstOption);
+
+				for (const element of optionList)
 				{
-					let option = document.createElement('option');
-
-					option.text = element['name']
-					option.value = element['rgbwValue']
-
-					optionList.push(option);
+					colorInput.appendChild(element);
 				}
+
+				colorSection.appendChild(colorLabel);
+				colorSection.appendChild(colorInput);
 			}
 
-			colorInput.appendChild(firstOption);
 
-			for (const element of optionList)
-			{
-				colorInput.appendChild(element);
-			}
-
-			colorSection.appendChild(colorLabel);
-			colorSection.appendChild(colorInput);
 		}
 
+		//id section
+		idSection.classList.add('row','informationSection');
 
-	}
+		idLabel.classList.add('col-5');
+		idLabel.textContent = "Id:";
+		
+		idData.textContent = data["id"];
+		idData.classList.add('col-7', 'rounded', 'data');
 
-	//id section
-	idSection.classList.add('row','informationSection');
+		idSection.appendChild(idLabel);
+		idSection.appendChild(idData);
 
-	idLabel.classList.add('col-5');
-	idLabel.textContent = "Id:";
-	
-	idData.textContent = data["id"];
-	idData.classList.add('col-7', 'rounded', 'data');
+		//type section
+		typeSection.classList.add('row', 'informationSection');
 
-	idSection.appendChild(idLabel);
-	idSection.appendChild(idData);
+		typeLabel.classList.add('col-5');
+		typeLabel.textContent = "Type:";
+		
+		typeData.textContent = data["type"];
+		typeData.classList.add('col-7', 'rounded', 'data');
 
-	//type section
-	typeSection.classList.add('row', 'informationSection');
-
-	typeLabel.classList.add('col-5');
-	typeLabel.textContent = "Type:";
-	
-	typeData.textContent = data["type"];
-	typeData.classList.add('col-7', 'rounded', 'data');
-
-	typeSection.appendChild(typeLabel);
-	typeSection.appendChild(typeData);
+		typeSection.appendChild(typeLabel);
+		typeSection.appendChild(typeData);
 
 
-	//product information
+		//product information
 
-	//manufacturerNameSection
-	manufacturerNameSection.classList.add('row', 'informationSection');
+		//manufacturerNameSection
+		manufacturerNameSection.classList.add('row', 'informationSection');
 
-	manufacturerNameLabel.classList.add('col-5');
-	manufacturerNameLabel.textContent = "Nom du fabriquant:";
-	
-	manufacturerNameData.textContent = data["manufacturer name"];
-	manufacturerNameData.classList.add('col-7', 'rounded', 'data');
+		manufacturerNameLabel.classList.add('col-5');
+		manufacturerNameLabel.textContent = "Nom du fabriquant:";
+		
+		manufacturerNameData.textContent = data["manufacturer name"];
+		manufacturerNameData.classList.add('col-7', 'rounded', 'data');
 
-	manufacturerNameSection.appendChild(manufacturerNameLabel);
-	manufacturerNameSection.appendChild(manufacturerNameData);
+		manufacturerNameSection.appendChild(manufacturerNameLabel);
+		manufacturerNameSection.appendChild(manufacturerNameData);
 
-	//productNameSection
-	productNameSection.classList.add('row', 'informationSection');
+		//productNameSection
+		productNameSection.classList.add('row', 'informationSection');
 
-	productNameLabel.classList.add('col-5');
-	productNameLabel.textContent = "Nom de produit:";
-	
-	productNameData.textContent = data["product name"];
-	productNameData.classList.add('col-7', 'rounded', 'data');
+		productNameLabel.classList.add('col-5');
+		productNameLabel.textContent = "Nom de produit:";
+		
+		productNameData.textContent = data["product name"];
+		productNameData.classList.add('col-7', 'rounded', 'data');
 
-	productNameSection.appendChild(productNameLabel);
-	productNameSection.appendChild(productNameData);
+		productNameSection.appendChild(productNameLabel);
+		productNameSection.appendChild(productNameData);
 
-	//productTypeSection
-	productTypeSection.classList.add('row', 'informationSection');
+		//productTypeSection
+		productTypeSection.classList.add('row', 'informationSection');
 
-	productTypeLabel.classList.add('col-5');
-	productTypeLabel.textContent = "Type de produit:";
-	
-	productTypeData.textContent = data["product type"];
-	productTypeData.classList.add('col-7', 'rounded', 'data');
+		productTypeLabel.classList.add('col-5');
+		productTypeLabel.textContent = "Type de produit:";
+		
+		productTypeData.textContent = data["product type"];
+		productTypeData.classList.add('col-7', 'rounded', 'data');
 
-	productTypeSection.appendChild(productTypeLabel);
-	productTypeSection.appendChild(productTypeData);
+		productTypeSection.appendChild(productTypeLabel);
+		productTypeSection.appendChild(productTypeData);
 
-	//systemTypeSection
-	systemTypeSection.classList.add('row', 'informationSection');
+		//systemTypeSection
+		systemTypeSection.classList.add('row', 'informationSection');
 
-	systemTypeLabel.classList.add('col-5');
-	systemTypeLabel.textContent = "Type de système:";
-	
-	systemTypeData.textContent = data["system type"];
-	systemTypeData.classList.add('col-7', 'rounded', 'data');
+		systemTypeLabel.classList.add('col-5');
+		systemTypeLabel.textContent = "Type de système:";
+		
+		systemTypeData.textContent = data["system type"];
+		systemTypeData.classList.add('col-7', 'rounded', 'data');
 
-	systemTypeSection.appendChild(systemTypeLabel);
-	systemTypeSection.appendChild(systemTypeData);
+		systemTypeSection.appendChild(systemTypeLabel);
+		systemTypeSection.appendChild(systemTypeData);
 
-	//state information
+		//state information
 
-	//awake section
-	awakeSection.classList.add('row', 'informationSection');
+		//awake section
+		awakeSection.classList.add('row', 'informationSection');
 
-	awakeLabel.classList.add('col-5');
-	awakeLabel.textContent = "Réveillé:";
-	
-	awakeData.textContent = data["awake"];
-	awakeData.classList.add('col-7', 'rounded', 'data');
+		awakeLabel.classList.add('col-5');
+		awakeLabel.textContent = "Réveillé:";
+		
+		awakeData.textContent = data["awake"];
+		awakeData.classList.add('col-7', 'rounded', 'data');
 
-	awakeSection.appendChild(awakeLabel);
-	awakeSection.appendChild(awakeData);
+		awakeSection.appendChild(awakeLabel);
+		awakeSection.appendChild(awakeData);
 
-	//disfunctionnement section
-	disfunctionnementSection.classList.add('row', 'informationSection');
+		//disfunctionnement section
+		disfunctionnementSection.classList.add('row', 'informationSection');
 
-	disfunctionnementLabel.classList.add('col-5');
-	disfunctionnementLabel.textContent = "Disfonctionnement:";
-	
-	disfunctionnementData.textContent = data["disfunctionnement"];
-	disfunctionnementData.classList.add('col-7', 'rounded', 'data');
+		disfunctionnementLabel.classList.add('col-5');
+		disfunctionnementLabel.textContent = "Disfonctionnement:";
+		
+		disfunctionnementData.textContent = data["disfunctionnement"];
+		disfunctionnementData.classList.add('col-7', 'rounded', 'data');
 
-	disfunctionnementSection.appendChild(disfunctionnementLabel);
-	disfunctionnementSection.appendChild(disfunctionnementData);
+		disfunctionnementSection.appendChild(disfunctionnementLabel);
+		disfunctionnementSection.appendChild(disfunctionnementData);
 
-	//ready section
-	readySection.classList.add('row', 'informationSection');
+		//ready section
+		readySection.classList.add('row', 'informationSection');
 
-	readyLabel.classList.add('col-5');
-	readyLabel.textContent = "Prêt:";
-	
-	readyData.textContent = data["ready"];
-	readyData.classList.add('col-7', 'rounded', 'data');
+		readyLabel.classList.add('col-5');
+		readyLabel.textContent = "Prêt:";
+		
+		readyData.textContent = data["ready"];
+		readyData.classList.add('col-7', 'rounded', 'data');
 
-	readySection.appendChild(readyLabel);
-	readySection.appendChild(readyData);
+		readySection.appendChild(readyLabel);
+		readySection.appendChild(readyData);
 
-	//sleep section
-	sleepSection.classList.add('row', 'informationSection');
+		//sleep section
+		sleepSection.classList.add('row', 'informationSection');
 
-	sleepLabel.classList.add('col-5');
-	sleepLabel.textContent = "Dort:";
-	
-	sleepData.textContent = data["sleep"];
-	sleepData.classList.add('col-7', 'rounded', 'data');
+		sleepLabel.classList.add('col-5');
+		sleepLabel.textContent = "Dort:";
+		
+		sleepData.textContent = data["sleep"];
+		sleepData.classList.add('col-7', 'rounded', 'data');
 
-	sleepSection.appendChild(sleepLabel);
-	sleepSection.appendChild(sleepData);
+		sleepSection.appendChild(sleepLabel);
+		sleepSection.appendChild(sleepData);
 
 
-	modulePictureZone.appendChild(modulePicture);
+		modulePictureZone.appendChild(modulePicture);
 
-	moduleInformationZone.appendChild(nameSection);
-	moduleInformationZone.appendChild(locationSection);
+		moduleInformationZone.appendChild(nameSection);
+		moduleInformationZone.appendChild(locationSection);
 
-	if(data['type'] == 'bulb' || data['type'] == 'rgb bulb')
-	{
-		moduleInformationZone.appendChild(lightUpSection);
-		moduleInformationZone.appendChild(intensitySection);
-
-		if(data['type'] == 'rgb bulb')
+		if(data['type'] == 'bulb' || data['type'] == 'rgb bulb')
 		{
-			moduleInformationZone.appendChild(colorSection);
+			moduleInformationZone.appendChild(lightUpSection);
+			moduleInformationZone.appendChild(intensitySection);
+
+			if(data['type'] == 'rgb bulb')
+			{
+				moduleInformationZone.appendChild(colorSection);
+			}
 		}
+
+		moduleInformationZone.appendChild(idSection);
+		moduleInformationZone.appendChild(typeSection);
+
+		productInformationZone.appendChild(manufacturerNameSection);
+		productInformationZone.appendChild(productNameSection);
+		productInformationZone.appendChild(productTypeSection);
+		productInformationZone.appendChild(systemTypeSection);
+
+		moduleStateInformationZone.appendChild(awakeSection);
+		moduleStateInformationZone.appendChild(disfunctionnementSection);
+		moduleStateInformationZone.appendChild(readySection);
+		moduleStateInformationZone.appendChild(sleepSection);
 	}
-
-	moduleInformationZone.appendChild(idSection);
-	moduleInformationZone.appendChild(typeSection);
-
-	productInformationZone.appendChild(manufacturerNameSection);
-	productInformationZone.appendChild(productNameSection);
-	productInformationZone.appendChild(productTypeSection);
-	productInformationZone.appendChild(systemTypeSection);
-
-	moduleStateInformationZone.appendChild(awakeSection);
-	moduleStateInformationZone.appendChild(disfunctionnementSection);
-	moduleStateInformationZone.appendChild(readySection);
-	moduleStateInformationZone.appendChild(sleepSection);
 
 
 })
