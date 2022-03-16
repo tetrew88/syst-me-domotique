@@ -83,7 +83,7 @@ socket.on('post_module', data=>{
 	let colorInput = document.createElement('select');
 
 
-	modulePicture.classList.add("img-fluid", "rounded-circle", "container-fluid");
+	modulePicture.classList.add("img-fluid", "rounded-circle");
 	if(data['type'] == 'rgb bulb')
 	{
 		modulePicture.src = "/static/pictures/" + 'bulb' + ".jpeg";
