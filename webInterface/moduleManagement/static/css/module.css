@@ -73,3 +73,36 @@
 	border-color: black;
 	border: solid;
 }
+
+
+@media all and (max-width: 1199px) and (min-width:  450px)
+{
+    #pageContent
+	{
+		font-size: large;
+	}
+}
+
+@media all and (max-width: 449px)
+{
+    #pageContent
+	{
+		font-size: small;
+	}
+}
+
+@media all and (max-width: 1199px) and (min-width:  450px)
+{
+    #pageContent
+	{
+		font-size: large;
+	}
+}
+
+@media all and (max-width: 449px)
+{
+    #pageContent
+	{
+		font-size: small;
+	}
+}
