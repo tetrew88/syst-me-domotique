@@ -24,6 +24,12 @@
 	margin-bottom: 3%;
 }
 
+.informationSection
+{
+	flex-wrap: nowrap;
+	margin: auto;
+}
+
 
 .data
 {

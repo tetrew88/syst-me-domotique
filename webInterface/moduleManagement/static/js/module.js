@@ -96,7 +96,7 @@ socket.on('post_module', data=>{
 	//module information
 
 	//name section
-	nameSection.classList.add('row', 'container-fluid', 'nameSection');
+	nameSection.classList.add('row', 'informationSection');
 
 	nameLabel.classList.add('col-5');
 	nameLabel.textContent = "Nom:";
@@ -115,7 +115,7 @@ socket.on('post_module', data=>{
 	nameSection.appendChild(nameButton);
 
 	//location section
-	locationSection.classList.add('row', 'container-fluid', 'locationSection');
+	locationSection.classList.add('row', 'informationSection');
 
 	locationLabel.classList.add('col-5');
 	locationLabel.textContent = "emplacement:";
@@ -160,7 +160,7 @@ socket.on('post_module', data=>{
 	if(data['type'] == 'bulb' || data['type'] == 'rgb bulb')
 	{
 		//light up section
-		lightUpSection.classList.add('row', 'container-fluid', 'lightUpSection');
+		lightUpSection.classList.add('row', 'informationSection');
 
 		lightUpLabel.classList.add('col-5');
 		lightUpLabel.textContent = "Allumé:";
@@ -177,7 +177,7 @@ socket.on('post_module', data=>{
 		lightUpSection.appendChild(switchLightButton);
 
 		//intensity section
-		intensitySection.classList.add('row', 'container-fluid', 'intensitySection');
+		intensitySection.classList.add('row', 'informationSection');
 
 		intensityLabel.classList.add('col-5');
 		intensityLabel.textContent = "intensité:";
@@ -198,7 +198,7 @@ socket.on('post_module', data=>{
 		if(data['type'] == 'rgb bulb')
 		{
 			//color section
-			colorSection.classList.add('row', 'container-fluid', 'colorSection');
+			colorSection.classList.add('row', 'informationSection');
 
 			colorLabel.classList.add('col-5');
 			colorLabel.textContent = "couleur:";
@@ -245,7 +245,7 @@ socket.on('post_module', data=>{
 	}
 
 	//id section
-	idSection.classList.add('row', 'container-fluid', 'idSection');
+	idSection.classList.add('row','informationSection');
 
 	idLabel.classList.add('col-5');
 	idLabel.textContent = "Id:";
@@ -257,7 +257,7 @@ socket.on('post_module', data=>{
 	idSection.appendChild(idData);
 
 	//type section
-	typeSection.classList.add('row', 'container-fluid', 'typeSection');
+	typeSection.classList.add('row', 'informationSection');
 
 	typeLabel.classList.add('col-5');
 	typeLabel.textContent = "Type:";
@@ -272,7 +272,7 @@ socket.on('post_module', data=>{
 	//product information
 
 	//manufacturerNameSection
-	manufacturerNameSection.classList.add('row', 'container-fluid', 'ManufacturerNameSection');
+	manufacturerNameSection.classList.add('row', 'informationSection');
 
 	manufacturerNameLabel.classList.add('col-5');
 	manufacturerNameLabel.textContent = "Nom du fabriquant:";
@@ -284,7 +284,7 @@ socket.on('post_module', data=>{
 	manufacturerNameSection.appendChild(manufacturerNameData);
 
 	//productNameSection
-	productNameSection.classList.add('row', 'container-fluid', 'productNameSection');
+	productNameSection.classList.add('row', 'informationSection');
 
 	productNameLabel.classList.add('col-5');
 	productNameLabel.textContent = "Nom de produit:";
@@ -296,7 +296,7 @@ socket.on('post_module', data=>{
 	productNameSection.appendChild(productNameData);
 
 	//productTypeSection
-	productTypeSection.classList.add('row', 'container-fluid', 'productTypeSection');
+	productTypeSection.classList.add('row', 'informationSection');
 
 	productTypeLabel.classList.add('col-5');
 	productTypeLabel.textContent = "Type de produit:";
@@ -308,7 +308,7 @@ socket.on('post_module', data=>{
 	productTypeSection.appendChild(productTypeData);
 
 	//systemTypeSection
-	systemTypeSection.classList.add('row', 'container-fluid', 'systemTypeSection');
+	systemTypeSection.classList.add('row', 'informationSection');
 
 	systemTypeLabel.classList.add('col-5');
 	systemTypeLabel.textContent = "Type de système:";
@@ -322,7 +322,7 @@ socket.on('post_module', data=>{
 	//state information
 
 	//awake section
-	awakeSection.classList.add('row', 'container-fluid', 'awakeSection');
+	awakeSection.classList.add('row', 'informationSection');
 
 	awakeLabel.classList.add('col-5');
 	awakeLabel.textContent = "Réveillé:";
@@ -334,7 +334,7 @@ socket.on('post_module', data=>{
 	awakeSection.appendChild(awakeData);
 
 	//disfunctionnement section
-	disfunctionnementSection.classList.add('row', 'container-fluid', 'disfunctionnementSection');
+	disfunctionnementSection.classList.add('row', 'informationSection');
 
 	disfunctionnementLabel.classList.add('col-5');
 	disfunctionnementLabel.textContent = "Disfonctionnement:";
@@ -346,7 +346,7 @@ socket.on('post_module', data=>{
 	disfunctionnementSection.appendChild(disfunctionnementData);
 
 	//ready section
-	readySection.classList.add('row', 'container-fluid', 'readySection');
+	readySection.classList.add('row', 'informationSection');
 
 	readyLabel.classList.add('col-5');
 	readyLabel.textContent = "Prêt:";
@@ -358,7 +358,7 @@ socket.on('post_module', data=>{
 	readySection.appendChild(readyData);
 
 	//sleep section
-	sleepSection.classList.add('row', 'container-fluid', 'sleepSection');
+	sleepSection.classList.add('row', 'informationSection');
 
 	sleepLabel.classList.add('col-5');
 	sleepLabel.textContent = "Dort:";
