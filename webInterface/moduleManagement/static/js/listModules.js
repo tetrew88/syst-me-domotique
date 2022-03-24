@@ -275,7 +275,7 @@ function list_modules_by_type(socket, screen)
 
 
 
-function list_modules(socket, screen, roomId)
+function list_modules(socket, screen)
 {
 	let maxModule = 0
 
