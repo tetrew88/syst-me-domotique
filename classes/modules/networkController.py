@@ -32,7 +32,7 @@ class NetworkController(Module):
 
 
     def hard_reset(self):
-        self.moduleNode.hard_reset
+        self.moduleNode.hard_reset()
 
 
     def soft_reset(self):

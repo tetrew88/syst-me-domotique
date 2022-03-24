@@ -14,6 +14,18 @@
 	color: white;
 }
 
+#modulesScreen
+{
+	margin: auto;
+	background-color: white;
+	opacity: 80%;
+
+	padding-top: 5%;
+	padding-bottom: 5%;
+
+	min-height: 2em;
+}
+
 h1
 {
 	margin: auto;
@@ -32,4 +44,32 @@ h2
 #homeId
 {
 	margin: auto;
+}
+
+
+#moduleCarousel .carousel-control-prev-icon
+{
+	filter: invert(100%);
+}
+
+#moduleCarousel .carousel-control-next-icon
+{
+	filter: invert(100%);
+}
+
+
+@media all and (max-width: 1199px) and (min-width:  450px)
+{
+    .card-title
+	{
+		font-size: large;
+	}
+}
+
+@media all and (max-width: 449px)
+{
+    .card-title
+	{
+		font-size: small;
+	}
 }

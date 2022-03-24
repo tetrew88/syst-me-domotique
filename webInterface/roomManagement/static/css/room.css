@@ -26,14 +26,6 @@ h3
 }
 
 
-.moduleList
-{
-	background-color: white;
-	opacity: 80%;
-
-	min-height: 2em;
-}
-
 #modulesSection
 {
 	margin: auto;
@@ -55,6 +47,10 @@ h3
 #modulesScreen
 {
 	margin: auto;
+	background-color: white;
+	opacity: 80%;
+
+	min-height: 2em;
 }
 
 .moduleCard
