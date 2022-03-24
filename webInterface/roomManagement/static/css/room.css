@@ -21,6 +21,7 @@ h3
 
 #bannerSection
 {
+	padding-top: 20%;
 	padding-bottom: 5%;
 	margin: auto;
 }
@@ -49,6 +50,9 @@ h3
 	margin: auto;
 	background-color: white;
 	opacity: 80%;
+
+	padding-top: 5%;
+	padding-bottom: 5%;
 
 	min-height: 2em;
 }
