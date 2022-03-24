@@ -294,7 +294,7 @@ function list_modules(socket, screen)
 		}
 	}
 
-	socket.emit('get_modules_list', roomId)
+	socket.emit('get_modules_list', '')
 	socket.on('post_modules_list', data=>{
 		screen.innerHTML = "";
 
