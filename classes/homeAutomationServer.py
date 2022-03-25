@@ -168,6 +168,22 @@ class HomeAutomationServer(socketio.Namespace):
 
 		socketIoServer.emit('post_profil', {"data": profil}, namespace='/HomeAutomationServer')
 
+	@socketIoServer.event(namespace='/HomeAutomationServer')
+	def get_homeId(sid, data):
+		homeId = HomeAutomationServer.homeAutomationSystem.get_homeId()
+
+		print(homeId)
+
+		socketIoServer.emit('post_homeId', {"data": homeId}, namespace='/HomeAutomationServer')
+
+	@socketIoServer.event(namespace='/HomeAutomationServer')
+	def get_network_state(sid, data):
+		networkState = HomeAutomationServer.homeAutomationSystem.get_network_state()
+
+		print(networkState)
+
+		socketIoServer.emit('post_network_state', {"data": networkState}, namespace='/HomeAutomationServer')
+
 	
 
 	@socketIoServer.event(namespace='/HomeAutomationServer')

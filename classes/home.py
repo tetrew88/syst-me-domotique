@@ -220,6 +220,9 @@ class Home:
 
         return profil
 
+    def get_network_state(self):
+        return self.homeAutomationNetwork.state
+
 
     def heal_network(self):
         self.homeAutomationNetwork.heal()

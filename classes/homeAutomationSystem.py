@@ -53,6 +53,12 @@ class HomeAutomationSystem:
     def get_home(self):
         return self.home
 
+    def get_homeId(self):
+        return self.home.id
+
+    def get_network_state(self):
+        return self.home.get_network_state()
+
     def get_home_rooms_list(self):
         return self.home.rooms
 
