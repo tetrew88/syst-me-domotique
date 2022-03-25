@@ -16,8 +16,8 @@
 
 #modulesSection
 {
-	padding-top: 10%;
-	margin-bottom: 10%;
+	padding-top: 6%;
+	margin-bottom: 6%;
 }
 
 #modulesScreen
@@ -52,6 +52,11 @@ h2
 	margin: auto;
 }
 
+.moduleCard
+{
+	border: none;
+}
+
 
 #moduleCarousel .carousel-control-prev-icon
 {
@@ -70,11 +75,21 @@ h2
 	{
 		font-size: large;
 	}
+
+	h2
+	{
+		font-size: large;
+	}
 }
 
 @media all and (max-width: 449px)
 {
     .card-title
+	{
+		font-size: small;
+	}
+
+	h2
 	{
 		font-size: small;
 	}
