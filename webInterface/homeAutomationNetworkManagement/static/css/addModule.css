@@ -1,4 +1,14 @@
 .inputSection
 {
 	background-color: white;
+	padding: 5%;
+	margin-top: 5%;
+
+	border: solid;
+	border-color: black;
+}
+
+.title
+{
+	margin: auto;
 }
