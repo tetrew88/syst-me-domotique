@@ -1,4 +1,9 @@
-socket.emit('get_rooms_list', 'rooms')
+let loader = document.getElementById("loader");
+let pageContent = document.getElementById("pageContent");
+
+loader.style.display = "none";
+
+socket.emit('get_rooms_list', '')
 socket.on('post_rooms_list', data=>{
 	let locationInput = document.getElementById("moduleEmplacement");
 
@@ -21,3 +26,19 @@ socket.on('post_rooms_list', data=>{
 		locationInput.appendChild(element);
 	}
 })
+
+
+function add_module()
+{
+	let nameInput = document.getElementById("moduleName");
+	let locationInput = document.getElementById("moduleEmplacement");
+
+	let data = {}
+
+	data['moduleName'] = nameInput.value;
+	data['roomId'] = locationInput.value;
+
+	socket.emit('add_module', data);
+	pageContent.style.display = "none";
+	loader.style.display = "block";
+}

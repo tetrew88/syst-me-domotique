@@ -281,5 +281,9 @@ class HomeAutomationServer(socketio.Namespace):
 	def set_profil_firstName(sid, data):
 		HomeAutomationServer.homeAutomationSystem.set_home_profil_first_name(data['profilId'], data["firstName"])
 
+	@socketIoServer.event(namespace='/HomeAutomationServer')
+	def add_module(sid, data):
+		HomeAutomationServer.homeAutomationSystem.add_home_automation_module(data["moduleName"], int(data["roomId"]))
+
 
 socketIoServer.register_namespace(HomeAutomationServer())
