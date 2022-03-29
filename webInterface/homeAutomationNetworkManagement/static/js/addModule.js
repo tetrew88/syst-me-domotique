@@ -1,7 +1,7 @@
-let loader = document.getElementById("loader");
+let loadingScreen = document.getElementById("loadingScreen");
 let pageContent = document.getElementById("pageContent");
 
-loader.style.display = "none";
+loadingScreen.style.display = "none";
 
 socket.emit('get_rooms_list', '')
 socket.on('post_rooms_list', data=>{
@@ -40,5 +40,5 @@ function add_module()
 
 	socket.emit('add_module', data);
 	pageContent.style.display = "none";
-	loader.style.display = "block";
+	loadingScreen.style.display = "block";
 }
