@@ -11,7 +11,7 @@
 
 .locationSection
 {
-
+	padding: 2%;
 }
 
 .nameSection
@@ -28,4 +28,28 @@ h2
 .buttonZone
 {
 	margin-top: 2%;
+}
+
+@media all and (max-width: 1199px) and (min-width:  600px)
+{
+    .label
+	{
+		font-size: medium;
+	}
+}
+
+@media all and (max-width: 599px) and (min-width:  450px)
+{
+    .label
+	{
+		font-size: x-small;
+	}
+}
+
+@media all and (max-width: 449px)
+{
+    .label
+	{
+		font-size: xx-small;
+	}
 }
