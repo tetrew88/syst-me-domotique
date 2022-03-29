@@ -175,9 +175,8 @@ function list_rooms(socket, screen, theoricMaxRoom = 0)
 				}
 			}
 
-			carousel.appendChild(carouselInner);
-
 			carousel.appendChild(carouselControlPrev);
+			carousel.appendChild(carouselInner);
 			carousel.appendChild(carouselControlNext);
 
 			screen.appendChild(carousel);
