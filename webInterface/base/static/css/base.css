@@ -40,7 +40,7 @@
 	height: 100%;
 }
 
-#logo h2
+h2
 {
 	margin: auto;
 }
@@ -53,6 +53,7 @@
 }
 
 
+###########carousel###########
 .carousel-control-prev
 {
 	left: -5%;
@@ -71,11 +72,15 @@
 }
 
 
+############footer############
 /* generic css */
 footer
 {
 	background: #000000;
 }
+
+
+#############responsive############
 
 @media all and (max-width: 899px) and (min-width:  550px)
 {
@@ -127,6 +132,8 @@ footer
 }
 
 
+
+#########Loader##########
 .loader{
   margin:auto;
   margin-top: 100px;
