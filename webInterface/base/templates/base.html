@@ -34,15 +34,21 @@
 
 		<div id='blocPage'>
 			<!--                              navBar                                       -->
-			<nav class="col-lg navbar navbar-light navbar-expand-lg bg-dark " id="mainNavbar">
-				<div class="row" style="width: 100%; margin: auto;">
+			<nav id="mainNavbar" class="col-lg navbar navbar-light navbar-expand-lg bg-dark">
+				<div id="mainNavBarContent" class="row">
 						
 					<a id="logo" class="navbar-brand col-2" href="/">
 						<h2 class="text-center">HD</h2>
 					</a>
 
+					<!--                     shrortcutBar(carousel)                           -->
 					<div class="col-8 shortcutsBar rounded ">
 						<div id="shortcutsCarousel" class="carousel slide row " data-interval="false">
+							<a class="carousel-control-prev" href="#shortcutsCarousel" role="button" data-slide="prev">
+						    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						    <span class="sr-only">Previous</span>
+						  </a>
+
 							<div class="carousel-inner">
 
 								<div class="carousel-item active">
@@ -60,20 +66,15 @@
 									</div>
     						</div>
 
-    						<!-- ... -->
-
 						  </div>
 
-						  <a class="carousel-control-prev" href="#shortcutsCarousel" role="button" data-slide="prev">
-						    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						    <span class="sr-only">Previous</span>
-						  </a>
 						  <a class="carousel-control-next" href="#shortcutsCarousel" role="button" data-slide="next">
 						    <span class="carousel-control-next-icon" aria-hidden="true"></span>
 						    <span class="sr-only">Next</span>
 						  </a>
 						</div>
 					</div>
+					<!--                          /shortcutBar                                      -->
 
 					<div class="col-2 text-right" style="margin: auto;">
 						<div class="dropdown">

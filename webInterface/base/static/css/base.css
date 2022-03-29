@@ -1,4 +1,10 @@
-/* bloc page*/
+h2
+{
+  margin: auto;
+}
+
+
+###########personnal_Class###########
 #blocPage
 {
 	width: 100%;
@@ -21,7 +27,7 @@
 }
 
 
-/*Navbar*/
+#########navbar##########
 #mainNavbar
 {
 	display: flex;
@@ -32,17 +38,18 @@
 	align-items: space-around;
 }
 
+#mainNavBarContent
+{
+  width: 100%; 
+  margin: auto;
+}
+
 #logo
 {
 	margin: auto;
 
 	width: 100%;
 	height: 100%;
-}
-
-h2
-{
-	margin: auto;
 }
 
 
