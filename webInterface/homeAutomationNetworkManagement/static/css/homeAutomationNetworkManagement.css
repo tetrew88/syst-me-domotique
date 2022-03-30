@@ -4,6 +4,8 @@
 
 	background-color: black;
 	color: white;
+
+	box-shadow: inset 0px 0px 10px 9px rgba(255, 0, 0, 0.5);
 }
 
 #networkStateSection
@@ -12,6 +14,8 @@
 
 	background-color: black;
 	color: white;
+
+	box-shadow: inset 0px 0px 10px 9px rgba(255, 0, 0, 0.5);
 }
 
 #modulesSection
