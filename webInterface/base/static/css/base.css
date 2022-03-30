@@ -36,6 +36,8 @@ h2
 
 	justify-content: flex-start;
 	align-items: space-around;
+
+  box-shadow: inset 0px 0px 10px 9px rgba(0, 0, 0, 0.5);
 }
 
 #mainNavBarContent
@@ -77,53 +79,28 @@ footer
 
 #############responsive############
 
-@media all and (max-width: 899px) and (min-width:  550px)
+@media all and (max-width: 1199px) and (min-width:  600px)
 {
-    .nav-link
-    {
-    	font-size: small;
-    }
-
-    .dropdown-item
-    {
-    	font-size: small;
-    }
-
+  .blocPage
+  {
+    font-size: medium;
+  }
 }
 
-@media all and (max-width: 549px) and (min-width:  480px)
+@media all and (max-width: 599px) and (min-width:  450px)
 {
-    .nav-link
-    {
-    	font-size: x-small;
-    }
-
-    .dropdown-item
-    {
-    	font-size: x-small;
-    }
+  .blocPage
+  {
+    font-size: x-small;
+  }
 }
 
-@media all and (max-width: 479px)
+@media all and (max-width: 449px)
 {
-    .nav-link
-    {
-    	font-size: xx-small;
-    }
-
-    .dropdown-item
-    {
-    	font-size: xx-small;
-    }
-}
-
-
-@media all and (max-width: 549px)
-{
-	#logo h2
-	{
-		font-size: large;
-	}
+  .blocPage
+  {
+    font-size: xx-small;
+  }
 }
 
 
