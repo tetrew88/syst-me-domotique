@@ -73,7 +73,7 @@ function list_inhabitants(socket, screen)
 			let nextIcon = document.createElement('span');
 
 			carousel.id = 'inhabitantCarousel'
-			carousel.classList.add("carousel", "slide", "container-fluid");
+			carousel.classList.add("carousel", "slide");
 			carousel.setAttribute('data-interval', "false");
 
 			carouselInner.classList.add("carousel-inner");
@@ -235,7 +235,7 @@ function list_guests(socket, screen)
 			let nextIcon = document.createElement('span');
 
 			carousel.id = 'guestCarousel'
-			carousel.classList.add("carousel", "slide", "container-fluid");
+			carousel.classList.add("carousel", "slide");
 			carousel.setAttribute('data-interval', "false");
 
 			carouselInner.classList.add("carousel-inner");
