@@ -82,7 +82,7 @@ function list_rooms(socket, screen, theoricMaxRoom = 0)
 			let nextIcon = document.createElement('span');
 
 			carousel.id = 'roomCarousel'
-			carousel.classList.add("carousel", "slide", 'container-fluid');
+			carousel.classList.add("carousel", "slide");
 			carousel.setAttribute('data-interval', "false");
 
 			carouselInner.classList.add("carousel-inner");
