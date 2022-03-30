@@ -30,6 +30,8 @@
 	margin-bottom: 5%;
 
 	min-height: 2em;
+
+	box-shadow: inset 0px 0px 10px 9px rgba(0, 0, 255, 0.5);
 }
 
 h1
@@ -71,52 +73,4 @@ h3
 #moduleCarousel .carousel-control-next-icon
 {
 	filter: invert(100%);
-}
-
-
-@media all and (max-width: 1199px) and (min-width:  450px)
-{
-    .card-title
-	{
-		font-size: large;
-	}
-
-	h3
-	{
-		font-size: large;
-	}
-
-	#homeId
-	{
-		font-size: large;
-	}
-	
-	#networkState
-	{
-		font-size: large;
-	}
-}
-
-@media all and (max-width: 449px)
-{
-    .card-title
-	{
-		font-size: small;
-	}
-
-	h3
-	{
-		font-size: x-small;
-	}
-
-	#homeId
-	{
-		font-size: x-small;
-	}
-
-	#networkState
-	{
-		font-size: x-small;
-	}
-
 }
