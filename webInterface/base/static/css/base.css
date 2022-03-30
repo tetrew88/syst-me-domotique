@@ -25,8 +25,7 @@ h2
 }
 
 
-#########navbar##########
-
+/*navbar*/
 #mainNavbar
 {
 	display: flex;
@@ -65,14 +64,14 @@ h2
 }
 
 
-############footer############
+/*footer*/
 footer
 {
 	background: #000000;
 }
 
 
-#############responsive############
+/*responsive*/
 @media all and (max-width: 1199px) and (min-width:  600px)
 {
   .blocPage
@@ -113,7 +112,7 @@ footer
 }
 
 
-#########Loader##########
+/*Loader*/
 .loader{
   margin:auto;
   margin-top: 100px;
