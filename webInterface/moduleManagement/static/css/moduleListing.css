@@ -47,29 +47,3 @@
 {
 	filter: invert(100%);
 }
-
-@media all and (max-width: 899px) and (min-width:  550px)
-{
-    .card-title
-    {
-    	font-size: small;
-    }
-
-    .moduleSection h2
-    {
-    	font-size: x-large;
-    }
-}
-
-@media all and (max-width: 549px)
-{
-    .card-title
-    {
-    	font-size: small;
-    }
-
-    .moduleSection h2
-    {
-    	font-size: large;
-    }
-}
