@@ -76,13 +76,12 @@ h3
 .indicatorZone
 {
 	box-shadow: inset 0px 0px 10px 9px rgba(255, 0, 0, 0.5);
+	background-color: black;
 }
 
 .indicator
 {
-	background-color: black;
-	padding: inherit;
-	width: fit-content;
+	margin: auto;
 }
 
 #moduleCarousel .carousel-control-prev-icon
