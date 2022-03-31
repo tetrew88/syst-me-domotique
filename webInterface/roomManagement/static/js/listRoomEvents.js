@@ -31,12 +31,15 @@ function list_room_events(socket, screen, roomId)
 				for (const element of data)
 				{
 					let eventNotif = document.createElement('div');
+					let paragraph = document.createElement('p');
 					
 
 					eventNotif.classList.add("row", "eventRapport");
+					eventNotif.style.margin = "auto";
+					paragraph.style.margin = "auto";
 
-					eventNotif.textContent = element['str'];
-					
+					paragraph.textContent = element['str'];
+					eventNotif.appendChild(paragraph);
 
 					screen.appendChild(eventNotif);
 				}
@@ -87,11 +90,14 @@ function list_room_events(socket, screen, roomId)
 
 				for (const element of data) {
 					let eventNotif = document.createElement('div');
+					let paragraph = document.createElement('p');
 					
-
 					eventNotif.classList.add("row", "eventRapport");
+					eventNotif.style.margin = "auto";
+					paragraph.style.margin = "auto";
 
-					eventNotif.textContent = element['str'];
+					paragraph.textContent = element['str'];
+					eventNotif.appendChild(paragraph);
 
 					if(x <= maxEvent - 1)
 					{
