@@ -66,6 +66,11 @@ h2
 	margin: auto;
 }
 
+.personalButton
+{
+  background-color: black;
+}
+
 
 /*footer*/
 footer
@@ -96,6 +101,11 @@ footer
   {
     font-size: small;
   }
+
+  #networkState
+  {
+    font-size: small;
+  }
 }
 
 @media all and (max-width: 599px) and (min-width:  450px)
@@ -119,6 +129,11 @@ footer
   {
     font-size: x-small;
   }
+
+  #networkState
+  {
+    font-size: x-small;
+  }
 }
 
 @media all and (max-width: 449px)
@@ -139,6 +154,11 @@ footer
   }
 
   #homeId
+  {
+    font-size: x-small;
+  }
+
+  #networkState
   {
     font-size: x-small;
   }
