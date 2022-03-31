@@ -33,13 +33,16 @@ function list_events(socket, screen)
 			for (const element of data)
 			{
 				let eventNotif = document.createElement('div');
+				let paragraph = document.createElement('p');
 				
 
 				eventNotif.classList.add("row", "eventRapport");
 				eventNotif.style.margin = "auto";
 
-				eventNotif.textContent = element['str'];
-				
+				paragraph.style.margin = "auto";
+
+				paragraph.textContent = element['str'];
+				eventNotif.appendChild(paragraph);
 
 				screen.appendChild(eventNotif);
 			}
@@ -90,12 +93,15 @@ function list_events(socket, screen)
 
 			for (const element of data) {
 				let eventNotif = document.createElement('div');
+				let paragraph = document.createElement('p');
 				
-
 				eventNotif.classList.add("row", "eventRapport");
 				eventNotif.style.margin = "auto";
 
-				eventNotif.textContent = element['str'];
+				paragraph.style.margin = "auto";
+
+				paragraph.textContent = element['str'];
+				eventNotif.appendChild(paragraph);
 
 				if(x <= maxEvent - 1)
 				{
