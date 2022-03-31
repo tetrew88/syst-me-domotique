@@ -43,7 +43,8 @@
 
 .personalButton
 {
-  background-color: black;
+  background-color: white;
+  border: none;
 }
 
 .less
