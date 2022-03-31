@@ -13,43 +13,19 @@ h3
 	margin: auto;
 }
 
-.pageContent
-{
-	padding-top: 5%;
-	padding-bottom: 5%;
-}
-
-#bannerSection
-{
-	padding-top: 20%;
-	padding-bottom: 5%;
-	margin: auto;
-}
-
-
 #modulesSection
 {
+	padding-top: 5%;
+
 	margin: auto;
 	margin-bottom: 5%;
-}
-
-.moduleList
-{
-	background-color: white;
-
-	padding-top: 5%;
-	padding-bottom: 5%;
-
-	opacity: 80%;
-
-	min-height: 2em;
 }
 
 #modulesScreen
 {
 	margin: auto;
 	background-color: white;
-	opacity: 80%;
+	opacity: 90%;
 
 	padding-top: 5%;
 	padding-bottom: 5%;
@@ -74,29 +50,32 @@ h3
 	margin-bottom: 5%;
 }
 
-.eventList
+#eventsScreen
 {
+	margin: auto;
 
 	background-color: black;
 
 	width: 100%;
 	height: 100%;
 
-	opacity: 70%;
+	opacity: 90%;
 
 	min-height: 2em;
-}
 
-#eventsScreen
-{
-	margin: auto;
+	box-shadow: inset 0px 0px 10px 9px rgba(255, 0, 0, 0.5);
 }
 
 .eventRapport
 {
 	color:  white;
 	width: 100%;
-	margin: auto;
+}
+
+
+.indicatorZone
+{
+	box-shadow: inset 0px 0px 10px 9px rgba(255, 0, 0, 0.5);
 }
 
 .indicator
@@ -114,42 +93,4 @@ h3
 #moduleCarousel .carousel-control-next-icon
 {
 	filter: invert(100%);
-}
-
-
-@media all and (max-width: 1199px) and (min-width:  450px)
-{
-    .card-title
-	{
-		font-size: large;
-	}
-}
-
-@media all and (max-width: 449px)
-{
-    .card-title
-	{
-		font-size: small;
-	}
-}
-
-@media all and (max-width: 1199px) and (min-width:  450px)
-{
-    .eventRapport
-	{
-		font-size: large;
-	}
-}
-
-@media all and (max-width: 449px)
-{
-    .eventRapport
-	{
-		font-size: small;
-	}
-
-	.indicator
-	{
-		font-size: small;
-	}
 }
