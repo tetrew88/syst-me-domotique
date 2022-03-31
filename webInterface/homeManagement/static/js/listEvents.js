@@ -36,6 +36,7 @@ function list_events(socket, screen)
 				
 
 				eventNotif.classList.add("row", "eventRapport");
+				eventNotif.style.margin = "auto";
 
 				eventNotif.textContent = element['str'];
 				
@@ -92,6 +93,7 @@ function list_events(socket, screen)
 				
 
 				eventNotif.classList.add("row", "eventRapport");
+				eventNotif.style.margin = "auto";
 
 				eventNotif.textContent = element['str'];
 
