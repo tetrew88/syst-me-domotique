@@ -91,6 +91,11 @@ footer
   {
     font-size: medium;
   }
+
+  #homeId
+  {
+    font-size: small;
+  }
 }
 
 @media all and (max-width: 599px) and (min-width:  450px)
@@ -109,6 +114,11 @@ footer
   {
     font-size: small;
   }
+
+  #homeId
+  {
+    font-size: x-small;
+  }
 }
 
 @media all and (max-width: 449px)
@@ -124,6 +134,11 @@ footer
   }
 
   h3
+  {
+    font-size: x-small;
+  }
+
+  #homeId
   {
     font-size: x-small;
   }
