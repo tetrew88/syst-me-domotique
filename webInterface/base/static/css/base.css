@@ -66,6 +66,32 @@ h2
 	margin: auto;
 }
 
+/*general*/
+
+/*listing*/
+.screen
+{
+  opacity: 90%;
+
+  min-height: 2em;
+  max-width: 60px;
+
+  padding: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+
+  box-shadow: inset 0px 0px 10px 9px rgba(0, 0, 255, 0.5);
+}
+
+.roomCard
+{
+  background-color: black;
+
+  width: 100%;
+  height: 100%;
+
+  margin: auto;
+}
 
 /*footer*/
 footer
