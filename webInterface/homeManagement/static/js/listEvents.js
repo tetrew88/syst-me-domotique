@@ -61,7 +61,7 @@ function list_events(socket, screen)
 			let eventNextIcon = document.createElement('span');
 
 			eventCarousel.id = 'eventCarousel'
-			eventCarousel.classList.add("carousel", "slide", "container-fluid");
+			eventCarousel.classList.add("carousel", "slide");
 			eventCarousel.setAttribute('data-interval', "false");
 
 			eventCarouselInner.classList.add("carousel-inner", 'container-fluid');
