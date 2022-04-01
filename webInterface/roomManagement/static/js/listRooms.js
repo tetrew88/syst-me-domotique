@@ -40,14 +40,13 @@ function list_rooms(socket, screen, theoricMaxRoom = 0)
 				console.log(element);
 
 				let link = document.createElement('a');
-				let roomCard = document.createElement('div');
 				let cardPicture = document.createElement('img');
 				let cardTitle =  document.createElement('div');                                                                                         
 
 				link.href = '/room/' + element['id'] + "/";
 				link.classList.add("col-lg-4", "col-md-6","col-sm-12", "card", "roomCard", "rounded", "container-fluid")
 
-				cardPicture.classList.add("img-fluid", "rounded", "container-fluid");
+				cardPicture.classList.add("img-fluid", "rounded", "container-fluid", "tile");
 				cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";//element[2];
 
 				cardTitle.classList.add("card-title", "text-center", "container-fluid");
@@ -108,15 +107,14 @@ function list_rooms(socket, screen, theoricMaxRoom = 0)
 
 			for (const element of data) 
 			{
-				let link = document.createElement('a')
-				let roomCard = document.createElement('div');
+				let link = document.createElement('a');
 				let cardPicture = document.createElement('img');
 				let cardTitle =  document.createElement('div');
 
 				link.href = '/room/' + element['id'] + "/";
 				link.classList.add("col-lg-4", "col-md-6", "col-sm-12", "card", "roomCard", "rounded", "container-fluid");
 
-				cardPicture.classList.add("img-fluid", "rounded", "container-fluid");
+				cardPicture.classList.add("img-fluid", "rounded", "container-fluid", "tile");
 				cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";
 				cardTitle.classList.add("card-title", "text-center");
 				cardTitle.style.color = 'blue';
