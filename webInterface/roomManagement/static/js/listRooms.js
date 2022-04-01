@@ -20,13 +20,16 @@ function list_rooms(socket, screen, theoricMaxRoom = 0)
 		{
 			maxRoom = 3
 		}
-		elif (window.matchMedia("(max-width: 800px)").matches)
-		{
-			maxRoom = 2
-		}
 		else
 		{
-			maxRoom = 1
+			if (window.matchMedia("(max-width: 800px)").matches)
+			{
+				maxRoom = 2
+			}
+			else
+			{
+				maxRoom = 1
+			}
 		}
 	}
 
