@@ -35,7 +35,7 @@
 {
 	#screen
 	{
-		min-height: 220px;
+		min-height: 120px;
 	}
 	
 }
@@ -43,7 +43,7 @@
 {
 	#screen
 	{
-		min-height: 200px;
+		min-height: 100px;
 	}
 }
 
@@ -59,7 +59,7 @@
 {
 	#screen
 	{
-		min-height: 150px;
+		min-height: 100px;
 	}
 }
 
