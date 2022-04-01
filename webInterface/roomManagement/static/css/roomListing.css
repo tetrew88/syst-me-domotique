@@ -4,7 +4,7 @@
 	max-height: 500px;
 	min-height: 500px;
 
-	margin-top: 10vh;
+	margin-top: 20vh;
 }
 
 #roomCarousel
@@ -16,7 +16,7 @@
 {
 	#roomsScreen
 	{
-		margin-top: 20vh;
+		margin-top: 10vh;
 	}
 }
 
@@ -25,6 +25,13 @@
 	#roomsScreen
 	{
 		margin-top: 10vh;
+	}
+}
+@media all and (max-height: 820px)
+{
+	#roomsScreen
+	{
+		margin-top: 30vh;
 	}
 }
 
