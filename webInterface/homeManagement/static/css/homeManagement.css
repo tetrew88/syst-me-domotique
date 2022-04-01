@@ -21,6 +21,10 @@
 	min-height: 250px;
 }
 
+.roomCard
+{
+	background-color: white;
+}
 
 .eventsList
 {
