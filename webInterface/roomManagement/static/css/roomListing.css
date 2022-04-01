@@ -11,3 +11,19 @@
 {
 	margin: auto;
 }
+
+@media all and (max-width: 599px) and (min-width:  450px)
+{
+	#roomsScreen
+	{
+		min-height: 200px;
+	}
+}
+
+@media all and (max-width: 449px)
+{
+	#roomsScreen
+	{
+		min-height: 80px;
+	}
+}
