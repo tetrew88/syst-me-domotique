@@ -230,7 +230,7 @@ function list_guests(socket, screen)
 			activeRow.classList.add('row')
 
 			carouselControlPrev.classList.add("carousel-control-prev", "container-fluid");
-			carouselControlPrev.href = "#inhabitantCarousel";
+			carouselControlPrev.href = "#guestCarousel";
 			carouselControlPrev.role="button";
 			carouselControlPrev.setAttribute('data-slide',"prev");
 
@@ -239,7 +239,7 @@ function list_guests(socket, screen)
 			prevIcon.style.color = 'black';
 
 			carouselControlNext.classList.add("carousel-control-next", 'container-fluid');
-			carouselControlNext.href = "#inhabitantCarousel";
+			carouselControlNext.href = "#guestCarousel";
 			carouselControlNext.role="button";
 			carouselControlNext.setAttribute('data-slide','next');
 

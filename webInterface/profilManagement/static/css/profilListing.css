@@ -39,3 +39,35 @@
 {
 	filter: invert(100%);
 }
+
+@media all and (max-height: 650px)
+{
+	#roomsScreen
+	{
+		min-height: 200px;
+	}
+}
+
+@media all and (max-height: 450px)
+{
+	#roomsScreen
+	{
+		min-height: 80px;
+	}
+}
+
+@media all and (max-width: 600px)
+{
+	#roomsScreen
+	{
+		min-height: 150px;
+	}
+}
+
+@media all and (max-width: 500px)
+{
+	#roomsScreen
+	{
+		min-height: 80px;
+	}
+}
