@@ -269,13 +269,13 @@ function list_modules(socket, screen)
 	let maxModule = 0
 
 	if (window.matchMedia("(min-width: 1000px)").matches) {
-		maxModule = 6
+		maxModule = 3
 	}
 	else
 	{
 		if (window.matchMedia("(min-width: 800px)").matches)
 		{
-			maxModule = 3
+			maxModule = 2
 		}
 		else
 		{
