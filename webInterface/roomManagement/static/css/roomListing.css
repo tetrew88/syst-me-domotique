@@ -67,4 +67,8 @@
 	{
 		min-height: 80px;
 	}
+	#roomsScreen
+	{
+		margin-top: 20vh;
+	}
 }
