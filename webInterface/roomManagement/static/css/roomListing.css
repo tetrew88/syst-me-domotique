@@ -1,7 +1,10 @@
 #roomsScreen
 {
 	background-color: black;
-	max-height: 600px;
+	max-height: 500px;
+	min-height: 500px;
+
+	margin-top: 10vh;
 }
 
 #roomCarousel
