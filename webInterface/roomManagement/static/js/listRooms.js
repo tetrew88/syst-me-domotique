@@ -25,6 +25,11 @@ function list_rooms(socket, screen, theoricMaxRoom = 0)
 			maxRoom = 1
 		}
 	}
+	
+	if (window.matchMedia("(min-height: 600px)").matches)
+	{
+		maxRoom = 2
+	}
 
 	socket.emit('get_rooms_list', 'rooms')
 	socket.on('post_rooms_list', data=>{
