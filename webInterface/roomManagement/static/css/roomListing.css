@@ -12,7 +12,7 @@
 	margin: auto;
 }
 
-@media all and (max-height: 1200px)
+@media all and (max-height: 1250px)
 {
 	#roomsScreen
 	{
@@ -20,22 +20,22 @@
 	}
 }
 
-@media all and (max-height: 900px)
+@media all and (max-height: 1050px)
+{
+	#roomsScreen
+	{
+		margin-top: 20vh;
+	}
+}
+@media all and (max-height: 850px)
 {
 	#roomsScreen
 	{
 		margin-top: 10vh;
 	}
 }
-@media all and (max-height: 820px)
-{
-	#roomsScreen
-	{
-		margin-top: 30vh;
-	}
-}
 
-@media all and (max-height: 600px)
+@media all and (max-height: 650px)
 {
 	#roomsScreen
 	{
@@ -44,7 +44,7 @@
 	}
 }
 
-@media all and (max-height: 400px)
+@media all and (max-height: 450px)
 {
 	#roomsScreen
 	{
