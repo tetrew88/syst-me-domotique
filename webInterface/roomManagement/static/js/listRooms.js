@@ -45,9 +45,7 @@ function list_rooms(socket, screen, theoricMaxRoom = 0)
 				let cardTitle =  document.createElement('div');                                                                                         
 
 				link.href = '/room/' + element['id'] + "/";
-				link.classList.add("col-lg-4", "col-md-6","col-sm-12", "container-fluid")
-
-				roomCard.classList.add("card", "roomCard", "rounded", "container-fluid");
+				link.classList.add("col-lg-4", "col-md-6","col-sm-12", "card", "roomCard", "rounded", "container-fluid")
 
 				cardPicture.classList.add("img-fluid", "rounded", "container-fluid");
 				cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";//element[2];
@@ -56,10 +54,8 @@ function list_rooms(socket, screen, theoricMaxRoom = 0)
 				cardTitle.style.color = 'blue';
 				cardTitle.textContent = element["name"]
 
-				roomCard.appendChild(cardPicture);
-				roomCard.appendChild(cardTitle);
-
-				link.appendChild(roomCard);
+				link.appendChild(cardPicture);
+				link.appendChild(cardTitle);
 
 				screen.appendChild(link);
 			}
@@ -118,9 +114,7 @@ function list_rooms(socket, screen, theoricMaxRoom = 0)
 				let cardTitle =  document.createElement('div');
 
 				link.href = '/room/' + element['id'] + "/";
-				link.classList.add("col-lg-4", "col-md-6", "col-sm-12", "container-fluid")
-
-				roomCard.classList.add("card", "roomCard", "rounded");
+				link.classList.add("col-lg-4", "col-md-6", "col-sm-12", "card", "roomCard", "rounded", "container-fluid");
 
 				cardPicture.classList.add("img-fluid", "rounded", "container-fluid");
 				cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";
@@ -128,10 +122,8 @@ function list_rooms(socket, screen, theoricMaxRoom = 0)
 				cardTitle.style.color = 'blue';
 				cardTitle.textContent = element["name"];
 
-				roomCard.appendChild(cardPicture);
-				roomCard.appendChild(cardTitle);
-
-				link.appendChild(roomCard);
+				link.appendChild(cardPicture);
+				link.appendChild(cardTitle);
 
 				if(x <= maxRoom-1)
 				{
