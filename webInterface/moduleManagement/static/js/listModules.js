@@ -1,5 +1,3 @@
-
-
 function list_modules_by_type(socket, screen)
 {
 
@@ -86,7 +84,7 @@ function list_modules_by_type(socket, screen)
 			listMargin2.classList.add('col-3');
 
 			listZone.classList.add('col-6', 'container-fluid');
-			listContent.classList.add('row', 'moduleList', "rounded");
+			listContent.classList.add('row', 'screen', "rounded");
 
 			bannerSection.style.margin = "auto";
 			listSection.style.margin = "auto";
@@ -107,11 +105,9 @@ function list_modules_by_type(socket, screen)
 					let cardTitle =  document.createElement('div');
 
 					link.href = '/module/' + element['id'] + "/";
-					link.classList.add("col-lg-4", "col-md-6","col-sm-12", "container-fluid");
+					link.classList.add("col-lg-4", "col-md-6","col-sm-12", "card", "moduleCard", "rounded", 'container-fluid');
 
-					moduleCard.classList.add("card", "moduleCard", "rounded", 'container-fluid');
-
-					cardPicture.classList.add("img-fluid", "rounded");
+					cardPicture.classList.add("img-fluid", "rounded", "container-fluid");
 					if(element['type'] == 'rgb bulb')
 					{
 						cardPicture.src = "/static/pictures/" + 'bulb' + ".jpeg";
@@ -124,10 +120,8 @@ function list_modules_by_type(socket, screen)
 					cardTitle.classList.add("card-title", "text-center");
 					cardTitle.textContent = element["name"];
 
-					moduleCard.appendChild(cardPicture);
-					moduleCard.appendChild(cardTitle);
-
-					link.appendChild(moduleCard);
+					link.appendChild(cardPicture);
+					link.appendChild(cardTitle);
 
 					listContent.appendChild(link);
 				}
@@ -153,41 +147,38 @@ function list_modules_by_type(socket, screen)
 				carousel.classList.add("carousel", "slide", "container-fluid");
 				carousel.setAttribute('data-interval', "false");
 
-				carouselInner.classList.add("carousel-inner");
+				carouselInner.classList.add("carousel-inner", "container-fluid");
 
 				carouselActiveItem.classList.add("carousel-item", "active");
 
 				activeRow.classList.add('row')
 
-				carouselControlPrev.classList.add("carousel-control-prev");
+				carouselControlPrev.classList.add("carousel-control-prev", "container-fluid");
 				carouselControlPrev.href = "#moduleCarousel";
 				carouselControlPrev.role="button";
 				carouselControlPrev.setAttribute('data-slide',"prev");
 
-				prevIcon.classList.add('carousel-control-prev-icon');
+				prevIcon.classList.add('carousel-control-prev-icon', "container-fluid");
 				prevIcon.setAttribute('aria-hidden', "true");
 
-				carouselControlNext.classList.add("carousel-control-next");
+				carouselControlNext.classList.add("carousel-control-next", "container-fluid");
 				carouselControlNext.href = "#moduleCarousel";
 				carouselControlNext.role="button";
 				carouselControlNext.setAttribute('data-slide','next');
 
-				nextIcon.classList.add('carousel-control-next-icon');
+				nextIcon.classList.add('carousel-control-next-icon', "container-fluid");
 				nextIcon.setAttribute('aria-hidden', 'true');
 
 				carouselControlPrev.appendChild(prevIcon);
 				carouselControlNext.appendChild(nextIcon);
 
 				for (const element of selectedModules) {
-					let link = document.createElement('a')
-					let moduleCard = document.createElement('div');
+					let link = document.createElement('a');
 					let cardPicture = document.createElement('img');
 					let cardTitle =  document.createElement('div');
 
 					link.href = '/room/' + element['id'] + "/"
-					link.classList.add("col-lg-4", "col-md-6","col-sm-12", "container-fluid")
-
-					moduleCard.classList.add("card", "moduleCard", "rounded", "container-fluid");
+					link.classList.add("col-lg-4", "col-md-6","col-sm-12", "card", "moduleCard", "rounded", "container-fluid")link
 
 					cardPicture.classList.add("img-fluid", "rounded", "container-fluid");
 					cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";
@@ -195,10 +186,8 @@ function list_modules_by_type(socket, screen)
 					cardTitle.style.color = 'blue';
 					cardTitle.textContent = element["name"];
 
-					moduleCard.appendChild(cardPicture);
-					moduleCard.appendChild(cardTitle);
-
-					link.appendChild(moduleCard);
+					link.appendChild(cardPicture);
+					link.appendChild(cardTitle);
 
 					if(x <= maxModule - 1)
 					{
