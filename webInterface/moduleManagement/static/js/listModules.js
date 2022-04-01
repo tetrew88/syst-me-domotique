@@ -178,7 +178,7 @@ function list_modules_by_type(socket, screen)
 					let cardTitle =  document.createElement('div');
 
 					link.href = '/room/' + element['id'] + "/"
-					link.classList.add("col-lg-4", "col-md-6","col-sm-12", "card", "moduleCard", "rounded", "container-fluid")link
+					link.classList.add("col-lg-4", "col-md-6","col-sm-12", "card", "moduleCard", "rounded", "container-fluid")
 
 					cardPicture.classList.add("img-fluid", "rounded", "container-fluid");
 					cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";
