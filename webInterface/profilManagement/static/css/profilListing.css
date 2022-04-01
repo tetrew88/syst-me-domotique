@@ -19,6 +19,11 @@
 	max-height: 300px;
 }
 
+#guestCarousel
+{
+	margin: auto;
+}
+
 
 #inhabitantCarousel .carousel-control-prev-icon
 {
@@ -44,13 +49,21 @@
 {
 	#inhabitantsScreen
 	{
-		min-height: 250x;
+		min-height: 220px;
+	}
+	#guestsScreen
+	{
+		min-height: 220px;
 	}
 	
 }
 @media all and (max-height: 650px)
 {
 	#inhabitantsScreen
+	{
+		min-height: 200px;
+	}
+	#guestsScreen
 	{
 		min-height: 200px;
 	}
@@ -62,6 +75,10 @@
 	{
 		min-height: 80px;
 	}
+	#guestsScreen
+	{
+		min-height: 80px;
+	}
 }
 
 @media all and (max-width: 600px)
@@ -70,11 +87,19 @@
 	{
 		min-height: 150px;
 	}
+	#guestsScreen
+	{
+		min-height: 150px;
+	}
 }
 
 @media all and (max-width: 500px)
 {
 	#inhabitantsScreen
+	{
+		min-height: 80px;
+	}
+	#guestsScreen
 	{
 		min-height: 80px;
 	}
