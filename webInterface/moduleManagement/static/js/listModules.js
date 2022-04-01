@@ -72,14 +72,14 @@ function list_modules_by_type(socket, screen)
 			}
 
 
-			moduleSection.classList.add('row', 'moduleSection', 'container-fluid');
+			moduleSection.classList.add('row', 'moduleSection');
 			content.classList.add('col');
 
 			bannerSection.classList.add('row', 'container-fluid');
 
 			title.classList.add("text-center", "col");
 
-			listSection.classList.add("row", 'container-fluid');
+			listSection.classList.add("row");
 			listMargin1.classList.add('col-3');
 			listMargin2.classList.add('col-3');
 
