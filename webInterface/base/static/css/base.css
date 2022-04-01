@@ -152,6 +152,23 @@ footer
 	background: #000000;
 }
 
+/*buttons*/
+.personalButton
+{
+  background-color: white;
+  border: none;
+}
+
+.less
+{
+  box-shadow: inset 0px 0px 10px 9px rgba(255, 0, 0, 0.5);
+}
+
+.more
+{
+  box-shadow: inset 0px 0px 10px 9px rgba(0, 255, 0, 0.5);
+}
+
 
 /*responsive*/
 @media all and (max-width: 1199px) and (min-width:  600px)
