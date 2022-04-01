@@ -14,8 +14,8 @@
 {
 	background-color: white;
 
-	max-height: 200px;
-	min-height: 200px;
+	max-height: 250px;
+	min-height: 250px;
 }
 
 
@@ -33,7 +33,7 @@
 
 @media all and (max-height: 1200px)
 {
-	#screen
+	.screen
 	{
 		min-height: 120px;
 	}
@@ -41,23 +41,15 @@
 }
 @media all and (max-height: 650px)
 {
-	#screen
+	.screen
 	{
 		min-height: 100px;
 	}
 }
 
-@media all and (max-height: 450px)
-{
-	#screen
-	{
-		min-height: 80px;
-	}
-}
-
 @media all and (max-width: 600px)
 {
-	#screen
+	.screen
 	{
 		min-height: 100px;
 	}
@@ -65,7 +57,7 @@
 
 @media all and (max-width: 500px)
 {
-	#screen
+	.screen
 	{
 		min-height: 80px;
 	}
