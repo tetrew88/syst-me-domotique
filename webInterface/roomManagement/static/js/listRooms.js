@@ -87,7 +87,7 @@ function list_rooms(socket, screen, theoricMaxRoom = 0)
 
 			carouselInner.classList.add("carousel-inner", "container-fluid");
 
-			carouselActiveItem.classList.add("carousel-item", "active", "container-fluid");
+			carouselActiveItem.classList.add("carousel-item", "active");
 
 			activeRow.classList.add('row')
 
@@ -120,11 +120,11 @@ function list_rooms(socket, screen, theoricMaxRoom = 0)
 				link.href = '/room/' + element['id'] + "/";
 				link.classList.add("col-lg-4", "col-md-6", "col-sm-12", "container-fluid")
 
-				roomCard.classList.add("card", "roomCard", "rounded", "container-fluid");
+				roomCard.classList.add("card", "roomCard", "rounded");
 
 				cardPicture.classList.add("img-fluid", "rounded", "container-fluid");
 				cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";
-				cardTitle.classList.add("card-title", "text-center", "container-fluid");
+				cardTitle.classList.add("card-title", "text-center");
 				cardTitle.style.color = 'blue';
 				cardTitle.textContent = element["name"];
 
