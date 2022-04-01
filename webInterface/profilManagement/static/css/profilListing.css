@@ -40,6 +40,14 @@
 	filter: invert(100%);
 }
 
+@media all and (max-height: 1200px)
+{
+	#inhabitantsScreen
+	{
+		min-height: 250x;
+	}
+	
+}
 @media all and (max-height: 650px)
 {
 	#inhabitantsScreen
