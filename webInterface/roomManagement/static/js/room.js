@@ -45,15 +45,6 @@ socket.on('post_room', data=>{
 
 })
 
-
-let moduleList = []
-socket.on('post_room_content', data=>{
-	if(data["roomId"] == roomId)
-	{
-		moduleList = data["data"];
-	}
-})
-
 function switch_light()
 {
 	bulbId = []
