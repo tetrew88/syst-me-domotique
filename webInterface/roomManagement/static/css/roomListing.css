@@ -12,12 +12,28 @@
 	margin: auto;
 }
 
+@media all and (max-height: 1200px)
+{
+	#roomsScreen
+	{
+		margin-top: 10vh;
+	}
+}
+
+@media all and (max-height: 900px)
+{
+	#roomsScreen
+	{
+		margin-top: 20vh;
+	}
+}
 
 @media all and (max-height: 600px)
 {
 	#roomsScreen
 	{
 		min-height: 200px;
+		margin-top: 30vh;
 	}
 }
 
@@ -26,6 +42,7 @@
 	#roomsScreen
 	{
 		min-height: 80px;
+		margin-top: 40vh;
 	}
 }
 
