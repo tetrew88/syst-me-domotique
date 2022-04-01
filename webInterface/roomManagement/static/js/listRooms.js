@@ -26,7 +26,7 @@ function list_rooms(socket, screen, theoricMaxRoom = 0)
 		}
 	}
 
-	if (window.matchMedia("(max-height: 600px)").matches)
+	if (window.matchMedia("(max-height: 800px)").matches)
 	{
 		maxRoom = 2
 	}
