@@ -112,10 +112,8 @@ function list_inhabitants(socket, screen)
 				cardTitle.style.color = 'blue';
 				cardTitle.textContent = element["profil"]["firstName"] +'\n'+ element["profil"]["lastName"];
 
-				profilCard.appendChild(cardPicture);
-				profilCard.appendChild(cardTitle);
-
-				link.appendChild(profilCard);
+				link.appendChild(cardPicture);
+				link.appendChild(cardTitle);
 
 				if(x <= maxProfil - 1)
 				{
