@@ -26,7 +26,7 @@ function list_rooms(socket, screen, theoricMaxRoom = 0)
 		}
 	}
 
-	if (window.matchMedia("(max-height: 800px)").matches)
+	if (window.matchMedia("(max-height: 900px)").matches)
 	{
 		maxRoom = 2
 	}
@@ -54,7 +54,7 @@ function list_rooms(socket, screen, theoricMaxRoom = 0)
 				cardPicture.classList.add("img-fluid", "rounded", "container-fluid", "tile");
 				cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";//element[2];
 
-				cardTitle.classList.add("card-title", "text-center", "container-fluid");
+				cardTitle.classList.add("card-title", "text-center");
 				cardTitle.style.color = 'blue';
 				cardTitle.textContent = element["name"]
 

@@ -33,25 +33,20 @@ function list_inhabitants(socket, screen)
 				console.log(element);
 
 				let link = document.createElement('a');
-				let profilCard = document.createElement('div');
 				let cardPicture = document.createElement('img');
 				let cardTitle =  document.createElement('div');                                                                                         
 
 				link.href = '/inhabitant/' + element['id'] + "/"
-				link.classList.add("col-lg-4", "col-md-6","col-sm-12", "container-fluid")
+				link.classList.add("col-lg-4", "col-md-6","col-sm-12", "card", "profilCard", "rounded", "container-fluid")
 
-				profilCard.classList.add("card", "profilCard", "rounded");
-
-				cardPicture.classList.add("img-fluid", "rounded-circle");
+				cardPicture.classList.add("img-fluid", "rounded-circle", "tile","container-fluid");
 				cardPicture.src = "/static/pictures/profil.png";
 				cardTitle.classList.add("card-title", "text-center");
 				cardTitle.style.color = 'blue';
 				cardTitle.textContent = element["profil"]["firstName"] +'\n'+ element["profil"]["lastName"];
 
-				profilCard.appendChild(cardPicture);
-				profilCard.appendChild(cardTitle);
-
-				link.appendChild(profilCard);
+				link.appendChild(cardPicture);
+				link.appendChild(cardTitle);
 				screen.appendChild(link);
 			}
 		}
@@ -73,30 +68,30 @@ function list_inhabitants(socket, screen)
 			let nextIcon = document.createElement('span');
 
 			carousel.id = 'inhabitantCarousel'
-			carousel.classList.add("carousel", "slide");
+			carousel.classList.add("carousel", "slide", 'container-fluid');
 			carousel.setAttribute('data-interval', "false");
 
-			carouselInner.classList.add("carousel-inner");
+			carouselInner.classList.add("carousel-inner", "container-fluid");
 
 			carouselActiveItem.classList.add("carousel-item", "active");
 
 			activeRow.classList.add('row')
 
-			carouselControlPrev.classList.add("carousel-control-prev");
+			carouselControlPrev.classList.add("carousel-control-prev", "container-fluid");
 			carouselControlPrev.href = "#inhabitantCarousel";
 			carouselControlPrev.role="button";
 			carouselControlPrev.setAttribute('data-slide',"prev");
 
-			prevIcon.classList.add('carousel-control-prev-icon');
+			prevIcon.classList.add('carousel-control-prev-icon', 'container-fluid');
 			prevIcon.setAttribute('aria-hidden', "true");
 			prevIcon.style.color = 'black';
 
-			carouselControlNext.classList.add("carousel-control-next");
+			carouselControlNext.classList.add("carousel-control-next", 'container-fluid');
 			carouselControlNext.href = "#inhabitantCarousel";
 			carouselControlNext.role="button";
 			carouselControlNext.setAttribute('data-slide','next');
 
-			nextIcon.classList.add('carousel-control-next-icon');
+			nextIcon.classList.add('carousel-control-next-icon', 'container-fluid');
 			nextIcon.setAttribute('aria-hidden', 'true');
 			nextIcon.style.color = 'black';
 
@@ -104,17 +99,14 @@ function list_inhabitants(socket, screen)
 			carouselControlNext.appendChild(nextIcon);
 
 			for (const element of inhabitantList) {
-				let link = document.createElement('a')
-				let profilCard = document.createElement('div');
+				let link = document.createElement('a');
 				let cardPicture = document.createElement('img');
 				let cardTitle =  document.createElement('div');
 
 				link.href = '/inhabitant/' + element['id'] + "/"
-				link.classList.add("col-lg-4", "col-md-6","col-sm-12", "container-fluid")
+				link.classList.add("col-lg-4", "col-md-6","col-sm-12", "card", "profilCard", "rounded", "container-fluid")
 
-				profilCard.classList.add("card", "profilCard", "rounded");
-
-				cardPicture.classList.add("img-fluid", "rounded-circle");
+				cardPicture.classList.add("img-fluid", "rounded-circle", "tile", "container-fluid");
 				cardPicture.src = "/static/pictures/profil.png";
 				cardTitle.classList.add("card-title", "text-center");
 				cardTitle.style.color = 'blue';
