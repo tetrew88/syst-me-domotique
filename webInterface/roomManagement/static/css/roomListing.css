@@ -16,7 +16,7 @@
 {
 	#roomsScreen
 	{
-		margin-top: 10vh;
+		margin-top: 20vh;
 	}
 }
 
@@ -24,7 +24,7 @@
 {
 	#roomsScreen
 	{
-		margin-top: 20vh;
+		margin-top: 10vh;
 	}
 }
 
@@ -33,7 +33,7 @@
 	#roomsScreen
 	{
 		min-height: 200px;
-		margin-top: 30vh;
+		margin-top: 20vh;
 	}
 }
 
@@ -42,7 +42,7 @@
 	#roomsScreen
 	{
 		min-height: 80px;
-		margin-top: 40vh;
+		margin-top: 0vh;
 	}
 }
 
