@@ -53,18 +53,17 @@ h2
 	height: 100%;
 }
 
-
 .shortcutsBar
 {
 
 	background-color: darkgray;
 }
 
-
 .nav-link
 {
 	margin: auto;
 }
+
 
 /*general*/
 
@@ -80,9 +79,16 @@ h2
   padding-top: 5%;
   padding-bottom: 5%;
 
+  margin-top: 2%;
+  margin-bottom: 2%;
+
+  margin: auto;
+
   box-shadow: inset 0px 0px 10px 9px rgba(0, 0, 255, 0.5);
 }
 
+
+/*cards*/
 .roomCard
 {
   background-color: black;
@@ -105,6 +111,7 @@ h2
 
   border: none;
 }
+
 
 /*footer*/
 footer

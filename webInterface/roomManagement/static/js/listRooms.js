@@ -47,12 +47,12 @@ function list_rooms(socket, screen, theoricMaxRoom = 0)
 				link.href = '/room/' + element['id'] + "/";
 				link.classList.add("col-lg-4", "col-md-6","col-sm-12", "container-fluid")
 
-				roomCard.classList.add("card", "roomCard", "rounded");
+				roomCard.classList.add("card", "roomCard", "rounded", "container-fluid");
 
 				cardPicture.classList.add("img-fluid", "rounded", "container-fluid");
 				cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";//element[2];
 
-				cardTitle.classList.add("card-title", "text-center");
+				cardTitle.classList.add("card-title", "text-center", "container-fluid");
 				cardTitle.style.color = 'blue';
 				cardTitle.textContent = element["name"]
 
@@ -82,29 +82,29 @@ function list_rooms(socket, screen, theoricMaxRoom = 0)
 			let nextIcon = document.createElement('span');
 
 			carousel.id = 'roomCarousel'
-			carousel.classList.add("carousel", "slide");
+			carousel.classList.add("carousel", "slide", "container-fluid");
 			carousel.setAttribute('data-interval', "false");
 
-			carouselInner.classList.add("carousel-inner");
+			carouselInner.classList.add("carousel-inner", "container-fluid");
 
-			carouselActiveItem.classList.add("carousel-item", "active");
+			carouselActiveItem.classList.add("carousel-item", "active", "container-fluid");
 
 			activeRow.classList.add('row')
 
-			carouselControlPrev.classList.add("carousel-control-prev");
+			carouselControlPrev.classList.add("carousel-control-prev", "container-fluid");
 			carouselControlPrev.href = "#roomCarousel";
 			carouselControlPrev.role="button";
 			carouselControlPrev.setAttribute('data-slide',"prev");
 
-			prevIcon.classList.add('carousel-control-prev-icon');
+			prevIcon.classList.add('carousel-control-prev-icon', "container-fluid");
 			prevIcon.setAttribute('aria-hidden', "true");
 
-			carouselControlNext.classList.add("carousel-control-next");
+			carouselControlNext.classList.add("carousel-control-next", "container-fluid");
 			carouselControlNext.href = "#roomCarousel";
 			carouselControlNext.role="button";
 			carouselControlNext.setAttribute('data-slide','next');
 
-			nextIcon.classList.add('carousel-control-next-icon');
+			nextIcon.classList.add('carousel-control-next-icon', "container-fluid");
 			nextIcon.setAttribute('aria-hidden', 'true');
 
 			carouselControlPrev.appendChild(prevIcon);
@@ -120,11 +120,11 @@ function list_rooms(socket, screen, theoricMaxRoom = 0)
 				link.href = '/room/' + element['id'] + "/";
 				link.classList.add("col-lg-4", "col-md-6", "col-sm-12", "container-fluid")
 
-				roomCard.classList.add("card", "roomCard", "rounded");
+				roomCard.classList.add("card", "roomCard", "rounded", "container-fluid");
 
 				cardPicture.classList.add("img-fluid", "rounded", "container-fluid");
 				cardPicture.src = "/static/pictures/" + element['type'] + ".jpeg";
-				cardTitle.classList.add("card-title", "text-center");
+				cardTitle.classList.add("card-title", "text-center", "container-fluid");
 				cardTitle.style.color = 'blue';
 				cardTitle.textContent = element["name"];
 
