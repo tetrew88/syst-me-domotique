@@ -86,6 +86,8 @@ async function add_module()
 		let message = document.createElement("h2");
 
 		notif.classList.add("row", "text-center");
+		message.classList.add("alertNotif");
+		
 		message.textContent = 'Erreur';
 
 		notif.appendChild(message);
