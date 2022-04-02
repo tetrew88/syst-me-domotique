@@ -137,8 +137,8 @@ class Home:
     def add_room(self, roomName, roomType):
         self.homeDatabase.add_room(roomName, roomType)
 
-    def add_inhabitant(self, profil):
-        self.homeDatabase.add_inhabitant(profil)
+    def add_inhabitant(self, firstName, lastName):
+        self.homeDatabase.add_inhabitant(firstName, newLastName)
 
     def add_guest(self, profil):
         self.homeDatabase.add_guest(profil)

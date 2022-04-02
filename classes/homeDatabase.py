@@ -171,9 +171,9 @@ class HomeDatabase:
 
         return self.db_cursor.lastrowid
 
-    def add_profil(self, profil):
+    def add_profil(self, firstName, lastName):
         request = "INSERT INTO Profils(first_name, last_name) VALUES\
-                ('{}', '{}')".format(profil.firstName, profil.lastName)
+                ('{}', '{}')".format(firstName, lastName)
 
         self.db_cursor.execute(request)
         self.commit_change()
@@ -183,8 +183,8 @@ class HomeDatabase:
     def add_event(self, event):
         pass
 
-    def add_inhabitant(self, profil):
-        profilId = self.add_profil(profil)
+    def add_inhabitant(self, firstName, lastName):
+        profilId = self.add_profil(firstName, lastName)
 
         request = "INSERT INTO Inhabitants(fk_profil_id) VALUES\
                 ({})".format(profilId)

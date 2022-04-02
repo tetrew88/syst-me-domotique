@@ -91,8 +91,8 @@ class HomeAutomationSystem:
     def add_home_room(self, roomName , roomType):
         self.home.add_room(roomName, roomType)
 
-    def add_home_inhabitant(self, profil):
-        self.home.add_inhabitant(profil)
+    def add_home_inhabitant(self, firstName, lastName):
+        self.home.add_inhabitant(firstName, lastName)
 
     def add_home_guest(self, profil):
         self.home.add_guest(profil)
