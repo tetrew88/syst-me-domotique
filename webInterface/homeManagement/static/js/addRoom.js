@@ -36,7 +36,7 @@ async function add_room()
 
 	for (const element of newRoomList)
 	{
-		if(element["name"] == data['moduleName'])
+		if(element["name"] == data['roomName'])
 		{
 			succes = true;
 			break;
