@@ -7,7 +7,8 @@ async function add_room()
 	let typeInput = document.getElementById("roomType");
 
 	let newRoomList = [];
-	
+
+	let data = {};
 	let succes = false
 
 	data['roomName'] = nameInput.value;
@@ -21,8 +22,8 @@ async function add_room()
 	await pause(5000);
 
 	socket.emit('get_rooms_list', '');
-	socket.on('post_rooms_list', data=>{
-		newRoomList = data["data"];
+	socket.on('post_rooms_list', roomsData=>{
+		newRoomList = roomsData["data"];
 	})
 
 	pageContent.style.display = "block";
