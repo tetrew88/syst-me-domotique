@@ -51,6 +51,8 @@ async function add_module()
 		newModuleList = data["data"];
 	})
 
+	await pause(2500);
+
 	pageContent.style.display = "block";
 	loadingScreen.style.display = "none";
 
@@ -73,17 +75,23 @@ async function add_module()
 	}
 	else
 	{
-		let notif = document.createElement('div');
-		let message = document.createElement("h2");
+		if(!document.getElementById('notif'))
+		{
+  			// on ajoute la div
+			let notif = document.createElement('div');
+			let message = document.createElement("h2");
 
-		notif.classList.add("row", "text-center");
-		message.classList.add("alertNotif");
-		
-		message.textContent = 'Erreur';
+			notif.classList.add("row", "text-center");
+			notif.id = "notif"
 
-		notif.appendChild(message);
+			message.classList.add("alertNotif");
+			
+			message.textContent = 'Erreur';
 
-		pageContent.appendChild(notif);
+			notif.appendChild(message);
+
+			pageContent.appendChild(notif);
+		}
 	}
 
 

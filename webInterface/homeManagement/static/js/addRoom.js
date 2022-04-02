@@ -30,21 +30,15 @@ async function add_room()
 
 	pageContent.style.display = "block";
 	loadingScreen.style.display = "none";
-
-	console.log(newRoomList)
-	console.log(data['roomName'])
-
 	for (const element of newRoomList)
 	{
 		if(element["name"] == data['roomName'])
 		{
-			console.log("yes")
 			succes = true;
 			break;
 		}
 		else
 		{
-			console.log('argh')
 			succes = false
 		}
 	}
@@ -56,17 +50,21 @@ async function add_room()
 	}
 	else
 	{
-		let notif = document.createElement('div');
-		let message = document.createElement("h2");
+		if(!document.getElementById('notif'))
+		{
+			let notif = document.createElement('div');
+			let message = document.createElement("h2");
 
-		notif.classList.add("row", "text-center");
-		message.classList.add("alertNotif");
-		
-		message.textContent = 'Erreur';
+			notif.classList.add("row", "text-center");
+			notif.id = "notif";
+			message.classList.add("alertNotif");
+			
+			message.textContent = 'Erreur';
 
-		notif.appendChild(message);
+			notif.appendChild(message);
 
-		pageContent.appendChild(notif);
+			pageContent.appendChild(notif);
+		}
 	}
 
 
