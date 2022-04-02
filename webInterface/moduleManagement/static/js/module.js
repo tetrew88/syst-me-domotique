@@ -396,7 +396,6 @@ socket.on('post_module', data=>{
 		{
 			
 			moduleInformationZone.appendChild(intensitySection);
-			}
 		}
 
 		productInformationZone.appendChild(idSection);
