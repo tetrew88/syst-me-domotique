@@ -29,7 +29,7 @@ from profilManagement.views.profil import profil
 from moduleManagement.views.moduleListing import module_listing
 
 from homeManagement.views.homeManagement import home_management
-from homeManagement.views.add_room import add_room
+from homeManagement.views.addRoom import add_room
 
 from homeAutomationNetworkManagement.views.homeAutomationNetworkManagement import home_automation_network_management
 from homeAutomationNetworkManagement.views.addModule import add_module
