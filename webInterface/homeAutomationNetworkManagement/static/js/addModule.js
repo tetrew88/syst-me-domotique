@@ -31,16 +31,10 @@ async function add_module()
 	let nameInput = document.getElementById("moduleName");
 	let locationInput = document.getElementById("moduleEmplacement");
 
-	let previousModuleList = [];
 	let newModuleList = [];
 
 	let data = {};
 	let succes = false
-
-	socket.emit('get_modules_list', '');
-	socket.on('post_modules_list', data=>{
-		previousModuleList = data["data"];
-	})
 
 	data['moduleName'] = nameInput.value;
 	data['roomId'] = locationInput.value;
@@ -60,20 +54,17 @@ async function add_module()
 	pageContent.style.display = "block";
 	loadingScreen.style.display = "none";
 
-	if(newModuleList.length > previousModuleList.length)
+	for (const element of newModuleList)
 	{
-		for (const element of newModuleList)
+		if(element["name"] == data['moduleName'])
 		{
-			if(element["name"] == data['moduleName'])
-			{
-				succes = true;
-				break;
-			}
+			succes = true;
+			break;
 		}
-	}
-	else
-	{
-		succes = false
+		else
+		{
+			succes = false
+		}
 	}
 
 	if(succes == true)

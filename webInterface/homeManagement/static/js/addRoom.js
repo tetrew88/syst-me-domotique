@@ -11,16 +11,10 @@ async function add_room()
 	let nameInput = document.getElementById("roomName");
 	let typeInput = document.getElementById("roomType");
 
-	let previousRoomList = [];
 	let newRoomList = [];
 
 	let data = {};
 	let succes = false
-
-	socket.emit('get_rooms_list', '');
-	socket.on('post_rooms_list', data=>{
-		previousRoomList = data["data"];
-	})
 
 	data['roomName'] = nameInput.value;
 	data['roomType'] = typeInput.value;
@@ -40,21 +34,19 @@ async function add_room()
 	pageContent.style.display = "block";
 	loadingScreen.style.display = "none";
 
-	if(newRoomList.length > previousRoomList.length)
+	for (const element of newRoomList)
 	{
-		for (const element of newRoomList)
+		if(element["name"] == data['moduleName'])
 		{
-			if(element["name"] == data['moduleName'])
-			{
-				succes = true;
-				break;
-			}
+			succes = true;
+			break;
+		}
+		else
+		{
+			succes = false
 		}
 	}
-	else
-	{
-		succes = false
-	}
+
 
 	if(succes == true)
 	{
