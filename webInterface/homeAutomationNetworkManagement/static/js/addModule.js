@@ -28,7 +28,7 @@ socket.on('post_rooms_list', data=>{
 })
 
 
-function add_module()
+async function add_module()
 {
 	let nameInput = document.getElementById("moduleName");
 	let locationInput = document.getElementById("moduleEmplacement");
