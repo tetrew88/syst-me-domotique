@@ -54,7 +54,7 @@ async function add_module()
 
 	socket.emit('get_modules_list', '');
 	socket.on('post_modules_list', data=>{
-		previousModuleList = data["data"];
+		newModuleList = data["data"];
 	})
 
 	pageContent.style.display = "block";

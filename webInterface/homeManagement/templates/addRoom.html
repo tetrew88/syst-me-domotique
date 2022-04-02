@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/addModule.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<div id= "pageContent" class="row">
+  <div class="col">
+
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <div class="row">
+          <h2>Ajout Pièce</h2>
+        </div>
+      </div>
+      <div class="col-2"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-1 col-md-2 col-lg-3"></div>
+      <div class="col-10 col-md-8 col-lg-6">
+        <div class="row screen">
+          <div class="col">
+
+            <div class="row nameSection section">
+              <div class="col-5 label">
+                Nom:
+              </div>
+              <input type="text" id="roomName" name="roomName" value="" class="col-7"/>
+            </div>
+
+            <div class="row typeSection section">
+              <div class="col-5 label">
+                type:
+              </div>
+              <select id="roomType" value="" class="col-7">
+                <option value="">--choisissez une option--</option>
+                <option value="bathroom">Salle de bain</option>
+                <option value="bedroom">Chambre</option>
+                <option value="kitchen">Cuisine</option>
+                <option value="livingroom">Salon</option>
+                <option value="corridor">couloir</option>
+              </select>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-1 col-md-2 col-lg-3"></div>
+    </div>
+
+    <div class="row buttonZone">
+      <div class="col-2 col-md-3 col-lg-4"></div>
+      <button class="col-8 col-md-6 col-lg-4 personalButton" onclick="add_room();">Ajouter</button>
+      <div class="col-2 col-md-3 col-lg-4"></div>
+    </div>
+
+  </div>
+</div>
+
+<div id="loadingScreen" style="display: none;">
+  <div id='loader' class="loader"></div>
+  <div class="row">
+    <h2 class="text-center">Ajout en cours</h2>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block jsScript %}
+  <script src="{% static 'js/addModule.js' %}"></script>
+{% endblock %}

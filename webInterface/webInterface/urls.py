@@ -29,6 +29,7 @@ from profilManagement.views.profil import profil
 from moduleManagement.views.moduleListing import module_listing
 
 from homeManagement.views.homeManagement import home_management
+from homeManagement.views.add_room import add_room
 
 from homeAutomationNetworkManagement.views.homeAutomationNetworkManagement import home_automation_network_management
 from homeAutomationNetworkManagement.views.addModule import add_module
@@ -50,4 +51,5 @@ urlpatterns = [
     path('inhabitant/<int:profilId>/', profil),
     path('guest/<int:profilId>/', profil),
     path('addModule/', add_module),
+    path("addRoom/", add_room),
 ]
