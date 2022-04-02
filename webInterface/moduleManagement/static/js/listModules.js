@@ -177,7 +177,7 @@ function list_modules_by_type(socket, screen)
 					let cardPicture = document.createElement('img');
 					let cardTitle =  document.createElement('div');
 
-					link.href = '/room/' + element['id'] + "/"
+					link.href = '/module/' + element['id'] + "/"
 					link.classList.add("col-lg-4", "col-md-6","col-sm-12", "card", "moduleCard", "rounded", "container-fluid")
 
 					cardPicture.classList.add("img-fluid", "rounded", "container-fluid");
@@ -371,7 +371,7 @@ function list_modules(socket, screen)
 				let cardPicture = document.createElement('img');
 				let cardTitle =  document.createElement('div');
 
-				link.href = '/room/' + element['id'] + "/"
+				link.href = '/module/' + element['id'] + "/"
 				link.classList.add("col-lg-4", "col-md-6","col-sm-12", "card", "moduleCard", "rounded","container-fluid")
 
 				cardPicture.classList.add("img-fluid", "rounded", "container-fluid");

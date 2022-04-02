@@ -108,7 +108,7 @@ function list_room_content(socket, screen, roomId)
 					let cardPicture = document.createElement('img');
 					let cardTitle =  document.createElement('div');
 
-					link.href = '/room/' + element['id'] + "/"
+					link.href = '/module/' + element['id'] + "/"
 					link.classList.add("col-lg-4", "col-md-6","col-sm-12", "card", "moduleCard", "rounded", "container-fluid")
 
 					cardPicture.classList.add("img-fluid", "rounded", "container-fluid");
