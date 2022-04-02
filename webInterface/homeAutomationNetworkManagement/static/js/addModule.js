@@ -70,7 +70,7 @@ async function add_module()
 			}
 		}
 	}
-	else:
+	else
 	{
 		succes = false
 	}
