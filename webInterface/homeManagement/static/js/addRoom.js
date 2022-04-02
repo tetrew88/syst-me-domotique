@@ -24,6 +24,7 @@ async function add_room()
 	socket.emit('get_rooms_list', '');
 	socket.on('post_rooms_list', roomsData=>{
 		newRoomList = roomsData["data"];
+		console.log(roomsData["data"]);
 	})
 
 	pageContent.style.display = "block";
