@@ -53,12 +53,25 @@ h3
 	box-shadow: inset 0px 0px 10px 9px rgba(255, 0, 0, 0.5);
 	background-color: black;
 	margin: auto;
+
+	min-width: fit-content;
 }
 
 .indicator
 {
 	margin: auto;
 }
+
+.temperature
+{
+	margin: auto;
+}
+
+.luminosity
+{
+	margin: auto;
+}
+
 
 #moduleCarousel .carousel-control-prev-icon
 {

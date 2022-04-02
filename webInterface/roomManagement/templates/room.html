@@ -11,7 +11,7 @@
   <div id="pageContent">
     <div class="col">
 
-      <div class="row container-fluid">
+      <div class="row container-fluid" style="flex-wrap: nowrap;">
         <div class="col-1"></div>
         <div class="col-1">
           <button id="lightButton" type="button" class="btn btn-primary btn-lg mb-2" onclick="switch_light();">
@@ -22,12 +22,12 @@
         <div class="col-8"></div>
 
         <div class="col-1 indicatorZone">
-          <div id='temperature' class="row indicator text-center">
-
+          <div class="row indicator text-center">
+              <p id='temperature'></p>
           </div>
 
-          <div id='luminosity' class="row indicator text-center">
-
+          <div class="row indicator text-center">
+            <p id='luminosity'></p>
           </div>
 
         </div>
