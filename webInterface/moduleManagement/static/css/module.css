@@ -15,6 +15,10 @@
 .screen
 {
 	background-color: black;
+	margin-bottom: 5%;
+
+	min-height: 500px;
+  	max-height: 500px;
 }
 
 .informationSection
