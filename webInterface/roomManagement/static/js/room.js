@@ -45,6 +45,12 @@ socket.on('post_room', data=>{
 
 })
 
+let moduleList = [];
+socket.on('post_room', data=>{
+	data = data["content"];
+})
+
+
 function switch_light()
 {
 	bulbId = []
