@@ -44,11 +44,11 @@ function add_module()
 		previousModuleList = data["data"];
 	})
 
-
 	data['moduleName'] = nameInput.value;
 	data['roomId'] = locationInput.value;
 
 	socket.emit('add_module', data);
+	
 	pageContent.style.display = "none";
 	loadingScreen.style.display = "block";
 
@@ -87,6 +87,9 @@ function add_module()
 		notif.textContent = 'Erreur';
 
 		document.location.href = "/addModule"
+
+		pageContent.style.display = "block";
+		loadingScreen.style.display = "none";
 
 		pageContent.appendChild(notif);
 	}
