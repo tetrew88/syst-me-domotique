@@ -59,6 +59,9 @@ async function add_module()
 		previousModuleList = data["data"];
 	})
 
+	pageContent.style.display = "block";
+	loadingScreen.style.display = "none";
+
 	if(newModuleList.length > previousModuleList.length)
 	{
 		for (const element of newModuleList)
@@ -87,9 +90,6 @@ async function add_module()
 		notif.textContent = 'Erreur';
 
 		document.location.href = "/addModule"
-
-		pageContent.style.display = "block";
-		loadingScreen.style.display = "none";
 
 		pageContent.appendChild(notif);
 	}
