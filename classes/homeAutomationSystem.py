@@ -94,8 +94,8 @@ class HomeAutomationSystem:
     def add_home_inhabitant(self, firstName, lastName):
         self.home.add_inhabitant(firstName, lastName)
 
-    def add_home_guest(self, profil):
-        self.home.add_guest(profil)
+    def add_home_guest(self, firstName, lastName):
+        self.home.add_guest(firstName, lastName)
 
     def add_home_automation_module(self, name, location):
         self.home.add_automation_module(name, location)

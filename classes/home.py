@@ -140,8 +140,8 @@ class Home:
     def add_inhabitant(self, firstName, lastName):
         self.homeDatabase.add_inhabitant(firstName, lastName)
 
-    def add_guest(self, profil):
-        self.homeDatabase.add_guest(profil)
+    def add_guest(self, firstName, lastName):
+        self.homeDatabase.add_guest(firstName, lastName)
 
     def add_automation_module(self, name, location):
         self.homeAutomationNetwork.add_module(name, location)

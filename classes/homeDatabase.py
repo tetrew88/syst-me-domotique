@@ -194,8 +194,8 @@ class HomeDatabase:
 
         return self.db_cursor.lastrowid
 
-    def add_guest(self, profil):
-        profilId = self.add_profil(profil)
+    def add_guest(self, firstName, lastName):
+        profilId = self.add_profil(firstName, lastName)
 
         request = "INSERT INTO Guests(fk_profil_id) VALUES\
                         ({})".format(profilId)

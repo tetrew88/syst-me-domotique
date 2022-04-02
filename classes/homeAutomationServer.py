@@ -295,5 +295,10 @@ class HomeAutomationServer(socketio.Namespace):
 		HomeAutomationServer.homeAutomationSystem.add_home_inhabitant(data["firstName"], data["lastName"])
 		print(data)
 
+	@socketIoServer.event(namespace='/HomeAutomationServer')
+	def add_guest(sid, data):
+		HomeAutomationServer.homeAutomationSystem.add_home_guest(data["firstName"], data["lastName"])
+		print(data)
+
 
 socketIoServer.register_namespace(HomeAutomationServer())

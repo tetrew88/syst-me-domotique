@@ -31,6 +31,7 @@ from moduleManagement.views.moduleListing import module_listing
 from homeManagement.views.homeManagement import home_management
 from homeManagement.views.addRoom import add_room
 from homeManagement.views.addInhabitant import add_inhabitant
+from homeManagement.views.addGuest import add_guest
 
 from homeAutomationNetworkManagement.views.homeAutomationNetworkManagement import home_automation_network_management
 from homeAutomationNetworkManagement.views.addModule import add_module
@@ -54,4 +55,5 @@ urlpatterns = [
     path('addModule/', add_module),
     path("addRoom/", add_room),
     path("addInhabitant/", add_inhabitant),
+    path("addGuest/", add_guest),
 ]
