@@ -87,8 +87,6 @@ async function add_module()
 		notif.classList.add("row", "text-center");
 		notif.textContent = 'Erreur';
 
-		document.location.href = "/addModule"
-
 		pageContent.appendChild(notif);
 	}
 
