@@ -1,14 +1,7 @@
-.inputSection
+.screen
 {
-	background-color: white;
-	padding: 5%;
-	margin-top: 5%;
-
-	border: solid;
-	border-color: black;
+	background-color: black;
 }
-
-
 .locationSection
 {
 	padding: 2%;
@@ -19,37 +12,10 @@
 	padding: 2%;
 }
 
-
-h2
+.personalButton
 {
-	margin: auto;
-}
+  background-color: white;
+  border: none;
 
-.buttonZone
-{
-	margin-top: 2%;
-}
-
-@media all and (max-width: 1199px) and (min-width:  600px)
-{
-    #pageContent
-	{
-		font-size: medium;
-	}
-}
-
-@media all and (max-width: 599px) and (min-width:  450px)
-{
-    #pageContent
-	{
-		font-size: x-small;
-	}
-}
-
-@media all and (max-width: 449px)
-{
-    #pageContent
-	{
-		font-size: xx-small;
-	}
+  box-shadow: inset 0px 0px 10px 9px rgba(0, 255, 0, 0.5);
 }
