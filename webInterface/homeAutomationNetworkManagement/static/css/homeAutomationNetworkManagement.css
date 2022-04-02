@@ -26,19 +26,6 @@
 
 #modulesScreen
 {
-	margin: auto;
-	background-color: white;
-	opacity: 80%;
-
-	margin-top: 5%;
-	margin-bottom: 5%;
-
-	padding: 5%;
-
-	padding-top: 5%;
-	padding-bottom: 5%;
-
-	min-height: 2em;
 
 	box-shadow: inset 0px 0px 10px 9px rgba(0, 0, 255, 0.5);
 }

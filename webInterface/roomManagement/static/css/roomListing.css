@@ -1,8 +1,6 @@
 #roomsScreen
 {
 	background-color: black;
-	max-height: 500px;
-	min-height: 500px;
 
 	margin-top: 10vh;
 }
@@ -34,39 +32,23 @@
 		margin-top: 10vh;
 	}
 }
-
 @media all and (max-height: 650px)
 {
 	#roomsScreen
 	{
-		min-height: 200px;
 		margin-top: 20vh;
 	}
 }
-
 @media all and (max-height: 450px)
 {
 	#roomsScreen
 	{
-		min-height: 80px;
 		margin-top: 0vh;
-	}
-}
-
-@media all and (max-width: 600px)
-{
-	#roomsScreen
-	{
-		min-height: 200px;
 	}
 }
 
 @media all and (max-width: 500px)
 {
-	#roomsScreen
-	{
-		min-height: 80px;
-	}
 	#roomsScreen
 	{
 		margin-top: 20vh;

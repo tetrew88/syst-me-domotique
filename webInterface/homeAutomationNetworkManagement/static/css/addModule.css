@@ -3,11 +3,8 @@
 	background-color: black;
 
 	margin-top: 5%;
-
-	min-height: 190px;
-	max-height: 190px;
-
 }
+
 .locationSection
 {
 	padding: 2%;
@@ -29,13 +26,4 @@
   border: none;
 
   box-shadow: inset 0px 0px 10px 9px rgba(0, 255, 0, 0.5);
-}
-
-@media all and (max-width: 850px)
-{
-	.screen
-	{
-		min-height: 110px;
-		max-height: 110px;
-	}
 }

@@ -1,11 +1,7 @@
 #inhabitantsScreen
 {
 	background-color: white;
-
-	min-height: 300px;
-	max-height: 300px;
 }
-
 #inhabitantCarousel
 {
 	margin: auto;
@@ -14,9 +10,6 @@
 #guestsScreen
 {
 	background-color: white;
-
-	min-height: 300px;
-	max-height: 300px;
 }
 
 #guestCarousel
@@ -43,64 +36,4 @@
 #guestCarousel .carousel-control-next-icon
 {
 	filter: invert(100%);
-}
-
-@media all and (max-height: 1200px)
-{
-	#inhabitantsScreen
-	{
-		min-height: 220px;
-	}
-	#guestsScreen
-	{
-		min-height: 220px;
-	}
-	
-}
-@media all and (max-height: 650px)
-{
-	#inhabitantsScreen
-	{
-		min-height: 200px;
-	}
-	#guestsScreen
-	{
-		min-height: 200px;
-	}
-}
-
-@media all and (max-height: 450px)
-{
-	#inhabitantsScreen
-	{
-		min-height: 80px;
-	}
-	#guestsScreen
-	{
-		min-height: 80px;
-	}
-}
-
-@media all and (max-width: 600px)
-{
-	#inhabitantsScreen
-	{
-		min-height: 150px;
-	}
-	#guestsScreen
-	{
-		min-height: 150px;
-	}
-}
-
-@media all and (max-width: 500px)
-{
-	#inhabitantsScreen
-	{
-		min-height: 80px;
-	}
-	#guestsScreen
-	{
-		min-height: 80px;
-	}
 }

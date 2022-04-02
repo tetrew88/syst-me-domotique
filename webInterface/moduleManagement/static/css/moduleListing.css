@@ -13,9 +13,6 @@
 .screen
 {
 	background-color: white;
-
-	max-height: 280px;
-	min-height: 280px;
 }
 
 
@@ -28,37 +25,4 @@
 #moduleCarousel .carousel-control-next-icon
 {
 	filter: invert(100%);
-}
-
-
-@media all and (max-height: 1200px)
-{
-	.screen
-	{
-		min-height: 120px;
-	}
-	
-}
-@media all and (max-height: 650px)
-{
-	.screen
-	{
-		min-height: 100px;
-	}
-}
-
-@media all and (max-width: 600px)
-{
-	.screen
-	{
-		min-height: 100px;
-	}
-}
-
-@media all and (max-width: 500px)
-{
-	.screen
-	{
-		min-height: 80px;
-	}
 }
