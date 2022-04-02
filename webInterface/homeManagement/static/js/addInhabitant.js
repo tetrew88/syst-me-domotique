@@ -1,7 +1,7 @@
 let loadingScreen = document.getElementById("loadingScreen");
 let pageContent = document.getElementById("pageContent");
 
-async function add_room()
+async function add_inhabitant()
 {
 	let firstNameInput = document.getElementById("firstName");
 	let lastNameInput = document.getElementById("lastName");
