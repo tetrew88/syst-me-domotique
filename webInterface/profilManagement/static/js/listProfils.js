@@ -36,7 +36,7 @@ function list_inhabitants(socket, screen)
 				let cardPicture = document.createElement('img');
 				let cardTitle =  document.createElement('div');                                                                                         
 
-				link.href = '/inhabitant/' + element['id'] + "/"
+				link.href = '/inhabitant/' + element['profil']["id"] + "/"
 				link.classList.add("col-lg-4", "col-md-6","col-sm-12", "card", "profilCard", "rounded", "container-fluid")
 
 				cardPicture.classList.add("img-fluid", "rounded-circle", "tile","container-fluid");
@@ -103,7 +103,7 @@ function list_inhabitants(socket, screen)
 				let cardPicture = document.createElement('img');
 				let cardTitle =  document.createElement('div');
 
-				link.href = '/inhabitant/' + element['id'] + "/"
+				link.href = '/inhabitant/' + element['profil']["id"] + "/"
 				link.classList.add("col-lg-4", "col-md-6","col-sm-12", "card", "profilCard", "rounded", "container-fluid")
 
 				cardPicture.classList.add("img-fluid", "rounded-circle", "tile", "container-fluid");
