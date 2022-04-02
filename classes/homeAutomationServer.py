@@ -287,7 +287,7 @@ class HomeAutomationServer(socketio.Namespace):
 
 	@socketIoServer.event(namespace='/HomeAutomationServer')
 	def add_room(sid, data):
-		HomeAutomationServer.homeAutomationSystem.add_home_automation_module(data["roomName"], data["roomType"])
+		HomeAutomationServer.homeAutomationSystem.add_home_room(data["roomName"], data["roomType"])
 		print(data)
 
 
