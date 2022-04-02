@@ -17,8 +17,8 @@
 	background-color: black;
 	margin-bottom: 5%;
 
-	min-height: 300px;
-  	max-height: 300px;
+	min-height: auto;
+  	max-height: auto;
 }
 
 .informationSection
