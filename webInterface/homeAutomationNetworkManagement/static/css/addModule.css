@@ -1,6 +1,12 @@
 .screen
 {
 	background-color: black;
+
+	margin-top: 5%;
+
+	min-height: 190px;
+	min-height: 190px;
+
 }
 .locationSection
 {
