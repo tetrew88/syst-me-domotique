@@ -1,8 +1,6 @@
 let loadingScreen = document.getElementById("loadingScreen");
 let pageContent = document.getElementById("pageContent");
 
-loadingScreen.style.display = "none";
-
 socket.emit('get_rooms_list', '')
 socket.on('post_rooms_list', data=>{
 	let locationInput = document.getElementById("moduleEmplacement");
