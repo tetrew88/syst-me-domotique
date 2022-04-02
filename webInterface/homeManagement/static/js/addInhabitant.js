@@ -30,6 +30,9 @@ async function add_inhabitant()
 
 	pageContent.style.display = "block";
 	loadingScreen.style.display = "none";
+
+	console.log(newInhabitantList);
+	console.log(data)
 	for (const element of newInhabitantList)
 	{
 		if(element["firstName"] == data['firstName'])
