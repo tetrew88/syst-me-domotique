@@ -252,6 +252,9 @@ socket.on('post_module', data=>{
 
 		}
 
+
+		//product information
+
 		//id section
 		idSection.classList.add('row','informationSection');
 
@@ -275,9 +278,6 @@ socket.on('post_module', data=>{
 
 		typeSection.appendChild(typeLabel);
 		typeSection.appendChild(typeData);
-
-
-		//product information
 
 		//manufacturerNameSection
 		manufacturerNameSection.classList.add('row', 'informationSection');
@@ -394,9 +394,8 @@ socket.on('post_module', data=>{
 			}
 		}
 
-		moduleInformationZone.appendChild(idSection);
-		moduleInformationZone.appendChild(typeSection);
-
+		productInformationZone.appendChild(idSection);
+		productInformationZone.appendChild(typeSection);
 		productInformationZone.appendChild(manufacturerNameSection);
 		productInformationZone.appendChild(productNameSection);
 		productInformationZone.appendChild(productTypeSection);
