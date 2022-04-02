@@ -36,6 +36,11 @@ h3
 	margin: auto;
 }
 
+#pageContent .carousel
+{
+  padding: 5%;
+}
+
 
 /*navbar*/
 #mainNavbar
