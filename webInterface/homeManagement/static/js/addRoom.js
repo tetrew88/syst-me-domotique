@@ -1,19 +1,13 @@
 let loadingScreen = document.getElementById("loadingScreen");
 let pageContent = document.getElementById("pageContent");
 
-
-let typeInput = document.getElementById("roomType");
-let typeList
-let optionList = [];
-
 async function add_room()
 {
 	let nameInput = document.getElementById("roomName");
 	let typeInput = document.getElementById("roomType");
 
 	let newRoomList = [];
-
-	let data = {};
+	
 	let succes = false
 
 	data['roomName'] = nameInput.value;
