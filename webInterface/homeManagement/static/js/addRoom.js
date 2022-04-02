@@ -19,13 +19,14 @@ async function add_room()
 	pageContent.style.display = "none";
 	loadingScreen.style.display = "block";
 
-	await pause(5000);
+	await pause(2500);
 
 	socket.emit('get_rooms_list', '');
 	socket.on('post_rooms_list', roomsData=>{
 		newRoomList = roomsData["data"];
-		console.log("!!!!!!!!");
 	})
+
+	await pause(2500);
 
 	pageContent.style.display = "block";
 	loadingScreen.style.display = "none";
