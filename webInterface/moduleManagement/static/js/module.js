@@ -381,16 +381,21 @@ socket.on('post_module', data=>{
 		modulePictureZone.appendChild(modulePicture);
 
 		moduleInformationZone.appendChild(nameSection);
+		if(data['type'] == 'bulb' || data['type'] == 'rgb bulb')
+		{
+			moduleInformationZone.appendChild(lightUpSection);
+			if(data['type'] == 'rgb bulb')
+			{
+				moduleInformationZone.appendChild(colorSection);
+			}
+		}
+
 		moduleInformationZone.appendChild(locationSection);
 
 		if(data['type'] == 'bulb' || data['type'] == 'rgb bulb')
 		{
-			moduleInformationZone.appendChild(lightUpSection);
+			
 			moduleInformationZone.appendChild(intensitySection);
-
-			if(data['type'] == 'rgb bulb')
-			{
-				moduleInformationZone.appendChild(colorSection);
 			}
 		}
 
