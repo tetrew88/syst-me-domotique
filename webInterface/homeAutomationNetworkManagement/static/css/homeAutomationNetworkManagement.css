@@ -24,10 +24,9 @@
 	margin-bottom: 6%;
 }
 
-#modulesScreen
+.screen
 {
-
-	box-shadow: inset 0px 0px 10px 9px rgba(0, 0, 255, 0.5);
+	background-color: white;
 }
 
 .personalButton
