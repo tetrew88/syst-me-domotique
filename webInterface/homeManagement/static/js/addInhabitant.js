@@ -31,13 +31,11 @@ async function add_inhabitant()
 	pageContent.style.display = "block";
 	loadingScreen.style.display = "none";
 
-	console.log(newInhabitantList);
-	console.log(data)
 	for (const element of newInhabitantList)
 	{
-		if(element["firstName"] == data['firstName'])
+		if(element["profil"]["firstName"] == data['firstName'])
 		{
-			if(element['lastName'] == data['lastName'])
+			if(element["profil"]['lastName'] == data['lastName'])
 			{
 				succes = true;
 				break;
