@@ -162,9 +162,9 @@ class HomeDatabase:
 
         return guest
 
-    def add_room(self, room):
+    def add_room(self, roomName, roomType):
         request = "INSERT INTO Rooms(name, type) VALUES\
-        ('{}', '{}')".format(room.name, room.type)
+        ('{}', '{}')".format(roomName, roomType)
 
         self.db_cursor.execute(request)
         self.commit_change()

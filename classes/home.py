@@ -134,8 +134,8 @@ class Home:
         self.homeAutomationNetwork.stop()
 
 
-    def add_room(self, room):
-        self.homeDatabase.add_room(room)
+    def add_room(self, roomName, roomType):
+        self.homeDatabase.add_room(roomName, roomType)
 
     def add_inhabitant(self, profil):
         self.homeDatabase.add_inhabitant(profil)

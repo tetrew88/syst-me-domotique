@@ -88,8 +88,8 @@ class HomeAutomationSystem:
         return self.home.get_profil(profilId)
 
 
-    def add_home_room(self, room):
-        self.home.add_room(room)
+    def add_home_room(self, roomName , roomType):
+        self.home.add_room(roomName, roomType)
 
     def add_home_inhabitant(self, profil):
         self.home.add_inhabitant(profil)
