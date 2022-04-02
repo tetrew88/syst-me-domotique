@@ -12,16 +12,9 @@
 	margin-bottom: 3%;
 }
 
-#moduleInformation
+.screen
 {
-	background-color: white;
-	margin: auto;
-	border-color: black;
-
-	padding-top: 2%;
-	padding-bottom: 2%;
-
-	margin-bottom: 3%;
+	background-color: black;
 }
 
 .informationSection
@@ -37,30 +30,6 @@
 	border: solid;
 }
 
-
-#productInformation
-{
-	background-color: white;
-	margin: auto;
-	border-color: black;
-
-	padding-top: 2%;
-	padding-bottom: 2%;
-
-	margin-bottom: 3%;
-}
-
-#moduleStateInformation
-{
-	background-color: white;
-	margin: auto;
-	border-color: black;
-
-	padding-top: 2%;
-	padding-bottom: 2%;
-
-	margin-bottom: 3%;
-}
 
 #color
 {
