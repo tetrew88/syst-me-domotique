@@ -34,15 +34,20 @@ async function add_room()
 	pageContent.style.display = "block";
 	loadingScreen.style.display = "none";
 
+	console.log(newRoomList)
+	console.log(data['roomName'])
+
 	for (const element of newRoomList)
 	{
 		if(element["name"] == data['roomName'])
 		{
+			console.log("yes")
 			succes = true;
 			break;
 		}
 		else
 		{
+			console.log('argh')
 			succes = false
 		}
 	}
