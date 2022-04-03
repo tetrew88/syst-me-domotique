@@ -300,5 +300,11 @@ class HomeAutomationServer(socketio.Namespace):
 		HomeAutomationServer.homeAutomationSystem.add_home_guest(data["firstName"], data["lastName"])
 		print(data)
 
+	@socketIoServer.event(namespace='/HomeAutomationServer')
+	def del_module(sid, data):
+		HomeAutomationServer.homeAutomationSystem.del_home_automation_module()
+		print(data)
+
+
 
 socketIoServer.register_namespace(HomeAutomationServer())
