@@ -41,6 +41,8 @@ async function add_module()
 	data['moduleName'] = nameInput.value;
 	data['roomId'] = locationInput.value;
 
+	console.log(data);
+
 	socket.emit('add_module', data);
 	
 	pageContent.style.display = "none";
