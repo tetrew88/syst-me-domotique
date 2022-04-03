@@ -29,6 +29,8 @@ async function del_module()
 {
 	let moduleInput = document.getElementById("module");
 
+	moduleInput.innerHTML = "";
+
 	let newModuleList = [];
 
 	let data = {};
@@ -41,7 +43,7 @@ async function del_module()
 	pageContent.style.display = "none";
 	loadingScreen.style.display = "block";
 
-	await pause(5000);
+	await pause(10000);
 
 	socket.emit('get_modules_list', '');
 	socket.on('post_modules_list', data=>{

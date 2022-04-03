@@ -5,6 +5,8 @@ socket.emit('get_rooms_list', '')
 socket.on('post_rooms_list', data=>{
 	let locationInput = document.getElementById("moduleEmplacement");
 
+	locationInput.innerHTML = "";
+
 	let optionList = [];
 
 	data = data["data"];
@@ -44,7 +46,7 @@ async function add_module()
 	pageContent.style.display = "none";
 	loadingScreen.style.display = "block";
 
-	await pause(5000);
+	await pause(10000);
 
 	socket.emit('get_modules_list', '');
 	socket.on('post_modules_list', data=>{
