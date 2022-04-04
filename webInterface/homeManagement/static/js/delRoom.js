@@ -4,6 +4,7 @@ let pageContent = document.getElementById("pageContent");
 socket.emit('get_rooms_list', '');
 socket.on('post_rooms_list', data=>{
 	let roomInput = document.getElementById("room");
+	roomInput.innerHTML = "";
 
 	let optionList = [];
 
@@ -12,8 +13,8 @@ socket.on('post_rooms_list', data=>{
 	{
 		let option = document.createElement('option');
 			
-		option.text = element['name']
-		option.value = element['id']
+		option.text = element['name'];
+		option.value = element['id'];
 
 		optionList.push(option);
 	}
@@ -28,8 +29,6 @@ socket.on('post_rooms_list', data=>{
 async function del_room()
 {
 	let roomInput = document.getElementById("room");
-
-	roomInput.innerHTML = "";
 
 	let newModuleList = [];
 

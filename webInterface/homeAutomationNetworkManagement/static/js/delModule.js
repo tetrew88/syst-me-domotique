@@ -3,7 +3,9 @@ let pageContent = document.getElementById("pageContent");
 
 socket.emit('get_modules_list', '');
 socket.on('post_modules_list', data=>{
-	let module = document.getElementById("module");
+	let moduleInput = document.getElementById("module");
+
+	moduleInput.innerHTML = "";
 
 	let optionList = [];
 
@@ -20,7 +22,7 @@ socket.on('post_modules_list', data=>{
 
 	for (const element of optionList)
 	{
-		module.appendChild(element);
+		moduleInput.appendChild(element);
 	}
 })
 
@@ -28,8 +30,6 @@ socket.on('post_modules_list', data=>{
 async function del_module()
 {
 	let moduleInput = document.getElementById("module");
-
-	moduleInput.innerHTML = "";
 
 	let newModuleList = [];
 
