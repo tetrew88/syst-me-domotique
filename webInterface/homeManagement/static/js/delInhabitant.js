@@ -26,7 +26,7 @@ socket.on('post_inhabitants_list', data=>{
 })
 
 
-async function del_room()
+async function del_inhabitant()
 {
 	let inhabitant = document.getElementById("inhabitant");
 
