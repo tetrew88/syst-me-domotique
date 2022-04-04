@@ -27,7 +27,7 @@ socket.on('post_modules_list', data=>{
 
 async function del_module()
 {
-	let moduleInput = document.getElementById("module");
+	let moduleInput = document.getElementById("room");
 
 	moduleInput.innerHTML = "";
 
