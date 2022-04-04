@@ -61,5 +61,5 @@ urlpatterns = [
     path("addGuest/", add_guest),
     path("delModule/", del_module),
     path("delRoom/", del_room),
-    path('delInhabitant/' del_inhabitant),
+    path('delInhabitant/', del_inhabitant),
 ]
