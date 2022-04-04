@@ -38,6 +38,10 @@ async function del_room()
 
 	data['roomId'] = roomInput.value;
 
+	console.log("!!!!!!!");
+	console.log(roomInput.value);
+	console.log("!!!!!!!!")
+
 	socket.emit('del_room', data);
 	
 	pageContent.style.display = "none";
