@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/delRoom.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<div id= "pageContent" class="row">
+  <div class="col">
+
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <div class="row">
+          <h2>Supression Pièce</h2>
+        </div>
+      </div>
+      <div class="col-2"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-1 col-md-2 col-lg-3"></div>
+      <div class="col-10 col-md-8 col-lg-6">
+        <div class="row screen">
+          <div class="col">
+
+            <div class="row roomSection section">
+              <div class="col-5 label">
+                pièce:
+              </div>
+              <select id="room" value="" class="col-7"></select>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-1 col-md-2 col-lg-3"></div>
+    </div>
+
+    <div class="row buttonZone">
+      <div class="col-2 col-md-3 col-lg-4"></div>
+      <button class="col-8 col-md-6 col-lg-4 personalButton" onclick="del_room();">Supprimer</button>
+      <div class="col-2 col-md-3 col-lg-4"></div>
+    </div>
+
+  </div>
+</div>
+
+<div id="loadingScreen" style="display: none;">
+  <div id='loader' class="loader"></div>
+  <div class="row">
+    <h2 class="text-center">Supression en cours</h2>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block jsScript %}
+  <script src="{% static 'js/delRoom.js' %}"></script>
+{% endblock %}

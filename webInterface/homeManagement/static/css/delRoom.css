@@ -1,0 +1,38 @@
+.screen
+{
+	background-color: black;
+
+	margin-top: 5%;
+}
+
+.roomSection
+{
+	padding: 2%;
+}
+
+.section
+{
+	font-size: smaller;
+}
+
+.personalButton
+{
+  background-color: white;
+  border: none;
+
+  margin-top: 2%;
+
+  box-shadow: inset 0px 0px 10px 9px rgba(0, 255, 0, 0.5);
+}
+
+.alertNotif
+{
+	margin: auto;
+
+	margin-top: 5%;
+	padding: 2%;
+
+	background-color: black;
+
+	box-shadow: inset 0px 0px 10px 9px rgba(255, 0, 0, 0.5);
+}
