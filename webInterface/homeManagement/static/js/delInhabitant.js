@@ -13,7 +13,7 @@ socket.on('post_inhabitants_list', data=>{
 	{
 		let option = document.createElement('option');
 			
-		option.text = element['name'];
+		option.text = element["profil"]['firstName'];
 		option.value = element['id'];
 
 		optionList.push(option);
