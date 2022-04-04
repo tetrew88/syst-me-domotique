@@ -37,7 +37,7 @@ async function del_inhabitant()
 
 	data['inhabitantId'] = inhabitant.value;
 
-	socket.emit('del_room', data);
+	socket.emit('del_inhabitant', data);
 	
 	pageContent.style.display = "none";
 	loadingScreen.style.display = "block";
