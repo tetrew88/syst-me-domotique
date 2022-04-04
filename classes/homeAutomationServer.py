@@ -316,5 +316,10 @@ class HomeAutomationServer(socketio.Namespace):
 		HomeAutomationServer.homeAutomationSystem.del_home_inhabitant(int(data['inhabitantId']))
 		print(data)
 
+	@socketIoServer.event(namespace='/HomeAutomationServer')
+	def del_guest(sid, data):
+		HomeAutomationServer.homeAutomationSystem.del_home_guest(int(data['guestId']))
+		print(data)
+
 
 socketIoServer.register_namespace(HomeAutomationServer())

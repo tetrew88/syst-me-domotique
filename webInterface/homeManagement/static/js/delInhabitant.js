@@ -3,8 +3,8 @@ let pageContent = document.getElementById("pageContent");
 
 socket.emit('get_inhabitants_list', '');
 socket.on('post_inhabitants_list', data=>{
-	let inhabitant = document.getElementById("inhabitant");
-	inhabitant.innerHTML = "";
+	let inhabitantInput = document.getElementById("inhabitant");
+	inhabitantInput.innerHTML = "";
 
 	let optionList = [];
 
@@ -21,21 +21,21 @@ socket.on('post_inhabitants_list', data=>{
 
 	for (const element of optionList)
 	{
-		inhabitant.appendChild(element);
+		inhabitantInput.appendChild(element);
 	}
 })
 
 
 async function del_inhabitant()
 {
-	let inhabitant = document.getElementById("inhabitant");
+	let inhabitantInput = document.getElementById("inhabitant");
 
 	let newInhabitantList = [];
 
 	let data = {};
 	let succes = false
 
-	data['inhabitantId'] = inhabitant.value;
+	data['inhabitantId'] = inhabitantInput.value;
 
 	socket.emit('del_inhabitant', data);
 	
