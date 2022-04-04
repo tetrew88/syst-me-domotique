@@ -46,8 +46,8 @@ async function del_room()
 	await pause(10000);
 
 	socket.emit('get_rooms_list', '');
-	socket.on('post_rooms_list', data=>{
-		newRoomList = data["data"];
+	socket.on('post_rooms_list', roomData=>{
+		newRoomList = roomData["data"];
 	})
 
 	await pause(2500);
