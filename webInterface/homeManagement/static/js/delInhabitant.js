@@ -35,7 +35,7 @@ async function del_inhabitant()
 	let data = {};
 	let succes = false
 
-	data['roomId'] = inhabitant.value;
+	data['inhabitantId'] = inhabitant.value;
 
 	socket.emit('del_room', data);
 	
@@ -56,7 +56,7 @@ async function del_inhabitant()
 
 	for (const element of newInhabitantList)
 	{
-		if(element["id"] == data['roomId'])
+		if(element["id"] == data['inhabitantId'])
 		{
 			succes = false;
 			break;
@@ -69,7 +69,7 @@ async function del_inhabitant()
 
 	if(succes == true)
 	{
-		document.location.href = '/roomListing'
+		document.location.href = '/profilListing'
 	}
 	else
 	{

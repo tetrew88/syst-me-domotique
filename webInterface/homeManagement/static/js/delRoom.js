@@ -35,9 +35,9 @@ async function del_inhabitant()
 	let data = {};
 	let succes = false
 
-	data['inhabitantId'] = roomInput.value;
+	data['roomId'] = roomInput.value;
 
-	socket.emit('del_inhabitant', data);
+	socket.emit('del_room', data);
 	
 	pageContent.style.display = "none";
 	loadingScreen.style.display = "block";
@@ -56,7 +56,7 @@ async function del_inhabitant()
 
 	for (const element of newRoomList)
 	{
-		if(element["id"] == data['inhabitantId'])
+		if(element["id"] == data['roomId'])
 		{
 			succes = false;
 			break;
@@ -69,7 +69,7 @@ async function del_inhabitant()
 
 	if(succes == true)
 	{
-		document.location.href = '/profilListing'
+		document.location.href = '/roomListing'
 	}
 	else
 	{
