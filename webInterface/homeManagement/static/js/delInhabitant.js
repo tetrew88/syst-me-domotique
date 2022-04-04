@@ -1,10 +1,10 @@
 let loadingScreen = document.getElementById("loadingScreen");
 let pageContent = document.getElementById("pageContent");
 
-socket.emit('get_rooms_list', '');
-socket.on('post_rooms_list', data=>{
-	let roomInput = document.getElementById("room");
-	roomInput.innerHTML = "";
+socket.emit('get_inhabitants_list', '');
+socket.on('post_inhabitants_list', data=>{
+	let inhabitant = document.getElementById("inhabitant");
+	inhabitant.innerHTML = "";
 
 	let optionList = [];
 
@@ -21,32 +21,32 @@ socket.on('post_rooms_list', data=>{
 
 	for (const element of optionList)
 	{
-		roomInput.appendChild(element);
+		inhabitant.appendChild(element);
 	}
 })
 
 
-async function del_inhabitant()
+async function del_room()
 {
-	let roomInput = document.getElementById("room");
+	let inhabitant = document.getElementById("inhabitant");
 
-	let newRoomList = [];
+	let newInhabitantList = [];
 
 	let data = {};
 	let succes = false
 
-	data['inhabitantId'] = roomInput.value;
+	data['roomId'] = inhabitant.value;
 
-	socket.emit('del_inhabitant', data);
+	socket.emit('del_room', data);
 	
 	pageContent.style.display = "none";
 	loadingScreen.style.display = "block";
 
 	await pause(10000);
 
-	socket.emit('get_rooms_list', '');
-	socket.on('post_rooms_list', roomData=>{
-		newRoomList = roomData["data"];
+	socket.emit('get_inhabitants_list', '');
+	socket.on('post_inhabitants_list', inhabitantData=>{
+		newInhabitantList = inhabitantData["data"];
 	})
 
 	await pause(2500);
@@ -54,9 +54,9 @@ async function del_inhabitant()
 	pageContent.style.display = "block";
 	loadingScreen.style.display = "none";
 
-	for (const element of newRoomList)
+	for (const element of newInhabitantList)
 	{
-		if(element["id"] == data['inhabitantId'])
+		if(element["id"] == data['roomId'])
 		{
 			succes = false;
 			break;
@@ -69,7 +69,7 @@ async function del_inhabitant()
 
 	if(succes == true)
 	{
-		document.location.href = '/profilListing'
+		document.location.href = '/roomListing'
 	}
 	else
 	{
